@@ -12,10 +12,10 @@ const StyledCircleButton = styled.button`
 `;
 
 
-const CircleButton = ({ icon: IconComponent, ...restProps }) => {
+const CircleButton = ({children, ...restProps }) => {
   return (
     <StyledCircleButton {...restProps}>
-      <IconComponent />
+      {children}
     </StyledCircleButton>
   );
 };

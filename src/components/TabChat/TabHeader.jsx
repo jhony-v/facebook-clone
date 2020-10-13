@@ -1,12 +1,15 @@
-import React from 'react'
+import React from "react";
+import CircleButton from "../Common/CircleButton";
+import FlexWrapper from "../Common/FlexWrapper";
+import TextLabel from "../Common/TextLabel";
 
+const TabHeader = ({ titleHeader, onClose }) => {
+  return (
+    <FlexWrapper align="center" justify="space-between">
+      <TextLabel>{titleHeader}</TextLabel>
+      <CircleButton onClick={onClose}></CircleButton>
+    </FlexWrapper>
+  );
+};
 
-const TabHeader = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
-
-export default TabHeader
+export default TabHeader;

@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useState} from "react";
+import FloatingButton from "./FloatingButton";
+import TabChatMainExpanded from "./TabChatMainExpanded";
+import TabHeader from "./TabHeader";
 
 const TabChat = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  const [open, setOpen] = useState(false);
 
-export default TabChat
+  return (
+    <>
+      {open && (
+        <TabChatMainExpanded>
+          <TabHeader onClose={() => setOpen(false)} />
+        </TabChatMainExpanded>
+      )}
+      <FloatingButton onClick={() => setOpen(true)} />
+    </>
+  );
+};
+
+export default TabChat;

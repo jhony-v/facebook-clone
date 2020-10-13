@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledButtonCircle = styled.button`
+const StyledCircleButton = styled.button`
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -11,12 +11,13 @@ const StyledButtonCircle = styled.button`
   color: ${({ theme, colorIcon }) => theme.theme.colors[colorIcon]};
 `;
 
-const ButtonCircleIconify = ({ icon: IconComponent, ...restProps }) => {
+
+const CircleButton = ({ icon: IconComponent, ...restProps }) => {
   return (
-    <StyledButtonCircle {...restProps}>
+    <StyledCircleButton {...restProps}>
       <IconComponent />
-    </StyledButtonCircle>
+    </StyledCircleButton>
   );
 };
 
-export default ButtonCircleIconify;
+export default CircleButton;

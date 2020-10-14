@@ -8,14 +8,17 @@ const defineVariantTextLabel = (key, value) => {
 };
 
 export const StyledTextLabel = styled.span`
+  font-family:Arial;
+  font-size:${props => props.fontSize};
+  font-weight: ${props=> props.weight && "bold"};
   color: ${(props) => props.theme.colors.primaryText};
   display: ${(props) => props.block && "block"};
   ${defineVariantTextLabel("primary", "primary")};
   ${defineVariantTextLabel("smooth", "primaryTextLight")};
 `;
 
-const TextLabel = ({ children, variant }) => {
-  return <StyledTextLabel variant={variant}>{children}</StyledTextLabel>;
+const TextLabel = ({ children, ...restProps }) => {
+  return <StyledTextLabel {...restProps}>{children}</StyledTextLabel>;
 };
 
 export default TextLabel;

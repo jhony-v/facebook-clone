@@ -1,19 +1,22 @@
-import React, { useState} from "react";
-import FloatingButton from "./FloatingButton";
-import TabChatMainExpanded from "./TabChatMainExpanded";
-import TabHeader from "./TabHeader";
+import React, { useCallback, useState } from "react";
+import FloatingButton from "./TabChatComponents/FloatingButton";
+import TabChatMainExpanded from "./TabChatComponents/TabChatMainExpanded";
+import TabHeader from "./TabChatComponents/TabHeader";
+import TabChatViewer from "./TabChatViewer";
 
 const TabChat = () => {
   const [open, setOpen] = useState(false);
+  const onToggleOpen = useCallback(() => setOpen(prevOpen => !prevOpen),[setOpen]);
 
   return (
     <>
       {open && (
         <TabChatMainExpanded>
-          <TabHeader onClose={() => setOpen(false)} />
+          <TabHeader onClose={onToggleOpen} titleHeader="New Message" />
+          <TabChatViewer/>
         </TabChatMainExpanded>
       )}
-      <FloatingButton onClick={() => setOpen(true)} />
+      <FloatingButton onClick={onToggleOpen} />
     </>
   );
 };

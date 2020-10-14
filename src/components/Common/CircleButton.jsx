@@ -1,14 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
+const defaultSize = "50px";
+
 const StyledCircleButton = styled.button`
-  width: 40px;
-  height: 40px;
+  width: ${(props) => props.sizeAvatar || defaultSize};
+  height: ${(props) => props.sizeAvatar || defaultSize};
   border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme, colorIcon }) => theme.theme.colors[colorIcon]};
+  border-width:0;
+  outline:none;
+  color: ${({ theme, colorIcon }) => theme.colors[colorIcon]};
 `;
 
 

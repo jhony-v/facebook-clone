@@ -1,6 +1,7 @@
 import React from "react";
 import CircleButton from "../../Common/CircleButton";
 import styled from "styled-components";
+import { FiEdit } from "react-icons/fi";
 
 const StyledFloatingCircleButton = styled(CircleButton)`
   position: fixed;
@@ -12,7 +13,9 @@ const StyledFloatingCircleButton = styled(CircleButton)`
 
 const FloatingButton = ({ onClick }) => {
   return (
-    <StyledFloatingCircleButton onClick={onClick}>+</StyledFloatingCircleButton>
+    <StyledFloatingCircleButton onClick={onClick}>
+      <FiEdit size={20} />
+    </StyledFloatingCircleButton>
   );
 };
 

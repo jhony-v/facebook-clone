@@ -7,7 +7,7 @@ const defineVariantTextLabel = (key, value) => {
   `;
 };
 
-export const StyledTextLabel = styled.span`
+const TextLabel = styled.span`
   font-family:Arial;
   font-size:${props => props.fontSize};
   font-weight: ${props=> props.weight && "bold"};
@@ -16,9 +16,5 @@ export const StyledTextLabel = styled.span`
   ${defineVariantTextLabel("primary", "primary")};
   ${defineVariantTextLabel("smooth", "primaryTextLight")};
 `;
-
-const TextLabel = ({ children, ...restProps }) => {
-  return <StyledTextLabel {...restProps}>{children}</StyledTextLabel>;
-};
 
 export default TextLabel;

@@ -7,7 +7,7 @@ import Wrapper from "../../Common/Wrapper";
 
 const TabHeader = ({ titleHeader, onClose }) => {
   return (
-    <Wrapper p="5px 20px">
+    <Wrapper p="10px 20px 5px">
     <FlexWrapper centerBetween>
       <TextLabel weight>{titleHeader}</TextLabel>
       <CircleButton onClick={onClose}></CircleButton>

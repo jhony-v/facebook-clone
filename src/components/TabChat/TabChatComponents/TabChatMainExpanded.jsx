@@ -9,8 +9,8 @@ const StyledTabChatMainExpanded = styled.div`
   bottom: 0;
   right: 0;
   margin-right: 10%;
-  height: 400px;
-  width:300px;
+  height: 480px;
+  width:350px;
   display: grid;
   grid-template-columns: 1;
   grid-template-rows: min-content 1fr;

@@ -9,12 +9,12 @@ const StyledInputSearch = styled.input`
   outline: none;
   border-width: 0;
   width: 100%;
-  margin-left: 10px;
+  margin-left: 5px;
 `;
 
 const ViewerInputSearch = () => {
   return (
-    <Wrapper p="10px 20px">
+    <Wrapper p="10px 20px 20px">
       <FlexWrapper centerBetween>
         <TextLabel fontSize=".8rem">Escribir:</TextLabel>
         <StyledInputSearch placeholder="Ingresar nombre..." />

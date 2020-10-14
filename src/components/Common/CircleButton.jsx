@@ -4,14 +4,15 @@ import styled from "styled-components";
 const defaultSize = "50px";
 
 const StyledCircleButton = styled.button`
-  width: ${(props) => props.sizeAvatar || defaultSize};
-  height: ${(props) => props.sizeAvatar || defaultSize};
   border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-width:0;
   outline:none;
+  background-color:rgba(0,0,0,.02);
+  width: ${(props) => props.sizeAvatar || defaultSize};
+  height: ${(props) => props.sizeAvatar || defaultSize};
   color: ${({ theme, colorIcon }) => theme.colors[colorIcon]};
 `;
 

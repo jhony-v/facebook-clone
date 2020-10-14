@@ -1,10 +1,14 @@
 import React from "react";
+import FlexWrapper from "../../Common/FlexWrapper";
 import ViewerInputSearch from "./ViewerInputSearch";
+import ViewerTabsOptionSearchNavigator from "./ViewerTabsOptionSearchNavigator";
+
 
 const TabChatViewer = () => {
-  return <div>
+  return <FlexWrapper direction="column">
     <ViewerInputSearch/>
-  </div>;
+    <ViewerTabsOptionSearchNavigator/>
+  </FlexWrapper>;
 };
 
 export default TabChatViewer;

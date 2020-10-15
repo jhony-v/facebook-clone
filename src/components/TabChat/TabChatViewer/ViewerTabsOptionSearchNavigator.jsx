@@ -3,28 +3,30 @@ import styled from "styled-components";
 import FlexWrapper from "../../Common/FlexWrapper";
 import TextLabel from "../../Common/TextLabel";
 
-const ViewerTabsOptionSearchNavigator = ({initialId,children,onTabSelected}) => {
-  const [ selectedId , setSelected ] = useState(initialId);
-  useEffect( () => {
-    onTabSelected && onTabSelected(selectedId);
-  },[selectedId,onTabSelected]);
+const ViewerTabsOptionSearchNavigator = ({ initialId, children, onOptionSelected }) => {
+  const [selectedId, setSelected] = useState(initialId);
+  useEffect(() => {
+    onOptionSelected && onOptionSelected(selectedId);
+  }, [selectedId, onOptionSelected]);
 
   return (
     <StyledFlexSearch>
-      {React.Children.map(children,e => (
-          React.cloneElement(e,{
-            selected : selectedId === e.props.optionId,
-            onClick : () => setSelected(e.props.optionId), 
-          })
-      ))}
+      {React.Children.map(children, (e) =>
+        React.cloneElement(e, {
+          selected: selectedId === e.props.optionId,
+          onClick: () => setSelected(e.props.optionId),
+        })
+      )}
     </StyledFlexSearch>
   );
 };
 
-ViewerTabsOptionSearchNavigator.Option = React.memo(({text,...restProps}) => (
-  <StyledTabOptionSearch {...restProps} >{text}</StyledTabOptionSearch>
-))
 
+ViewerTabsOptionSearchNavigator.Option = React.memo(
+  ({ text, ...restProps }) => (
+    <StyledTabOptionSearch {...restProps}>{text}</StyledTabOptionSearch>
+  )
+);
 
 const StyledTabOptionSearch = styled(TextLabel).attrs({
   weight: true,
@@ -44,7 +46,7 @@ const StyledTabOptionSearch = styled(TextLabel).attrs({
 
 const StyledFlexSearch = styled(FlexWrapper)`
   border-top: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow:0 10px 20px rgba(0,0,0,.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 `;
 
 export default ViewerTabsOptionSearchNavigator;

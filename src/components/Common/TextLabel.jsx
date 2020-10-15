@@ -7,9 +7,9 @@ const defineVariantTextLabel = (key, value) => {
 };
 
 const TextLabel = styled.span`
-  font-family:Arial;
-  font-size:${props => props.textSize};
-  font-weight: ${props=> props.weight && "bold"};
+  font-family: Arial;
+  font-size: ${(props) => props.textSize};
+  font-weight: ${(props) => props.weight && "bold"};
   color: ${(props) => props.theme.colors.primaryText};
   display: ${(props) => props.block && "block"};
   ${defineVariantTextLabel("primary", "primary")};

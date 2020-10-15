@@ -1,32 +1,34 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useCallback, useState } from "react";
 import Spinner from "../../Common/Spinner";
 import { StyledTabChatFillWrapper } from "../TabChatComponents/TabChatMainExpanded";
 import ViewerInputSearch from "./ViewerInputSearch";
 import ViewerTabsOptionSearchNavigator from "./ViewerTabsOptionSearchNavigator";
+import RowItem from "./RowItem";
 
-const AsyncListItems = lazy(() => import("./ViewListItems"));
+const AsyncListRowItems = lazy(() => import("./ViewListRowItems"));
 
 const TabChatViewer = () => {
+  const [ data , setData ] = useState([]);
+  const onOptionSelected = useCallback ( id => {
+      setData(Array(10).fill({
+        image: `https://source.unsplash.com/collection/${Math.floor(Math.random()*1000)}/1600x900`,
+        text: "Mark Zuckerberk Facebook"+id,
+      }));
+  },[]);
+
   return (
     <StyledTabChatFillWrapper>
       <ViewerInputSearch />
-      <ViewerTabsOptionSearchNavigator initialId="friends">
-        <ViewerTabsOptionSearchNavigator.Option
-          optionId="friends"
-          text="Friends"
-        />
-        <ViewerTabsOptionSearchNavigator.Option
-          optionId="online"
-          text="Online"
-        />
+      <ViewerTabsOptionSearchNavigator initialId="friends" onOptionSelected={onOptionSelected}>
+        <ViewerTabsOptionSearchNavigator.Option optionId="friends" text="Friends"/>
+        <ViewerTabsOptionSearchNavigator.Option optionId="online" text="Online"/>
       </ViewerTabsOptionSearchNavigator>
       <Suspense fallback={<Spinner />}>
-        <AsyncListItems
-          data={Array(10).fill({
-            image:
-              "https://cdn.pixabay.com/photo/2020/10/09/06/09/rabbit-5639615__340.jpg",
-            text: "Mark Zuckerberk Facebook",
-          })}
+        <AsyncListRowItems  
+          data={data}
+          render={(currentItem,index) => (
+            <RowItem  key={index} {...currentItem}  />
+          )}
         />
       </Suspense>
     </StyledTabChatFillWrapper>

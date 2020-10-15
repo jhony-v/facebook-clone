@@ -8,21 +8,16 @@ const StyledCircleButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-width:0;
-  outline:none;
-  background-color:rgba(0,0,0,.02);
+  border-width: 0;
+  outline: none;
+  background-color: ${props => props.theme.colors.primaryButtonNeutral};
   width: ${(props) => props.sizeAvatar || defaultSize};
   height: ${(props) => props.sizeAvatar || defaultSize};
   color: ${({ theme, colorIcon }) => theme.colors[colorIcon]};
 `;
 
-
-const CircleButton = ({children, ...restProps }) => {
-  return (
-    <StyledCircleButton {...restProps}>
-      {children}
-    </StyledCircleButton>
-  );
+const CircleButton = ({ children, ...restProps }) => {
+  return <StyledCircleButton {...restProps}>{children}</StyledCircleButton>;
 };
 
 export default CircleButton;

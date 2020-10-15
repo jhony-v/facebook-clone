@@ -4,8 +4,9 @@ const defaultTheme = {
     primaryLayout: "#ffffff",
     primaryLayoutDark: "#e0e0e0",
     primaryLayoutLight: "#fafafa",
-    primaryText : "#424242",
-    primaryTextLight : "#9e9e9e",
+    primaryText: "#424242",
+    primaryTextLight: "#9e9e9e",
+    primaryButtonNeutral: "rgba(0, 0, 0, 0.02)",
   },
   fontSizes: {
     big: "1.3rem",

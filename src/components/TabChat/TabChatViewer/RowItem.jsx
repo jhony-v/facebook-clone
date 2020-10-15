@@ -18,7 +18,12 @@ const StyledRowItem = styled(FlexWrapper).attrs({
   }
 `;
 
-const RowItem = ({ text, image }) => {
+type RowItemProps = {
+  text? : string,
+  image? : string
+};
+
+const RowItem = React.memo(({ text, image } : RowItemProps) => {
   return (
     <StyledRowItem>
       <Wrapper m="0 10px 0 0">
@@ -29,6 +34,6 @@ const RowItem = ({ text, image }) => {
       </TextLabel>
     </StyledRowItem>
   );
-};
+});
 
 export default RowItem;

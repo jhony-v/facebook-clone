@@ -2,12 +2,12 @@
 import React from "react";
 import Scrollbars from "react-custom-scrollbars";
 
-type ViewListProp = {
+type ListProp = {
   data: Array<any> | [],
   render: (currentData: any, index: number) => any
 };
 
-const ViewListRowItems = ({ data, render } : ViewListProp ) => {
+const ViewerListRowItems = ({ data, render } : ListProp ) => {
   return (
     <Scrollbars height="100%" autoHide>
       {data.map((currentData, index) => render(currentData, index))}
@@ -15,4 +15,4 @@ const ViewListRowItems = ({ data, render } : ViewListProp ) => {
   );
 };
 
-export default ViewListRowItems;
+export default ViewerListRowItems;

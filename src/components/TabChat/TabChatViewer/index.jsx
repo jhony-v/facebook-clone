@@ -1,11 +1,11 @@
 import React, { lazy, Suspense, useCallback, useReducer } from "react";
 import Spinner from "../../Common/Spinner";
 import { StyledTabChatFillWrapper } from "../TabChatComponents/elements";
-import ViewerInputSearch from "./ViewerInputSearch";
+import ViewerSearchInput from "./ViewerSearchInput";
 import ViewerTabOptions from "./ViewerTabOptions";
 import RowItem from "./RowItem";
 
-const AsyncListRowItems = lazy(() => import("./ViewListRowItems"));
+const AsyncListRowItems = lazy(() => import("./ViewerListRowItems"));
 
 const initialState = {
   searching : false,
@@ -50,7 +50,7 @@ const TabChatViewer = () => {
 
   return (
     <StyledTabChatFillWrapper>
-      <ViewerInputSearch onKeyUp={onSearch} />
+      <ViewerSearchInput onKeyUp={onSearch} />
       {!state.searching && (
         <ViewerTabOptions initialId="friends" onOptionSelected={onOptionSelected}>
           <ViewerTabOptions.Option optionId="friends" text="Friends"/>

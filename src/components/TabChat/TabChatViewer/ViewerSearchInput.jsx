@@ -5,11 +5,11 @@ import TextLabel from "../../Common/TextLabel";
 import Wrapper from "../../Common/Wrapper";
 import { StyledInputSearch } from "./elements";
 
-type ViewerInputSearchProps = {
+type ViewerSearchInputProps = {
   onKeyUp: (ev: any) => void
 };
 
-const ViewerInputSearch = ({ onKeyUp }: ViewerInputSearchProps) => {
+const ViewerSearchInput = ({ onKeyUp }: ViewerSearchInputProps) => {
   return (
     <Wrapper p="10px 20px 20px">
       <FlexWrapper centerBetween>
@@ -21,4 +21,4 @@ const ViewerInputSearch = ({ onKeyUp }: ViewerInputSearchProps) => {
 };
 
 
-export default ViewerInputSearch;
+export default ViewerSearchInput;

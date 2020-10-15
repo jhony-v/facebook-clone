@@ -16,8 +16,8 @@ const ViewerInputSearch = () => {
   return (
     <Wrapper p="10px 20px 20px">
       <FlexWrapper centerBetween>
-        <TextLabel fontSize=".8rem">Escribir:</TextLabel>
-        <StyledInputSearch placeholder="Ingresar nombre..." />
+        <TextLabel textSize=".8rem">To:</TextLabel>
+        <StyledInputSearch  autoFocus />
       </FlexWrapper>
     </Wrapper>
   );

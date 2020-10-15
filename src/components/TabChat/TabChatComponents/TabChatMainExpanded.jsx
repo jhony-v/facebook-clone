@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import FlexWrapper from "../../Common/FlexWrapper";
 
 const StyledTabChatMainExpanded = styled.div`
   border-radius: 10px 10px 0 0;
@@ -11,14 +12,23 @@ const StyledTabChatMainExpanded = styled.div`
   margin-right: 10%;
   height: 480px;
   width:350px;
-  display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: min-content 1fr;
-  overflow:hidden;
+  display:flex;
 `;
 
+export const StyledTabChatFillWrapper = styled(FlexWrapper).attrs({
+  fDirection: "column",
+})`
+  width: 100%;
+  height:100%;
+`;
+
+
 const TabChatMainExpanded = ({ children }) => {
-  return <StyledTabChatMainExpanded>{children}</StyledTabChatMainExpanded>;
+  return <StyledTabChatMainExpanded>
+    <StyledTabChatFillWrapper>
+      {children}
+    </StyledTabChatFillWrapper>
+  </StyledTabChatMainExpanded>;
 };
 
 export default TabChatMainExpanded;

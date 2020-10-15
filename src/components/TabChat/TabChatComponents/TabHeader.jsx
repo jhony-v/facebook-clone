@@ -7,7 +7,7 @@ import { VscClose } from "react-icons/vsc";
 
 const TabHeader = ({ titleHeader, onClose }) => {
   return (
-    <Wrapper p="10px 20px 5px">
+    <Wrapper p="10px 20px 5px" >
     <FlexWrapper centerBetween>
       <TextLabel weight>{titleHeader}</TextLabel>
       <CircleButton onClick={onClose} colorIcon="primary">

@@ -1,16 +1,13 @@
 import React from "react";
-import styled from "styled-components";
-import FlexWrapper from "../../Common/FlexWrapper";
+import Scrollbars from "react-custom-scrollbars";
+import RowItem from "./RowItem";
 
-const StyledWrapperList = styled(FlexWrapper)`
-  flex: none;
-  height: 100%;
-`;
-
-const ViewListItems = () => {
-  return <StyledWrapperList>
-      
-  </StyledWrapperList>;
+const ViewListItems = ({data}) => {
+  return (
+    <Scrollbars height="100%" autoHide>
+      {data.map((currentData, i) => ( <RowItem key={i} {...currentData} /> ))}
+    </Scrollbars>
+  );
 };
 
 export default ViewListItems;

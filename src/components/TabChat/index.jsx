@@ -6,14 +6,16 @@ import TabChatViewer from "./TabChatViewer";
 
 const TabChat = () => {
   const [open, setOpen] = useState(false);
-  const onToggleOpen = useCallback(() => setOpen(prevOpen => !prevOpen),[setOpen]);
+  const onToggleOpen = useCallback(() => setOpen((prevOpen) => !prevOpen), [
+    setOpen,
+  ]);
 
   return (
     <>
       {open && (
         <TabChatMainExpanded>
           <TabHeader onClose={onToggleOpen} titleHeader="New Message" />
-          <TabChatViewer/>
+          <TabChatViewer />
         </TabChatMainExpanded>
       )}
       <FloatingButton onClick={onToggleOpen} />

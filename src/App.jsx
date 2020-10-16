@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
-import TabChat from "./components/TabChat";
+import TabChat from "./components/ChatTab";
 import defaultTheme from "./theme/defaultTheme";
 
 function App() {
   
-  const e = "https://jsonplaceholder.typicode.com/posts/";
+  const e = "https://jsonplaceholder.typicode.com/todos/";
 
   const [ data , setData ] = React.useState([]);
   const [ url , setUrl ] = React.useState(e);
@@ -16,7 +16,6 @@ function App() {
   },[url]);
 
   return (
-    <div>
       <ThemeProvider theme={defaultTheme}>
         <TabChat
           filterOptionsInitial={1} 
@@ -37,12 +36,14 @@ function App() {
             )}
           </TabChat.RenderOptions>
             <TabChat.RenderList>
-            { (item,index) => <TabChat.Item key={index} image={item.thumbnailUrl} text={item.title} />  }
+            { (item,index) => (
+              <TabChat.Item 
+                key={index} 
+                text={item.title} />  
+            )}
             </TabChat.RenderList>
         </TabChat>
-
       </ThemeProvider>
-    </div>
   );
 }
 

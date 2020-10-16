@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledTabChatFillWrapper, StyledTabChatMainExpanded } from "./elements";
 
-const TabChatMainExpanded = ({ children }) => {
+const TabMainExpanded = ({ children }) => {
   return (
     <StyledTabChatMainExpanded>
       <StyledTabChatFillWrapper>{children}</StyledTabChatFillWrapper>
@@ -9,4 +9,4 @@ const TabChatMainExpanded = ({ children }) => {
   );
 };
 
-export default TabChatMainExpanded;
+export default TabMainExpanded;

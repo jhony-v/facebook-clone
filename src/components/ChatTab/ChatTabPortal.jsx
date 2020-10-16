@@ -6,7 +6,7 @@ const chatPortal = document.createElement("div");
 
 chatPortal.classList = className;
 
-const TabChatPortal = ({ children }) => {
+const ChatTabPortal = ({ children }) => {
   React.useEffect(() => {
       if(!document.querySelector(`.${className}`)) {
           document.body.appendChild(chatPortal);
@@ -19,4 +19,4 @@ const TabChatPortal = ({ children }) => {
   return ReactDOM.createPortal(children, chatPortal);
 };
 
-export default TabChatPortal;
+export default ChatTabPortal;

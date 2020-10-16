@@ -1,16 +1,16 @@
 import React, { useCallback } from "react";
-import ViewerListRowItems from "./TabChatViewer/ViewerListRowItems";
-import ViewerSearchInput from "./TabChatViewer/ViewerSearchInput";
-import { actionSearch } from "./Context/TabChatReducer";
-import { useTabChatContext } from "./Context/TabChatContext";
-import ViewerTabOptions from "./TabChatViewer/ViewerTabOptions";
+import ViewerListRowItems from "./ChatTabViewer/ViewerListRowItems";
+import ViewerSearchInput from "./ChatTabViewer/ViewerSearchInput";
+import { actionSearch } from "./Context/ChatTabReducer";
+import { useChatTabContext } from "./Context/ChatTabContext";
+import ViewerTabOptions from "./ChatTabViewer/ViewerTabOptions";
 import ErrorComponent from "../Common/ErrorComponent";
 
 /**
  * Input to search in the list
  */
 export const SearchInput = () => {
-  const { state , action, onSearch } = useTabChatContext();
+  const { state , action, onSearch } = useChatTabContext();
   return <ViewerSearchInput onKeyUp={(e) => {
     const value = e.target.value;
     const validationOnSearch = onSearch(state.data,value);
@@ -26,7 +26,7 @@ export const SearchInput = () => {
  * Options to filter by id
  */
 export const RenderOptions = ({ children }) => {
-  const { state, onOptionSelected } = useTabChatContext();
+  const { state, onOptionSelected } = useChatTabContext();
   const onSelectedOption = useCallback((e) => onOptionSelected(e) , [onOptionSelected]);
 
   return !state.searching && (
@@ -40,7 +40,7 @@ export const RenderOptions = ({ children }) => {
  * Render list items
  */
 export const RenderList = ({ children }) => {
-  const { state } = useTabChatContext();
+  const { state } = useChatTabContext();
   return <ErrorComponent>
     <ViewerListRowItems data={state.data} render={(e, i) => children(e,i)} />
   </ErrorComponent>

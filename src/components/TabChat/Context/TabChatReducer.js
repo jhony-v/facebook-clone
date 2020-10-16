@@ -16,12 +16,13 @@ export const actionSearch = (value) => ({
 const TabChatReducer = (state, action) => {
   switch (action.type) {
     case TYPES.TAB_SEARCH:
-      let textValue = action.payload.value;
-      let searching = textValue.trim().length > 0;
+      let { value  } = action.payload;
+      let searching = value.trim().length > 0;
+      console.log(state.filterOptionsSearch)
       return {
         ...state,
         searching: searching,
-        data: state.data.filter((e) => e.text.includes(textValue)),
+        // data: state.data.filter((e) => e.text.includes(textValue)),
       };
     case TYPES.TAB_FILTER:
       let filterValue = action.payload.id;

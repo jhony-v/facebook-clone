@@ -18,7 +18,7 @@ export default class ErrorComponent extends Component {
   }
 
   render() {
-    if (!this.state.error) {
+    if (this.state.error) {
       return <p>Error</p>;
     }
     return this.props.children;

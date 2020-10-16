@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import ViewerListRowItems from "./TabChatViewer/ViewerListRowItems";
 import ViewerSearchInput from "./TabChatViewer/ViewerSearchInput";
-import { actionFilter, actionSearch } from "./Context/TabChatReducer";
+import { actionSearch } from "./Context/TabChatReducer";
 import { useTabChatContext } from "./Context/TabChatContext";
 import ViewerTabOptions from "./TabChatViewer/ViewerTabOptions";
 import ErrorComponent from "../Common/ErrorComponent";
@@ -19,10 +19,8 @@ export const SearchInput = () => {
  * Options to filter by id
  */
 export const RenderOptions = ({ children }) => {
-  const { state, action } = useTabChatContext();
-  const onSelectedOption = useCallback((e) => action(actionFilter(e)), [
-    action,
-  ]);
+  const { state, onOptionSelected } = useTabChatContext();
+  const onSelectedOption = useCallback((e) => onOptionSelected(e) , [onOptionSelected]);
 
   return !state.searching && (
     <ViewerTabOptions initialId={state.filterOptionsInitial} onSelectedOption={onSelectedOption}>
@@ -37,6 +35,6 @@ export const RenderOptions = ({ children }) => {
 export const RenderList = ({ children }) => {
   const { state } = useTabChatContext();
   return <ErrorComponent>
-    <ViewerListRowItems data={state.data} render={(e, i) => children(e, i)} />
+    <ViewerListRowItems data={state.data} render={(e, i) => children(e,i)} />
   </ErrorComponent>
 };

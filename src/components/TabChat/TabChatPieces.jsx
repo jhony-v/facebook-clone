@@ -4,6 +4,7 @@ import ViewerSearchInput from "./TabChatViewer/ViewerSearchInput";
 import { actionFilter, actionSearch } from "./Context/TabChatReducer";
 import { useTabChatContext } from "./Context/TabChatContext";
 import ViewerTabOptions from "./TabChatViewer/ViewerTabOptions";
+import ErrorComponent from "../Common/ErrorComponent";
 
 /**
  * Input to search in the list
@@ -35,5 +36,7 @@ export const RenderOptions = ({ children }) => {
  */
 export const RenderList = ({ children }) => {
   const { state } = useTabChatContext();
-  return <ViewerListRowItems data={state.data} render={(e, i) => children(e, i)} />
+  return <ErrorComponent>
+    <ViewerListRowItems data={state.data} render={(e, i) => children(e, i)} />
+  </ErrorComponent>
 };

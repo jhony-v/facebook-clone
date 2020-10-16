@@ -20,7 +20,7 @@ const TabChat = ({children,...restProps}) => {
           <TabChatProvider {...restProps}>
             <StyledTabChatFillWrapper>
               <SearchInput/>
-              {children}
+                {children}
             </StyledTabChatFillWrapper>
           </TabChatProvider>
         </TabChatMainExpanded>

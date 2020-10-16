@@ -10,8 +10,15 @@ import ErrorComponent from "../Common/ErrorComponent";
  * Input to search in the list
  */
 export const SearchInput = () => {
-  const { action } = useTabChatContext();
-  return <ViewerSearchInput onKeyUp={(e) => action(actionSearch(e.target.value))} />
+  const { state , action, onSearch } = useTabChatContext();
+  return <ViewerSearchInput onKeyUp={(e) => {
+    const value = e.target.value;
+    const validationOnSearch = onSearch(state.data,value);
+    action(actionSearch(
+      validationOnSearch,
+      value
+    ))
+  }} />
   
 };
 

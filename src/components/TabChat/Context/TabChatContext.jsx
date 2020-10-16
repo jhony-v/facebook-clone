@@ -7,20 +7,19 @@ export const TabChatProvider = ({
   children,
   data,
   filterOptions,
-  filterOptionsSearch,
   filterOptionsInitial,
   onOptionSelected,
+  onSearch
 }) => {
   const [state, action] = useReducer(TabChatReducer, {
     searching: false,
+    data,
     filterOptions,
     filterOptionsInitial,
-    filterOptionsSearch,
-    data,
   });
 
   return (
-    <TabChatContext.Provider value={{ state, action, onOptionSelected }}>
+    <TabChatContext.Provider value={{ state, action, onOptionSelected, onSearch }}>
       {children}
     </TabChatContext.Provider>
   );

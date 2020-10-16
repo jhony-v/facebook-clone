@@ -19,16 +19,14 @@ function App() {
     <div>
       <ThemeProvider theme={defaultTheme}>
         <TabChat
-          data={data} 
-          onOptionSelected={optionId => {
-            setUrl(e);
-          }}
           filterOptionsInitial={1} 
-          filterOptionsSearch={["title","body"]}
           filterOptions={{
             completed: 1,
             notCompleted : 2,
           }}
+          data={data} 
+          onOptionSelected={ optionId => setUrl(e) }
+          onSearch={ (data,value) => data.filter(item => item.title.includes(value)) }
         >
           <TabChat.RenderOptions>
             {(props) =>(
@@ -39,11 +37,10 @@ function App() {
             )}
           </TabChat.RenderOptions>
             <TabChat.RenderList>
-            {
-              (item,index) => <TabChat.Item key={index} image={item.thumbnailUrl} text={item.title} /> 
-            }
+            { (item,index) => <TabChat.Item key={index} image={item.thumbnailUrl} text={item.title} />  }
             </TabChat.RenderList>
         </TabChat>
+
       </ThemeProvider>
     </div>
   );

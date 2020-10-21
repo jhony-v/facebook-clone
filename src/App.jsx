@@ -9,39 +9,41 @@ function App() {
 
   const [ data , setData ] = React.useState([]);
   const [ url , setUrl ] = React.useState(e);
+  
   useEffect(() => {
     fetch(url).then(e=>e.text()).then(e => {
-      setData(JSON.parse(e));
+      setData(JSON.parse(e).map(item => ({
+        ...item,
+        image : `https://source.unsplash.com/collection/${Math.floor(Math.random()*19072)}/1600x900`
+      })));
     })
   },[url]);
 
   return (
       <ThemeProvider theme={defaultTheme}>
         <TabChat
-          filterOptionsInitial={1} 
-          filterOptions={{
-            completed: 1,
-            notCompleted : 2,
-          }}
           data={data} 
+          filterOptions={{
+            friends: 1,
+            actives : 2,
+          }}
+          filterOptionsInitial={1} 
           onOptionSelected={ optionId => setUrl(e) }
           onSearch={ (data,value) => data.filter(item => item.title.includes(value)) }
         >
-          <TabChat.RenderOptions>
+          <TabChat.Options>
             {(props) =>(
               <>
-                <TabChat.Option optionId={props.completed} text="Completed" />
-                <TabChat.Option optionId={props.notCompleted} text="Not completed" />
+                <TabChat.Option optionId={props.friends} text="Friends" />
+                <TabChat.Option optionId={props.actives} text="Active (52)" />
               </>
             )}
-          </TabChat.RenderOptions>
-            <TabChat.RenderList>
-            { (item,index) => (
-              <TabChat.Item 
-                key={index} 
-                text={item.title} />  
+          </TabChat.Options>
+            <TabChat.List>
+            { (data,item) => (
+              <TabChat.ListItem key={item.key}  style={item.style} image={data.image} text={data.title} />  
             )}
-            </TabChat.RenderList>
+            </TabChat.List>
         </TabChat>
       </ThemeProvider>
   );

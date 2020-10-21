@@ -19,6 +19,7 @@
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
     "react-scripts": "3.4.3",
+    "react-virtualized": "^9.22.2",
     "styled-components": "^5.2.0"
   },
   "eslintConfig": {
@@ -45,6 +46,8 @@
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.26",
     "babel-loader": "^8.1.0",
+    "faker": "^5.1.0",
+    "jest-styled-components": "^7.0.3",
     "react-is": "^16.13.1"
   }
 }

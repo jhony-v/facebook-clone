@@ -1,17 +1,17 @@
 import React, { useCallback } from "react";
-import ViewerListRowItems from "./ChatTabViewer/ViewerListRowItems";
-import ViewerSearchInput from "./ChatTabViewer/ViewerSearchInput";
+import ListRenderItems from "../Common/ListRenderItems";
+import SearchInput from "./ChatTabMolecules/SearchInput";
 import { actionSearch } from "./Context/ChatTabReducer";
 import { useChatTabContext } from "./Context/ChatTabContext";
-import ViewerTabOptions from "./ChatTabViewer/ViewerTabOptions";
+import TabOptions from "./ChatTabMolecules/TabOptions";
 import ErrorComponent from "../Common/ErrorComponent";
 
 /**
  * Input to search in the list
  */
-export const SearchInput = () => {
+export const RenderSearchInput = () => {
   const { state , action, onSearch } = useChatTabContext();
-  return <ViewerSearchInput onKeyUp={(e) => {
+  return <SearchInput onKeyUp={(e) => {
     const value = e.target.value;
     const validationOnSearch = onSearch(state.data,value);
     action(actionSearch(
@@ -30,9 +30,9 @@ export const RenderOptions = ({ children }) => {
   const onSelectedOption = useCallback((e) => onOptionSelected(e) , [onOptionSelected]);
 
   return !state.searching && (
-    <ViewerTabOptions initialId={state.filterOptionsInitial} onSelectedOption={onSelectedOption}>
+    <TabOptions initialId={state.filterOptionsInitial} onSelectedOption={onSelectedOption}>
       {children(state.filterOptions)}
-    </ViewerTabOptions>
+    </TabOptions>
   );
 };
 
@@ -41,7 +41,10 @@ export const RenderOptions = ({ children }) => {
  */
 export const RenderList = ({ children }) => {
   const { state } = useChatTabContext();
+
   return <ErrorComponent>
-    <ViewerListRowItems data={state.data} render={(e, i) => children(e,i)} />
+    <ListRenderItems  data={state.data} renderHeight={70} render={(item,options)=>(
+      children(item,options)
+    )} />
   </ErrorComponent>
 };

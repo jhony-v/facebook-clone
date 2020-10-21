@@ -1,7 +1,7 @@
 import React, { Fragment, useCallback, useEffect, useState } from "react";
 import {  StyledFlexSearch, StyledTabOptionSearch } from "./elements";
 
-const ViewerTabOptions = ({ initialId, children, onSelectedOption }) => {
+const TabOptions = ({ initialId, children, onSelectedOption }) => {
   const [selectedId, setSelected] = useState(initialId);
 
   // Active event onOptionSelected if the event property exists
@@ -29,10 +29,10 @@ const ViewerTabOptions = ({ initialId, children, onSelectedOption }) => {
 };
 
 // Component item selected
-ViewerTabOptions.Option = React.memo(
+TabOptions.Option = React.memo(
   ({ text,optionId, ...restProps }) => (
     <StyledTabOptionSearch {...restProps} optionId={optionId}>{text}</StyledTabOptionSearch>
   )
 );
 
-export default ViewerTabOptions;
+export default TabOptions;

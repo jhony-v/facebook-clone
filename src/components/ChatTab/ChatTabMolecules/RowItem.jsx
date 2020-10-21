@@ -9,8 +9,9 @@ type RowItemProps = {
   image? : string
 };
 
-const RowItem = React.memo(({ text, image } : RowItemProps) => {
+const RowItem = React.memo(({ style, text, image } : RowItemProps) => {
   return (
+    <Wrapper style={style}>
     <StyledRowItem>
       <Wrapper m="0 10px 0 0">
         <Avatar src={image} />
@@ -19,6 +20,7 @@ const RowItem = React.memo(({ text, image } : RowItemProps) => {
         {text}
       </TextLabel>
     </StyledRowItem>
+    </Wrapper>
   );
 });
 

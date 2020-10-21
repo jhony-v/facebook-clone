@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { ChatTabProvider } from "./Context/ChatTabContext";
-import { StyledTabChatFillWrapper } from "./ChatTabComponents/elements";
-import FloatingButton from "./ChatTabComponents/FloatingButton";
-import TabMainExpanded from "./ChatTabComponents/TabMainExpanded";
-import TabHeader from "./ChatTabComponents/TabHeader";
-import ViewerTabOptions from "./ChatTabViewer/ViewerTabOptions";
-import RowItem from "./ChatTabViewer/RowItem";
-import { RenderList, RenderOptions, SearchInput } from "./ChatTabPieces";
+import { StyledTabChatFillWrapper } from "./ChatTabAtoms/elements";
+import FloatingButton from "./ChatTabAtoms/FloatingButton";
+import TabMainExpanded from "./ChatTabAtoms/TabMainExpanded";
+import TabHeader from "./ChatTabAtoms/TabHeader";
+import TabOptions from "./ChatTabMolecules/TabOptions";
+import RowItem from "./ChatTabMolecules/RowItem";
+import * as ChatTabPieces from "./ChatTabPieces";
 import ChatTabPortal from "./ChatTabPortal";
 
 const ChatTab = ({ children, ...restProps }) => {
@@ -20,7 +20,7 @@ const ChatTab = ({ children, ...restProps }) => {
             <TabHeader onClose={onToggleOpen} titleHeader="New Message" />
             <ChatTabProvider {...restProps}>
               <StyledTabChatFillWrapper>
-                <SearchInput />
+                <ChatTabPieces.RenderSearchInput />
                 {children}
               </StyledTabChatFillWrapper>
             </ChatTabProvider>
@@ -32,9 +32,9 @@ const ChatTab = ({ children, ...restProps }) => {
   );
 };
 
-ChatTab.RenderOptions = RenderOptions;
-ChatTab.Option = ViewerTabOptions.Option;
-ChatTab.RenderList = RenderList;
-ChatTab.Item = RowItem;
+ChatTab.Options = ChatTabPieces.RenderOptions;
+ChatTab.Option = TabOptions.Option;
+ChatTab.List = ChatTabPieces.RenderList;
+ChatTab.ListItem = RowItem;
 
 export default ChatTab;

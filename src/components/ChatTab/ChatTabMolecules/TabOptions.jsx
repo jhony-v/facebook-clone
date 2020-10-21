@@ -31,7 +31,11 @@ const TabOptions = ({ initialId, children, onSelectedOption }) => {
 // Component item selected
 TabOptions.Option = React.memo(
   ({ text,optionId, ...restProps }) => (
-    <StyledTabOptionSearch {...restProps} optionId={optionId}>{text}</StyledTabOptionSearch>
+    <StyledTabOptionSearch 
+      {...restProps} 
+      optionId={optionId}
+      data-testid={optionId}
+      >{text}</StyledTabOptionSearch>
   )
 );
 

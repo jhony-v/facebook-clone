@@ -1,6 +1,7 @@
 import CircleButton from "../../Common/CircleButton";
 import styled from "styled-components";
 import FlexWrapper from "../../Common/FlexWrapper";
+import defaultTheme from "../../../theme/defaultTheme";
 
 export const StyledFloatingCircleButton = styled(CircleButton)`
   position: fixed;
@@ -13,7 +14,7 @@ export const StyledFloatingCircleButton = styled(CircleButton)`
 export const StyledTabChatMainExpanded = styled.div`
   border-radius: 10px 10px 0 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  background-color: ${({ theme }) => theme.colors.primaryLayout};
+  background-color: ${defaultTheme.colors.primaryLayout};
   position: fixed;
   bottom: 0;
   right: 0;

@@ -4,7 +4,7 @@ import { StyledFloatingCircleButton } from "./elements";
 
 const FloatingButton = ({ onClick }) => {
   return (
-    <StyledFloatingCircleButton onClick={onClick}>
+    <StyledFloatingCircleButton data-testid="floating-button" onClick={onClick}>
       <FiEdit size={20} />
     </StyledFloatingCircleButton>
   );

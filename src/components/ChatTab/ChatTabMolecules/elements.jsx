@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import FlexWrapper from "../../Common/FlexWrapper";
 import TextLabel from "../../Common/TextLabel";
+import defaultTheme from "../../../theme/defaultTheme";
 
 export const StyledRowItem = styled(FlexWrapper).attrs({
   align: "center",
@@ -32,12 +33,15 @@ export const StyledTabOptionSearch = styled(TextLabel).attrs({
 })`
   text-align: center;
   border-bottom: 3px solid transparent;
-  color: ${(props) => props.selected && props.theme.colors.primary};
+  color: ${(props) => props.selected && defaultTheme.colors.primary};
   border-bottom-color: ${(props) => props.selected && "currentColor"};
   padding: 15px 10px;
   width: 100%;
   cursor: pointer;
   transition: 0.3s;
+  &:hover {
+    background-color:${defaultTheme.colors.primaryLayoutLight};
+  }
 `;
 
 // Style container tabs

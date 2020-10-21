@@ -1,34 +1,30 @@
 import React, { useEffect } from "react";
-import { ThemeProvider } from "styled-components";
 import TabChat from "./components/ChatTab";
-import defaultTheme from "./theme/defaultTheme";
+import faker from "faker";
 
 function App() {
   
-  const e = "https://jsonplaceholder.typicode.com/todos/";
+  const [ data , setData ] = React.useState(Array(Math.floor(Math.random() * 500)).fill(0).map((e,i) => ({
+      title : faker.name.findName(),
+      image : faker.image.people(),
+      category : i % 2 === 0 ? 1 : 0
+    })));
+  const [ url , setUrl ] = React.useState(0);
 
-  const [ data , setData ] = React.useState([]);
-  const [ url , setUrl ] = React.useState(e);
-  
   useEffect(() => {
-    fetch(url).then(e=>e.text()).then(e => {
-      setData(JSON.parse(e).map(item => ({
-        ...item,
-        image : `https://source.unsplash.com/collection/${Math.floor(Math.random()*19072)}/1600x900`
-      })));
-    })
+    setData(data.filter(e =>e.category === url))
+  // eslint-disable-next-line
   },[url]);
 
   return (
-      <ThemeProvider theme={defaultTheme}>
         <TabChat
           data={data} 
           filterOptions={{
-            friends: 1,
-            actives : 2,
+            friends: 0,
+            actives : 1,
           }}
-          filterOptionsInitial={1} 
-          onOptionSelected={ optionId => setUrl(e) }
+          filterOptionsInitial={0}
+          onOptionSelected={ optionId => setUrl(optionId) }
           onSearch={ (data,value) => data.filter(item => item.title.includes(value)) }
         >
           <TabChat.Options>
@@ -45,7 +41,6 @@ function App() {
             )}
             </TabChat.List>
         </TabChat>
-      </ThemeProvider>
   );
 }
 

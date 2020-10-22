@@ -1,30 +1,30 @@
-import React, { useEffect } from "react";
+import React from "react";
 import TabChat from "./components/ChatTab";
 import faker from "faker";
 
+const dataTest =  Array(20).fill(0).map((e,i) => ({
+  title : faker.name.findName(),
+  image : faker.image.people(),
+}))
+
+const dataTest2 =  Array(20).fill(0).map((e,i) => ({
+  title : faker.name.lastName(),
+  image : faker.image.animals(),
+}))
+
 function App() {
   
-  const [ data , setData ] = React.useState(Array(Math.floor(Math.random() * 500)).fill(0).map((e,i) => ({
-      title : faker.name.findName(),
-      image : faker.image.people(),
-      category : i % 2 === 0 ? 1 : 0
-    })));
-  const [ url , setUrl ] = React.useState(0);
-
-  useEffect(() => {
-    setData(data.filter(e =>e.category === url))
-  // eslint-disable-next-line
-  },[url]);
-
   return (
         <TabChat
-          data={data} 
           filterOptions={{
             friends: 0,
             actives : 1,
           }}
-          filterOptionsInitial={0}
-          onOptionSelected={ optionId => setUrl(optionId) }
+          selectedFilterOption={0}
+          onOptionSelected={ ({ optionId, fillData }) => {
+              console.log(optionId)
+              fillData(optionId === 0 ? dataTest : dataTest2)
+          }}
           onSearch={ (data,value) => data.filter(item => item.title.includes(value)) }
         >
           <TabChat.Options>

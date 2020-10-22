@@ -4,7 +4,8 @@ import Scrollbars from "react-custom-scrollbars";
 import { AutoSizer, List } from "react-virtualized";
 
 const listStyle = {
-  overflow : false
+  overflowX : false,
+  overflowY : false,
 }
 
 const ListRenderItems = ({ data, render, renderHeight }) => {

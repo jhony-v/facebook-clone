@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+/**
+ * Static options
+ */
 const className = "chat-tab-portal";
 const chatPortal = document.createElement("div");
 const classNameSelector = `.${className}`;

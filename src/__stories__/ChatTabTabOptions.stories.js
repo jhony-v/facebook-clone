@@ -1,8 +1,8 @@
 import React from "react";
-import TabOptions from "../components/TabChat/TabChatViewer/ViewerTabOptions";
+import TabOptions from "../components/ChatTab/ChatTabMolecules/TabOptions";
 
 export default {
-  title: "TabChat/Components/TabChatTabOptions",
+  title: "ChatTab/Components/TabChatTabOptions",
   component: TabOptions,
   args: {
     optionId : "friends",

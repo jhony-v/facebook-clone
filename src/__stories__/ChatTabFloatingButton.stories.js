@@ -1,8 +1,8 @@
 import React from "react";
-import FloatingButton from "../components/TabChat/TabChatComponents/FloatingButton";
+import FloatingButton from "../components/ChatTab/ChatTabAtoms/FloatingButton";
 
 export default {
-  title : "TabChat/Components/FloatingButton",
+  title : "ChatTab/Components/FloatingButton",
   component : FloatingButton
 } 
 

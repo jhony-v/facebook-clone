@@ -6,6 +6,7 @@ import { AutoSizer, List } from "react-virtualized";
 const listStyle = {
   overflowX : false,
   overflowY : false,
+  outline: "none"
 }
 
 const ListRenderItems = ({ data, render, renderHeight }) => {

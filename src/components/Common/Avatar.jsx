@@ -7,6 +7,6 @@ export default styled.img`
   object-fit: cover;
   -webkit-user-drag: none;
   background-color:rgba(0,0,0,.1);
-  width: ${(props) => props.sizeImage || defaultSize};
-  height: ${(props) => props.sizeImage || defaultSize};
+  width: ${(props) => props.dimension || defaultSize};
+  height: ${(props) => props.dimension || defaultSize};
 `;

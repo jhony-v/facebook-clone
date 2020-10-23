@@ -6,7 +6,7 @@ Clone Floating Facebook Chat Search Tab.
 
 ## Preview component 
 
-![preview image](./preview.png)
+![preview image](./preview.gif)
 
 
 ```javascript

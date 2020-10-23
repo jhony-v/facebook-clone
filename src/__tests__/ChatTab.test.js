@@ -1,27 +1,34 @@
 import React from "react";
-import { cleanup, render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect"
 import "jest-styled-components";
 import TabHeader from "../components/ChatTab/ChatTabAtoms/TabHeader"
 import FloatingButton from "../components/ChatTab/ChatTabAtoms/FloatingButton"
 import TabOptions from "../components/ChatTab/ChatTabMolecules/TabOptions";
+import ChatTab from "../components/ChatTab";
 
-afterEach(cleanup);
 
-describe("Chat tab components", () => {
+describe("ChatTab component", () => {
+
+  test('should toggle main chat tab is visible', () => {
+    render(<ChatTab/>);
+    expect(screen.queryByTestId(/chat-tab-portal$/i)).not.toBeInTheDocument()
+    fireEvent.click(screen.getByRole("button"));
+    expect(screen.queryByTestId(/chat-tab-portal$/i)).toBeInTheDocument()
+  });
 
   test("should exists components header and allow emit event onClose", () => {
     const handlerClick = jest.fn()
-    const { getByTestId } = render(<TabHeader titleHeader="message" onClose={handlerClick} />);
-    expect(getByTestId("title-header")).toHaveTextContent("message");
-    fireEvent.click(getByTestId("button-close"))
+    render(<TabHeader titleHeader="message" onClose={handlerClick} />);
+    expect(screen.getByTestId("title-header")).toHaveTextContent("message");
+    fireEvent.click(screen.getByRole("button"))
     expect(handlerClick).toHaveBeenCalledTimes(1);
   })
 
   test("call onClick from floating button", () => {
     const handlerClick = jest.fn();
-    const {  getByTestId } = render(<FloatingButton onClick={handlerClick} />);
-    fireEvent.click(getByTestId("floating-button"))
+    render(<FloatingButton onClick={handlerClick} />);
+    fireEvent.click(screen.getByRole("button"))
     expect(handlerClick).toHaveBeenCalledTimes(1);
   })
 
@@ -30,13 +37,15 @@ describe("Chat tab components", () => {
     const handlerSelected = jest.fn( (id) => {
       idSelected = id;
     });
-    const { getByTestId } = render(<TabOptions onSelectedOption={handlerSelected}>
+    render(
+      <TabOptions onSelectedOption={handlerSelected}>
         <TabOptions.Option optionId="a" />
         <TabOptions.Option optionId="b" />
-      </TabOptions>)
-    fireEvent.click(getByTestId("a"))
+      </TabOptions>
+    )
+    fireEvent.click(screen.getByTestId("a"))
     expect(idSelected).toBe("a")
-    fireEvent.click(getByTestId("b"))
+    fireEvent.click(screen.getByTestId("b"))
     expect(idSelected).toBe("b")
   });
 });

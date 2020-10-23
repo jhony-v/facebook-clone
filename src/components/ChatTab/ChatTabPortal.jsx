@@ -8,7 +8,7 @@ const className = "chat-tab-portal";
 const chatPortal = document.createElement("div");
 const classNameSelector = `.${className}`;
 chatPortal.classList = className;
-
+chatPortal.dataset.testid = className;
 const ChatTabPortal = ({ children }) => {
   React.useEffect(() => {
       if(!document.querySelector(classNameSelector)) {

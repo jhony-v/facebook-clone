@@ -4,12 +4,7 @@ import Avatar from "../../Common/Avatar";
 import TextLabel from "../../Common/TextLabel";
 import { StyledRowItem } from "./elements";
 
-type RowItemProps = {
-  text? : string,
-  image? : string
-};
-
-const RowItem = React.memo(({ style, text, image } : RowItemProps) => {
+const RowItem = React.memo(({ style, text, image }) => {
   return (
     <Wrapper style={style}>
     <StyledRowItem>

@@ -1,6 +1,11 @@
 import React from "react";
+<<<<<<< HEAD:src/__stories__/ChatTabList.stories.js
 import { RenderList  } from "../components/ChatTab/ChatTabPieces";
 import RowItem from "../components/ChatTab/ChatTabMolecules/RowItem";
+=======
+import ListRenderItems from "../../components/Common/ListRenderItems";
+import RowItem from "../../components/ChatTab/Molecules/RowItem";
+>>>>>>> fa9e50b6836a4a3470c568caf5ad4bf25f9af15f:src/__stories__/ChatTab/TabChatList.stories.js
 
 export default {
   title: "ChatTab/Components/ListRowItem",
@@ -21,6 +26,10 @@ const data = Array(10).fill(Default.args);
 export const List = () => {
   return (
     <div style={{ height: "300px" }}>
+<<<<<<< HEAD:src/__stories__/ChatTabList.stories.js
+=======
+      <ListRenderItems data={data} render={(item, index) => <RowItem {...item} key={index} />} />
+>>>>>>> fa9e50b6836a4a3470c568caf5ad4bf25f9af15f:src/__stories__/ChatTab/TabChatList.stories.js
     </div>
   );
 };

@@ -12,8 +12,8 @@ const StyledCircleButton = styled.button`
   border-width: 0;
   outline: none;
   background-color: ${props => defaultTheme.colors.primaryButtonNeutral};
-  width: ${(props) => props.sizeAvatar || defaultSize};
-  height: ${(props) => props.sizeAvatar || defaultSize};
+  width: ${(props) => props.dimension || defaultSize};
+  height: ${(props) => props.dimension || defaultSize};
   color: ${({ colorIcon }) => defaultTheme.colors[colorIcon]};
 `;
 

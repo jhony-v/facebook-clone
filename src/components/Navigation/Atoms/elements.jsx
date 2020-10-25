@@ -26,10 +26,10 @@ export const StyledLinkButton = styled.button`
   position:relative;
   ${props => props.isSelected && css`
     color:${defaultTheme.colors.primary};
-    border-bottom:2px solid ${defaultTheme.colors.primary};
+    border-bottom:3px solid ${defaultTheme.colors.primary};
     border-radius:0;
     margin-bottom:0;
-    padding-bottom:5px;
+    padding-bottom:2px;
   `}
 
   ${props => !props.isSelected && css`

@@ -1,5 +1,6 @@
 import React from "react";
 import { HeaderNavigation, Navigation } from "../../components";
+import AccountControlSettings from "../../components/AccountControlSettings";
 
 export default {
   title: "HeaderNavigation/Default",
@@ -9,5 +10,6 @@ export default {
 export const Default = () => {
   return <HeaderNavigation>
       <Navigation/>
+      <AccountControlSettings/>
     </HeaderNavigation>;
 };

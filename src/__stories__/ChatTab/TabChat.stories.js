@@ -1,5 +1,5 @@
 import React from 'react'
-import {ChatTab} from "../../components"
+import ChatTab from "../../components/ChatTab"
 import faker from "faker";
 
 export default {

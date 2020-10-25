@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import { HeaderNavigation, Navigation } from "./components";
+import Navigation from "./components/Navigation";
+import HeaderNavigation from "./components/HeaderNavigation";
 import AccountControlSettings from "./components/AccountControlSettings";
 import FacebookAvatar from "./components/FacebookAvatar";
 import { ChatTabExample, ContactListExample } from "./__examples__";

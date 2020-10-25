@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import ContactList from "../components/ContactList";
+import {ContactList} from "../../components";
 import { FiCamera, FiSearch } from "react-icons/fi";
 
 describe("ContactList component", () => {

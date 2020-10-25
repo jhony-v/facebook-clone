@@ -1,9 +1,9 @@
 import React, { useCallback } from "react";
 import ListRenderItems from "../Common/ListRenderItems";
-import SearchInput from "./ChatTabMolecules/SearchInput";
+import SearchInput from "./Molecules/SearchInput";
 import { actionSearch, actionSelectFilter } from "./Context/ChatTabReducer";
 import { useChatTabContext } from "./Context/ChatTabContext";
-import TabOptions from "./ChatTabMolecules/TabOptions";
+import TabOptions from "./Molecules/TabOptions";
 import ErrorComponent from "../Common/ErrorComponent";
 
 /**

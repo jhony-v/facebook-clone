@@ -1,9 +1,9 @@
 import React from "react";
-import ViewerListRowItems from "../components/TabChat/TabChatViewer/ViewerListRowItems";
-import RowItem from "../components/TabChat/TabChatViewer/RowItem";
+import ListRenderItems from "../../components/Common/ListRenderItems";
+import RowItem from "../../components/ChatTab/Molecules/RowItem";
 
 export default {
-  title: "TabChat/Components/ListRowItem",
+  title: "ChatTab/Components/ListRowItem",
   component: RowItem,
 };
 
@@ -21,7 +21,7 @@ const data = Array(10).fill(Default.args);
 export const List = () => {
   return (
     <div style={{ height: "300px" }}>
-      <ViewerListRowItems data={data} render={(item, index) => <RowItem {...item} key={index} />} />
+      <ListRenderItems data={data} render={(item, index) => <RowItem {...item} key={index} />} />
     </div>
   );
 };

@@ -2,10 +2,10 @@ import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect"
 import "jest-styled-components";
-import TabHeader from "../components/ChatTab/ChatTabAtoms/TabHeader"
-import FloatingButton from "../components/ChatTab/ChatTabAtoms/FloatingButton"
-import TabOptions from "../components/ChatTab/ChatTabMolecules/TabOptions";
-import ChatTab from "../components/ChatTab";
+import TabHeader from "../components/ChatTab/Atoms/TabHeader"
+import FloatingButton from "../../components/ChatTab/ChatTabAtoms/FloatingButton"
+import TabOptions from "../../components/ChatTab/ChatTabMolecules/TabOptions";
+import {ChatTab} from "../../components";
 
 
 describe("ChatTab component", () => {

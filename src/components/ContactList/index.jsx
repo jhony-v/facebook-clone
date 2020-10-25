@@ -1,9 +1,9 @@
 import React from "react";
-import RowItem from "../ChatTab/ChatTabMolecules/RowItem";
+import RowItem from "../ChatTab/Molecules/RowItem";
 import ListRenderItems from "../Common/ListRenderItems";
-import ButtonOption from "./ContactListAtoms/ButtonOption";
-import { StyledListContainer } from "./ContactListAtoms/elements";
-import ListHeaderOptions from "./ContactListMolecules/ListHeaderOptions";
+import ButtonOption from "./Atoms/ButtonOption";
+import { StyledListContainer } from "./Atoms/elements";
+import ListHeaderOptions from "./Molecules/ListHeaderOptions";
 
 const ContactList = ({ data, title, children, options }) => {
   return (

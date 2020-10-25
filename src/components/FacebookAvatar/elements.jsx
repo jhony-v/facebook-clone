@@ -21,4 +21,5 @@ export const StyledFacebookAvatar = styled.a`
   display:flex;
   justify-content:center;
   align-items:flex-end;
+  z-index:1;
 `;

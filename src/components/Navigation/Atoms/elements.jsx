@@ -8,7 +8,7 @@ export const StyledNotificationPoint = styled.div`
   border-radius: 15px;
   position:absolute;
   font-size:${defaultTheme.fontSizes.smallUltra};
-  top:5%;
+  top:9%;
   left:70%;
   transform:translateX(-50%);
 `;

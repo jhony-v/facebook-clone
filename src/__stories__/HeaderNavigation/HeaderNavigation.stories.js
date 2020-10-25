@@ -1,6 +1,7 @@
 import React from "react";
 import { HeaderNavigation, Navigation } from "../../components";
 import AccountControlSettings from "../../components/AccountControlSettings";
+import FacebookAvatar from "../../components/FacebookAvatar";
 
 export default {
   title: "HeaderNavigation/Default",
@@ -8,8 +9,11 @@ export default {
 };
 
 export const Default = () => {
-  return <HeaderNavigation>
-      <Navigation/>
-      <AccountControlSettings/>
-    </HeaderNavigation>;
+  return (
+    <HeaderNavigation>
+      <FacebookAvatar isFixed/>
+      <Navigation />
+      <AccountControlSettings />
+    </HeaderNavigation>
+  );
 };

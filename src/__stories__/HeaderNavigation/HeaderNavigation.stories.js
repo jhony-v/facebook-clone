@@ -1,5 +1,8 @@
 import React from "react";
-import { HeaderNavigation, Navigation } from "../../components";
+import HeaderNavigation from "../../components/HeaderNavigation";
+import AccountControlSettings from "../../components/AccountControlSettings";
+import FacebookAvatar from "../../components/FacebookAvatar";
+import Navigation from "../../components/Navigation";
 
 export default {
   title: "HeaderNavigation/Default",
@@ -7,7 +10,11 @@ export default {
 };
 
 export const Default = () => {
-  return <HeaderNavigation>
-      <Navigation/>
-    </HeaderNavigation>;
+  return (
+    <HeaderNavigation>
+      <FacebookAvatar isFixed/>
+      <Navigation />
+      <AccountControlSettings />
+    </HeaderNavigation>
+  );
 };

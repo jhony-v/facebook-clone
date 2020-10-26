@@ -1,15 +1,8 @@
 import React from "react";
-<<<<<<< HEAD:src/__stories__/ChatTabTabOptions.stories.js
-import TabOptions from "../components/ChatTab/ChatTabMolecules/TabOptions";
-
-export default {
-  title: "ChatTab/Components/TabChatTabOptions",
-=======
 import TabOptions from "../../components/ChatTab/Molecules/TabOptions";
 
 export default {
   title: "ChatTab/Components/TabOptions",
->>>>>>> dev:src/__stories__/ChatTab/TabChatTabOptions.stories.js
   component: TabOptions,
   args: {
     optionId : "friends",

@@ -5,9 +5,9 @@ import ButtonOption from "./Atoms/ButtonOption";
 import { StyledListContainer } from "./Atoms/elements";
 import ListHeaderOptions from "./Molecules/ListHeaderOptions";
 
-const ContactList = ({ data, title, children, options }) => {
+const ContactList = ({ data, title, children, options, w,h }) => {
   return (
-    <StyledListContainer>
+    <StyledListContainer w={w} h={h}>
       <ListHeaderOptions title={title}>{options}</ListHeaderOptions>
       <ListRenderItems data={data} renderHeight={60} render={(item, options) => children(item, options)} />
     </StyledListContainer>

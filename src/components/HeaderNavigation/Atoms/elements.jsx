@@ -2,14 +2,8 @@ import styled from "styled-components";
 import defaultTheme from "../../../theme/defaultTheme";
 import FlexWrapper from "../../Common/FlexWrapper";
 
-export const NotificationPoint = styled.div`
-  background-color: ${defaultTheme.colors.danger};
-  padding: 5px;
-  border-radius: 10px;
-`;
-
 export const HeaderWrapper = styled(FlexWrapper).attrs({
-  
+    justify : "center"
 })`
   background-color: ${defaultTheme.colors.primaryLayout};
   height:${defaultTheme.height.header};
@@ -18,4 +12,5 @@ export const HeaderWrapper = styled(FlexWrapper).attrs({
   width:100%;
   top:0;
   left:0;
+  z-index:1;
 `;

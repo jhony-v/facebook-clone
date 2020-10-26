@@ -5,9 +5,7 @@ import FlexWrapper from "../../Common/FlexWrapper";
 export const StyledListContainer = styled(FlexWrapper).attrs({
     fDirection : "column"
 })`
-    width: 320px;
-    height:100%;
-    right:0;
-    position:fixed;
+    width: ${props => props.w || "320px"};
+    height:${props => props.h || "100%"};
     background-color:${defaultTheme.colors.primaryLayoutLight};
 `

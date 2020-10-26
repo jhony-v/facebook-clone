@@ -13,7 +13,9 @@ const TextLabel = styled.span`
   font-weight: ${(props) => props.weight && "bold"};
   color: ${defaultTheme.colors.primaryText};
   display: ${(props) => props.block && "block"};
+  text-align:${props => props.textAlign};
   ${defineVariantTextLabel("primary", "primary")};
+  ${defineVariantTextLabel("light", "primaryLayout")};
   ${defineVariantTextLabel("smooth", "primaryTextLight")};
 `;
 

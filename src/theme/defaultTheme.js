@@ -13,6 +13,7 @@ const defaultTheme = {
     big: "1.3rem",
     normal: "1rem",
     small: ".9rem",
+    smallUltra: ".7rem",
   },
   height: {
     header: "60px",

@@ -5,7 +5,7 @@ import { StyledRaisedButtonPlaceholderInput } from "./elements";
 const ActionInputController = ({ placeholder, onClick }) => {
   return (
     <StyledRaisedButtonPlaceholderInput onClick={onClick}>
-      <TextLabel weight>{placeholder}</TextLabel>
+      <TextLabel weight variant="smooth">{placeholder}</TextLabel>
     </StyledRaisedButtonPlaceholderInput>
   );
 };

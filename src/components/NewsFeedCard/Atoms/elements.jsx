@@ -8,6 +8,7 @@ export const StyledNewsFeedWrapper = styled(FlexWrapper)`
   overflow: hidden;
   flex-direction: column;
   background-color: ${defaultTheme.colors.primaryLayout};
+  margin:2em auto;
 `;
 
 

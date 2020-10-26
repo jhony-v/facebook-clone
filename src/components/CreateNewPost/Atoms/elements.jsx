@@ -7,11 +7,12 @@ export const StyledCreatePostWrapper = styled(FlexWrapper)`
   border-radius: 10px;
   padding: 20px;
   flex-direction: column;
+  background-color:${defaultTheme.colors.primaryLayout};
 `;
 
 
 export const StyledActionInputWrapper = styled(FlexWrapper)`
   border-bottom: 1px solid ${defaultTheme.colors.primaryLayoutLight};
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
 `;

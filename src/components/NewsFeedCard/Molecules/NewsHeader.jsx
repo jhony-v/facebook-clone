@@ -7,7 +7,7 @@ import DetailUser from "../Atoms/DetailUser";
 
 const NewsHeader = ({ user, detail }) => {
   return (
-    <Wrapper p="5px 10px">
+    <Wrapper p="20px 10px 0">
       <FlexWrapper align="center">
         <Wrapper flexNone m="0 5px 0 0">
           <Avatar src={user.avatar} />

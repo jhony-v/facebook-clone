@@ -12,7 +12,7 @@ const DetailUser = ({ title, detail, icon: IconComponent }) => {
       <Wrapper p="5px 0">
         <FlexWrapper align="center">
             <Wrapper m="0 5px 0 0">
-              <TextLabel textSize=".8rem">{detail}</TextLabel>
+              <TextLabel textSize=".8rem" variant="smooth">{detail}</TextLabel>
             </Wrapper>
           <IconComponent size={12} color="gray" />
         </FlexWrapper>

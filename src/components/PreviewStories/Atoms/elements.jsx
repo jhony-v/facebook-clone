@@ -1,15 +1,13 @@
 import styled from "styled-components";
 import defaultTheme from "../../../theme/defaultTheme";
-import Avatar from "../../Common/Avatar";
 import RoundButton from "../../Common/RoundButton";
 
-export const StyledPreviewHistoriesWrapper = styled.div`
+export const StyledPreviewStoriesWrapper = styled.div`
     display:flex;
     > * {
         margin-right:10px;
     }
 `
-
 
 export const StyledCardOverflow = styled.div`
     overflow:hidden;

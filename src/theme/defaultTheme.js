@@ -5,6 +5,7 @@ const defaultTheme = {
     primaryLayoutDark: "#e0e0e0",
     primaryLayoutLight: "#fafafa",
     primaryText: "#424242",
+    primaryTextDark: "rgb(30,30,30)",
     primaryTextLight: "#9e9e9e",
     primaryButtonNeutral: "rgba(0, 0, 0, 0.02)",
     danger: "rgb(235,20,20)",
@@ -20,7 +21,7 @@ const defaultTheme = {
   },
   width: {
     feedUnit: "550px",
-    storiesUnit: "590px",
+    storiesUnit: "650px",
   },
 };
 

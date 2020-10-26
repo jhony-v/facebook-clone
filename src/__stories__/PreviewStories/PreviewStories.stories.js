@@ -1,11 +1,11 @@
 import React from "react";
-import PreviewHistories from "../../components/PreviewHistories";
+import PreviewStories from "../../components/PreviewStories";
 import faker from "faker";
-import HistoryUserItem from "../../components/PreviewHistories/Atoms/HistoryUserItem";
+import HistoryUserItem from "../../components/PreviewStories/Atoms/HistoryUserItem";
 
 export default {
-  title: "Components/PreviewHistories",
-  components: PreviewHistories,
+  title: "Components/PreviewStories",
+  components: PreviewStories,
 };
 
 const data = Array(4)
@@ -25,7 +25,7 @@ const data = Array(4)
 
 export const Default = () => {
   return (
-    <PreviewHistories
+    <PreviewStories
       data={data}
       userAddController={
         <HistoryUserItem
@@ -34,7 +34,7 @@ export const Default = () => {
         />
       }
     >
-      {(current, index) => <PreviewHistories.Item key={index} {...current} />}
-    </PreviewHistories>
+      {(current, index) => <PreviewStories.Item key={index} {...current} />}
+    </PreviewStories>
   );
 };

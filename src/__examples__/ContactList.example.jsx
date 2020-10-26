@@ -15,7 +15,6 @@ const ContactListExample = () => {
     <div>
       <ContactList
         title="Contacts"
-        h="100vh"
         data={dataTest}
         options={<>
             <ContactList.Option icon={FiCamera} onClick={()=>alert()} />

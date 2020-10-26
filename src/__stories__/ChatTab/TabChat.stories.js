@@ -1,6 +1,11 @@
-import React from "react";
-import TabChat from "../components/ChatTab";
+import React from 'react'
+import {ChatTab} from "../../components"
 import faker from "faker";
+
+export default {
+    title : "ChatTab",
+}
+
 const dataTest = Array(20)
   .fill(0)
   .map((e, i) => ({
@@ -15,9 +20,10 @@ const dataTest2 = Array(20)
     image: faker.random.image(),
   }));
 
-const ChatTabExample = () => {
+
+export const Default = () => {
   return (
-    <TabChat
+    <ChatTab
       filterOptions={{
         friends: 0,
         actives: 1,
@@ -28,26 +34,24 @@ const ChatTabExample = () => {
           fillData(optionId === 0 ? dataTest : dataTest2);
       }}
     >
-      <TabChat.Options>
+      <ChatTab.Options>
         {(props) => (
           <>
-            <TabChat.Option optionId={props.friends} text="Friends" />
-            <TabChat.Option optionId={props.actives} text="Active (52)" />
+            <ChatTab.Option optionId={props.friends} text="Friends" />
+            <ChatTab.Option optionId={props.actives} text="Active (52)" />
           </>
         )}
-      </TabChat.Options>
-      <TabChat.List>
+      </ChatTab.Options>
+      <ChatTab.List>
         {(data, options) => (
-          <TabChat.ListItem
+          <ChatTab.ListItem
             key={options.key}
             style={options.style}
             image={data.image}
             text={data.title}
           />
         )}
-      </TabChat.List>
-    </TabChat>
-  );
-};
+      </ChatTab.List>
+    </ChatTab>
+  );}
 
-export default ChatTabExample;

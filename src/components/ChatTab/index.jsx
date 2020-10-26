@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { ChatTabProvider } from "./Context/ChatTabContext";
-import { StyledTabChatFillWrapper } from "./ChatTabAtoms/elements";
-import FloatingButton from "./ChatTabAtoms/FloatingButton";
-import TabMainExpanded from "./ChatTabAtoms/TabMainExpanded";
-import TabHeader from "./ChatTabAtoms/TabHeader";
-import TabOptions from "./ChatTabMolecules/TabOptions";
-import RowItem from "./ChatTabMolecules/RowItem";
+import { StyledTabChatFillWrapper } from "./Atoms/elements";
+import FloatingButton from "./Atoms/FloatingButton";
+import TabMainExpanded from "./Atoms/TabMainExpanded";
+import TabHeader from "./Atoms/TabHeader";
+import TabOptions from "./Molecules/TabOptions";
+import RowItem from "./Molecules/RowItem";
+import PortalComponent from "../Common/PortalComponent";
 import * as ChatTabPieces from "./ChatTabPieces";
-import ChatTabPortal from "./ChatTabPortal";
 
 const ChatTab = ({ children, ...restProps }) => {
   const [open, setOpen] = useState(false);
@@ -15,7 +15,7 @@ const ChatTab = ({ children, ...restProps }) => {
   return (
     <>
       {open && (
-        <ChatTabPortal>
+        <PortalComponent className="chat-tab-portal">
           <TabMainExpanded>
             <TabHeader onClose={onToggleOpen} titleHeader="New Message" />
             <ChatTabProvider {...restProps}>
@@ -25,7 +25,7 @@ const ChatTab = ({ children, ...restProps }) => {
               </StyledTabChatFillWrapper>
             </ChatTabProvider>
           </TabMainExpanded>
-        </ChatTabPortal>
+        </PortalComponent>
       )}
       <FloatingButton onClick={onToggleOpen} />
     </>

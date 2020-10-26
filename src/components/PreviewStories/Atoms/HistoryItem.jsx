@@ -12,7 +12,7 @@ const HistoryItem = ({ user, image }) => {
           <Avatar dimension="30px" isFeature src={user.avatar} />
         </Wrapper>
         <Wrapper m="auto 10px 10px" w="90%">
-          <TextLabel variant="light" textSize=".9rem">
+          <TextLabel weight variant="light" textSize=".9rem">
             {user.username}
           </TextLabel>
         </Wrapper>

@@ -5,7 +5,7 @@ const LinkButton = ({ isSelected, notifications, icon: IconComponent }) => {
   return (
     <StyledItemNavigation>
       <StyledLinkButton isSelected={isSelected}>
-        {<IconComponent size={20} />}
+        {<IconComponent size={22} />}
         {(notifications > 0) && (
             <StyledNotificationPoint>{notifications}</StyledNotificationPoint>
         )}

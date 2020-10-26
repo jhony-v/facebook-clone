@@ -8,6 +8,7 @@ import LayoutsDrawer from "../components/LayoutsDrawer";
 import Wrapper from "../components/Common/Wrapper";
 import CreateNewPostExample from "../__examples__/CreateNewPost.example";
 import NewsFeedExample from "../__examples__/NewsFeed.example";
+import OptionsNavigationList from "../components/OptionsNavigationList";
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
           <ContactListExample/>
       </LayoutsDrawer.RightRail>
       <LayoutsDrawer.LeftRail>
-        
+        <OptionsNavigationList/>
       </LayoutsDrawer.LeftRail>
       <ChatTabExample/>
     </>

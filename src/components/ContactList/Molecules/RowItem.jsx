@@ -7,7 +7,7 @@ const RowItem = React.memo(({ style, text, image }) => {
   return (
     <Wrapper style={style}>
       <Wrapper m="10px">
-        <RowItemSelectable  image={<Avatar src={image}  />} text={text} />
+        <RowItemSelectable  image={<Avatar src={image} dimension="25px" isOnline />} text={text} />
       </Wrapper>
     </Wrapper>
   );

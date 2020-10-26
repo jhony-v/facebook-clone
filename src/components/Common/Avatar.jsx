@@ -22,11 +22,12 @@ const StyledAvatarWrapper = styled.div`
     position:relative;
     &::after {
       content: "";
-      width: 7px;
-      height: 7px;
-      right:4px;
-      bottom:2px;
-      background-color: #00e676;
+      width: 6px;
+      height: 6px;
+      right:0;
+      bottom:1px;
+      border:2px solid white;
+      background-color: #26963c;
       position:absolute;
       border-radius:100%;
     }

@@ -22,6 +22,8 @@ const defaultTheme = {
   width: {
     feedUnit: "550px",
     storiesUnit: "650px",
+    rightContactsRailsUnit : "300px",
+    leftNavigationUnitRailsUnit : "300px"
   },
 };
 

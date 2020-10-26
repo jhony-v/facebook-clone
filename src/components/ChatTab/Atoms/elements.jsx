@@ -10,6 +10,7 @@ export const StyledFloatingCircleButton = styled(CircleButton)`
   margin: 20px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   z-index:10;
+  background-color:${defaultTheme.colors.primaryLayout};
 `;
 
 export const StyledTabChatMainExpanded = styled.div`

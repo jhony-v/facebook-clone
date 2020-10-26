@@ -1,5 +1,5 @@
 import React from "react";
-import RowItem from "../ChatTab/Molecules/RowItem";
+import RowItem from "./Molecules/RowItem";
 import ListRenderItems from "../Common/ListRenderItems";
 import ButtonOption from "./Atoms/ButtonOption";
 import { StyledListContainer } from "./Atoms/elements";

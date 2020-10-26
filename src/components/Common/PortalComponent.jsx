@@ -15,6 +15,7 @@ const PortalComponent = ({ children, className }) => {
     return () => {
       document.querySelector(classNameSelector).remove();
     };
+  // eslint-disable-next-line
   }, []);
 
   return ReactDOM.createPortal(children, element);

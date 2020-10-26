@@ -20,7 +20,7 @@ const HistoryUserItem = ({ username, avatar }) => {
       </FlexWrapper>
       <Wrapper m="auto 0" w="100%">
         <FlexWrapper justify="center">
-          <TextLabel textSize=".8rem" textAlign="center">
+          <TextLabel weight textSize=".8rem" textAlign="center">
             {username}
           </TextLabel>
         </FlexWrapper>

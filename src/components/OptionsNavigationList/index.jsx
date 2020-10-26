@@ -1,18 +1,21 @@
 import React from "react";
-import Avatar from "../Common/Avatar";
-import RowItemSelectable from "../Common/RowItemSelectable";
+import { StyledNavigationListWrapper } from "./Atoms/elements";
+import RowItem from "./Atoms/RowItem";
 import items from "./items";
+import faker from "faker"
 
 const OptionsNavigationList = () => {
   return (
-    <div>
+    <StyledNavigationListWrapper>
+      <RowItem  text={faker.name.firstName() + " " + faker.name.lastName()} image={faker.image.avatar()} />
       {items.map((e, i) => (
-        <RowItemSelectable key={i}
-          image={<Avatar src={require("../../assets/icons/"+e.image)} />}
+        <RowItem
+          key={i}
           text={e.title}
+          image={require("../../assets/icons/" + e.image)}
         />
       ))}
-    </div>
+    </StyledNavigationListWrapper>
   );
 };
 

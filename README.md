@@ -1,5 +1,5 @@
 
-# Chat Search Tab Reusable Component - Clone Facebook
+# Facebook Component - Clone Facebook :blue_heart:
 
 Clone Facebook Components. :busts_in_silhouette:
 

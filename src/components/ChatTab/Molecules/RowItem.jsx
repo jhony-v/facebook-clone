@@ -1,20 +1,14 @@
 import React from "react";
 import Wrapper from "../../Common/Wrapper";
 import Avatar from "../../Common/Avatar";
-import TextLabel from "../../Common/TextLabel";
-import { StyledRowItem } from "./elements";
+import RowItemSelectable from "../../Common/RowItemSelectable";
 
 const RowItem = React.memo(({ style, text, image }) => {
   return (
     <Wrapper style={style}>
-    <StyledRowItem>
-      <Wrapper m="0 10px 0 0">
-        <Avatar src={image} />
+      <Wrapper m="10px">
+        <RowItemSelectable  image={<Avatar src={image} />} text={text} />
       </Wrapper>
-      <TextLabel weight textSize=".9rem">
-        {text}
-      </TextLabel>
-    </StyledRowItem>
     </Wrapper>
   );
 });

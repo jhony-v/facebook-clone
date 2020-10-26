@@ -17,6 +17,14 @@ const LayoutsDrawer = {
     width: ${defaultTheme.width.feedUnit};
     margin:2em auto 0;
   `,
+  LeftRail : styled.div`
+    position:fixed;
+    left:0;
+    bottom:0;
+    display:flex;
+    align-items:stretch;
+    height:calc(100vh - ${defaultTheme.height.header});
+  `,
   RightRail : styled.div`
     position:fixed;
     right:0;

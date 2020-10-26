@@ -9,7 +9,6 @@ const StyledAvatar = styled.img`
   object-fit: cover;
   display:block;
   -webkit-user-drag: none;
-  background-color: rgba(0, 0, 0, 0.1);
   width: ${(props) => props.dimension || defaultSize};
   height: ${(props) => props.dimension || defaultSize};
   ${(props) => props.isFeature && css`
@@ -35,13 +34,11 @@ const StyledAvatarWrapper = styled.div`
 `
 
 const Avatar = ({ isOnline, isFeature, ...restProps }) => {
-  if (isOnline) {
-    return (
+  if (isOnline) return (
       <StyledAvatarWrapper isOnline>
-        <StyledAvatar {...restProps} isFeature={isFeature} />;
+        <StyledAvatar {...restProps} isFeature={isFeature} />
       </StyledAvatarWrapper>
-    )
-  }
+  )
   return <StyledAvatar {...restProps} isFeature={isFeature} />;
 };
 

@@ -18,6 +18,10 @@ const defaultTheme = {
   height: {
     header: "60px",
   },
+  width: {
+    feedUnit: "550px",
+    storiesUnit: "590px",
+  },
 };
 
 export default defaultTheme;

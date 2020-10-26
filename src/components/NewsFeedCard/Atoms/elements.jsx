@@ -10,3 +10,9 @@ export const StyledNewsFeedWrapper = styled(FlexWrapper)`
   background-color: ${defaultTheme.colors.primaryLayout};
 `;
 
+
+export const StyledNewsMainImage = styled.img`
+  display: block;
+  height:280px;
+  width:100%;
+`

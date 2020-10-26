@@ -1,15 +1,13 @@
 import React from "react";
+import ActionButtonsController from "../../ActionButtonsController";
 import Avatar from "../../Common/Avatar";
-import TextLabel from "../../Common/TextLabel";
-import { StyledActionInputWrapper, StyledButtonPlaceholderInput } from "./elements";
+import { StyledActionInputWrapper } from "./elements";
 
-const ActionInputController = ({ userImage, inputPlaceholder }) => {
+const ActionInputController = ({ userImage, inputPlaceholder, onClick }) => {
   return (
-    <StyledActionInputWrapper>
+    <StyledActionInputWrapper onClick={onClick}>
       <Avatar src={userImage} />
-      <StyledButtonPlaceholderInput>
-        <TextLabel weight>{inputPlaceholder}</TextLabel>
-      </StyledButtonPlaceholderInput>
+      <ActionButtonsController.Input placeholder={inputPlaceholder} />
     </StyledActionInputWrapper>
   );
 };

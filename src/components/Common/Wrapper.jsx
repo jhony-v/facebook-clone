@@ -5,6 +5,7 @@ const Wrapper = styled.div`
   margin: ${(props) => props.m};
   width: ${(props) => props.w};
   height: ${(props) => props.h};
+  flex:${props => props.flexNone && "none"};
 `;
 
 export default Wrapper;

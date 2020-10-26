@@ -1,11 +1,10 @@
 import React from "react";
-import FlexWrapper from "../../Common/FlexWrapper";
 import TextLabel from "../../Common/TextLabel";
 import { StyledRaisedButton } from "./elements";
 
-const ActionButtonController = ({ text, icon: IconComponent, colorIcon }) => {
+const ActionButtonController = ({ text, icon: IconComponent, colorIcon, onClick }) => {
   return (
-    <StyledRaisedButton>
+    <StyledRaisedButton onClick={onClick}>
       <IconComponent size={20} style={{ marginRight: "5px" }} color={colorIcon} />
       <TextLabel textSize=".9rem" weight>{text}</TextLabel>
     </StyledRaisedButton>

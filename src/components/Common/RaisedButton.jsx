@@ -6,7 +6,7 @@ const StyledRaisedWrapper = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 25px;
+  padding: 12px 10px;
   border-radius: 10px;
   outline:none;
   border-width:0;

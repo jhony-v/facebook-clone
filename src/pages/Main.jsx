@@ -32,6 +32,9 @@ function App() {
       <LayoutsDrawer.RightRail>
           <ContactListExample/>
       </LayoutsDrawer.RightRail>
+      <LayoutsDrawer.LeftRail>
+        
+      </LayoutsDrawer.LeftRail>
       <ChatTabExample/>
     </>
   );

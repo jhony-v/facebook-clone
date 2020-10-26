@@ -1,4 +1,4 @@
-import CircleButton from "../../Common/CircleButton";
+import CircleButton from "../../Common/RoundButton";
 import styled from "styled-components";
 import FlexWrapper from "../../Common/FlexWrapper";
 import defaultTheme from "../../../theme/defaultTheme";

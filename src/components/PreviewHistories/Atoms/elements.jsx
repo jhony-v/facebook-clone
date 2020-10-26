@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import defaultTheme from "../../../theme/defaultTheme";
 import Avatar from "../../Common/Avatar";
-import CircleButton from "../../Common/CircleButton";
+import RoundButton from "../../Common/RoundButton";
 
 export const StyledPreviewHistoriesWrapper = styled.div`
     display:flex;
@@ -13,8 +13,8 @@ export const StyledPreviewHistoriesWrapper = styled.div`
 
 export const StyledCardOverflow = styled.div`
     overflow:hidden;
-    height:220px;
-    width:140px;
+    height:200px;
+    width:120px;
     border-radius:10px;
     display:flex;
     align-items:stretch;
@@ -32,15 +32,9 @@ export const StyledCardBackgroundImage = styled.div`
     flex-direction:column;
     `
 
-export const StyledAvatarBordered = styled(Avatar).attrs({
-    dimension : "30px"
-})`
-    border:4px solid ${defaultTheme.colors.primary};
-`
-
-export const StyledUserButtonAdd = styled(CircleButton).attrs({
+export const StyledUserButtonAdd = styled(RoundButton).attrs({
     colorIcon : "primaryLayout",
-    dimension : "36px"
+    dimension : "36px",
 })`
     background-color:${defaultTheme.colors.primary};
     position:absolute;

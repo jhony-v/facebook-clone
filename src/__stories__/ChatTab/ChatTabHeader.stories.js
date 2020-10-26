@@ -1,8 +1,8 @@
 import React from "react";
-import TabHeader from "../components/ChatTab/ChatTabAtoms/TabHeader";
+import TabHeader from "../../components/ChatTab/Atoms/TabHeader";
 
 export default {
-  title: "ChatTab/Components/TabChatHeader",
+  title: "Components/ChatTab/TabChatHeader",
   component: TabHeader,
 };
 

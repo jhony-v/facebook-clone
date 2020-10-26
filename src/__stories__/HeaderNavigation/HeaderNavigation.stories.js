@@ -5,7 +5,7 @@ import FacebookAvatar from "../../components/FacebookAvatar";
 import Navigation from "../../components/Navigation";
 
 export default {
-  title: "HeaderNavigation/Default",
+  title: "Components/HeaderNavigation",
   component: HeaderNavigation,
 };
 

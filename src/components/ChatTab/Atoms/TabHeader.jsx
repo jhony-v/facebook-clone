@@ -1,5 +1,5 @@
 import React from "react";
-import CircleButton from "../../Common/CircleButton";
+import CircleButton from "../../Common/RoundButton";
 import FlexWrapper from "../../Common/FlexWrapper";
 import TextLabel from "../../Common/TextLabel";
 import Wrapper from "../../Common/Wrapper";

@@ -3,7 +3,8 @@ import ChatTab from "../../components/ChatTab"
 import faker from "faker";
 
 export default {
-    title : "ChatTab",
+    title : "Components/ChatTab",
+    component: ChatTab
 }
 
 const dataTest = Array(20)

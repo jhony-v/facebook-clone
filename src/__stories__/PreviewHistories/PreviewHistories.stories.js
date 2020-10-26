@@ -4,7 +4,7 @@ import faker from "faker";
 import HistoryUserItem from "../../components/PreviewHistories/Atoms/HistoryUserItem";
 
 export default {
-  title: "PreviewHistories/Default",
+  title: "Components/PreviewHistories",
   components: PreviewHistories,
 };
 

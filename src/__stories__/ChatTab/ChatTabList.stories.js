@@ -3,7 +3,7 @@ import ListRenderItems from "../../components/Common/ListRenderItems";
 import RowItem from "../../components/ChatTab/Molecules/RowItem";
 
 export default {
-  title: "ChatTab/Components/ListRowItem",
+  title: "Components/ChatTab/ListRowItem",
   component: RowItem,
 };
 

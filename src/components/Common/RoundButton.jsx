@@ -4,7 +4,7 @@ import defaultTheme from "../../theme/defaultTheme";
 
 const defaultSize = "50px";
 
-const StyledCircleButton = styled.button`
+const StyledRoundButton = styled.button`
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -17,8 +17,8 @@ const StyledCircleButton = styled.button`
   color: ${({ colorIcon }) => defaultTheme.colors[colorIcon]};
 `;
 
-const CircleButton = ({ children, ...restProps }) => {
-  return <StyledCircleButton {...restProps}>{children}</StyledCircleButton>;
+const RoundButton = ({ children, ...restProps }) => {
+  return <StyledRoundButton {...restProps}>{children}</StyledRoundButton>;
 };
 
-export default CircleButton;
+export default RoundButton;

@@ -4,10 +4,10 @@ import { StyledTabChatFillWrapper } from "./Atoms/elements";
 import FloatingButton from "./Atoms/FloatingButton";
 import TabMainExpanded from "./Atoms/TabMainExpanded";
 import TabHeader from "./Atoms/TabHeader";
-import TabOptions from "./Molecules/TabOptions";
 import RowItem from "./Molecules/RowItem";
 import PortalComponent from "../Common/PortalComponent";
 import * as ChatTabPieces from "./ChatTabPieces";
+import TabOptions from "../TabOptions";
 
 const ChatTab = ({ children, ...restProps }) => {
   const [open, setOpen] = useState(false);

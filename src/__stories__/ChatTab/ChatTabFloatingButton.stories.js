@@ -2,7 +2,7 @@ import React from "react";
 import FloatingButton from "../../components/ChatTab/Atoms/FloatingButton"
 
 export default {
-  title : "ChatTab/Components/FloatingButton",
+  title : "Components/ChatTab/FloatingButton",
   component : FloatingButton
 } 
 

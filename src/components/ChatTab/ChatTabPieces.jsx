@@ -3,8 +3,8 @@ import ListRenderItems from "../Common/ListRenderItems";
 import SearchInput from "./Molecules/SearchInput";
 import { actionSearch, actionSelectFilter } from "./Context/ChatTabReducer";
 import { useChatTabContext } from "./Context/ChatTabContext";
-import TabOptions from "./Molecules/TabOptions";
 import ErrorComponent from "../Common/ErrorComponent";
+import TabOptions from "../TabOptions";
 
 /**
  * Input to search in the list

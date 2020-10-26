@@ -1,11 +1,11 @@
 import React from 'react'
-import CircleButton from '../../Common/CircleButton'
+import RoundButton from '../../Common/RoundButton'
 import Wrapper from '../../Common/Wrapper'
 
 const ControlButtonOption = ({icon:IconComponent,...restProps}) => {
     return (
         <Wrapper m="0 5px">
-            <CircleButton {...restProps} dimension="40px"><IconComponent size={20} /></CircleButton>
+            <RoundButton {...restProps} dimension="40px"><IconComponent size={20} /></RoundButton>
         </Wrapper>
     )
 }

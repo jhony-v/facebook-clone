@@ -2,7 +2,7 @@ import React from 'react'
 import SearchInput from "../../components/ChatTab/Molecules/SearchInput";
 
 export default {
-    title : "ChatTab/Components/SearchInput",
+    title : "Components/ChatTab/SearchInput",
     component : SearchInput
 }
 

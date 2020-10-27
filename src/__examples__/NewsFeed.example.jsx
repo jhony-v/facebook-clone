@@ -2,6 +2,7 @@ import React from "react";
 import faker from "faker";
 import NewsFeedCard from "../components/NewsFeedCard";
 import { FaGlobeAsia } from "react-icons/fa";
+import Reactions from "src/components/Reactions";
 
 const data = Array(10)
   .fill(0)
@@ -26,6 +27,7 @@ const NewsFeedExample = () => {
       {data.map((e, i) => (
         <NewsFeedCard key={i}>
           <NewsFeedCard.Header user={e.user} detail={e.detail} />
+          <Reactions.Like />
           <NewsFeedCard.Body {...e.publication} />
         </NewsFeedCard>
       ))}

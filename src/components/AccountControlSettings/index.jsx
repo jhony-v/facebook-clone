@@ -2,8 +2,8 @@ import React from 'react'
 import { FiBell, FiMessageSquare, FiPlus } from 'react-icons/fi'
 import { AiFillCaretDown } from 'react-icons/ai';
 import { StyledControlWrapper } from "./Atoms/elements"
-import ControlButtonOption from './Atoms/ControlButtonOption';
 import UserAccountButtonOption from './Atoms/UserAccountButtonOption';
+import ControlButtonOption from './Atoms/ControlButtonOption';
 
 const AccountControlSettings = () => {
     return (

@@ -20,7 +20,7 @@ const defaultTheme = {
     header: "60px",
   },
   width: {
-    feedUnit: "550px",
+    feedUnit: "500px",
     storiesUnit: "650px",
     rightContactsRailsUnit : "300px",
     leftNavigationUnitRailsUnit : "300px"

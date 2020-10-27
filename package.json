@@ -4,17 +4,22 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && yarn run postbuild",
+    "postbuild": "rimraf build/**/*.map",
     "test": "react-scripts test",
     "test:watch": "react-scripts test --watch",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
+  "_moduleAliases" : {
+    "src/*" : "."
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^7.1.2",
+    "module-alias": "^2.2.2",
     "react": "^16.13.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.13.1",
@@ -50,6 +55,7 @@
     "babel-loader": "^8.1.0",
     "faker": "^5.1.0",
     "jest-styled-components": "^7.0.3",
-    "react-is": "^16.13.1"
+    "react-is": "^16.13.1",
+    "rimraf": "^3.0.2"
   }
 }

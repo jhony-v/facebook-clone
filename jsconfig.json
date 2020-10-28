@@ -1,9 +1,0 @@
-{ 
-    "typeAcquisition": {
-        "include": ["jest"]
-    },
-    "compilerOptions": {
-        "baseUrl": ".",
-        "jsx": "react"
-    }
-}

@@ -20,21 +20,19 @@ const Container = styled(FlexWrapper)`
 
 
 export type StringReactionsProps = {
-  reactions : {
-    [key : string] : Function
-  }
+  reactions : [keyof typeof Reactions]
 }
+
+
 const StringReactions = ({ reactions } : StringReactionsProps) => {
-  const mapReactions = Object.keys(reactions);
-  const transformReactionsToMap = mapReactions.map((e, i) => ({
-    onClick: reactions[e],
-    Component: Reactions[covertFirstLetterToUppercase(e)],
+  const transformReactionsToMap = reactions.map((e, i) => ({
+    Component: Reactions[e],
   }));
   return (
     <Container>
       {transformReactionsToMap.map((item, i) => (
         <Item key={i} leftPosition={i}>
-          <item.Component onClick={item.onClick} dimension="20px" />
+          <item.Component dimension="20px" />
         </Item>
       ))}
     </Container>

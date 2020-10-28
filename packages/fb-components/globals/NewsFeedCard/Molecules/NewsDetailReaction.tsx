@@ -4,7 +4,7 @@ import TextLabel from "@fb-components/TextLabel";
 import Wrapper from "@fb-components/Wrapper";
 
 type NewsDetailReactionProps = {
-  reactions : { [key: string] : Function };
+  reactions : [any];
   totalReactions : number;
   textTotalDetail : string;
 } 

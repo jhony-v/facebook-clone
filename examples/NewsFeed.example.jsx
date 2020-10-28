@@ -27,11 +27,7 @@ const NewsFeedExample = () => {
         <NewsFeedCard key={i}>
           <NewsFeedCard.Header user={e.user} detail={e.detail} />
           <NewsFeedCard.Body {...e.publication} />
-          <NewsFeedCard.DetailReaction  reactions={{
-            like : () => null,
-            love : () => null,
-            sad : () => null,
-          }} totalReactions={"40 mil"} textTotalDetail="60 comments" />
+          <NewsFeedCard.DetailReaction  reactions={["Like","Love","Sad"]} totalReactions={"40 mil"} textTotalDetail="60 comments" />
         </NewsFeedCard>
       ))}
     </div>

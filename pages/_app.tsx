@@ -1,5 +1,6 @@
+import React from "react"
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps } : { Component : React.FC, pageProps : any }) {
   return <Component {...pageProps} />
 }
 

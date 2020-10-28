@@ -16,6 +16,6 @@ const NewsFeedCard = ({ children }) => {
 
 NewsFeedCard.Header = NewsHeader;
 NewsFeedCard.Body = NewsBody;
-NewsFeedCard.NewsDetailReaction = NewsDetailReaction;
+NewsFeedCard.DetailReaction = NewsDetailReaction;
 
 export default NewsFeedCard;

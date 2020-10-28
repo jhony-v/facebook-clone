@@ -10,7 +10,8 @@
         "stylus",
         "xml",
         "svg",
-        "javascript"
+        "javascript",
+        "typescript"
     ],
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 500

@@ -6,3 +6,5 @@ export function covertFirstLetterToUppercase(letter : string) : string {
     const firstLetterToUppercase = letter.charAt(0).toUpperCase();
     return firstLetterToUppercase + letter.substring(1);
 }
+
+export type GetComponentProps<T> = React.ComponentProps<T>;

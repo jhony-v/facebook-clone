@@ -3,7 +3,10 @@
     "baseUrl": ".",
     "paths": {
       "@fb-components/*": [
-        "packages/fb-components/*"
+        "packages/fb-components/application/*",
+        "packages/fb-components/common/*",
+        "packages/fb-components/globals/*",
+        "packages/fb-components/layouts/*",
       ],
       "@fb-contexts/*": [
         "packages/fb-contexts/*"
@@ -53,6 +56,6 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx", "packages/fb-components/common/ErrorComponent.jsx", "packages/fb-components/common/ListRenderItems.jsx"
   ]
 }

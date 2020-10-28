@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@fb-components/*": [
+        "packages/fb-components/*"
+      ],
+      "@fb-contexts/*": [
+        "packages/fb-contexts/*"
+      ],
+      "@fb-hooks/*": [
+        "packages//fb-hooks/*"
+      ],
+      "@views/*": [
+        "views/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@theme/*": [
+        "theme/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ]
+    },
+    "target": "es5",
+    "module": "commonjs",
+    "allowJs": true,
+    "jsx": "preserve",
+    "sourceMap": false,
+    "removeComments": true,
+    "isolatedModules": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "noEmit": true,
+    "resolveJsonModule": true,
+  },
+  "exclude": [
+    "/node_modules/**/*"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}

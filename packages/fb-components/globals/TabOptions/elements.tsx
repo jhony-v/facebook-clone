@@ -4,7 +4,7 @@ import TextLabel, { TextLabelTypes } from "@fb-components/TextLabel";
 
 type StyledTabOptionSearchTypes = {
   selected ?: boolean;
-  optionId ?: string;
+  optionId ?: string | number;
 }
 // Style tab option
 export const StyledTabOptionSearch = styled(TextLabel).attrs<TextLabelTypes,TextLabelTypes>({

@@ -1,4 +1,5 @@
 import createAction from "@utils/createAction";
+import { ChatTabMetadata } from "./types";
 
 export const TYPES = {
   TAB_SEARCH: "TAB_SEARCH",
@@ -6,7 +7,8 @@ export const TYPES = {
   FILL_DATA: "FILL_DATA"
 };
 
-export default function TabChatReducer(state, action){
+function TabChatReducer(
+  state : ChatTabMetadata.IStateReducer, action ) : ChatTabMetadata.IStateReducer{
   switch (action.type) {
     case TYPES.TAB_SEARCH:
       let { value, filterValue } = action.payload;
@@ -31,4 +33,4 @@ export default function TabChatReducer(state, action){
 export const actionSearch = createAction(TYPES.TAB_SEARCH);
 export const actionSelectFilter = createAction(TYPES.TAB_FILTER);
 export const actionFillData = createAction(TYPES.FILL_DATA);
-
+export default TabChatReducer;

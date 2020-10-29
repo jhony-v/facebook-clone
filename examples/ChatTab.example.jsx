@@ -24,7 +24,7 @@ const ChatTabExample = () => {
       }}
       selectedFilterOption={0}
       onSearch={(data, value) => data.filter((item) => item.title.includes(value)) }
-      onOptionSelected={({ optionId, fillData }) => {
+      onSelectedOption={({ optionId, fillData }) => {
           fillData(optionId === 0 ? dataTest : dataTest2);
       }}
     >

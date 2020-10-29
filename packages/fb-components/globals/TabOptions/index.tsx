@@ -2,16 +2,16 @@ import React, { Fragment, useCallback, useEffect, useState } from "react";
 import {  StyledFlexSearch, StyledTabOptionSearch } from "./elements";
 
 type TabOptionsTypes = {
-  initialId : string;
-  children : React.ReactNode;
-  onSelectedOption ?: (selectedId : string) => void
+  initialId : string | number;
+  children : React.ReactElement<any>;
+  onSelectedOption : (selectedId : string | number) => void;
 }
 const TabOptions = ({ initialId, children, onSelectedOption } : TabOptionsTypes) => {
-  const [selectedId, setSelected] = useState<string>(initialId);
+  const [selectedId, setSelected] = useState<string | number>(initialId);
 
   // Active event onOptionSelected if the event property exists
   const selected = useCallback(() => {
-    onSelectedOption && onSelectedOption(selectedId);
+    onSelectedOption && onSelectedOption(selectedId as string);
   },[selectedId,onSelectedOption]); 
 
   useEffect(() => {
@@ -19,11 +19,11 @@ const TabOptions = ({ initialId, children, onSelectedOption } : TabOptionsTypes)
   }, [selected]);
 
   // Verify is the children is a fragment or not
-  const crossChildren = children?.type === Fragment ? children?.props.children : children; 
+  const crossChildren = children.type === Fragment ? children.props.children : children; 
   
   return (
     <StyledFlexSearch>
-      {React.Children.map(crossChildren, (e) =>
+      {React.Children.map(crossChildren, (e : React.ReactElement<OptionTypes & {selected : boolean}>) =>
         React.cloneElement(e, {
           selected: selectedId === e.props.optionId,
           onClick: () => setSelected(e.props.optionId),
@@ -36,7 +36,7 @@ const TabOptions = ({ initialId, children, onSelectedOption } : TabOptionsTypes)
 
 type OptionTypes = {
   text ?: string;
-  optionId ?: string;
+  optionId : string | number;
 } & React.HTMLAttributes<{}>;
 
 // Component item selected

@@ -35,7 +35,7 @@
     "removeComments": true,
     "isolatedModules": true,
     "strict": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "experimentalDecorators": true,
@@ -56,6 +56,6 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", "packages/fb-components/common/ErrorComponent.jsx", "packages/fb-components/common/ListRenderItems.jsx"
+    "**/*.tsx", 
   ]
 }

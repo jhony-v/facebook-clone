@@ -5,9 +5,19 @@ import { StyledListContainer } from "./Atoms/elements";
 import ListHeaderOptions from "./Molecules/ListHeaderOptions";
 import ListRenderItems from "@fb-components/ListRenderItems";
 
-const ContactList = ({ data, title, children, options, w,h }) => {
+type ContactListProps = {
+  data: any[];
+  title: string;
+  children: ( item : any, options : any ) => React.ReactNode;
+  options: React.ReactNode;
+  sizes ?: {
+    w ?: string;
+    h ?: string;
+  }
+}
+const ContactList = ({ data, title, children, options, sizes }: ContactListProps) => {
   return (
-    <StyledListContainer w={w} h={h}>
+    <StyledListContainer w={sizes?.w} h={sizes?.h}>
       <ListHeaderOptions title={title}>{options}</ListHeaderOptions>
       <ListRenderItems data={data} renderHeight={60} render={(item, options) => children(item, options)} />
     </StyledListContainer>

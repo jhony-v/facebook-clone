@@ -26,7 +26,7 @@ const RowItemSelectable = ({ image, text, children, ...restProps }  :RowItemSele
     <StyledRowItemSelectable {...restProps}>
       <Wrapper m="0 10px 0 0">{image}</Wrapper>
       {text ? (
-        <TextLabel textSize={300} weight>
+        <TextLabel textSize={300} weight textColor="vgTextBlackAlpha30"> 
           {text}
         </TextLabel>
       ) : (

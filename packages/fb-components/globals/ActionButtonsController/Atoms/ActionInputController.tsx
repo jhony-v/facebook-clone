@@ -9,7 +9,7 @@ type ActionInputControllerProps = {
 const ActionInputController = ({ placeholder, onClick }: ActionInputControllerProps) => {
   return (
     <StyledRaisedButtonPlaceholderInput onClick={onClick}>
-      <TextLabel variant="smooth">{placeholder}</TextLabel>
+      <TextLabel>{placeholder}</TextLabel>
     </StyledRaisedButtonPlaceholderInput>
   );
 };

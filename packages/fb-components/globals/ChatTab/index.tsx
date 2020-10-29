@@ -8,10 +8,10 @@ import TabHeader from "./Atoms/TabHeader";
 import RowItem from "./Molecules/RowItem";
 import * as ChatTabPieces from "./ChatTabPieces";
 import TabOptions from "../TabOptions";
+import { ChatTabMetadata } from "./Context/types";
 
-type ChatTabProps = {
-  children: React.ReactNode;
-}
+type ChatTabProps = ChatTabMetadata.ChatTabProviderProps;
+
 const ChatTab = ({ children, ...restProps } : ChatTabProps) => {
   const [open, setOpen] = useState<boolean>(false);
   const onToggleOpen = () => setOpen((prevOpen) => !prevOpen);
@@ -21,7 +21,7 @@ const ChatTab = ({ children, ...restProps } : ChatTabProps) => {
         <PortalComponent className="chat-tab-portal">
           <TabMainExpanded>
             <TabHeader onClose={onToggleOpen} titleHeader="New Message" />
-            <ChatTabProvider {...restProps}>
+            <ChatTabProvider {...restProps} >
               <StyledTabChatFillWrapper>
                 <ChatTabPieces.RenderSearchInput />
                 {children}

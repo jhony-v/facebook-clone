@@ -13,8 +13,8 @@ export const themeBaseColors = {
 export const themeBaseTextColors = {
   vgTextBlackAlpha00 : "#ffffff",
   vgTextBlackAlpha10 : "#e0e0e0",
-  vgTextBlackAlpha20 : "#424242",
-  vgTextBlackAlpha30 : "gray",
+  vgTextBlackAlpha20 : "gray",
+  vgTextBlackAlpha30 : "#424242",
   vgTextBlack : "rgb(20,20,20)",
   vgTextPrimary : themeBaseColors.vgPrimary,
 }

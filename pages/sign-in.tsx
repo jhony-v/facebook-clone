@@ -1,9 +1,9 @@
+import EditText from '@fb-components/EditText'
 import React from 'react'
 
 const SignIn = () => {
     return (
         <div>
-            asfpokp
         </div>
     )
 }

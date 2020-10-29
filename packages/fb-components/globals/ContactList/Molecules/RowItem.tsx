@@ -3,7 +3,12 @@ import RowItemSelectable from "@fb-components/RowItemSelectable";
 import Avatar from "@fb-components/Avatar";
 import Wrapper from "@fb-components/Wrapper";
 
-const RowItem = React.memo(({ style, text, image }) => {
+type RowItemProps = {
+  style?: React.CSSProperties;
+  text ?: string;
+  image ?: string;
+}
+const RowItem = React.memo(({ style, text, image }: RowItemProps) => {
   return (
     <Wrapper style={style}>
       <Wrapper m="10px">

@@ -12,7 +12,7 @@ export type TextLabelTypes = {
 const TextLabel = styled.span<TextLabelTypes>`
   font-family: Arial;
   font-size: ${(props) => props.theme.fontSizes[props.textSize || 400]};
-  color: ${props => props.theme.colors[props.textColor || "vgTextBlackAlpha30"]};
+  color: ${props => props.theme.colors[props.textColor || "vgTextBlackAlpha20"]};
   text-align: ${(props) => props.textAlign};
   font-weight: ${(props) => props.weight && "bold"};
   display: ${(props) => props.block && "block"};

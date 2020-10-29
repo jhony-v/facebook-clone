@@ -7,4 +7,4 @@ export function covertFirstLetterToUppercase(letter : string) : string {
     return firstLetterToUppercase + letter.substring(1);
 }
 
-export type GetComponentProps<T> = React.ComponentProps<T>;
+export type GetComponentProps<T extends React.ComponentType<any>> = React.ComponentProps<T>;

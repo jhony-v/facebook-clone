@@ -10,6 +10,7 @@ import NewsFeedExample from "../../examples/NewsFeed.example"
 import OptionsNavigationList from '@fb-components/OptionsNavigationList'
 import ChatTabExample from "../../examples/ChatTab.example";
 import ContactListExample from "../../examples/ContactList.example";
+import WriteNewPostModal from '@fb-components/WriteNewPostModal'
 
 const IndexView = () => {
     return (
@@ -28,6 +29,7 @@ const IndexView = () => {
                 <CreateNewPostExample/>
                 <NewsFeedExample/>
             </LayoutsDrawer.Feed>
+            <WriteNewPostModal/>
           </Wrapper>
         </LayoutsDrawer.Drawer>
         <LayoutsDrawer.RightRail>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 
 type PortalComponentProps = {
@@ -7,23 +7,25 @@ type PortalComponentProps = {
 };
 
 const PortalComponent = ({ children, className } : PortalComponentProps) => {
-  const element = document.createElement("div");
-  const classNameSelector = `.${className}`;
-
-  element.classList.add(classNameSelector);
-  element.dataset.testid = className;
-
-  React.useEffect(() => {
-    if (!document.querySelector(classNameSelector)) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [ isMounted , setMounted ] = useState(false);
+  
+  useEffect(() => {
+    const element = document.createElement("div");
+    element.classList.add(className || "");
+    element.dataset.testid = className;
+    if (!document.querySelector(`.${className}`)) {
       document.body.appendChild(element);
+      ref.current = element;
     }
+    setMounted(true);
     return () => {
-      document.querySelector(classNameSelector)?.remove();
+      ref.current?.remove();
     };
     // eslint-disable-next-line
   }, []);
 
-  return ReactDOM.createPortal(children, element);
+  return ( isMounted && ref.current) ? ReactDOM.createPortal(children, ref.current ) : null;
 };
 
 export default PortalComponent;

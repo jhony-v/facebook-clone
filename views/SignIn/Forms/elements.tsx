@@ -5,12 +5,12 @@ import styled from "styled-components";
 
 export const StyledGlobal = {
   Background: styled(FullScreenWrapper)`
-    background-color: ${(props) => props.theme.colors.vgBlackAlpha00};
+    background:white url("/login-graph.png") no-repeat 300px center / cover;
     display:flex;
     align-items:center;
   `,
-  Container: styled.div`
-    padding:10px 5em;
+  FormContainer: styled.div`
+    padding:10px 3em;
     position:relative;
     z-index:1;
     background-color: ${(props) => props.theme.colors.vgBlackAlpha00};
@@ -23,5 +23,13 @@ export const StyledGlobal = {
     box-sizing:content-box;
     padding:10px;
     object-fit:cover;
+  `,
+  TextDanger : styled.span`
+    display:block;
+    padding:10px 0;
+    text-align:right;
+    color:${props => props.theme.colors.vgDanger};
+    font-size:${props => props.theme.fontSizes[100]};
   `
 };
+

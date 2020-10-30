@@ -17,6 +17,7 @@ const StyledRaisedWrapper = styled.button<StyledRaisedWrapperTypes>`
   border-width:0;
   background:none;
   transition: background-color .3s;
+  cursor:pointer;
   &:hover {
     background-color: ${props => props.theme.colors.vgBlackAlpha10};
   }

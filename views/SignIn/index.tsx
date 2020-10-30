@@ -10,7 +10,7 @@ const SignInView = () => {
     <StyledGlobal.Background>
       <Grid sizeColumns={[500, "1fr"]}>
         <SignInForm />
-        <GraphsAvatar/>
+        <img src="/login-graph.png" width="100%" height="90%" style={{objectFit:"cover"}} />
       </Grid>
     </StyledGlobal.Background>
   );

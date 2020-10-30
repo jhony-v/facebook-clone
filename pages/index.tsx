@@ -1,10 +1,8 @@
-import Index from "@views/Index";
+import IndexView from "@views/IndexView";
 
-export default function Home() {
+export default function Index() {
   return (
-    <div>
-      <Index/>
-    </div>
+      <IndexView/>
   )
 }
 

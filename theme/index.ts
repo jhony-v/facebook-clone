@@ -1,6 +1,6 @@
 export const themeBaseColors = {
   vgPrimary: "#1976d2",
-  vgPage : "#F2F3F5",
+  vgPrimaryAlpha10 : "#2196f3",
   vgBlackAlpha00: "#ffffff",
   vgBlackAlpha10: "#fafafa",
   vgBlackAlpha20: "#e0e0e0",
@@ -8,6 +8,7 @@ export const themeBaseColors = {
   vgBlackAlpha40: "#424242",
   vgBlackAlpha50: "rgb(30,30,30)",
   vgBlackAlpha60: "rgba(0, 0, 0, 0.02)",
+  vgPage : "#F2F3F5",
 }
 
 export const themeBaseTextColors = {
@@ -35,6 +36,9 @@ const theme = {
     200: ".8rem",
     300: ".9rem",
     400: "1rem",
+    600: "1.2rem",
+    700: "1.5rem",
+    800: "2rem",
   },
   layoutSizes: {
     heightNavigator: "60px",

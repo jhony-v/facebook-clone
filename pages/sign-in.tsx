@@ -1,11 +1,11 @@
-import EditText from '@fb-components/EditText'
-import React from 'react'
+import SignInView from "@views/SignIn";
 
 const SignIn = () => {
-    return (
-        <div>
-        </div>
-    )
-}
+  return (
+    <>
+      <SignInView/>
+    </>
+  );
+};
 
-export default SignIn
+export default SignIn;

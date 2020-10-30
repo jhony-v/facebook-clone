@@ -10,13 +10,14 @@ const options = {
 export type StyledEditTextTypes = {
   variant?: keyof typeof options;
   w ?: string;
+  fluid ?: boolean;
 };
 const StyledEditText = styled.input<StyledEditTextTypes>`
   padding: 15px 20px;
   border-radius: 10px;
   outline: none;
   border-width:0;
-  width:${props => props.w};
+  width:${props => props.fluid ? "100%"  : (props.w || "auto")};
   ${(props) => props.variant === options.primary && css`
     background-color:${props => props.theme.colors.vgBlackAlpha10};
     color:${props => props.theme.colors.vgTextBlackAlpha20};
@@ -32,9 +33,10 @@ const StyledEditText = styled.input<StyledEditTextTypes>`
 
 `;
 
+type Ref = HTMLInputElement;
 type EditTextProps = StyledEditTextTypes & React.InputHTMLAttributes<{}>;
-const EditText = (props: EditTextProps) => {
-  return <StyledEditText {...props} />;
-};
+const EditText = React.forwardRef<Ref,EditTextProps>((props,ref) => {
+  return <StyledEditText {...props} ref={ref} />;
+});
 
 export default EditText;

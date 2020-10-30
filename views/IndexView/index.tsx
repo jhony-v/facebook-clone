@@ -11,7 +11,7 @@ import OptionsNavigationList from '@fb-components/OptionsNavigationList'
 import ChatTabExample from "../../examples/ChatTab.example";
 import ContactListExample from "../../examples/ContactList.example";
 
-const Index = () => {
+const IndexView = () => {
     return (
         <>
         <HeaderNavigation>
@@ -41,4 +41,4 @@ const Index = () => {
       )
 }
 
-export default Index
+export default IndexView

@@ -1,7 +1,13 @@
+import { GetComponentProps } from "@utils/transforms";
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const StyledRaisedWrapper = styled.button`
+type StyledRaisedWrapperTypes = {
+  variant ?: "primary";
+  w ?: string;
+  fluid ?: boolean;
+}
+const StyledRaisedWrapper = styled.button<StyledRaisedWrapperTypes>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,13 +20,21 @@ const StyledRaisedWrapper = styled.button`
   &:hover {
     background-color: ${props => props.theme.colors.vgBlackAlpha10};
   }
+  width:${props => props.fluid ? "100%"  : (props.w || "auto")};
+  ${props=>props.variant === "primary" && css`
+    background-color:${props.theme.colors.vgPrimary};
+    color: ${props.theme.colors.vgTextBlackAlpha00};
+    &:hover {
+    background-color: ${props => props.theme.colors.vgPrimaryAlpha10};
+  }
+  `}
 `;
 
 
 export type RaisedButtonProps = {
-  children : React.ReactNode
+  children ?: React.ReactNode;
 }
- & React.ButtonHTMLAttributes<{}>
+ & React.ButtonHTMLAttributes<{}> & GetComponentProps<typeof StyledRaisedWrapper> & StyledRaisedWrapperTypes
 
 const RaisedButton = ({ children, ...restProps } : RaisedButtonProps) => {
   return <StyledRaisedWrapper {...restProps}>{children}</StyledRaisedWrapper>;

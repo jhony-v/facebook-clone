@@ -3,6 +3,7 @@ export const themeBaseColors = {
   vgPrimaryAlpha10 : "#2196f3",
   vgBlackAlpha00: "#ffffff",
   vgBlackAlpha10: "#fafafa",
+  vgBlackAlpha12: "#f0f0f0",
   vgBlackAlpha20: "#e0e0e0",
   vgBlackAlpha30: "#9e9e9e",
   vgBlackAlpha40: "#424242",

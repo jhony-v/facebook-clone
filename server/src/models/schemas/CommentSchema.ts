@@ -1,7 +1,7 @@
 import { model, Schema, Document } from "mongoose";
 import { Entities } from "../entities";
 
-export interface CommentDocument extends Entities.Comment, Document {}
+export type CommentDocument = Entities.Comment & Document;
 
 export const CommentSchema = new Schema(
   {
@@ -11,7 +11,7 @@ export const CommentSchema = new Schema(
     datetime: {
       type: String,
     },
-    userId: {
+    user: {
       type: Schema.Types.ObjectId,
       ref: "User",
     },

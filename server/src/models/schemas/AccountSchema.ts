@@ -16,6 +16,9 @@ export const AccountSchema = new Schema<AccountDocument>({
     type: String,
     required: true,
   },
+},{
+  timestamps : true,
+  versionKey : false  
 });
 
 export const AccountModel = model<AccountDocument>("Account", AccountSchema);

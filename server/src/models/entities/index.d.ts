@@ -29,20 +29,30 @@ export namespace Entities {
   export interface Publication {
     _id?: string;
     text?: string;
-    datetime?: string;
     image?: [string];
   }
 
   export interface PublicationByUser extends Publication {
-    user?: string | UserAccountBasic;
+    user?: string | UserAccountBasic | User;
     userPublished?: UserAccountBasic;
-    commentsId?: [string | Comment];
+    comments?: [string | Comment];
+  }
+
+  export interface CommentNewsFeedMutation  {
+    user : {
+      _id : string;
+    },
+    publication:{
+      _id : string;
+    },
+    text: string;    
+    userPublished : UserAccountBasic;
   }
 
   export interface Comment {
     _id?: string;
     text?: string;
-    datetime?: string;
-    user?: UserAccountBasic;
+    user?: string | UserAccountBasic;
+    userPublished ?: UserAccountBasic;
   }
 }

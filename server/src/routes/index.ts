@@ -1,7 +1,7 @@
 import { Router } from "express";
 import * as auth from "@root/controllers/AuthManagementController";
 import * as getUser from "@controllers/GetUserController";
-import * as createNewsFeed from "@controllers/CreateNewsFeed";
+import * as createNewsFeed from "@root/controllers/CreateNewsFeedController";
 
 const router = Router();
 

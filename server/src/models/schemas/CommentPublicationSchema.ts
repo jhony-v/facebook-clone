@@ -1,4 +1,4 @@
-import { model, Schema, Document, Types } from "mongoose";
+import { model, Schema, Document } from "mongoose";
 import { Entities } from "../entities";
 
 export interface AccountDocument extends Entities.Account, Document {}
@@ -17,7 +17,7 @@ export const AccountSchema = new Schema({
     required: true,
   },
   userId: {
-    type: Types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: "User",
   },
 });

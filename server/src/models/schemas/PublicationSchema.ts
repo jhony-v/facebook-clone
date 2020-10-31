@@ -1,7 +1,7 @@
-import { model, Schema, Document, Types } from "mongoose";
+import { model, Schema, Document } from "mongoose";
 import { Entities } from "../entities";
 
-export interface PublicationDocument extends Entities.PublicationByUser, Document {}
+export type PublicationDocument = Entities.PublicationByUser & Document
 
 export const PublicationSchema = new Schema({
   text: {
@@ -13,8 +13,8 @@ export const PublicationSchema = new Schema({
   image: {
     type: [String],
   },
-  userId: {
-    type: Types.ObjectId,
+  user: {
+    type: Schema.Types.ObjectId,
     ref: "User",
   },
   userPublished: new Schema(
@@ -31,7 +31,12 @@ export const PublicationSchema = new Schema({
       _id: false,
     }
   ),
-  commentsId : [Types.ObjectId]
+  comments : [{
+    type: Schema.Types.ObjectId,
+    ref: "Comment"
+  }]
+},{
+  timestamps : true
 });
 
 export const PublicationModel = model<PublicationDocument>("Publication", PublicationSchema);

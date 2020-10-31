@@ -1,5 +1,6 @@
 export namespace Entities {
   export interface Account {
+    _id?: string;
     email?: string;
     username?: string;
     password?: string;
@@ -26,18 +27,20 @@ export namespace Entities {
   }
 
   export interface Publication {
+    _id?: string;
     text?: string;
     datetime?: string;
     image?: [string];
   }
 
   export interface PublicationByUser extends Publication {
-    userId?: string | UserAccountBasic;
+    user?: string | UserAccountBasic;
     userPublished?: UserAccountBasic;
     commentsId?: [string | Comment];
   }
 
   export interface Comment {
+    _id?: string;
     text?: string;
     datetime?: string;
     user?: UserAccountBasic;

@@ -1,4 +1,4 @@
-import { model, Schema, Document, Types } from "mongoose";
+import { model, Schema, Document } from "mongoose";
 import { Entities } from "../entities";
 
 export interface CommentDocument extends Entities.Comment, Document {}
@@ -12,7 +12,7 @@ export const CommentSchema = new Schema(
       type: String,
     },
     userId: {
-      type: Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "User",
     },
     userPublished: new Schema(

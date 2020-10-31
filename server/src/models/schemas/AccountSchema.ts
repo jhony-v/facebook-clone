@@ -1,4 +1,4 @@
-import { model, Schema, Document, Types, Model } from "mongoose";
+import { model, Schema, Document } from "mongoose";
 import { Entities } from "../entities";
 
 export type AccountDocument = Entities.Account & Document 

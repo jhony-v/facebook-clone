@@ -1,4 +1,4 @@
-import { model, Schema, Document, Types } from "mongoose";
+import { model, Schema, Document } from "mongoose";
 import { Entities } from "../entities";
 
 export type UserDocument = Entities.User & Document;
@@ -23,7 +23,7 @@ export const UserSchema = new Schema({
     }),
   ],
   account: {
-    type: Types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: "Account",
   },
 });

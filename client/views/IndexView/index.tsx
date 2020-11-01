@@ -4,11 +4,10 @@ import LayoutsDrawer from '@fb-components/LayoutsDrawer'
 import Navigation from '@fb-components/Navigation'
 import RootSearchEngine from '@fb-components/RootSearchEngine'
 import Wrapper from '@fb-components/Wrapper'
-import StoriesExample from "../../examples/Stories.example"
 import CreateNewPostExample from "../../examples/CreateNewPost.example"
 import ChatTabExample from "../../examples/ChatTab.example";
 import dynamic from "next/dynamic"
-import { SkeletonElementCard, SkeletonElementRow } from '@fb-components/LoadersSkeletonElement'
+import { SkeletonElementCard, SkeletonElementCardGrid, SkeletonElementRow } from '@fb-components/LoadersSkeletonElement'
 
 const AsyncOptionsNavigationList = dynamic(()=>import("@fb-components/OptionsNavigationList"),{
   loading : () =>  <SkeletonElementRow repeat={10} p="10px" />,
@@ -25,6 +24,11 @@ const AsyncNewsFeedExample = dynamic(()=>import("../../examples/NewsFeed.example
    ssr:false
 }) 
 
+const AsyncStoriesExample = dynamic(()=>import("../../examples/Stories.example"),{
+  loading : () => <SkeletonElementCardGrid repeat={5} />,
+  ssr : false
+})
+
 const IndexView = () => {
     return (
         <>
@@ -36,7 +40,7 @@ const IndexView = () => {
         <LayoutsDrawer.Drawer>
           <Wrapper>
             <LayoutsDrawer.Stories>
-              <StoriesExample/>
+              <AsyncStoriesExample/>
             </LayoutsDrawer.Stories>
             <LayoutsDrawer.Feed>
                 <CreateNewPostExample/>

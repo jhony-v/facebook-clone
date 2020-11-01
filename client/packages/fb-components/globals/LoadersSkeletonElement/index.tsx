@@ -1,4 +1,5 @@
 import FlexWrapper from "@fb-components/FlexWrapper";
+import Grid from "@fb-components/Grid";
 import Skeleton from "@fb-components/Skeleton";
 import Wrapper from "@fb-components/Wrapper";
 import { converMeasureCSSToNumber } from "@utils/transforms";
@@ -56,3 +57,13 @@ export const SkeletonElementCard = ({scale, ...restProps }: SkeletonElementProps
     </RenderSkeketons>
   );
 };
+
+export const SkeletonElementCardGrid = ({repeat}: SkeletonElementProps) => {
+  return(
+    <Grid repeatColumns={repeat} gap="10px">
+      {Array(repeat).fill(0).map((_,i)=>(
+        <Skeleton type="rect" h="200px" r={20} />
+      ))}
+    </Grid>    
+  )
+}

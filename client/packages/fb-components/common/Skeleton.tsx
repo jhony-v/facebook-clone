@@ -14,6 +14,7 @@ export type SkeletonTypes = {
   h?: string;
   type?: "rect" | "circle";
   inline ?: boolean;
+  r ?: number;
 };
 
 const Skeleton = styled(Wrapper)<SkeletonTypes>`
@@ -30,7 +31,7 @@ const Skeleton = styled(Wrapper)<SkeletonTypes>`
   ${(props) => props.type === "rect" &&  css`
       height: ${props.h};
       width: ${props.w};
-      border-radius: 4px;
+      border-radius: ${props.r || 4}px;
   `}
   ${(props) =>  props.type === "circle" && css`
       width: ${props.dimension || defaultSize};

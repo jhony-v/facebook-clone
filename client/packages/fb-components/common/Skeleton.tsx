@@ -1,9 +1,10 @@
 import styled, { css, keyframes } from "styled-components";
+import Wrapper from "./Wrapper";
 
 const defaultSize = "40px";
 const animation = keyframes`
   from {
-    background-position:300% 0%;
+    background-position:400% 0%;
   }
 `;
 
@@ -11,21 +12,22 @@ export type SkeletonTypes = {
   dimension?: string;
   w?: string;
   h?: string;
-  type?: "rectangle" | "circle";
+  type?: "rect" | "circle";
+  inline ?: boolean;
 };
 
-const Skeleton = styled.div<SkeletonTypes>`
-  display:inline-block;
+const Skeleton = styled(Wrapper)<SkeletonTypes>`
+  display:${props => props.inline && "inline-block"};
   background:linear-gradient(
     to right,
-    ${props => props.theme.colors.vgBlackAlpha12} 0%,
-    ${props => props.theme.colors.vgBlackAlpha10},
-    ${props => props.theme.colors.vgBlackAlpha12} 100%    
+    ${props => props.theme.colors.vgBlackAlpha20} 0%,
+    ${props => props.theme.colors.vgBlackAlpha12},
+    ${props => props.theme.colors.vgBlackAlpha20} 100%    
   );
-  background-size:300% 100%;
-  animation:${animation} 2s linear infinite;
+  background-size:400% 100%;
+  animation:${animation} 4s linear infinite;
 
-  ${(props) => props.type === "rectangle" &&  css`
+  ${(props) => props.type === "rect" &&  css`
       height: ${props.h};
       width: ${props.w};
       border-radius: 4px;

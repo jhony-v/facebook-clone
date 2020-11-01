@@ -1,4 +1,4 @@
-export function converMeasureCSSToNumber(measure : string) : number {
+export function converMeasureCSSToNumber(measure : string = "0px") : number {
     return Number(measure.replace(/(px|rem|em|mm|cm|%)/g,""));
 } 
 

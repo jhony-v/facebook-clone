@@ -6,11 +6,24 @@ import RootSearchEngine from '@fb-components/RootSearchEngine'
 import Wrapper from '@fb-components/Wrapper'
 import StoriesExample from "../../examples/Stories.example"
 import CreateNewPostExample from "../../examples/CreateNewPost.example"
-import NewsFeedExample from "../../examples/NewsFeed.example"
-import OptionsNavigationList from '@fb-components/OptionsNavigationList'
 import ChatTabExample from "../../examples/ChatTab.example";
-import ContactListExample from "../../examples/ContactList.example";
-import WriteNewPostModal from '@fb-components/WriteNewPostModal'
+import dynamic from "next/dynamic"
+import { SkeletonElementCard, SkeletonElementRow } from '@fb-components/LoadersSkeletonElement'
+
+const AsyncOptionsNavigationList = dynamic(()=>import("@fb-components/OptionsNavigationList"),{
+  loading : () =>  <SkeletonElementRow repeat={10} p="10px" />,
+   ssr:false
+}) 
+
+const AsyncContactListExample = dynamic(()=>import("../../examples/ContactList.example"),{
+  loading : () =>  <SkeletonElementRow repeat={10} p="10px" />,
+   ssr:false
+}) 
+
+const AsyncNewsFeedExample = dynamic(()=>import("../../examples/NewsFeed.example"),{
+  loading : () =>  <SkeletonElementCard repeat={10} />,
+   ssr:false
+}) 
 
 const IndexView = () => {
     return (
@@ -27,16 +40,15 @@ const IndexView = () => {
             </LayoutsDrawer.Stories>
             <LayoutsDrawer.Feed>
                 <CreateNewPostExample/>
-                <NewsFeedExample/>
+                <AsyncNewsFeedExample/>
             </LayoutsDrawer.Feed>
-            <WriteNewPostModal/>
           </Wrapper>
         </LayoutsDrawer.Drawer>
         <LayoutsDrawer.RightRail>
-            <ContactListExample/>
+            <AsyncContactListExample/>
         </LayoutsDrawer.RightRail>
         <LayoutsDrawer.LeftRail>
-          <OptionsNavigationList/>
+          <AsyncOptionsNavigationList/>
         </LayoutsDrawer.LeftRail>
         <ChatTabExample/>
       </>

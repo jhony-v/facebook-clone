@@ -22,6 +22,7 @@ const LayoutsDrawer = {
     display:flex;
     align-items:stretch;
     height:${props => props.theme.layoutSizes.heightMainDrawer};
+    width:${props => props.theme.layoutSizes.widthLeftRail};
   `,
   RightRail : styled.div`
     position:fixed;
@@ -30,6 +31,7 @@ const LayoutsDrawer = {
     display:flex;
     align-items:stretch;
     height:${props => props.theme.layoutSizes.heightMainDrawer};
+    width:${props => props.theme.layoutSizes.widthRightRail};
   `
 };
 

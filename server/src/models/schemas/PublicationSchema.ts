@@ -1,7 +1,7 @@
 import { model, Schema, Document } from "mongoose";
 import { Entities } from "../entities";
 
-export type PublicationDocument = Entities.PublicationByUser & Document
+export type PublicationDocument = Entities.PublicationByUser & Document;
 
 export const PublicationSchema = new Schema({
   text: {
@@ -10,7 +10,7 @@ export const PublicationSchema = new Schema({
   datetime: {
     type: String,
   },
-  image: {
+  images: {
     type: [String],
   },
   user: {
@@ -19,24 +19,37 @@ export const PublicationSchema = new Schema({
   },
   userPublished: new Schema(
     {
-      fullName : {
-        type : String
+      fullName: {
+        type: String,
       },
-      avatar : {
-        type : String
-      }
+      avatar: {
+        type: String,
+      },
     },
     {
       versionKey: false,
       _id: false,
     }
   ),
-  comments : [{
-    type: Schema.Types.ObjectId,
-    ref: "Comment"
-  }]
-},{
-  timestamps : true
+  comments: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Comment",
+    },
+  ],
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+  reactions: [
+    {
+      typeReaction: String,
+      valueId: String,
+    },
+  ],
 });
 
-export const PublicationModel = model<PublicationDocument>("Publication", PublicationSchema);
+export const PublicationModel = model<PublicationDocument>(
+  "Publication",
+  PublicationSchema
+);

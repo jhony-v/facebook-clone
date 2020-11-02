@@ -12,7 +12,7 @@ export default class NewsFeedManagement {
         fullName: userPublished?.fullName,
       },
     });
-    return createNewsFeed.isNew ? createNewsFeed : {};
+    return createNewsFeed.toJSON();
   }
 
   async deleteOneNewsFeed(publication: Entities.Publication) {
@@ -23,10 +23,19 @@ export default class NewsFeedManagement {
   }
 
   async getAllNews({ skip, limit }: { skip: number; limit: number }) {
-    const getNewsFeed = await PublicationModel.find({})
-      .skip(+skip)
-      .limit(+limit);
+    const getNewsFeed = await PublicationModel.find({}).select({
+      comments : 0,
+      updatedAt : 0,
+      __v : 0
+    }).skip(+skip).limit(+limit);
     return getNewsFeed;
+  }
+
+  async getOneNews(newsId : string) {
+    const getOneNewsFeed = await PublicationModel.findOne({
+      _id : newsId
+    });
+    return getOneNewsFeed;
   }
 
 }

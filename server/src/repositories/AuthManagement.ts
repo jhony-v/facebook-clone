@@ -1,4 +1,4 @@
-import { ENCRPYT_SALT_ROUNDS } from "@root/config";
+import { ENCRPYT_SALT_ROUNDS } from "@root/config/environments";
 import { Entities } from "@root/models/entities";
 import { AccountModel } from "@root/models/schemas/AccountSchema";
 import { UserModel } from "@root/models/schemas/UserSchema";

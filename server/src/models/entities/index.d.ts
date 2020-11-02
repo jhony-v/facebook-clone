@@ -13,13 +13,15 @@ export namespace Entities {
     description?: string;
     hobbies?: [Hobbies];
     avatar?: string;
-    account ?: string | Account;
+    account?: string | Account;
   }
 
   export interface Hobbies {
     name?: string;
     description?: string;
   }
+
+  export type Reaction = string;
 
   export interface UserAccountBasic {
     fullName?: string;
@@ -29,7 +31,12 @@ export namespace Entities {
   export interface Publication {
     _id?: string;
     text?: string;
-    image?: [string];
+    images?: string[];
+    createdAt?: string;
+    reactions ?: [{
+      type : Reaction,
+      userId : string
+    }]
   }
 
   export interface PublicationByUser extends Publication {
@@ -38,21 +45,21 @@ export namespace Entities {
     comments?: [string | Comment];
   }
 
-  export interface CommentNewsFeedMutation  {
-    user : {
-      _id : string;
-    },
-    publication:{
-      _id : string;
-    },
-    text: string;    
-    userPublished : UserAccountBasic;
+  export interface CommentNewsFeedMutation {
+    user: {
+      _id: string;
+    };
+    publication: {
+      _id: string;
+    };
+    text: string;
+    userPublished: UserAccountBasic;
   }
 
   export interface Comment {
     _id?: string;
     text?: string;
     user?: string | UserAccountBasic;
-    userPublished ?: UserAccountBasic;
+    userPublished?: UserAccountBasic;
   }
 }

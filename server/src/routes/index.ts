@@ -5,6 +5,7 @@ import * as createNewsFeed from "@root/controllers/CreateNewsFeedController";
 import * as getNewsFeed from "@root/controllers/GetNewsFeedController";
 import { uploadMultipleFilesMiddleware } from "@root/middlewares/uploadMiddleware";
 import verifyUserIsAuthenticateMiddleware from "@root/middlewares/verifyUserIsAuthenticateMiddleware";
+import verifyAppKeyMiddleware from "@root/middlewares/verifyAppKeyMiddleware";
 
 const router = Router();
 

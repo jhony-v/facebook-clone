@@ -1,3 +1,4 @@
 
-export const KEY_TOKEN = "2001-key-2001-secret"
+export const KEY_TOKEN = "2000-key-2000-secret"
+export const APPLICATION_KEY = "2000";
 export const ENCRPYT_SALT_ROUNDS = 10

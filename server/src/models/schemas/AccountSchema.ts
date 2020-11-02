@@ -7,6 +7,7 @@ export const AccountSchema = new Schema<AccountDocument>({
   email: {
     type: String,
     required: true,
+    unique: true,
   },
   password: {
     type: String,
@@ -15,6 +16,7 @@ export const AccountSchema = new Schema<AccountDocument>({
   username: {
     type: String,
     required: true,
+    unique: true,
   },
 },{
   timestamps : true,

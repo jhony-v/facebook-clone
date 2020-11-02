@@ -20,22 +20,22 @@ export default class AuthManagement {
         _id : findUser._id
       } : {}
     }
-    return {}
+    return null
   }
 
   async signUpUser({username,email,password}: Entities.Account) {
     const findUser = await this.findUserAccount({email});
-    if(findUser) return {}
+    if(findUser) return null
     const passwordEncrypted = await bcrypt.hash(password,ENCRPYT_SALT_ROUNDS);
     const newAccount = await AccountModel.create({
         email,
         username,
         password: passwordEncrypted,
-    })
-    const newUser = await UserModel.create({
+    });
+    await UserModel.create({
       account : newAccount._id
     })
-    return newUser.isNew && {
+    return {
       email : newAccount.email,
       username : newAccount.username,
     }

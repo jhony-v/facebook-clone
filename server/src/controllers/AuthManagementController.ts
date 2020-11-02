@@ -5,17 +5,20 @@ import { Request, Response } from "express";
 export const signInController = async (req: Request, res: Response) => {
     const auth = new AuthManagement();
     const request = await auth.signInUser(req.body);
-    if(!Object.keys(request).length) {
+    if(request) {
         return res.status(400).json({})
     }
     return res.json({
-        token :TokenAuthentication.sign(request)
+        token :TokenAuthentication.sign(request || {})
     });
 };
 
 export const signUpController = async (req: Request, res: Response) => {
     const auth = new AuthManagement();
-    const request = await auth.signUpUser(req.params);
+    const request = await auth.signUpUser(req.body);
+    if(request) {
+        return res.status(400).json({})
+    }
     return res.json(request);
 };
 

@@ -5,14 +5,13 @@ import * as createNewsFeed from "@root/controllers/CreateNewsFeedController";
 import * as getNewsFeed from "@root/controllers/GetNewsFeedController";
 import { uploadMultipleFilesMiddleware } from "@root/middlewares/uploadMiddleware";
 import verifyUserIsAuthenticateMiddleware from "@root/middlewares/verifyUserIsAuthenticateMiddleware";
-import verifyAppKeyMiddleware from "@root/middlewares/verifyAppKeyMiddleware";
 
 const router = Router();
 
 router.post("/auth/sign-in", auth.signInController);
 router.post("/auth/sign-up", auth.signUpController);
 router.get("/auth/verify/:userId", auth.verifyUserController);
-router.get("/users/:userId?",verifyUserIsAuthenticateMiddleware, getUser.getUserController);
+router.get("/users/:userId?", getUser.getUserController);
 
 router.post("/news-feed",uploadMultipleFilesMiddleware, createNewsFeed.createNewsFeedController);
 router.get("/news-feed/:newsId?",uploadMultipleFilesMiddleware, getNewsFeed.getNewsFeedController);

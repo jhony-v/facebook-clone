@@ -1,12 +1,12 @@
 import FlexWrapper from "@fb-components/FlexWrapper";
-import StringReactions, { ReactionsType } from "@fb-components/StringReactions";
+import StringReactions, { StringReactionType } from "@fb-components/StringReactions";
 import TextLabel from "@fb-components/TextLabel";
 import Wrapper from "@fb-components/Wrapper";
 
 type NewsDetailReactionProps = {
-  reactions : ReactionsType[];
-  totalReactions : number;
-  textTotalDetail : string;
+  reactions ?: StringReactionType[];
+  totalReactions? : number;
+  textTotalDetail? : string;
 } 
 
 const NewsDetailReaction = ({reactions, totalReactions, textTotalDetail }:NewsDetailReactionProps) => {
@@ -14,7 +14,7 @@ const NewsDetailReaction = ({reactions, totalReactions, textTotalDetail }:NewsDe
     <Wrapper p="5px 10px">
       <FlexWrapper justify="space-between" align="center">
         <FlexWrapper align="center">
-          { reactions && <StringReactions reactions={reactions} />}
+          { reactions && <StringReactions reactions={reactions}/>}
           <TextLabel textSize={300}>{totalReactions}</TextLabel>
         </FlexWrapper>
         <Wrapper>

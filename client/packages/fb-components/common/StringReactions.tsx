@@ -17,20 +17,24 @@ const Container = styled(FlexWrapper)`
     display:inline-flex;
 `
 
-export type ReactionsType = keyof typeof Reactions;
+export type StringReactionType = {
+  reaction : keyof typeof Reactions
+} & React.HTMLAttributes<{}>;
+
 export type StringReactionsProps = {
-  reactions : ReactionsType[]
+ reactions ?: StringReactionType[];
 }
 
 const StringReactions = ({ reactions } : StringReactionsProps) => {
-  const transformReactionsToMap = reactions.map((e, i) => ({
-    Component: Reactions[e],
+  const transformReactionsToMap = reactions?.map(({reaction,...restProps}) => ({
+    Component: Reactions[reaction],
+    Props : restProps
   }));
   return (
     <Container>
-      {transformReactionsToMap.map((item, i) => (
+      {transformReactionsToMap?.map(({Component,Props}, i) => (
         <Item key={i} leftPosition={i}>
-          <item.Component dimension="20px" />
+          <Component {...Props} dimension="20px" />
         </Item>
       ))}
     </Container>

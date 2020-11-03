@@ -5,7 +5,7 @@ import NewsFeedCard from "@fb-components/NewsFeedCard";
 
 const data = Array(10)
   .fill(0)
-  .map((e, i) => ({
+  .map(() => ({
     user: {
       username: faker.name.firstName() + " " + faker.name.lastName(),
       avatar: faker.random.image(),
@@ -20,6 +20,12 @@ const data = Array(10)
     },
   }));
 
+const reactions = [{
+  reaction : "Angry"
+},{
+  reaction : "Haha"
+}]  
+
 const NewsFeedExample = () => {
   return (
     <div>
@@ -27,7 +33,7 @@ const NewsFeedExample = () => {
         <NewsFeedCard key={i}>
           <NewsFeedCard.Header user={e.user} detail={e.detail} />
           <NewsFeedCard.Body {...e.publication} />
-          <NewsFeedCard.DetailReaction  reactions={["Like","Love","Sad"]} totalReactions={"40 mil"} textTotalDetail="60 comments" />
+          <NewsFeedCard.DetailReaction  reactions={reactions} totalReactions={"40 mil"} textTotalDetail="60 comments" />
         </NewsFeedCard>
       ))}
     </div>

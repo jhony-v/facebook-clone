@@ -1,12 +1,11 @@
 import LayoutsDrawer from '@fb-components/LayoutsDrawer'
 import Wrapper from '@fb-components/Wrapper'
 import ChatTabExample from "../../examples/ChatTab.example";
-import ContainerMainNavigator from '@fb-components/ContainerMainNavigator';
-import ContainerGridStories from '@fb-components/ContainerGridStories';
-import ContainerOptionsNavigation from '@fb-components/ContainerOptionsNavigation';
-import ContainerConnectionChatList from '@fb-components/ContainerConnectionChatList';
-import ContainerGetNewsFeed from '@fb-components/ContainerGetNewsFeed';
-
+import ContainerMainNavigator from '@fb-containers/ContainerMainNavigator';
+import ContainerGridStories from '@fb-containers/ContainerGridStories';
+import ContainerOptionsNavigation from '@fb-containers/ContainerOptionsNavigation';
+import ContainerConnectionChatList from '@fb-containers/ContainerConnectionChatList';
+import ContainerGetNewsFeed from '@fb-containers/ContainerGetNewsFeed';
 
 const IndexView = () => {
     return (

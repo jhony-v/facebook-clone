@@ -13,8 +13,11 @@
       "@fb-contexts/*": [
         "packages/fb-contexts/*"
       ],
+      "@fb-containers/*": [
+        "packages/fb-containers/*",
+      ],
       "@fb-hooks/*": [
-        "packages//fb-hooks/*"
+        "packages/fb-hooks/*"
       ],
       "@views/*": [
         "views/*"

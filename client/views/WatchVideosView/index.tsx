@@ -1,5 +1,5 @@
-import ContainerMainNavigator from '@fb-components/ContainerMainNavigator';
-import ContainerOptionsNavigation from '@fb-components/ContainerOptionsNavigation';
+import ContainerMainNavigator from '@fb-containers/ContainerMainNavigator';
+import ContainerOptionsNavigation from '@fb-containers/ContainerOptionsNavigation';
 import FlexWrapper from '@fb-components/FlexWrapper';
 import Grid from '@fb-components/Grid';
 import LayoutsDrawer from '@fb-components/LayoutsDrawer';

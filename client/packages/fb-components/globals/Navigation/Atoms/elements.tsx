@@ -15,7 +15,7 @@ export const StyledNotificationPoint = styled.div`
 type StyledLinkButtonTypes = {
   isSelected ?: boolean;
 }
-export const StyledLinkButton = styled.button<StyledLinkButtonTypes>`
+export const StyledLinkButton = styled.a<StyledLinkButtonTypes>`
   background-color: ${({theme}) => theme.colors.vgBlackAlpha00};
   border-radius: 10px;
   padding: 5px 35px;

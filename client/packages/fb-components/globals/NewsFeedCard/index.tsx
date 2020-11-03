@@ -12,7 +12,6 @@ const NewsFeedCard = ({ children }: NewsFeedCardProps) => {
   return (
     <StyledNewsFeedWrapper>
       {children}
-      <NewsOptions />
     </StyledNewsFeedWrapper>
   );
 };
@@ -20,5 +19,6 @@ const NewsFeedCard = ({ children }: NewsFeedCardProps) => {
 NewsFeedCard.Header = NewsHeader;
 NewsFeedCard.Body = NewsBody;
 NewsFeedCard.DetailReaction = NewsDetailReaction;
+NewsFeedCard.Options = NewsOptions;
 
 export default NewsFeedCard;

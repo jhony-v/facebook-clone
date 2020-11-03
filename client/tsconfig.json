@@ -8,6 +8,7 @@
         "packages/fb-components/globals/*",
         "packages/fb-components/layouts/*",
         "packages/fb-components/forms/*",
+        "packages/fb-containers/*",
       ],
       "@fb-contexts/*": [
         "packages/fb-contexts/*"

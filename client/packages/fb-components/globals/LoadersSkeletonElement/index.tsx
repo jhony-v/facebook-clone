@@ -62,7 +62,7 @@ export const SkeletonElementCardGrid = ({repeat}: SkeletonElementProps) => {
   return(
     <Grid repeatColumns={repeat} gap="10px">
       {Array(repeat).fill(0).map((_,i)=>(
-        <Skeleton type="rect" h="200px" r={20} key={i} />
+        <Skeleton key={i} type="rect" h="200px" r={20} />
       ))}
     </Grid>    
   )

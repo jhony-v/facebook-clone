@@ -1,5 +1,4 @@
 import React from "react";
-import { covertFirstLetterToUppercase } from "@utils/transforms";
 import styled from "styled-components";
 import Reactions from "./Reactions";
 import FlexWrapper from "./FlexWrapper";
@@ -18,11 +17,10 @@ const Container = styled(FlexWrapper)`
     display:inline-flex;
 `
 
-
+export type ReactionsType = keyof typeof Reactions;
 export type StringReactionsProps = {
-  reactions : [keyof typeof Reactions]
+  reactions : ReactionsType[]
 }
-
 
 const StringReactions = ({ reactions } : StringReactionsProps) => {
   const transformReactionsToMap = reactions.map((e, i) => ({

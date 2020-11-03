@@ -4,9 +4,15 @@ import RaisedButton from "@fb-components/RaisedButton";
 import React from "react";
 import HeaderTitle from "./Atoms/HeaderTitle";
 
-const WriteNewPostModal = () => {
+type WriteNewPostModalProps = {
+  actions : {
+    open : boolean;
+    onClose : () => void;
+  }
+}
+const WriteNewPostModal = ({actions}: WriteNewPostModalProps) => {
   return (
-    <ModalDialog open={true} onClose={() => null}>
+    <ModalDialog open={actions.open} onClose={actions.onClose}>
       <ModalDialog.Header p="20px" border>
         <HeaderTitle />
       </ModalDialog.Header>

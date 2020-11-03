@@ -9,11 +9,12 @@ import { StyledCreatePostWrapper } from "./Atoms/elements";
 type CreateNewPostProps = {
   userImage: string;
   inputPlaceholder: string;
+  onClick ?: () => void;
 }
-const CreateNewPost = ({ userImage, inputPlaceholder }: CreateNewPostProps) => {
+const CreateNewPost = ({ userImage, inputPlaceholder,onClick }: CreateNewPostProps) => {
   return (
     <StyledCreatePostWrapper>
-       <ActionInputController userImage={userImage} inputPlaceholder={inputPlaceholder} /> 
+       <ActionInputController userImage={userImage} inputPlaceholder={inputPlaceholder} onClick={onClick} /> 
       <ActionButtonsController repeatColumns={3}>
         <ActionButtonsController.Button text="Live video" icon={FaFileVideo} colorIcon="red" />
         <ActionButtonsController.Button text="Photo/Video" icon={FiImage} colorIcon="green" />

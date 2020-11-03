@@ -15,7 +15,7 @@ const ActionButtonsController = ({ children, repeatColumns } : ActionButtonsCont
   );
 };
 
-ActionButtonsController.Button = ActionButtonController
-ActionButtonsController.Input = ActionInputController;
+ActionButtonsController.Button = React.memo(ActionButtonController);
+ActionButtonsController.Input = React.memo(ActionInputController);
 
 export default ActionButtonsController;

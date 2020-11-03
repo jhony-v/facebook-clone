@@ -10,27 +10,15 @@
         "packages/fb-components/forms/*",
         "packages/fb-containers/*",
       ],
-      "@fb-contexts/*": [
-        "packages/fb-contexts/*"
-      ],
-      "@fb-containers/*": [
-        "packages/fb-containers/*",
-      ],
-      "@fb-hooks/*": [
-        "packages/fb-hooks/*"
-      ],
-      "@views/*": [
-        "views/*"
-      ],
-      "@utils/*": [
-        "utils/*"
-      ],
-      "@theme/*": [
-        "theme/*"
-      ],
-      "@config/*": [
-        "config/*"
-      ]
+      "@fb-contexts/*": [ "packages/fb-contexts/*" ],
+      "@fb-containers/*": [ "packages/fb-containers/*", ],
+      "@fb-hooks/*": [ "packages/fb-hooks/*" ],
+      "@fb-features-recoil/*": [ "packages/fb-features-recoil/*" ],
+      "@fb-services/*": [ "packages/fb-services/*" ],
+      "@views/*": ["views/*" ],
+      "@utils/*": [ "utils/*" ],
+      "@theme/*": [ "theme/*" ],
+      "@config/*": [ "config/*" ]
     },
     "target": "es5",
     "module": "commonjs",

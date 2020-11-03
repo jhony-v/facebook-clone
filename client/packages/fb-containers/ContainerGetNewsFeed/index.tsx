@@ -6,7 +6,7 @@ const AsyncNewsFeedExample = dynamic(()=>import("../../../examples/NewsFeed.exam
     ssr:false
 }) 
 
-const AsyncCreateNewPostExample = dynamic(() => import("../../../examples/CreateNewPost.example"),{
+const AsyncCreateNewPostExample = dynamic(() => import("@fb-containers/ContainerCreateNewPost"),{
     loading : () =>  <SkeletonElementCard repeat={1} scale="20px" />,
     ssr: false
 })

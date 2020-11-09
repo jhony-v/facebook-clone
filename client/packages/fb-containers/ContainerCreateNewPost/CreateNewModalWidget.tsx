@@ -1,5 +1,5 @@
 import WriteNewPostModal from "@fb-components/WriteNewPostModal";
-import { useCreateNewPostOpenModal } from "@fb-features-recoil/createNewPost/hooks";
+import { useCreateNewPostOpenModal } from "@fb-features-recoil/createNewPost";
 
 const CreateNewModalWidget = () => {
   const { open, toggleModal } = useCreateNewPostOpenModal();

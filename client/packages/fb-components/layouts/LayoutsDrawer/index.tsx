@@ -15,7 +15,7 @@ const LayoutsDrawer = {
     width: ${props => props.theme.layoutSizes.widthFeeds};
     margin:2em auto 0;
   `,
-  LeftRail : styled.div`
+  LeftRail : styled.div<{compact?:boolean}>`
     position:fixed;
     left:0;
     bottom:0;
@@ -23,6 +23,7 @@ const LayoutsDrawer = {
     align-items:stretch;
     height:${props => props.theme.layoutSizes.heightMainDrawer};
     width:${props => props.theme.layoutSizes.widthLeftRail};
+    background-color:${props => props.compact && props.theme.colors.vgBlackAlpha00};
   `,
   RightRail : styled.div`
     position:fixed;

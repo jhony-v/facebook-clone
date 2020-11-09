@@ -1,6 +1,6 @@
 import faker from "faker";
 import CreateNewPost from "@fb-components/CreateNewPost";
-import { useCreateNewPostOpenModal } from "@fb-features-recoil/createNewPost/hooks";
+import { useCreateNewPostOpenModal } from "@fb-features-recoil/createNewPost";
 
 const CreateNewWidget = () => {
     const { toggleModal } = useCreateNewPostOpenModal();

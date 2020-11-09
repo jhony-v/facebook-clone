@@ -18,9 +18,6 @@ const StyledRaisedWrapper = styled.button<StyledRaisedWrapperTypes>`
   background:none;
   transition: background-color .3s;
   cursor:pointer;
-  &:hover {
-    background-color: ${props => props.theme.colors.vgBlackAlpha10};
-  }
   width:${props => props.fluid ? "100%"  : (props.w || "auto")};
   ${props=>props.variant === "primary" && css`
     background-color:${props.theme.colors.vgPrimary};
@@ -29,6 +26,9 @@ const StyledRaisedWrapper = styled.button<StyledRaisedWrapperTypes>`
     background-color: ${props => props.theme.colors.vgPrimaryAlpha10};
   }
   `}
+  &:hover {
+    background-color: ${props => props.theme.colors.vgBlackAlpha10};
+  }
 `;
 
 

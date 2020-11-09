@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
-import Img from "next/image";
 
 export type StyledAvatarTypes = {
   dimension ?: string;

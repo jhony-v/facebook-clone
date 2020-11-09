@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import GridColumn from "./Atoms/GridColumn";
 
 const LayoutsDrawer = {
   Drawer: styled.div`
@@ -33,7 +34,8 @@ const LayoutsDrawer = {
     align-items:stretch;
     height:${props => props.theme.layoutSizes.heightMainDrawer};
     width:${props => props.theme.layoutSizes.widthRightRail};
-  `
+  `,
+  GridColumn: GridColumn,
 };
 
 export default LayoutsDrawer;

@@ -1,23 +1,18 @@
 import ContainerMainNavigator from "@fb-components/ContainerMainNavigator";
 import ContainerOptionsNavigation from "@fb-components/ContainerOptionsNavigation";
-import FlexWrapper from "@fb-components/FlexWrapper";
 import Grid from "@fb-components/Grid";
 import LayoutsDrawer from "@fb-components/LayoutsDrawer";
 import MarketplaceCard from "@fb-components/MarketplaceCard";
 import Wrapper from "@fb-components/Wrapper";
 import ChatTabExample from "examples/ChatTab.example";
-import React from "react";
-import { useTheme } from "styled-components";
 import faker from "faker";
 import TextLabel from "@fb-components/TextLabel";
 
 const MarketPlaceView = () => {
-  const { layoutSizes } = useTheme();
   return (
     <ContainerMainNavigator>
       <LayoutsDrawer.Drawer>
-        <Wrapper w="100%">
-          <Grid sizeColumns={[layoutSizes.widthLeftRail, "1fr"]}>
+        <LayoutsDrawer.GridColumn variant="left-rail fluid">
             <LayoutsDrawer.LeftRail compact>
               <ContainerOptionsNavigation />
             </LayoutsDrawer.LeftRail>
@@ -44,8 +39,7 @@ const MarketPlaceView = () => {
                 </Grid>
               </Wrapper>
             </Wrapper>
-          </Grid>
-        </Wrapper>
+        </LayoutsDrawer.GridColumn>
       </LayoutsDrawer.Drawer>
       <ChatTabExample />
     </ContainerMainNavigator>

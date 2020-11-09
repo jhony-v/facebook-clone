@@ -1,5 +1,4 @@
 import Grid from "@fb-components/Grid";
-import React from "react";
 import { StyledGlobal } from "./Forms/elements";
 import SignInForm from "./Forms/SignInForm";
 

@@ -9,7 +9,6 @@ export default function useVisibilityObserver( options: IntersectionObserverInit
       setVisibility(entry.isIntersecting);
     };
     const observer : IntersectionObserver = new IntersectionObserver(onIntersection, options);
-
     element && observer.observe(element);
 
     return () => element &&  observer.unobserve(element);

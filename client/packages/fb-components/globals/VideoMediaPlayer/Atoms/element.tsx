@@ -3,16 +3,30 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ButtonPlayerContainer = styled(FlexWrapper)`
-  border: 2px solid white;
+  border: 3px solid white;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 100%;
   margin: auto;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  font-size:3em;
 `;
 
-export const VideoPlayer = styled(motion.video)<{ h?: string }>`
-  width: 100%;
+
+export const VideoPlayerContainer = styled.div`
+  display:inline-block;
+  position:relative;
+`
+
+export const VideoPlayer = styled(motion.video)<{ h?: string,w?:string,objectFit ?: string }>`
+  object-fit:${props => props.objectFit};
   height: ${(props) => props.h || "180px"};
+  width: ${props => props.w};
+  display:block;
 `;

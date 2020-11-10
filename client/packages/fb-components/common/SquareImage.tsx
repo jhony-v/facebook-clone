@@ -9,4 +9,5 @@ export default styled.img<SquareImageTypes>`
   width: ${(props) => props.w || "100%"};
   object-fit: cover;
   border-radius: 5px;
+  display:block;
 `;

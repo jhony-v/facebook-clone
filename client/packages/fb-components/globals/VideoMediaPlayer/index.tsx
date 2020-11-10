@@ -10,11 +10,12 @@ type VideoMediaPlayerProps = {
     w?: string;
     h?: string;
   };
+  objectFit ?: string;
   autoplay?: boolean;
 };
 
 const VideoMediaPlayer = (props: VideoMediaPlayerProps) => {
-  const { src, poster } = props;
+  const { src, poster, objectFit } = props;
   const [visible, setVisible] = useState<boolean>(false);
   const [playing, setPlaying] = useState<boolean>(false);
   const videoRef = useRef() as MutableRefObject<HTMLVideoElement>;
@@ -41,7 +42,7 @@ const VideoMediaPlayer = (props: VideoMediaPlayerProps) => {
       onMouseLeave={() => setVisible(false)}
       ref={ref => ref && setElement(ref)}
     >
-      <VideoPlayer src={src} poster={poster} ref={videoRef} />
+      <VideoPlayer src={src} poster={poster} ref={videoRef} objectFit={objectFit} />
       {visible && playerButtonComponent}
     </VideoPlayerContainer>
   );

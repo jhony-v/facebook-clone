@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
+import { StreamWrapperVideoCard } from "./Atoms/elements";
+import VideoDetailStreamInformation, { VideoDetailStreamInformationProps } from "./Molecules/VideoDetailStreamInformation";
+import VideoWatchInformation, { VideoWatchInformationProps } from "./Molecules/VideoWatchInformation";
 
-const PreviewStreamWatchVideoCard = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+type PreviewStreamWatchVideoCardProps = VideoWatchInformationProps & {
+  detailStream: VideoDetailStreamInformationProps;
+};
 
-export default PreviewStreamWatchVideoCard
+const PreviewStreamWatchVideoCard = (props : PreviewStreamWatchVideoCardProps) => {
+  return <StreamWrapperVideoCard>
+      <VideoWatchInformation video={props.video} live={props.live} totalViews={props.totalViews}  />
+      <VideoDetailStreamInformation {...props.detailStream} />
+  </StreamWrapperVideoCard>
+
+};
+
+export default PreviewStreamWatchVideoCard;

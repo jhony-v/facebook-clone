@@ -1,13 +1,14 @@
 import styled from "styled-components";
-import FlexWrapper from "./FlexWrapper";
 import { BsEyeFill } from "react-icons/bs";
 import Wrapper from "./Wrapper";
 
-const StyledTotalViewsWrapper = styled(FlexWrapper)`
-  padding: 10px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
+const StyledTotalViewsWrapper = styled.div`
+  font-size: ${(props) => props.theme.fontSizes[200]};
+  padding: 4px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
+  display: inline-flex;
   align-items: center;
 `;
 
@@ -17,10 +18,8 @@ type TotalViewsProps = {
 const TotalViews = ({ total }: TotalViewsProps) => {
   return (
     <StyledTotalViewsWrapper>
-      <Wrapper m="0 0 10px 0">
-        <BsEyeFill color="white" />
-      </Wrapper>
-      {total}
+      <BsEyeFill color="white" />
+      <Wrapper m="0 0 0 5px">{total}</Wrapper>
     </StyledTotalViewsWrapper>
   );
 };

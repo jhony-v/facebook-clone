@@ -23,7 +23,7 @@ export const themeBaseTextColors = {
 
 export const themeBaseHelperColors = {
   vgDanger: "rgb(235,20,20)",
-  vgDanger10: "rgba(235,20,20,.2)",
+  vgDanger10: "rgba(240,80,80,1)",
   vgOnline : "#26963c",
 }
 

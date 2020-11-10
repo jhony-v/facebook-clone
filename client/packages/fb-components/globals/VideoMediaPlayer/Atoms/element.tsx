@@ -1,5 +1,4 @@
 import FlexWrapper from "@fb-components/FlexWrapper";
-import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ButtonPlayerContainer = styled(FlexWrapper)`
@@ -24,9 +23,9 @@ export const VideoPlayerContainer = styled.div`
   position:relative;
 `
 
-export const VideoPlayer = styled(motion.video)<{ h?: string,w?:string,objectFit ?: string }>`
+export const VideoPlayer = styled.video<{ h?: string,w?:string,objectFit ?: string }>`
   object-fit:${props => props.objectFit};
   height: ${(props) => props.h || "180px"};
-  width: ${props => props.w};
+  width: ${props => props.w || "100%"};
   display:block;
 `;

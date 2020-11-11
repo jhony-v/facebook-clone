@@ -5,7 +5,7 @@ import { FiMoreHorizontal } from "react-icons/fi";
 const ButtonMoreAction = () => {
   return (
       <Wrapper flexNone>
-        <RoundButton dimension="40px">
+        <RoundButton dimension="40px" style={{background:"none"}}>
           <FiMoreHorizontal size={25} color="gray" />
         </RoundButton>
       </Wrapper>

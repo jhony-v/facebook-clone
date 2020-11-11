@@ -6,7 +6,7 @@ import CreateNewPostExample from "../../../../../examples/CreateNewPost.example"
 
 const ScenePosts = () => {
   return (
-    <Grid sizeColumns={["350px", "1fr"]} gap="10px">
+    <Grid sizeColumns={["380px", "1fr"]} gap="10px">
       <Wrapper>
           <Card variant="compact">
               <Wrapper p="20px">

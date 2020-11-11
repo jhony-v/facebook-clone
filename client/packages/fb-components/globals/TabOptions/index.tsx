@@ -5,8 +5,9 @@ type TabOptionsTypes = {
   initialId : string | number;
   children : React.ReactElement<any>;
   onSelectedOption : (selectedId : string | number) => void;
+  style ?: React.CSSProperties;
 }
-const TabOptions = ({ initialId, children, onSelectedOption } : TabOptionsTypes) => {
+const TabOptions = ({ initialId, children, onSelectedOption,style } : TabOptionsTypes) => {
   const [selectedId, setSelected] = useState<string | number>(initialId);
 
   // Active event onOptionSelected if the event property exists
@@ -22,7 +23,7 @@ const TabOptions = ({ initialId, children, onSelectedOption } : TabOptionsTypes)
   const crossChildren = children.type === Fragment ? children.props.children : children; 
   
   return (
-    <StyledFlexSearch>
+    <StyledFlexSearch style={style}>
       {React.Children.map(crossChildren, (e : React.ReactElement<OptionTypes & {selected : boolean}>) =>
         React.cloneElement(e, {
           selected: selectedId === e.props.optionId,

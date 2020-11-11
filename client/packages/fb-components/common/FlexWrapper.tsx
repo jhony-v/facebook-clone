@@ -3,9 +3,9 @@ import styled, { css } from "styled-components";
 export type FlexWrapperTypes = {
   w?: string;
   h?: string;
-  flexDirection?: string;
-  align?: string;
-  justify?: string;
+  flexDirection?: React.CSSProperties['flexDirection'];
+  align?: React.CSSProperties['alignItems'];
+  justify?: React.CSSProperties['justifyContent'];
   centerBetween?: boolean;
 };
 

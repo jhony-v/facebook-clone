@@ -11,6 +11,8 @@ const GlobalStyles = createGlobalStyle`
    }
     body {
         background-color:${(props) => props.theme.colors.vgPage};
+        margin:0;
+        padding:0;
     }
 `
 export default GlobalStyles;

@@ -5,14 +5,14 @@ import styled from "styled-components";
 
 export const BannerAvatar = styled(Avatar)`
   border: 4px solid white;
-  width: 190px;
-  height: 190px;
+  width: 170px;
+  height: 170px;
 `;
 
 export const BannerCardBackgroundImage = styled.div<{ image?: string }>`
   --margin-bottom-avatar: 25px;
   border-radius: 0 0 10px 10px;
-  height: 280px;
+  height: 340px;
   width: 75%;
   margin: auto;
   background: url(${(props) => props.image}) no-repeat center / cover;

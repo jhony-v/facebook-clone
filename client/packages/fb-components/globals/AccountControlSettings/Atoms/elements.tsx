@@ -9,6 +9,7 @@ export const StyledControlWrapper = styled(FlexWrapper)`
   top: 0;
   align-items: center;
   padding-right: 16px;
+  z-index:10;
 `;
 
 export const StyledUserAccountButton = styled(RowItemSelectable)`

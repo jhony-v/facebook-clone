@@ -16,7 +16,7 @@ export type StyledFacebookAvatarTypes =  {
 }
 
 export const StyledFacebookAvatar = styled.a<StyledFacebookAvatarTypes>`
-  background: linear-gradient(15deg, blue 40%, #64b5f6 100%);
+  background: linear-gradient(15deg, ${props => props.theme.colors.vgPrimary} 40%, #64b5f6 100%);
   width: ${size}px;
   height: ${size}px;
   position: ${(props) => props.isFixed && "fixed"};
@@ -28,5 +28,5 @@ export const StyledFacebookAvatar = styled.a<StyledFacebookAvatarTypes>`
   display:flex;
   justify-content:center;
   align-items:flex-end;
-  z-index:1;
+  z-index:10;
 `;

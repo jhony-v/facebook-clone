@@ -9,7 +9,7 @@ type PreviewStreamWatchVideoCardProps = VideoWatchInformationProps & {
 
 const PreviewStreamWatchVideoCard = (props : PreviewStreamWatchVideoCardProps) => {
   return <StreamWrapperVideoCard>
-      <VideoWatchInformation video={props.video} live={props.live} totalViews={props.totalViews}  />
+      <VideoWatchInformation poster={props.poster} live={props.live} totalViews={props.totalViews}  />
       <VideoDetailStreamInformation {...props.detailStream} />
   </StreamWrapperVideoCard>
 

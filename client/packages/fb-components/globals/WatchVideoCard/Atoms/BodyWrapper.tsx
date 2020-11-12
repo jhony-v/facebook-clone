@@ -1,4 +1,5 @@
 import TextLabel from "@fb-components/TextLabel";
+import VideoMediaPlayer from "@fb-components/VideoMediaPlayer";
 import Wrapper from "@fb-components/Wrapper";
 import React from "react";
 
@@ -13,8 +14,7 @@ const BodyWrapper = ({ text, video }: BodyWrapperProps) => {
         <TextLabel textColor="vgTextBlack" weight>{text}</TextLabel>
       </Wrapper>
       <Wrapper>
-        <video src={video} controls muted style={{ width: "100%", height: "340px", objectFit: "cover" }}
-        />
+        <VideoMediaPlayer autoplay src={video} h="350px" objectFit="cover" />
       </Wrapper>
     </Wrapper>
   );

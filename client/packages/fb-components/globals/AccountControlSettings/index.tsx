@@ -1,5 +1,7 @@
 import React from "react";
-import { FiBell, FiMessageSquare, FiPlus } from "react-icons/fi";
+import { FiPlus } from "react-icons/fi";
+import { FaFacebookMessenger } from "react-icons/fa";
+import { GoBell } from "react-icons/go";
 import { StyledControlWrapper } from "./Atoms/elements";
 import UserAccountButtonOption from "./Atoms/UserAccountButtonOption";
 import ControlButtonOption from "./Atoms/ControlButtonOption";
@@ -10,8 +12,8 @@ const AccountControlSettings = () => {
     <StyledControlWrapper>
       <UserAccountButtonOption />
       <ControlButtonOption icon={FiPlus} />
-      <ControlButtonOption icon={FiMessageSquare} />
-      <ControlButtonOption icon={FiBell} />
+      <ControlButtonOption icon={FaFacebookMessenger} />
+      <ControlButtonOption icon={GoBell} />
       <ButtonToMoreOptionsAccount/>
     </StyledControlWrapper>
   );

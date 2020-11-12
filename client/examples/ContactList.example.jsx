@@ -1,7 +1,8 @@
 import React from "react";
 import ContactList from "@fb-components/ContactList";
 import faker from "faker";
-import { FiCamera, FiSearch, FiSettings } from "react-icons/fi";
+import { FiSearch, FiSettings } from "react-icons/fi";
+import { RiVideoAddFill } from "react-icons/ri";
 
 const dataTest = Array(50)
   .fill(0)
@@ -17,7 +18,7 @@ const ContactListExample = () => {
         title="Contacts"
         data={dataTest}
         options={<>
-            <ContactList.Option icon={FiCamera} onClick={()=>alert()} />
+            <ContactList.Option icon={RiVideoAddFill} onClick={()=>alert()} />
             <ContactList.Option icon={FiSearch} onClick={()=>alert(2)} />
             <ContactList.Option icon={FiSettings} onClick={()=>alert(3)} />
         </>}

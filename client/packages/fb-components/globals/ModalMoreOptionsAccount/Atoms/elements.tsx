@@ -1,8 +1,7 @@
 import RoundButton from "@fb-components/RoundButton";
-import Wrapper from "@fb-components/Wrapper";
 import styled from "styled-components";
 
-export const WrapperModalOptions = styled(Wrapper)`
+export const WrapperModalOptions = styled.div`
     top:0;
     right:0;
     margin:50px;

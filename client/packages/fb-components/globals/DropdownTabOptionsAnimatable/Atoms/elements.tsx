@@ -14,10 +14,6 @@ export const ContainerAnimatable = styled(motion.div)<ContainerAnimatableTypes>`
   position: relative;
 `;
 
-ContainerAnimatable.defaultProps = {
-  layout: true,
-};
-
 export const ItemAnimatable = styled(motion.div)`
   background-color: ${(props) => props.theme.colors.vgBlackAlpha00};
   background-color: ${(props) => props.theme.colors.vgBlackAlpha00};

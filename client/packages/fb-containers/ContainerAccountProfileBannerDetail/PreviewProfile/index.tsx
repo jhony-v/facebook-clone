@@ -7,7 +7,7 @@ const PreviewProfile: React.FC = ({ children }) => {
   return (
     <AccountProfileBanner
       backgroundImage={faker.random.image()}
-      text="Jhony Vega | Programmer"
+      text={faker.name.findName() + " " + faker.name.lastName() + " | " + faker.address.country()}
       avatar={faker.random.image()}
     >
       <Wrapper>{children}</Wrapper>

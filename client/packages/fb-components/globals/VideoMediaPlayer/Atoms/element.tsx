@@ -2,11 +2,11 @@ import FlexWrapper from "@fb-components/FlexWrapper";
 import styled from "styled-components";
 
 export const ButtonPlayerContainer = styled(FlexWrapper)`
-  border: 3px solid white;
+  border: 4px solid white;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
   margin: auto;
   position:absolute;
@@ -18,14 +18,16 @@ export const ButtonPlayerContainer = styled(FlexWrapper)`
 `;
 
 
-export const VideoPlayerContainer = styled.div`
-  display:inline-block;
+export const VideoPlayerContainer = styled.div<{ h?: string,w?:string}>`
+  display:flex;
   position:relative;
-`
-
-export const VideoPlayer = styled.video<{ h?: string,w?:string,objectFit ?: string }>`
-  object-fit:${props => props.objectFit};
   height: ${(props) => props.h || "180px"};
   width: ${props => props.w || "100%"};
+`
+
+export const VideoPlayer = styled.video<{objectFit ?: string }>`
+  object-fit:${props => props.objectFit};
   display:block;
+  height:100%;
+  width:100%;
 `;

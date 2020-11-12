@@ -1,23 +1,23 @@
 import FlexWrapper from "@fb-components/FlexWrapper";
 import LiveMicroText from "@fb-components/LiveMicroText";
+import SquareImage from "@fb-components/SquareImage";
 import TotalViews from "@fb-components/TotalViews";
-import VideoMediaPlayer from "@fb-components/VideoMediaPlayer";
 import Wrapper from "@fb-components/Wrapper";
 import { StreamWrapperMicroOptions } from "../Atoms/elements";
 
 export type VideoWatchInformationProps = {
-    video: string;
+    poster: string;
     live?: boolean;
     totalViews?: number;  
 }
 
-const VideoWatchInformation = ({video,live,totalViews} : VideoWatchInformationProps) => {
+const VideoWatchInformation = ({poster,live,totalViews} : VideoWatchInformationProps) => {
   return (
     <Wrapper>
-      <VideoMediaPlayer src={video} objectFit="cover" />
+      <SquareImage src={poster} h="180px" />
       <StreamWrapperMicroOptions>
-          <LiveMicroText live={live} />
-          <TotalViews total={totalViews} />
+          {live && <LiveMicroText live={live} />}
+          {totalViews && <TotalViews total={totalViews} />}
       </StreamWrapperMicroOptions>
     </Wrapper>
   );

@@ -15,7 +15,7 @@ const ProfileAccountButtonPreview = () => {
           <TextLabel weight textColor="vgTextBlack" block>
             {faker.name.firstName() + " " + faker.name.lastName() + " " + faker.name.lastName()}
           </TextLabel>
-          <TextLabel textSize={300} block notWeight>See your profile</TextLabel>
+          <TextLabel textSize={300} block >See your profile</TextLabel>
         </Wrapper>
       </FlexWrapper>
     </ItemButtonSelectable>

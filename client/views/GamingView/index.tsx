@@ -22,7 +22,9 @@ const GamingView = () => {
                     {Array(20).fill(0).map((e,i)=>{
                       return(
                         <Wrapper key={i} w="310px" m="0 10px 0 0"> 
-                          <PreviewStreamWatchVideoCard  video="https://player.vimeo.com/external/459802291.sd.mp4?s=c846c0ef9292600014ca216aa0be31496974e3a6&profile_id=164" live totalViews={5} detailStream={{
+                          <PreviewStreamWatchVideoCard
+                          poster={faker.random.image()}
+                          live totalViews={5} detailStream={{
                             avatar : faker.random.image(),
                             detail : "3D Juegos - Fortnite",
                             title : "Cordinando una nueva victoria en Warzone"
@@ -46,6 +48,7 @@ const GamingView = () => {
                             faker.random.image(),
                           ]}
                           textDetail="140 followers"
+                          following={false}
                           />
                           </Wrapper>
                       )
@@ -55,11 +58,13 @@ const GamingView = () => {
                     {Array(20).fill(0).map((e,i)=>{
                       return(
                         <Wrapper key={i} w="310px" m="0 10px 0 0"> 
-                          <PreviewStreamWatchVideoCard  video="https://player.vimeo.com/external/459802291.sd.mp4?s=c846c0ef9292600014ca216aa0be31496974e3a6&profile_id=164" live totalViews={5} detailStream={{
+                          <PreviewStreamWatchVideoCard  
+                          poster={faker.random.image()}
+                          detailStream={{
                             avatar : faker.random.image(),
-                            detail : "holaaaaaaaa",
-                            title : "holaaaaa"
-                          }} />
+                            detail : "Team Pelicula en acción",
+                            title : "Comisario  · American Truck Simulator"
+                          }}/>
                         </Wrapper>
                       )
                     })}

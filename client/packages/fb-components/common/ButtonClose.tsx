@@ -10,8 +10,8 @@ type ButtonCloseProps = {
 const ButtonClose = ({ onClose }: ButtonCloseProps) => {
   const { colors } = useTheme();
   return (
-    <RoundButton onClick={onClose}>
-      <VscChromeClose color={colors.vgBlackAlpha30} size={20} />
+    <RoundButton onClick={onClose} dimension="42px">
+      <VscChromeClose color={colors.vgBlackAlpha40} size={20} />
     </RoundButton>
   );
 };

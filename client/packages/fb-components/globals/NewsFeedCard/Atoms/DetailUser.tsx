@@ -11,13 +11,13 @@ type DetailtUserProps = {
 const DetailUser = ({ title, detail, icon: IconComponent }: DetailtUserProps) => {
   return (
     <FlexWrapper flexDirection="column" w="100%">
-      <TextLabel textSize={300} textColor="vgTextBlack">
+      <TextLabel textSize={300} weight textColor="vgTextBlack">
         {title}
       </TextLabel>
       <Wrapper p="5px 0">
         <FlexWrapper align="center">
             <Wrapper m="0 5px 0 0">
-              <TextLabel textSize={100} textColor="vgTextBlackAlpha20">{detail}</TextLabel>
+              <TextLabel textSize={200} textColor="vgTextBlackAlpha20">{detail}</TextLabel>
             </Wrapper>
           <IconComponent size={12} color="gray" />
         </FlexWrapper>

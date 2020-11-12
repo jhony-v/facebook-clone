@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 export type TextLabelTypes = {
   textSize?: ThemeBase.FontSizesTypes;
-  weight?: boolean;
-  notWeight ?: boolean;
+  weight?: boolean |  300 | 400 | 600 | 900;
   block?: boolean;
   textAlign?: string;
   textColor ?: ThemeBase.ColorsTextTypes;
@@ -15,8 +14,10 @@ const TextLabel = styled.span<TextLabelTypes>`
   font-size: ${(props) => props.theme.fontSizes[props.textSize || 400]};
   color: ${props => props.theme.colors[props.textColor || "vgTextBlackAlpha20"]};
   text-align: ${(props) => props.textAlign};
-  font-weight: ${(props) => props.weight && "bold"};
-  font-weight: ${(props) => props.notWeight && "normal"};
+  font-weight: ${({weight}) => {
+    if(weight) return (typeof weight  === "boolean") ? "bold" : weight;
+    return null;
+  }};
   display: ${(props) => props.block && "block"};
 `;
 

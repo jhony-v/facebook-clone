@@ -1,3 +1,4 @@
+import SquareImage from "@fb-components/SquareImage";
 import useVisibilityObserver from "@fb-hooks/useVisibilityObserver";
 import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 import ButtonPlayer from "./Atoms/ButtonPlayer";
@@ -6,22 +7,17 @@ import { VideoPlayer, VideoPlayerContainer } from "./Atoms/element";
 type VideoMediaPlayerProps = {
   src?: string;
   poster?: string;
-  dimension?: {
-    w?: string;
-    h?: string;
-  };
+  w?: string;
+  h?: string;
   objectFit ?: string;
   autoplay?: boolean;
 };
 
 const VideoMediaPlayer = (props: VideoMediaPlayerProps) => {
-  const { src, poster, objectFit } = props;
+  const { src, poster, objectFit, w,h } = props;
   const [visible, setVisible] = useState<boolean>(false);
   const [playing, setPlaying] = useState<boolean>(false);
   const videoRef = useRef() as MutableRefObject<HTMLVideoElement>;
-  const { visibility, setElement } = useVisibilityObserver({
-    threshold : [1]
-  });
 
   useEffect(() => {
     if(playing) videoRef.current.play();
@@ -29,20 +25,22 @@ const VideoMediaPlayer = (props: VideoMediaPlayerProps) => {
   },[videoRef,playing])
 
 
-  useEffect(() => {
-    setPlaying(visibility);
-  },[visibility])
-
   const TypeButtonPlayer = ButtonPlayer[playing ? "Pause" : "Play"];
   const playerButtonComponent =  <TypeButtonPlayer onClick={()=>setPlaying(prevState => !prevState)} />;
 
   return (
     <VideoPlayerContainer
+      w={w}
+      h={h}
       onMouseEnter={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
-      ref={ref => ref && setElement(ref)}
     >
-      <VideoPlayer src={src} poster={poster} ref={videoRef} objectFit={objectFit} />
+      <VideoPlayer 
+      ref={videoRef} 
+      src={src} 
+      autoPlay={props.autoplay}
+      poster={poster} 
+      objectFit={objectFit} />
       {visible && playerButtonComponent}
     </VideoPlayerContainer>
   );

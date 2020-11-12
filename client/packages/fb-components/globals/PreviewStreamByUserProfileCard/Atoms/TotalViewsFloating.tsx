@@ -1,0 +1,17 @@
+import TotalViews from "@fb-components/TotalViews";
+import Wrapper from "@fb-components/Wrapper";
+import React from "react";
+
+const TotalViewsFloating = ({ total }: { total: number }) => {
+  return (
+    <Wrapper absolute={{ 
+        top: "5px",
+        left: "5px",
+      }}
+    >
+      <TotalViews total={total} />
+    </Wrapper>
+  );
+};
+
+export default TotalViewsFloating;

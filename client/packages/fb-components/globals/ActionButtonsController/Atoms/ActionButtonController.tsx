@@ -12,7 +12,7 @@ const ActionButtonController = ({ text, icon: IconComponent, colorIcon, onClick 
   return (
     <StyledRaisedButton onClick={onClick}>
       {IconComponent && (
-          <IconComponent size={20} style={{ marginRight: "5px" }} color={colorIcon} />
+          <IconComponent size={15} style={{ marginRight: "5px" }} color={colorIcon} />
       )}
       <TextLabel textSize={300} weight>{text}</TextLabel>
     </StyledRaisedButton>

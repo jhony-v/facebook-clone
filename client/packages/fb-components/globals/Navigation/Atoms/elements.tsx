@@ -1,12 +1,8 @@
+import PointNotification from "@fb-components/PointNotification";
 import styled, { css } from "styled-components";
 
-export const StyledNotificationPoint = styled.div`
-  background-color: ${props => props.theme.colors.vgDanger};
-  color:white;
-  padding: 5px 8px;
-  border-radius: 15px;
+export const StyledNotificationPoint = styled(PointNotification)`
   position:absolute;
-  font-size:${({theme}) => theme.fontSizes[100]};
   top:9%;
   left:70%;
   transform:translateX(-50%);
@@ -51,4 +47,8 @@ export const StyledListItemsNavigation = styled.ul`
 `
 export const StyledItemNavigation = styled.li`
     display:flex;
+    > * {
+      height:100%;
+      display:flex;
+    }
 `

@@ -34,8 +34,9 @@ const StyledRaisedWrapper = styled.button<StyledRaisedWrapperTypes>`
 
 export type RaisedButtonProps = {
   children ?: React.ReactNode;
-}
- & React.ButtonHTMLAttributes<{}> & GetComponentProps<typeof StyledRaisedWrapper> & StyledRaisedWrapperTypes
+} & React.ButtonHTMLAttributes<{}> 
+  & GetComponentProps<typeof StyledRaisedWrapper> 
+  & StyledRaisedWrapperTypes
 
 const RaisedButton = ({ children, ...restProps } : RaisedButtonProps) => {
   return <StyledRaisedWrapper {...restProps}>{children}</StyledRaisedWrapper>;

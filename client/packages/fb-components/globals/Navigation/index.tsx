@@ -8,11 +8,11 @@ import LinkButton from "./Atoms/LinkButton";
 const Navigation = () => {
   return (
     <StyledListItemsNavigation>
-      <LinkButton href="/" icon={FiHome} />
-      <LinkButton href="/watch" icon={MdOndemandVideo} />
-      <LinkButton href="/marketplace" icon={RiStore2Line} notifications={4} />
-      <LinkButton href="/gaming" icon={FiArchive} />
-      <LinkButton href="/groups" icon={FaUsers} notifications={25} />
+      <LinkButton href="/" icon={FiHome} title="Home" />
+      <LinkButton href="/watch" icon={MdOndemandVideo} title="Watch" />
+      <LinkButton href="/marketplace" icon={RiStore2Line} notifications={4} title="Marketplace" />
+      <LinkButton href="/gaming" icon={FiArchive} title="Gaming" />
+      <LinkButton href="/groups" icon={FaUsers} notifications={25} title="Groups" />
     </StyledListItemsNavigation>
   );
 };

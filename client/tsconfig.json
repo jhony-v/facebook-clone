@@ -15,6 +15,7 @@
       "@fb-hooks/*": [ "packages/fb-hooks/*" ],
       "@fb-features-recoil/*": [ "packages/fb-features-recoil/*" ],
       "@fb-services/*": [ "packages/fb-services/*" ],
+      "@mocks/*" : ["mocks/*"],
       "@views/*": ["views/*" ],
       "@utils/*": [ "utils/*" ],
       "@theme/*": [ "theme/*" ],

@@ -1,6 +1,6 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import styled from "styled-components";
-import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -36,16 +36,18 @@ type DarkTooltipProps = {
   text?: string;
 } ;
 const DarkTooltip: FC<DarkTooltipProps> = ({ children, text }) => {
-  const [cycle, setCycle] = useCycle(false, true);
-  const onHover = () => {
-    setCycle();
+  const [visible, setVisible ] = useState(false);
+  const onHover = (state : boolean) => () => {
+    setVisible(state)
   };
 
   return (
-    <StyledWrapper onMouseEnter={onHover} onMouseLeave={onHover}>
+    <StyledWrapper 
+    onMouseEnter={onHover(true)} 
+    onMouseLeave={onHover(false)}>
       {children}
       <AnimatePresence>
-        {cycle && <StyledTooltip>{text}</StyledTooltip>}
+        {visible && <StyledTooltip>{text}</StyledTooltip>}
       </AnimatePresence>
     </StyledWrapper>
   );

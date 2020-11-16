@@ -8,14 +8,15 @@ type MarketplaceCardProps = {
   price?: string;
   description?: string;
   location?: string;
+  onClick  ?: () => void
 };
 
 const MarketplaceCard = (props: MarketplaceCardProps) => {
   return (
-    <Wrapper w="300px">
+    <Wrapper w="300px" onClick={props.onClick}>
      <SquareImage src={props.image}/>
       <Wrapper>
-        <Wrapper p="5px 0">
+        <Wrapper p="10px 0 5px">
           <TextLabel weight textColor="vgTextBlack">{props.price}</TextLabel>
         </Wrapper>
         <Wrapper p="5px 0">

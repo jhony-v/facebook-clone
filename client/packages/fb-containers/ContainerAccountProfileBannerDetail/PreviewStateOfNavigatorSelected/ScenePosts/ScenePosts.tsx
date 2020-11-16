@@ -1,9 +1,9 @@
 import Card from "@fb-components/Card";
+import ContainerCreateNewPost from "@fb-components/ContainerCreateNewPost";
+import ContainerGetNewsFeed from "@fb-components/ContainerGetNewsFeed";
 import Grid from "@fb-components/Grid";
 import TextLabel from "@fb-components/TextLabel";
 import Wrapper from "@fb-components/Wrapper";
-import NewsFeedExample from "examples/NewsFeed.example";
-import CreateNewPostExample from "../../../../../examples/CreateNewPost.example";
 
 const ScenePosts = () => {
   return (
@@ -20,10 +20,10 @@ const ScenePosts = () => {
       </Wrapper>
       <Wrapper>
         <Wrapper>
-          <CreateNewPostExample />
+          <ContainerCreateNewPost />
         </Wrapper>
         <Wrapper>
-          <NewsFeedExample />
+          <ContainerGetNewsFeed />
         </Wrapper>
       </Wrapper>
     </Grid>

@@ -8,7 +8,7 @@ import DetailUser from "../Atoms/DetailUser";
 type NewsHeaderProps = {
   user: {
     avatar: string;
-    username: string;
+    name: string;
   },
   detail: {
     text: string;
@@ -22,7 +22,7 @@ const NewsHeader = ({ user, detail }: NewsHeaderProps) => {
         <Wrapper flexNone m="0 10px 0 0">
           <Avatar src={user.avatar} />
         </Wrapper>
-        <DetailUser title={user.username} detail={detail.text} icon={detail.icon} />
+        <DetailUser title={user.name} detail={detail.text} icon={detail.icon} />
         <ButtonMoreAction/>
       </FlexWrapper>
     </Wrapper>

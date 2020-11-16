@@ -1,25 +1,11 @@
 import React from "react";
-import faker from "faker";
 import PreviewStories from "@fb-components/PreviewStories";
 import HistoryUserItem from "@fb-components/PreviewStories/Atoms/HistoryUserItem";
-
-const data = Array(4)
-  .fill(0)
-  .map((e, i) => ({
-    user: {
-      avatar: faker.random.image(),
-      username:
-        faker.name.firstName() +
-        " " +
-        faker.name.lastName() +
-        " " +
-        faker.name.lastName(),
-    },
-    image: faker.random.image,
-  }));
-
+import { useGetPreviewUserStories } from "@fb-features-recoil/userStories";
+import faker from "faker";
 
 export default () => {
+  const { data } = useGetPreviewUserStories();
   return (
     <PreviewStories
       data={data}

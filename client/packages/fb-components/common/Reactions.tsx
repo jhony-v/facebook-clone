@@ -5,6 +5,9 @@ const reaction = (image : string, alt: string)  => (props: AvatarTypes) => (
   <Avatar {...props} src={image} alt={alt} />
 );
 
+
+export type ReactionsType = keyof typeof Reactions;
+
 const Reactions = {
   Like: reaction("/assets/reactions/like.svg", "like"),
   Love: reaction("/assets/reactions/love.svg", "love"),

@@ -34,6 +34,7 @@ export const CardStreamUser = styled(Card)`
   display: flex;
   flex-direction: column;
   position:relative;
+  cursor:pointer;
 `;
 
 

@@ -1,10 +1,9 @@
-import React from "react";
 import PreviewStories from "@fb-components/PreviewStories";
 import HistoryUserItem from "@fb-components/PreviewStories/Atoms/HistoryUserItem";
 import { useGetPreviewUserStories } from "@fb-features-recoil/userStories";
 import faker from "faker";
 
-export default () => {
+const ContainerPreviewUserStories = () => {
   const { data } = useGetPreviewUserStories();
   return (
     <PreviewStories
@@ -20,3 +19,5 @@ export default () => {
     </PreviewStories>
   );
 };
+
+export default ContainerPreviewUserStories;

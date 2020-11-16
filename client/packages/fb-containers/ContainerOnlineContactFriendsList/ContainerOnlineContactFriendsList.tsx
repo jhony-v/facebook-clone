@@ -1,8 +1,8 @@
-import React from "react";
-import ContactList from "@fb-components/ContactList";
 import faker from "faker";
 import { FiSearch, FiSettings } from "react-icons/fi";
 import { RiVideoAddFill } from "react-icons/ri";
+import ContactList from '@fb-components/ContactList';
+
 
 const dataTest = Array(50)
   .fill(0)
@@ -11,10 +11,10 @@ const dataTest = Array(50)
     image: faker.random.image(),
   }));
 
-const ContactListExample = () => {
-  return (
-    <div>
-      <ContactList
+
+const ContainerOnlineContactFriendsList = () => {
+    return (
+        <ContactList
         title="Contacts"
         data={dataTest}
         options={<>
@@ -32,8 +32,7 @@ const ContactListExample = () => {
           />
         )}
       </ContactList>
-    </div>
-  );
-};
+    )
+}
 
-export default ContactListExample;
+export default ContainerOnlineContactFriendsList

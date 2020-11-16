@@ -2,6 +2,7 @@ import SquareImage from "@fb-components/SquareImage";
 import TextLabel from "@fb-components/TextLabel";
 import Wrapper from "@fb-components/Wrapper";
 import React from "react";
+import { MarketplaceCardWrapper } from "./Atoms/elements";
 
 type MarketplaceCardProps = {
   image: string;
@@ -13,7 +14,7 @@ type MarketplaceCardProps = {
 
 const MarketplaceCard = (props: MarketplaceCardProps) => {
   return (
-    <Wrapper w="300px" onClick={props.onClick}>
+    <MarketplaceCardWrapper onClick={props.onClick}>
      <SquareImage src={props.image}/>
       <Wrapper>
         <Wrapper p="10px 0 5px">
@@ -26,7 +27,7 @@ const MarketplaceCard = (props: MarketplaceCardProps) => {
           <TextLabel textSize={200}>{props.location}</TextLabel>
         </Wrapper>
       </Wrapper>
-    </Wrapper>
+    </MarketplaceCardWrapper>
   );
 };
 

@@ -62,7 +62,7 @@ const StringAvatars = (props: StringAvatarsProps) => {
   return (
     <FlexWrapper>
       {images.map((image, i) => (
-        <ItemWrapperAvatar w={dimension} h={dimension}>
+        <ItemWrapperAvatar key={i} w={dimension} h={dimension}>
           <ItemAvatar src={image} dimension={dimension+"px"} />
           {placeholder && (
             i + 1 === len && (

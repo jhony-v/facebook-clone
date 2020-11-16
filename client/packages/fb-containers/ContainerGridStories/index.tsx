@@ -1,7 +1,7 @@
 import { SkeletonElementCardGrid } from "@fb-components/LoadersSkeletonElement";
 import dynamic from "next/dynamic";
 
-const AsyncStoriesExample = dynamic(() => import("../../../examples/Stories.example"),{
+const AsyncStoriesExample = dynamic(() => import("@fb-containers/ContainerPreviewUserStories"),{
     loading: () => <SkeletonElementCardGrid repeat={5} />,
     ssr: false,
   }

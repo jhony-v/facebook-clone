@@ -24,6 +24,7 @@ export const RenderSearchInput = () => {
 /**
  * Options to filter by id
  */
+
 export const RenderOptions = ({ children }) => {
   const { state, onSelectedOption, action } = useChatTabContext();
   const handlerOnSelectedOption = useCallback((selectedFilterOption : string | number ) => {
@@ -35,11 +36,11 @@ export const RenderOptions = ({ children }) => {
   );
 
   return (
-    !state.searching && (
+    !state.searching ? (
       <TabOptions initialId={state.selectedFilterOption} onSelectedOption={handlerOnSelectedOption}>
         {children(state.filterOptions)}
       </TabOptions>
-    )
+    ) : null
   );
 };
 

@@ -3,7 +3,7 @@ import { StyledPreviewStoriesWrapper } from "./Atoms/elements";
 import HistoryItem from "./Atoms/HistoryItem";
 
 type PreviewStoriesProps = {
-  data : [any],
+  data : any[],
   children: (e:any,i:number) => React.ReactNode;
   userAddController: React.ReactNode
 }

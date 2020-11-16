@@ -11,8 +11,8 @@ const Navigation = () => {
       <LinkButton href="/" icon={FiHome} title="Home" />
       <LinkButton href="/watch" icon={MdOndemandVideo} title="Watch" />
       <LinkButton href="/marketplace" icon={RiStore2Line} notifications={4} title="Marketplace" />
-      <LinkButton href="/gaming" icon={FiArchive} title="Gaming" />
       <LinkButton href="/groups" icon={FaUsers} notifications={25} title="Groups" />
+      <LinkButton href="/gaming" icon={FiArchive} title="Gaming" />
     </StyledListItemsNavigation>
   );
 };

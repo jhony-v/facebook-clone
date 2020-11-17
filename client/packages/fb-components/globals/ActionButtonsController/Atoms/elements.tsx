@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import RaisedButton from "@fb-components/RaisedButton";
+import RaisedButton from "@fb-components/common/RaisedButton";
 
 export const StyledRaisedButton = styled(RaisedButton)`
   width: 100%;

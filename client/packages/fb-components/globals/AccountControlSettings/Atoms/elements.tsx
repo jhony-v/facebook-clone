@@ -1,5 +1,5 @@
-import FlexWrapper from "@fb-components/FlexWrapper";
-import RowItemSelectable from "@fb-components/RowItemSelectable";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import RowItemSelectable from "@fb-components/common/RowItemSelectable";
 import styled from "styled-components";
 
 export const StyledControlWrapper = styled(FlexWrapper)`
@@ -15,5 +15,5 @@ export const StyledControlWrapper = styled(FlexWrapper)`
 export const StyledUserAccountButton = styled(RowItemSelectable)`
   border-radius: 20px;
   padding: 4px;
-  margin-right: 20px;
+  margin-right: 10px;
 `;

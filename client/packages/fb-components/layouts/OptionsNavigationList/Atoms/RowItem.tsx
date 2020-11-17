@@ -1,6 +1,6 @@
-import Avatar from "@fb-components/Avatar";
-import RowItemSelectable from "@fb-components/RowItemSelectable";
-import Wrapper from "@fb-components/Wrapper";
+import Avatar from "@fb-components/common/Avatar";
+import RowItemSelectable from "@fb-components/common/RowItemSelectable";
+import Wrapper from "@fb-components/common/Wrapper";
 
 type RowItemProps = {
   text ?: string;

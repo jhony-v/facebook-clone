@@ -1,4 +1,4 @@
-import { SkeletonElementCardGrid } from "@fb-components/LoadersSkeletonElement";
+import { SkeletonElementCardGrid } from "@fb-components/globals/LoadersSkeletonElement";
 import dynamic from "next/dynamic";
 
 const AsyncStoriesExample = dynamic(() => import("@fb-containers/ContainerPreviewUserStories"),{

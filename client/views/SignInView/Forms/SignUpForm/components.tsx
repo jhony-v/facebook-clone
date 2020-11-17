@@ -1,6 +1,5 @@
-import TextLabel from '@fb-components/TextLabel'
-import Wrapper from '@fb-components/Wrapper'
-import React from 'react'
+import TextLabel from '@fb-components/common/TextLabel'
+import Wrapper from '@fb-components/common/Wrapper'
 
 export const HeaderTitle = () => (<>
     <TextLabel textSize={800} textColor="vgTextBlack" weight block>Sign Up</TextLabel>

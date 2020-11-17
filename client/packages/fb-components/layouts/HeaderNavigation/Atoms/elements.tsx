@@ -1,4 +1,4 @@
-import FlexWrapper from "@fb-components/FlexWrapper";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
 import styled from "styled-components";
 
 export const HeaderWrapper = styled(FlexWrapper).attrs({

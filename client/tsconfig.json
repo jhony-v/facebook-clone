@@ -2,14 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@fb-components/*": [
-        "packages/fb-components/application/*",
-        "packages/fb-components/common/*",
-        "packages/fb-components/globals/*",
-        "packages/fb-components/layouts/*",
-        "packages/fb-components/forms/*",
-        "packages/fb-containers/*",
-      ],
+      "@fb-components/*": [ "packages/fb-components/*" ],
       "@fb-contexts/*": [ "packages/fb-contexts/*" ],
       "@fb-containers/*": [ "packages/fb-containers/*", ],
       "@fb-hooks/*": [ "packages/fb-hooks/*" ],
@@ -50,6 +43,6 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", 
+    "**/*.tsx", ".storybook/Button.stories.tsx", 
   ]
 }

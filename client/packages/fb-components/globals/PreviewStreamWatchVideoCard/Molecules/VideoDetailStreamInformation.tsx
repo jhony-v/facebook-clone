@@ -1,7 +1,6 @@
-import FlexWrapper from "@fb-components/FlexWrapper";
-import TextLabel from "@fb-components/TextLabel";
-import Wrapper from "@fb-components/Wrapper";
-import React from "react";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import TextLabel from "@fb-components/common/TextLabel";
+import Wrapper from "@fb-components/common/Wrapper";
 import { AvatarStreaming } from "../Atoms/elements";
 
 export type VideoDetailStreamInformationProps = {

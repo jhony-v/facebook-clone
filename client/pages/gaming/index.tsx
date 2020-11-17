@@ -1,7 +1,7 @@
-import ContainerChatTabs from "@fb-components/ContainerChatTabs";
-import ContainerMainNavigator from "@fb-components/ContainerMainNavigator";
-import ContainerOptionsNavigation from "@fb-components/ContainerOptionsNavigation";
-import LayoutsDrawer from "@fb-components/LayoutsDrawer";
+import ContainerChatTabs from "@fb-containers/ContainerChatTabs";
+import ContainerMainNavigator from "@fb-containers/ContainerMainNavigator";
+import ContainerOptionsNavigation from "@fb-containers/ContainerOptionsNavigation";
+import LayoutsDrawer from "@fb-components/layouts/LayoutsDrawer";
 import GamingView from "@views/GamingView";
 
 export default function gaming() {

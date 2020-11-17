@@ -3,8 +3,8 @@ import SearchInput from "./Molecules/SearchInput";
 import { actionSearch, actionSelectFilter } from "./Context/ChatTabReducer";
 import { useChatTabContext } from "./Context/ChatTabContext";
 import TabOptions from "../TabOptions";
-import ErrorComponent from "@fb-components/ErrorComponent";
-import ListRenderItems from "@fb-components/ListRenderItems";
+import ErrorComponent from "@fb-components/common/ErrorComponent";
+import ListRenderItems from "@fb-components/common/ListRenderItems";
 
 /**
  * Input to search in the list

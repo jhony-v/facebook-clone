@@ -1,4 +1,4 @@
-import PointNotification from "@fb-components/PointNotification";
+import PointNotification from "@fb-components/common/PointNotification";
 import styled, { css } from "styled-components";
 
 export const StyledNotificationPoint = styled(PointNotification)`

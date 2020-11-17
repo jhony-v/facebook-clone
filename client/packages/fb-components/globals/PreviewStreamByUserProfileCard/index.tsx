@@ -1,5 +1,5 @@
-import StringAvatars from "@fb-components/StringAvatars";
-import Wrapper from "@fb-components/Wrapper";
+import StringAvatars from "@fb-components/common/StringAvatars";
+import Wrapper from "@fb-components/common/Wrapper";
 import { CardStreamUser, ImageStreamUser, TextLabelStreamUser,CardWrapperDetailStreamUser } from "./Atoms/elements"
 import FollowButton from "./Atoms/FollowButton";
 import TotalViewsFloating from "./Atoms/TotalViewsFloating";

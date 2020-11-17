@@ -1,8 +1,8 @@
-import FacebookAvatar from "@fb-components/FacebookAvatar";
-import FlexWrapper from "@fb-components/FlexWrapper";
-import Grid from "@fb-components/Grid";
-import TextLabel from "@fb-components/TextLabel";
-import Wrapper from "@fb-components/Wrapper";
+import FacebookAvatar from "@fb-components/application/FacebookAvatar";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import Grid from "@fb-components/common/Grid";
+import TextLabel from "@fb-components/common/TextLabel";
+import Wrapper from "@fb-components/common/Wrapper";
 import useToggle from "@fb-hooks/useToogle";
 import { StyledGlobal } from "../elements";
 import SignUpForm from "../SignUpForm";

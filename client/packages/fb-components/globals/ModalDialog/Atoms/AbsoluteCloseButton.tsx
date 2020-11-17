@@ -1,6 +1,5 @@
-import ButtonClose from "@fb-components/ButtonClose";
-import Wrapper from "@fb-components/Wrapper";
-import React from "react";
+import ButtonClose from "@fb-components/common/ButtonClose";
+import Wrapper from "@fb-components/common/Wrapper";
 
 const AbsoluteCloseButton = ({ onClose }: { onClose: () => void }) => {
   return (

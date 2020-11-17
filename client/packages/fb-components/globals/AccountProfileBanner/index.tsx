@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import {BannerAvatar,BannerCardBackgroundImage,BannerCardContainer, BannerNameAccount} from "./Atoms/elements";
-import Wrapper from "@fb-components/Wrapper";
+import Wrapper from "@fb-components/common/Wrapper";
 
 type AccountProfileBannerProps = {
     backgroundImage ?: string;

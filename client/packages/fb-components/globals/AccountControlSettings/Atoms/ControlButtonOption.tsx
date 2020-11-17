@@ -1,5 +1,5 @@
-import RoundButton from "@fb-components/RoundButton";
-import Wrapper from "@fb-components/Wrapper";
+import RoundButton from "@fb-components/common/RoundButton";
+import Wrapper from "@fb-components/common/Wrapper";
 import { GetComponentProps } from "@utils/transforms";
 
 type ControlButtonOptionProps = GetComponentProps<typeof RoundButton> & {

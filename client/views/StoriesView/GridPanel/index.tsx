@@ -1,6 +1,5 @@
-import LayoutsDrawer from "@fb-components/LayoutsDrawer";
-import Wrapper from "@fb-components/Wrapper";
 import React from "react";
+import Wrapper from "@fb-components/common/Wrapper";
 import styled from "styled-components";
 
 const DrawerFullScreen = styled.div`

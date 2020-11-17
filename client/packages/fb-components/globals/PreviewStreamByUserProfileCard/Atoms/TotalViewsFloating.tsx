@@ -1,5 +1,5 @@
-import TotalViews from "@fb-components/TotalViews";
-import Wrapper from "@fb-components/Wrapper";
+import TotalViews from "@fb-components/common/TotalViews";
+import Wrapper from "@fb-components/common/Wrapper";
 import React from "react";
 
 const TotalViewsFloating = ({ total }: { total: number }) => {

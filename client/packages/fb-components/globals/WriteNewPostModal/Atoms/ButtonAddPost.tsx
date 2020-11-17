@@ -1,5 +1,4 @@
-import RaisedButton from "@fb-components/RaisedButton";
-import React from "react";
+import RaisedButton from "@fb-components/common/RaisedButton";
 import { useRecoilValue } from "recoil";
 import styled, { css } from "styled-components";
 import { textMessageDetailsSelector } from "../Store";

@@ -1,6 +1,6 @@
-import FlexWrapper from "@fb-components/FlexWrapper";
-import TabOptions from "@fb-components/TabOptions";
-import Wrapper from "@fb-components/Wrapper";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import TabOptions from "@fb-components/globals/TabOptions";
+import Wrapper from "@fb-components/common/Wrapper";
 import React from "react";
 import { FaFacebookMessenger, FaPhone, FaUser} from "react-icons/fa";
 import { FiMoreHorizontal } from "react-icons/fi";

@@ -1,10 +1,10 @@
-import LayoutsDrawer from "@fb-components/LayoutsDrawer";
-import Wrapper from "@fb-components/Wrapper";
+import LayoutsDrawer from "@fb-components/layouts/LayoutsDrawer";
+import Wrapper from "@fb-components/common/Wrapper";
 import ContainerGridStories from "@fb-containers/ContainerGridStories";
 import ContainerOptionsNavigation from "@fb-containers/ContainerOptionsNavigation";
 import ContainerGetNewsFeed from "@fb-containers/ContainerGetNewsFeed";
-import ContainerOnlineContactFriendsList from "@fb-components/ContainerOnlineContactFriendsList";
-import ContainerCreateNewPost from "@fb-components/ContainerCreateNewPost";
+import ContainerOnlineContactFriendsList from "@fb-containers/ContainerOnlineContactFriendsList";
+import ContainerCreateNewPost from "@fb-containers/ContainerCreateNewPost";
 
 const IndexView = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import Avatar from "@fb-components/Avatar";
-import Wrapper from "@fb-components/Wrapper";
+import Avatar from "@fb-components/common/Avatar";
+import Wrapper from "@fb-components/common/Wrapper";
 import ActionButtonsController from "../../ActionButtonsController";
 import { StyledActionInputWrapper } from "./elements";
 

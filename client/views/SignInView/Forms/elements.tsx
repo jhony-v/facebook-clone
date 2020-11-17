@@ -1,6 +1,4 @@
-// ----------sign in----------
-
-import FullScreenWrapper from "@fb-components/FullScreenWrapper";
+import FullScreenWrapper from "@fb-components/common/FullScreenWrapper";
 import styled from "styled-components";
 
 export const StyledGlobal = {

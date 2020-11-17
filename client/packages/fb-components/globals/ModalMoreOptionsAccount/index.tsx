@@ -1,4 +1,4 @@
-import DropdownTabOptionsAnimatable from "@fb-components/DropdownTabOptionsAnimatable";
+import DropdownTabOptionsAnimatable from "@fb-components/globals/DropdownTabOptionsAnimatable";
 import { IoIosSettings } from "react-icons/io";
 import { AiFillQuestionCircle } from "react-icons/ai";
 import { BsMoon } from "react-icons/bs";

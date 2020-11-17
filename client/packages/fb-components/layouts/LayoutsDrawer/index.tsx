@@ -36,6 +36,16 @@ const LayoutsDrawer = {
     width:${props => props.theme.layoutSizes.widthRightRail};
   `,
   GridColumn: GridColumn,
+  PreviewPublication : styled.div`
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    grid-template-columns:1fr 430px;
+    display:grid;
+    overflow: hidden;
+  `
 };
 
 export default LayoutsDrawer;

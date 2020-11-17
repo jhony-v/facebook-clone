@@ -1,4 +1,4 @@
-import Avatar from "@fb-components/Avatar";
+import Avatar from "@fb-components/common/Avatar";
 import styled from "styled-components";
 
 export const StreamWrapperVideoCard = styled.div<{ w?: string }>`

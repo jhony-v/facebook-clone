@@ -1,4 +1,4 @@
-import ModalDialog from "@fb-components/ModalDialog";
+import ModalDialog from "@fb-components/globals/ModalDialog";
 import ButtonAddPost from "./Atoms/ButtonAddPost";
 import HeaderTitle from "./Atoms/HeaderTitle";
 import TextAreaMessage from "./Atoms/TextAreaMessage";

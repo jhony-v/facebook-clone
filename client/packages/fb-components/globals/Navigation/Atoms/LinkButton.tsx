@@ -1,8 +1,8 @@
-import { useRouter } from "next/dist/client/router";
 import React from "react";
+import { useRouter } from "next/router";
 import { StyledItemNavigation, StyledLinkButton, StyledNotificationPoint } from "./elements";
 import Link, { LinkProps } from "next/link"
-import DarkTooltip from "@fb-components/DarkTooltip";
+import DarkTooltip from "@fb-components/common/DarkTooltip";
 
 type LinkButtonProps = {
   isSelected ?: boolean;

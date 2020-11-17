@@ -1,7 +1,7 @@
 import React from "react";
+import AccountProfileBanner from "@fb-components/globals/AccountProfileBanner";
+import Wrapper from "@fb-components/common/Wrapper";
 import faker from "faker";
-import AccountProfileBanner from "@fb-components/AccountProfileBanner";
-import Wrapper from "@fb-components/Wrapper";
 
 const PreviewProfile: React.FC = ({ children }) => {
   return (

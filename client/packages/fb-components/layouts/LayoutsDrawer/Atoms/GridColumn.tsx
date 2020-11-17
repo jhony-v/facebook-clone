@@ -1,6 +1,6 @@
-import Grid from "@fb-components/Grid";
-import Wrapper from "@fb-components/Wrapper";
 import React from "react";
+import Grid from "@fb-components/common/Grid";
+import Wrapper from "@fb-components/common/Wrapper";
 import { useTheme } from "styled-components";
 
 type GridColumnProps = {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import FlexWrapper from "@fb-components/FlexWrapper";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
 
 export const StyledListContainer = styled(FlexWrapper).attrs({
     flexDirection : "column"

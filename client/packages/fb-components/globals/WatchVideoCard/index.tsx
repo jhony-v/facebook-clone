@@ -1,4 +1,4 @@
-import NewsFeedCard from "@fb-components/NewsFeedCard";
+import NewsFeedCard from "@fb-components/globals/NewsFeedCard";
 import FooterWrapper from "./Atoms/FooterWrapper";
 import BodyWrapper from "./Atoms/BodyWrapper";
 

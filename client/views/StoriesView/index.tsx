@@ -1,8 +1,7 @@
-import AccountControlSettings from '@fb-components/AccountControlSettings'
-import ContainerListUserStories from '@fb-components/ContainerListUserStories'
-import FacebookCloseWithAvatar from '@fb-components/FacebookCloseWithAvatar'
-import Wrapper from '@fb-components/Wrapper'
-import React from 'react'
+import AccountControlSettings from '@fb-components/globals/AccountControlSettings'
+import ContainerListUserStories from '@fb-containers/ContainerListUserStories'
+import FacebookCloseWithAvatar from '@fb-components/application/FacebookCloseWithAvatar'
+import Wrapper from '@fb-components/common/Wrapper'
 import GridPanel from './GridPanel'
 
 const StoriesView = () => {

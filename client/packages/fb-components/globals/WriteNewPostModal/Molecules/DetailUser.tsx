@@ -1,7 +1,7 @@
-import Avatar from "@fb-components/Avatar";
-import FlexWrapper from "@fb-components/FlexWrapper";
-import TextLabel from "@fb-components/TextLabel";
-import Wrapper from "@fb-components/Wrapper";
+import Avatar from "@fb-components/common/Avatar";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import TextLabel from "@fb-components/common/TextLabel";
+import Wrapper from "@fb-components/common/Wrapper";
 import faker from "faker";
 
 const DetailUser = () => {

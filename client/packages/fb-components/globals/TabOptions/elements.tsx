@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import FlexWrapper from "@fb-components/FlexWrapper";
-import TextLabel, { TextLabelTypes } from "@fb-components/TextLabel";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import TextLabel, { TextLabelTypes } from "@fb-components/common/TextLabel";
 
 type StyledTabOptionSearchTypes = {
   selected ?: boolean;

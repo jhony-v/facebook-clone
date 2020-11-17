@@ -1,6 +1,6 @@
-import Card from "@fb-components/Card";
-import Wrapper from "@fb-components/Wrapper";
 import React from "react";
+import Card from "@fb-components/common/Card";
+import Wrapper from "@fb-components/common/Wrapper";
 import AbsoluteCloseButton from "./AbsoluteCloseButton";
 import { StyledBackdropScreenWrapper, WrapperBodyAnimatable } from "./elements";
 

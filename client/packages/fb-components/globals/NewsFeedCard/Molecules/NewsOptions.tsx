@@ -2,7 +2,7 @@ import { FiShare } from "react-icons/fi";
 import ActionButtonsController from "../../ActionButtonsController";
 import { GoComment } from "react-icons/go";
 import { RiThumbUpLine } from "react-icons/ri";
-import Wrapper from "@fb-components/Wrapper";
+import Wrapper from "@fb-components/common/Wrapper";
 
 const NewsOptions = () => {
   return (

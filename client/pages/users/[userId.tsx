@@ -1,6 +1,6 @@
-import ContainerChatTabs from "@fb-components/ContainerChatTabs";
-import ContainerMainNavigator from "@fb-components/ContainerMainNavigator";
-import LayoutsDrawer from "@fb-components/LayoutsDrawer";
+import ContainerChatTabs from "@fb-containers/ContainerChatTabs";
+import ContainerMainNavigator from "@fb-containers/ContainerMainNavigator";
+import LayoutsDrawer from "@fb-components/layouts/LayoutsDrawer";
 import UsersView from "@views/UsersView";
 
 export default function Users() {

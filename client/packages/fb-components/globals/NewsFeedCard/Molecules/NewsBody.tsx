@@ -1,5 +1,5 @@
-import TextLabel from "@fb-components/TextLabel";
-import Wrapper from "@fb-components/Wrapper";
+import TextLabel from "@fb-components/common/TextLabel";
+import Wrapper from "@fb-components/common/Wrapper";
 import { StyledNewsMainImage } from "../Atoms/elements";
 
 type NewsBodyProps = {

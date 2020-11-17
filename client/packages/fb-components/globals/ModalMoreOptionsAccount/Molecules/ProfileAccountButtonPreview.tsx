@@ -1,10 +1,9 @@
-import React from "react";
 import ItemButtonSelectable from "../Atoms/ItemButtonSelectable";
+import Avatar from "@fb-components/common/Avatar";
+import TextLabel from "@fb-components/common/TextLabel";
+import Wrapper from "@fb-components/common/Wrapper";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
 import faker from "faker";
-import Avatar from "@fb-components/Avatar";
-import TextLabel from "@fb-components/TextLabel";
-import Wrapper from "@fb-components/Wrapper";
-import FlexWrapper from "@fb-components/FlexWrapper";
 
 const ProfileAccountButtonPreview = () => {
   return (

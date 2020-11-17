@@ -1,5 +1,4 @@
-import ModalDialog from "@fb-components/ModalDialog";
-import React from "react";
+import ModalDialog from "@fb-components/globals/ModalDialog";
 import { HeaderTitle } from "./components";
 import Form from "./Form";
 

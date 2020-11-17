@@ -1,7 +1,7 @@
-export default function ErrorPage(){
-    return(
-        <div>
-            error
-        </div>
-    )
+import ContainerMainNavigator from "@fb-containers/ContainerMainNavigator";
+
+export default function ErrorPage() {
+  return <ContainerMainNavigator>
+      
+  </ContainerMainNavigator>;
 }

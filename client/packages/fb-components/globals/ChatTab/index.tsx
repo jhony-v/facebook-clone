@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PortalComponent from "@fb-components/PortalComponent";
+import PortalComponent from "@fb-components/common/PortalComponent";
 import { ChatTabProvider } from "./Context/ChatTabContext";
 import { StyledTabChatFillWrapper } from "./Atoms/elements";
 import FloatingButton from "./Atoms/FloatingButton";

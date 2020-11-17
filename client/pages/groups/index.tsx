@@ -1,8 +1,8 @@
-import ContainerChatTabs from "@fb-components/ContainerChatTabs";
-import ContainerMainNavigator from "@fb-components/ContainerMainNavigator";
-import LayoutsDrawer from "@fb-components/LayoutsDrawer";
-import OptionsNavigationList from "@fb-components/OptionsNavigationList";
-import Wrapper from "@fb-components/Wrapper";
+import ContainerChatTabs from "@fb-containers/ContainerChatTabs";
+import ContainerMainNavigator from "@fb-containers/ContainerMainNavigator";
+import LayoutsDrawer from "@fb-components/layouts/LayoutsDrawer";
+import OptionsNavigationList from "@fb-components/layouts/OptionsNavigationList";
+import Wrapper from "@fb-components/common/Wrapper";
 import GroupsView from "@views/GroupsView";
 
 export default function Groups() {

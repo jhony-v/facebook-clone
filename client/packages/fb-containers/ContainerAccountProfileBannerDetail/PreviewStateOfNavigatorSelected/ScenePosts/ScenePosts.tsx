@@ -1,9 +1,9 @@
-import Card from "@fb-components/Card";
-import ContainerCreateNewPost from "@fb-components/ContainerCreateNewPost";
-import ContainerGetNewsFeed from "@fb-components/ContainerGetNewsFeed";
-import Grid from "@fb-components/Grid";
-import TextLabel from "@fb-components/TextLabel";
-import Wrapper from "@fb-components/Wrapper";
+import Card from "@fb-components/common/Card";
+import ContainerCreateNewPost from "@fb-containers/ContainerCreateNewPost";
+import ContainerGetNewsFeed from "@fb-containers/ContainerGetNewsFeed";
+import Grid from "@fb-components/common/Grid";
+import TextLabel from "@fb-components/common/TextLabel";
+import Wrapper from "@fb-components/common/Wrapper";
 
 const ScenePosts = () => {
   return (

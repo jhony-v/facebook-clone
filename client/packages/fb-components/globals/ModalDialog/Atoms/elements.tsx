@@ -1,6 +1,6 @@
-import Card from "@fb-components/Card";
-import FullScreenWrapper from "@fb-components/FullScreenWrapper";
-import Wrapper from "@fb-components/Wrapper";
+import Card from "@fb-components/common/Card";
+import FullScreenWrapper from "@fb-components/common/FullScreenWrapper";
+import Wrapper from "@fb-components/common/Wrapper";
 import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 
@@ -18,13 +18,13 @@ export const WrapperBodyAnimatable = styled(motion.div)<{ w?: string }>`
 `;
 WrapperBodyAnimatable.defaultProps = {
   initial: {
-    scale: 0,
+    scale: .6,
   },
   animate: {
     scale: 1,
     transition: {
         type: "spring",
-        stiffness: 200,
+        stiffness: 180,
     }
   },
   exit: {

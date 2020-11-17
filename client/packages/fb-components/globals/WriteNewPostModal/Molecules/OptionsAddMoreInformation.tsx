@@ -1,7 +1,7 @@
-import Card from "@fb-components/Card";
-import FlexWrapper from "@fb-components/FlexWrapper";
-import TextLabel from "@fb-components/TextLabel";
-import Wrapper from "@fb-components/Wrapper";
+import Card from "@fb-components/common/Card";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import TextLabel from "@fb-components/common/TextLabel";
+import Wrapper from "@fb-components/common/Wrapper";
 import styled from "styled-components";
 import { RiVideoAddFill } from "react-icons/ri";
 import { MdPhotoLibrary,MdLocationOn, MdTagFaces } from "react-icons/md";

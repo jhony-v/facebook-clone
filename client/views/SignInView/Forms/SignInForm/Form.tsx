@@ -1,5 +1,5 @@
-import RaisedButton from "@fb-components/RaisedButton";
 import React from "react";
+import RaisedButton from "@fb-components/common/RaisedButton";
 import { useForm } from "react-hook-form";
 import { FormEditText } from "../components";
 

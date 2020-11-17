@@ -1,5 +1,5 @@
-import ContainerGetNewsFeed from "@fb-components/ContainerGetNewsFeed";
-import Wrapper from "@fb-components/Wrapper";
+import ContainerGetNewsFeed from "@fb-containers/ContainerGetNewsFeed";
+import Wrapper from "@fb-components/common/Wrapper";
 
 const GroupsView = () => {
   return (

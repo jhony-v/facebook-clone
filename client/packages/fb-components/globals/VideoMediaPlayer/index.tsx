@@ -1,5 +1,3 @@
-import SquareImage from "@fb-components/SquareImage";
-import useVisibilityObserver from "@fb-hooks/useVisibilityObserver";
 import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 import ButtonPlayer from "./Atoms/ButtonPlayer";
 import { VideoPlayer, VideoPlayerContainer } from "./Atoms/element";

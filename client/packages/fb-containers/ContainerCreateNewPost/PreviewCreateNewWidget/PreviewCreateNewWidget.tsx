@@ -1,5 +1,5 @@
 import faker from "faker";
-import CreateNewPost from "@fb-components/CreateNewPost";
+import CreateNewPost from "@fb-components/globals/CreateNewPost";
 import { useCreateNewPostOpenModal } from "@fb-features-recoil/createNewPost";
 
 const PreviewCreateNewWidget = () => {

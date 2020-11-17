@@ -1,4 +1,4 @@
-import TextLabel from "@fb-components/TextLabel";
+import TextLabel from "@fb-components/common/TextLabel";
 
 const LinksPrivacityApplication = () => {
   return (

@@ -1,5 +1,5 @@
-import FlexWrapper from "@fb-components/FlexWrapper";
-import RoundButton from "@fb-components/RoundButton";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import RoundButton from "@fb-components/common/RoundButton";
 import styled from "styled-components";
 
 export const StyledFloatingCircleButton = styled(RoundButton)`

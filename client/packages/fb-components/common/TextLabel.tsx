@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export type TextLabelTypes = {
   textSize?: ThemeBase.FontSizesTypes;
-  weight?: boolean |  300 | 400 | 600 | 900;
+  weight?: boolean | 200 |  300 | 400 | 500 | 600 | 700 | 900;
   block?: boolean;
   textAlign?: string;
   textColor ?: ThemeBase.ColorsTextTypes;

@@ -1,6 +1,6 @@
-import Avatar from "@fb-components/Avatar";
-import Card from "@fb-components/Card";
-import TextLabel from "@fb-components/TextLabel";
+import Avatar from "@fb-components/common/Avatar";
+import Card from "@fb-components/common/Card";
+import TextLabel from "@fb-components/common/TextLabel";
 import styled from "styled-components";
 
 export const BannerAvatar = styled(Avatar)`

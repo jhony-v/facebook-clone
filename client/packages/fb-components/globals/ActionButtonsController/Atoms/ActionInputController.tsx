@@ -1,5 +1,5 @@
-import TextLabel from "@fb-components/TextLabel";
 import React from "react";
+import TextLabel from "@fb-components/common/TextLabel";
 import { StyledRaisedButtonPlaceholderInput } from "./elements";
 
 type ActionInputControllerProps = {

@@ -1,6 +1,6 @@
-import Wrapper from "@fb-components/Wrapper";
-import TextLabel from "@fb-components/TextLabel";
-import ContainerGetListProducts from "@fb-components/ContainerGetListProducts";
+import Wrapper from "@fb-components/common/Wrapper";
+import TextLabel from "@fb-components/common/TextLabel";
+import ContainerGetListProducts from "@fb-containers/ContainerGetListProducts";
 
 const MarketPlaceView = () => {
   return (

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import FlexWrapper from "@fb-components/FlexWrapper";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
 
 export const StyledCreatePostWrapper = styled(FlexWrapper)`
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);

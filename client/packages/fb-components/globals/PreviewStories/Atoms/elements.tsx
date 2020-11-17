@@ -1,5 +1,4 @@
-import Avatar from "@fb-components/Avatar";
-import RoundButton, { StyledRoundButtonTypes } from "@fb-components/RoundButton";
+import RoundButton, { StyledRoundButtonTypes } from "@fb-components/common/RoundButton";
 import styled from "styled-components";
 
 export const StyledPreviewStoriesWrapper = styled.div`

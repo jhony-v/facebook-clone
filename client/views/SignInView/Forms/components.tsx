@@ -1,5 +1,5 @@
-import EditText from "@fb-components/EditText";
-import Wrapper from "@fb-components/Wrapper";
+import EditText from "@fb-components/common/EditText";
+import Wrapper from "@fb-components/common/Wrapper";
 import { Control, Controller, FieldError } from "react-hook-form";
 import { StyledGlobal } from "./elements";
 

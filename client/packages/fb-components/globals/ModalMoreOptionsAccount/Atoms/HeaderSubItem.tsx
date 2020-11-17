@@ -1,8 +1,8 @@
-import FlexWrapper from "@fb-components/FlexWrapper";
-import RoundButton from "@fb-components/RoundButton";
-import TextLabel from "@fb-components/TextLabel";
-import Wrapper from "@fb-components/Wrapper";
 import React from "react";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import RoundButton from "@fb-components/common/RoundButton";
+import TextLabel from "@fb-components/common/TextLabel";
+import Wrapper from "@fb-components/common/Wrapper";
 import { BiArrowBack } from "react-icons/bi";
 
 type HeaderSubItemProps = {

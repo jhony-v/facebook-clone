@@ -1,5 +1,5 @@
-import Grid from "@fb-components/Grid";
-import MarketplaceCard from "@fb-components/MarketplaceCard";
+import Grid from "@fb-components/common/Grid";
+import MarketplaceCard from "@fb-components/globals/MarketplaceCard";
 import { useGetProducts } from "@fb-features-recoil/marketplace";
 
 const ContainerGetListProducts = () => {

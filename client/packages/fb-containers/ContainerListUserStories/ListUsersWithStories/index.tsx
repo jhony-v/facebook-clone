@@ -1,10 +1,9 @@
-import Avatar from "@fb-components/Avatar";
-import FlexWrapper from "@fb-components/FlexWrapper";
-import RaisedButton from "@fb-components/RaisedButton";
-import Wrapper from "@fb-components/Wrapper";
-import React from "react";
+import Avatar from "@fb-components/common/Avatar";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import RaisedButton from "@fb-components/common/RaisedButton";
+import Wrapper from "@fb-components/common/Wrapper";
+import TextLabel from "@fb-components/common/TextLabel";
 import faker from "faker";
-import TextLabel from "@fb-components/TextLabel";
 
 const ListUSersWithStories = () => {
   return (

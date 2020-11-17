@@ -1,5 +1,5 @@
 import faker from "faker";
-import TabChat from "@fb-components/ChatTab";
+import TabChat from "@fb-components/globals/ChatTab";
 const dataTest = Array(20)
   .fill(0)
   .map((e, i) => ({

@@ -1,7 +1,7 @@
-import Card from "@fb-components/Card";
-import RaisedButton from "@fb-components/RaisedButton";
-import SquareImage from "@fb-components/SquareImage";
-import TextLabel from "@fb-components/TextLabel";
+import Card from "@fb-components/common/Card";
+import RaisedButton from "@fb-components/common/RaisedButton";
+import SquareImage from "@fb-components/common/SquareImage";
+import TextLabel from "@fb-components/common/TextLabel";
 import styled, { css } from "styled-components";
 
 export const ImageStreamUser = styled(SquareImage)`
@@ -14,12 +14,10 @@ export const TextLabelStreamUser = styled(TextLabel)<{ isTitle?: boolean }>`
   font-size: ${(props) => props.theme.fontSizes[200]};
   display: block;
   padding: 5px 0;
-  ${(props) =>
-    props.isTitle &&
-    css`
+  ${(props) => props.isTitle && (css`
       font-weight: bold;
       font-size: ${(props) => props.theme.fontSizes[300]};
-    `}
+    `)}
 `;
 
 export const CardWrapperDetailStreamUser = styled.div`

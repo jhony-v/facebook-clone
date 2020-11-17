@@ -3,7 +3,7 @@ import RowItem from "./Molecules/RowItem";
 import ButtonOption from "./Atoms/ButtonOption";
 import { StyledListContainer } from "./Atoms/elements";
 import ListHeaderOptions from "./Molecules/ListHeaderOptions";
-import ListRenderItems from "@fb-components/ListRenderItems";
+import ListRenderItems from "@fb-components/common/ListRenderItems";
 
 type ContactListProps = {
   data: any[];

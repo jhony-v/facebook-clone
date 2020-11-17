@@ -1,4 +1,4 @@
-import Wrapper from "@fb-components/Wrapper";
+import Wrapper from "@fb-components/common/Wrapper";
 import React from "react";
 import ScenePosts from "./ScenePosts/ScenePosts";
 

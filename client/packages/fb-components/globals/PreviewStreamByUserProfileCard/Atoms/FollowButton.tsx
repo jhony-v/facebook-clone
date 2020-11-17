@@ -1,4 +1,3 @@
-import React from "react";
 import { ButtonFollowStreamUser } from "./elements";
 
 const FollowButton = ({ following }: { following?: boolean }) => {

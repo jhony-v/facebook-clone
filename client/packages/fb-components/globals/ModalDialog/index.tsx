@@ -1,5 +1,5 @@
-import PortalComponent from "@fb-components/PortalComponent";
-import Wrapper from "@fb-components/Wrapper";
+import PortalComponent from "@fb-components/common/PortalComponent";
+import Wrapper from "@fb-components/common/Wrapper";
 import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 import BackdropModal from "./Atoms/BackdropModal";

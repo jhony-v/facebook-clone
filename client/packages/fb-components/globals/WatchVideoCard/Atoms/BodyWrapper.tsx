@@ -1,7 +1,6 @@
-import TextLabel from "@fb-components/TextLabel";
-import VideoMediaPlayer from "@fb-components/VideoMediaPlayer";
-import Wrapper from "@fb-components/Wrapper";
-import React from "react";
+import TextLabel from "@fb-components/common/TextLabel";
+import VideoMediaPlayer from "@fb-components/globals/VideoMediaPlayer";
+import Wrapper from "@fb-components/common/Wrapper";
 
 type BodyWrapperProps = {
   text?: string;

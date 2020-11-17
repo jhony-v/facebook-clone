@@ -1,8 +1,7 @@
-import FlexWrapper from "@fb-components/FlexWrapper";
-import LiveMicroText from "@fb-components/LiveMicroText";
-import SquareImage from "@fb-components/SquareImage";
-import TotalViews from "@fb-components/TotalViews";
-import Wrapper from "@fb-components/Wrapper";
+import LiveMicroText from "@fb-components/common/LiveMicroText";
+import SquareImage from "@fb-components/common/SquareImage";
+import TotalViews from "@fb-components/common/TotalViews";
+import Wrapper from "@fb-components/common/Wrapper";
 import { StreamWrapperMicroOptions } from "../Atoms/elements";
 
 export type VideoWatchInformationProps = {

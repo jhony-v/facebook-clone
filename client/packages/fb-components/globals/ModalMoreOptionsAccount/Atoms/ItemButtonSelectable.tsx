@@ -1,8 +1,8 @@
-import FlexWrapper from "@fb-components/FlexWrapper";
-import RaisedButton from "@fb-components/RaisedButton";
-import TextLabel from "@fb-components/TextLabel";
-import Wrapper from "@fb-components/Wrapper";
 import React from "react";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import RaisedButton from "@fb-components/common/RaisedButton";
+import TextLabel from "@fb-components/common/TextLabel";
+import Wrapper from "@fb-components/common/Wrapper";
 import { IoIosArrowForward } from "react-icons/io";
 import { RoundButtonIcon } from "./elements";
 

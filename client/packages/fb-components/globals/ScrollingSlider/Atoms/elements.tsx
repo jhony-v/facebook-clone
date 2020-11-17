@@ -1,4 +1,4 @@
-import Card from "@fb-components/Card";
+import Card from "@fb-components/common/Card";
 import styled, { css } from "styled-components";
 
 export const ButtonFloatingToMove = styled(Card)<{ position?: "left" | "right"}>`

@@ -1,4 +1,4 @@
-import TextLabel from "@fb-components/TextLabel";
+import TextLabel from "@fb-components/common/TextLabel";
 import React from "react";
 
 const HeaderTitle = () => {

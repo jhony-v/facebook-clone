@@ -1,5 +1,5 @@
-import FlexWrapper from "@fb-components/FlexWrapper";
-import Wrapper from "@fb-components/Wrapper";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import Wrapper from "@fb-components/common/Wrapper";
 import React from "react";
 
 type FooterWrapperProps = {

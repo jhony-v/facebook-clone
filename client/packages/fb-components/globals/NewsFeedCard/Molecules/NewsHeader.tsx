@@ -1,7 +1,7 @@
-import Avatar from "@fb-components/Avatar";
-import FlexWrapper from "@fb-components/FlexWrapper";
-import Wrapper from "@fb-components/Wrapper";
 import React from "react";
+import Avatar from "@fb-components/common/Avatar";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import Wrapper from "@fb-components/common/Wrapper";
 import ButtonMoreAction from "../Atoms/ButtonMoreAction";
 import DetailUser from "../Atoms/DetailUser";
 

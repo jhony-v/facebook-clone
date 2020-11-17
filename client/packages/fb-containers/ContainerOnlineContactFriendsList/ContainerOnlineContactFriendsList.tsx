@@ -1,7 +1,7 @@
 import faker from "faker";
 import { FiSearch, FiSettings } from "react-icons/fi";
 import { RiVideoAddFill } from "react-icons/ri";
-import ContactList from '@fb-components/ContactList';
+import ContactList from '@fb-components/globals/ContactList';
 
 
 const dataTest = Array(50)

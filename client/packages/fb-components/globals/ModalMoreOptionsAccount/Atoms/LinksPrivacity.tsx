@@ -1,6 +1,5 @@
-import LinksPrivacityApplication from "@fb-components/LinksPrivacityApplication";
-import Wrapper from "@fb-components/Wrapper";
-import React from "react";
+import LinksPrivacityApplication from "@fb-components/application/LinksPrivacityApplication";
+import Wrapper from "@fb-components/common/Wrapper";
 
 const LinksPrivacity = () => {
   return (

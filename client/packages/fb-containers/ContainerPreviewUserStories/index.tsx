@@ -1,5 +1,5 @@
-import PreviewStories from "@fb-components/PreviewStories";
-import HistoryUserItem from "@fb-components/PreviewStories/Atoms/HistoryUserItem";
+import PreviewStories from "@fb-components/globals/PreviewStories";
+import HistoryUserItem from "@fb-components/globals/PreviewStories/Atoms/HistoryUserItem";
 import { useGetPreviewUserStories } from "@fb-features-recoil/userStories";
 import faker from "faker";
 

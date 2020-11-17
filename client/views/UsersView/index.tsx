@@ -1,5 +1,5 @@
-import ContainerAccountProfileBannerDetail from "@fb-components/ContainerAccountProfileBannerDetail";
-import Wrapper from "@fb-components/Wrapper";
+import ContainerAccountProfileBannerDetail from "@fb-containers/ContainerAccountProfileBannerDetail";
+import Wrapper from "@fb-components/common/Wrapper";
 
 const UsersView = () => {
   return (

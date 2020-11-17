@@ -1,6 +1,5 @@
-import WatchVideoCard from '@fb-components/WatchVideoCard'
-import Wrapper from '@fb-components/Wrapper'
-import React from 'react'
+import WatchVideoCard from '@fb-components/globals/WatchVideoCard'
+import Wrapper from '@fb-components/common/Wrapper'
 import { FaGlobeAsia } from 'react-icons/fa'
 import faker from "faker";
 

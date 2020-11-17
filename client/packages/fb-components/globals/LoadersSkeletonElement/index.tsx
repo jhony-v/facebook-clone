@@ -1,7 +1,7 @@
-import FlexWrapper from "@fb-components/FlexWrapper";
-import Grid from "@fb-components/Grid";
-import Skeleton from "@fb-components/Skeleton";
-import Wrapper from "@fb-components/Wrapper";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import Grid from "@fb-components/common/Grid";
+import Skeleton from "@fb-components/common/Skeleton";
+import Wrapper from "@fb-components/common/Wrapper";
 import { converMeasureCSSToNumber } from "@utils/transforms";
 
 const scaleValue = (scale?: string) => converMeasureCSSToNumber(scale || "50px");

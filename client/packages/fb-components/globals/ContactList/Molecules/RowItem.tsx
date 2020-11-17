@@ -1,7 +1,7 @@
 import React from "react";
-import RowItemSelectable from "@fb-components/RowItemSelectable";
-import Avatar from "@fb-components/Avatar";
-import Wrapper from "@fb-components/Wrapper";
+import RowItemSelectable from "@fb-components/common/RowItemSelectable";
+import Avatar from "@fb-components/common/Avatar";
+import Wrapper from "@fb-components/common/Wrapper";
 
 type RowItemProps = {
   style?: React.CSSProperties;

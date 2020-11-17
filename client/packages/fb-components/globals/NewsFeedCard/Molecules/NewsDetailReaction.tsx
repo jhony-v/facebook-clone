@@ -1,7 +1,7 @@
-import FlexWrapper from "@fb-components/FlexWrapper";
-import StringReactions, { StringReactionType } from "@fb-components/StringReactions";
-import TextLabel from "@fb-components/TextLabel";
-import Wrapper from "@fb-components/Wrapper";
+import FlexWrapper from "@fb-components/common/FlexWrapper";
+import StringReactions, { StringReactionType } from "@fb-components/common/StringReactions";
+import TextLabel from "@fb-components/common/TextLabel";
+import Wrapper from "@fb-components/common/Wrapper";
 
 type NewsDetailReactionProps = {
   reactions ?: StringReactionType[];

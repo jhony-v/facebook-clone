@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "@fb-components/Grid";
+import Grid from "@fb-components/common/Grid";
 import ActionButtonController from "./Atoms/ActionButtonController";
 import ActionInputController from "./Atoms/ActionInputController";
 

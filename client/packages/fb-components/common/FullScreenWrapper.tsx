@@ -12,7 +12,10 @@ const StyledWrapper = styled.div`
 
 const FullScreenWrapper: React.FC<{}> = ({ children, ...restProps }) => {
   useEffect(() => {
-      document.documentElement.style.overflow = "hidden";
+      document.documentElement.style.overflowY = "hidden";
+      return () => {
+        document.documentElement.style.overflowY = "auto";
+      }
   }, []);
   return <StyledWrapper {...restProps}>{children}</StyledWrapper>;
 };

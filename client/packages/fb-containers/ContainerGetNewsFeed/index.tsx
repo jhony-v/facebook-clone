@@ -1,5 +1,5 @@
-import NewsFeedCard from "@fb-components/NewsFeedCard";
-import { ReactionsType } from "@fb-components/Reactions";
+import NewsFeedCard from "@fb-components/globals/NewsFeedCard";
+import { ReactionsType } from "@fb-components/common/Reactions";
 import { useGetNewsFeed } from "@fb-features-recoil/newsFeed";
 import { FaGlobeAsia } from "react-icons/fa";
 

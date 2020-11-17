@@ -1,7 +1,7 @@
-import PreviewStreamByUserProfileCard from "@fb-components/PreviewStreamByUserProfileCard";
-import PreviewStreamWatchVideoCard from "@fb-components/PreviewStreamWatchVideoCard";
-import ScrollingSlider from "@fb-components/ScrollingSlider";
-import Wrapper from "@fb-components/Wrapper";
+import PreviewStreamByUserProfileCard from "@fb-components/globals/PreviewStreamByUserProfileCard";
+import PreviewStreamWatchVideoCard from "@fb-components/globals/PreviewStreamWatchVideoCard";
+import ScrollingSlider from "@fb-components/globals/ScrollingSlider";
+import Wrapper from "@fb-components/common/Wrapper";
 import faker from "faker";
 
 const GamingView = () => {

@@ -15,7 +15,7 @@ type ItemButtonSelectableProps = {
 const ItemButtonSelectable: React.FC<ItemButtonSelectableProps> = ({icon:IconComponent,...props}) => {
   return (
     <Wrapper m="10px 0">
-      <RaisedButton fluid onClick={props.onClick}>
+      <RaisedButton hover fluid onClick={props.onClick}>
         <FlexWrapper align="center" w="100%">
           {IconComponent && <RoundButtonIcon>
             <IconComponent size="20px" />

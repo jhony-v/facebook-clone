@@ -14,7 +14,7 @@ const HistoryItem = ({ user, image }: HistoryItemProps) => {
   return (
     <StyledCardOverflow>
       <StyledCardBackgroundImage image={image}>
-        <Wrapper p="10px">
+        <Wrapper p="10px" >
           <Avatar dimension="30px" isFeature src={user.avatar} />
         </Wrapper>
         <Wrapper m="auto 10px 10px" w="90%">

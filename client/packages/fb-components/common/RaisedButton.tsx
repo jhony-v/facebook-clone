@@ -6,6 +6,7 @@ type StyledRaisedWrapperTypes = {
   variant ?: "primary";
   w ?: string;
   fluid ?: boolean;
+  hover ?: boolean;
 }
 const StyledRaisedWrapper = styled.button<StyledRaisedWrapperTypes>`
   display: flex;
@@ -26,9 +27,11 @@ const StyledRaisedWrapper = styled.button<StyledRaisedWrapperTypes>`
     background-color: ${props => props.theme.colors.vgPrimaryAlpha10};
   }
   `}
-  &:hover {
-    background-color: ${props => props.theme.colors.vgBlackAlpha10};
-  }
+  ${props => props.hover && css`
+    &:hover {
+      background-color: ${props => props.theme.colors.vgBlackAlpha10};
+    }
+  `}
 `;
 
 

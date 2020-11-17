@@ -1,10 +1,10 @@
-import CreateNewWidget from "./CreateNewWidget";
-import CreateNewModalWidget from "./CreateNewModalWidget";
+import PreviewCreateNewWidget from "./PreviewCreateNewWidget/PreviewCreateNewWidget";
+import CreateNewModalWidget from "./CreateNewModalWidget/CreateNewModalWidget";
 
 const ContainerCreateNewPost = () => {
   return (
     <>
-      <CreateNewWidget />
+      <PreviewCreateNewWidget />
       <CreateNewModalWidget />
     </>
   );

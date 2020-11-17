@@ -5,7 +5,7 @@ export default {
       id: faker.random.uuid(),
       image: faker.random.image(),
       text: faker.lorem.paragraphs(2),
-      createdAt: new Date(),
+      createdAt: new Date().toLocaleDateString(),
       user: {
         name: faker.name.firstName() + " " + faker.name.lastName(),
         avatar: faker.random.image(),

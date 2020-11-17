@@ -1,7 +1,7 @@
-import ButtonClose from "@fb-components/ButtonClose";
 import PortalComponent from "@fb-components/PortalComponent";
 import Wrapper from "@fb-components/Wrapper";
-import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 import BackdropModal from "./Atoms/BackdropModal";
 import { StyledHeaderWrapper } from "./Atoms/elements";
 
@@ -17,19 +17,17 @@ const ModalDialog = ({ open, children, w, onModal, onClose }: ModalDialogProps) 
     onModal && onModal(open);
   },[open]);
 
-  return open ? (
-      <PortalComponent className="modal">
-        <BackdropModal w={w}>
-              <Wrapper absolute={{
-                right : "10px",
-                top : "10px"
-              }}> 
-                <ButtonClose onClose={onClose} />
-              </Wrapper>
-              {children}
-        </BackdropModal>
-      </PortalComponent>
-    ) : null;
+  return (
+  <AnimatePresence>
+    {open  && (
+    <PortalComponent className="modal">
+      <BackdropModal w={w} onClose={onClose}>
+        {children}
+      </BackdropModal>
+    </PortalComponent>
+    )}
+  </AnimatePresence>
+  )
 };
 
 ModalDialog.defaultProps = {

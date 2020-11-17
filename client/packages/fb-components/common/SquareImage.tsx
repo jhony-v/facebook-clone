@@ -10,4 +10,5 @@ export default styled.img<SquareImageTypes>`
   object-fit: cover;
   border-radius: 5px;
   display:block;
+  background-color:rgba(0,0,0,.05);
 `;

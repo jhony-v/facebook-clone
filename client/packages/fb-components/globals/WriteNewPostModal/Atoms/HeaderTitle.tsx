@@ -5,7 +5,7 @@ const HeaderTitle = () => {
   return (
     <div>
       <TextLabel textColor="vgTextBlack" weight textSize={600} textAlign="center" block>
-        Add post
+        Create Post
       </TextLabel>
     </div>
   );

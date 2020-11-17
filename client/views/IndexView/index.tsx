@@ -4,6 +4,7 @@ import ContainerGridStories from "@fb-containers/ContainerGridStories";
 import ContainerOptionsNavigation from "@fb-containers/ContainerOptionsNavigation";
 import ContainerGetNewsFeed from "@fb-containers/ContainerGetNewsFeed";
 import ContainerOnlineContactFriendsList from "@fb-components/ContainerOnlineContactFriendsList";
+import ContainerCreateNewPost from "@fb-components/ContainerCreateNewPost";
 
 const IndexView = () => {
   return (
@@ -14,6 +15,7 @@ const IndexView = () => {
             <ContainerGridStories />
           </LayoutsDrawer.Stories>
           <LayoutsDrawer.Feed>
+            <ContainerCreateNewPost/>
             <ContainerGetNewsFeed />
           </LayoutsDrawer.Feed>
         </Wrapper>

@@ -1,7 +1,8 @@
 import SquareImage from "@fb-components/SquareImage";
 import TextLabel from "@fb-components/TextLabel";
 import Wrapper from "@fb-components/Wrapper";
-import React from "react";
+import useVisibilityObserver from "@fb-hooks/useVisibilityObserver";
+import React, { useEffect, useState } from "react";
 import { MarketplaceCardWrapper } from "./Atoms/elements";
 
 type MarketplaceCardProps = {
@@ -13,9 +14,16 @@ type MarketplaceCardProps = {
 };
 
 const MarketplaceCard = (props: MarketplaceCardProps) => {
+  const { setElement, visibility } = useVisibilityObserver();
+  const [ image , setImage ] = useState("");
+
+  useEffect(() => {
+    visibility && setImage(props.image); 
+  },[visibility])
+
   return (
     <MarketplaceCardWrapper onClick={props.onClick}>
-     <SquareImage src={props.image}/>
+     <SquareImage data-src={props.image} ref={setElement} {...!!image && {src:image}}  />
       <Wrapper>
         <Wrapper p="10px 0 5px">
           <TextLabel weight textColor="vgTextBlack">{props.price}</TextLabel>

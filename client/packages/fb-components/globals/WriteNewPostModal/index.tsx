@@ -1,10 +1,9 @@
-import DropDownTabOptionsAnimatable from "@fb-components/DropdownTabOptionsAnimatable";
-import FormTextarea from "@fb-components/FormTextarea";
 import ModalDialog from "@fb-components/ModalDialog";
-import RaisedButton from "@fb-components/RaisedButton";
-
-import React from "react";
+import ButtonAddPost from "./Atoms/ButtonAddPost";
 import HeaderTitle from "./Atoms/HeaderTitle";
+import TextAreaMessage from "./Atoms/TextAreaMessage";
+import DetailUser from "./Molecules/DetailUser";
+import OptionsAddMoreInformation from "./Molecules/OptionsAddMoreInformation";
 
 type WriteNewPostModalProps = {
   actions : {
@@ -14,13 +13,15 @@ type WriteNewPostModalProps = {
 }
 const WriteNewPostModal = ({actions}: WriteNewPostModalProps) => {
   return (
-    <ModalDialog open={actions.open} onClose={actions.onClose}>
+    <ModalDialog w="500px" open={actions.open} onClose={actions.onClose}>
       <ModalDialog.Header p="20px" border>
         <HeaderTitle />
       </ModalDialog.Header>
       <ModalDialog.Body p="20px">
-        <FormTextarea placeholder="What's on your mind, Jhony?" />
-        <RaisedButton w="100%">Add post</RaisedButton>
+        <DetailUser/>
+        <TextAreaMessage/>
+        <OptionsAddMoreInformation/>
+        <ButtonAddPost/>
       </ModalDialog.Body>
     </ModalDialog>
   );

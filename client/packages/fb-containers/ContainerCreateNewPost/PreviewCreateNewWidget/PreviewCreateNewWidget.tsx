@@ -2,7 +2,7 @@ import faker from "faker";
 import CreateNewPost from "@fb-components/CreateNewPost";
 import { useCreateNewPostOpenModal } from "@fb-features-recoil/createNewPost";
 
-const CreateNewWidget = () => {
+const PreviewCreateNewWidget = () => {
     const { toggleModal } = useCreateNewPostOpenModal();
     return (
         <CreateNewPost
@@ -12,4 +12,4 @@ const CreateNewWidget = () => {
       )
 }
 
-export default CreateNewWidget
+export default PreviewCreateNewWidget

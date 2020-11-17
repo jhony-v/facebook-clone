@@ -1,3 +1,4 @@
+import Avatar from "@fb-components/Avatar";
 import RoundButton, { StyledRoundButtonTypes } from "@fb-components/RoundButton";
 import styled from "styled-components";
 
@@ -19,6 +20,11 @@ export const StyledCardOverflow = styled.div`
     box-shadow:0 2px 3px rgba(0,0,0,.1);
     position:relative;
     background-color:${props => props.theme.colors.vgBlackAlpha00};
+    will-change:transform;
+    transition:transform .3s;
+    &:hover {
+        transform:scale(1.05);
+    }
 `
 
 type StyledCardBackgroundImageProps = {

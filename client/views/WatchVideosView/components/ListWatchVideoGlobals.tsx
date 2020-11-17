@@ -16,7 +16,7 @@ const ListWatchVideoGlobals = () => {
             >
             <WatchVideoCard.Header user={{
                 avatar: faker.random.image(),
-                username: faker.name.title(),
+                name: faker.name.title(),
               }}
               detail={{
                 icon: FaGlobeAsia,

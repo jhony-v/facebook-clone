@@ -8,3 +8,16 @@ Clone Facebook Components. :busts_in_silhouette:
 
 ![preview image](./preview.PNG)
 
+## Screens
+
+* [x] Index
+* [x] Groups
+* [x] Marketplace
+* [ ] Photos
+* [x] Gaming
+* [ ] Stories
+* [x] Users
+* [ ] Users/Photos
+* [x] Watch
+* [x] 404
+

@@ -8,7 +8,8 @@ const PreviewPhotoById = () => {
   return (
     <LayoutDrawerAbsoluteFullScreen>
       <LayoutDrawerFlexFluid></LayoutDrawerFlexFluid>
-      <LayoutDrawerFlexSidebar w="medium"></LayoutDrawerFlexSidebar>
+      <LayoutDrawerFlexSidebar w="medium">
+      </LayoutDrawerFlexSidebar>
       <FacebookCloseWithAvatar onClose={() => null} />
       <AccountControlSettings />
     </LayoutDrawerAbsoluteFullScreen>

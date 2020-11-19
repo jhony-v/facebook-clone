@@ -5,7 +5,6 @@ import FacebookCloseWithAvatar from "@fb-components/application/FacebookCloseWit
 import LayoutDrawerAbsoluteFullScreen from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerAbsoluteFullScreen";
 import LayoutDrawerFlexSidebar from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerFlexSidebar";
 import LayoutDrawerFlexFluid from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerFlexFluid";
-import { SidebarWrapperHeader } from "./GridPanel";
 
 const StoriesView = () => {
   return (
@@ -14,7 +13,6 @@ const StoriesView = () => {
       <AccountControlSettings />
       <LayoutDrawerAbsoluteFullScreen>
         <LayoutDrawerFlexSidebar>
-          <SidebarWrapperHeader/>  
           <ContainerListUserStories />
         </LayoutDrawerFlexSidebar>
         <LayoutDrawerFlexFluid>

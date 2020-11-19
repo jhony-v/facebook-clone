@@ -1,19 +1,8 @@
 import React from "react";
 import TextLabel from "./TextLabel";
 import Wrapper from "./Wrapper";
-import styled from "styled-components";
 import FlexWrapper from "./FlexWrapper";
-
-export const StyledRowItemSelectable = styled(FlexWrapper)`
-  align-items: center;
-  padding: 10px;
-  border-radius: 10px;
-  transition: background-color 0.3s;
-  &:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.03);
-  }
-`;
+import RowDivider from "./RowDivider";
 
 export type RowItemSelectableProps = {
   image ?: React.ReactNode;
@@ -23,16 +12,18 @@ export type RowItemSelectableProps = {
 
 const RowItemSelectable = ({ image, text, children, ...restProps }  :RowItemSelectableProps) => {
   return (
-    <StyledRowItemSelectable {...restProps}>
-      <Wrapper m="0 10px 0 0">{image}</Wrapper>
-      {text ? (
-        <TextLabel textSize={300} weight textColor="vgTextBlackAlpha30"> 
-          {text}
-        </TextLabel>
-      ) : (
-        <Wrapper>{children}</Wrapper>
-      )}
-    </StyledRowItemSelectable>
+    <RowDivider>
+      <FlexWrapper align="center" {...restProps}>
+        <Wrapper m="0 10px 0 0">{image}</Wrapper>
+        {text ? (
+          <TextLabel textSize={300} weight textColor="vgTextBlackAlpha30"> 
+            {text}
+          </TextLabel>
+        ) : (
+          <Wrapper>{children}</Wrapper>
+        )}
+      </FlexWrapper>
+    </RowDivider>
   );
 };
 

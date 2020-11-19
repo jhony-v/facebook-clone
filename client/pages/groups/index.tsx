@@ -1,23 +1,25 @@
 import ContainerChatTabs from "@fb-containers/ContainerChatTabs";
 import ContainerMainNavigator from "@fb-containers/ContainerMainNavigator";
-import LayoutsDrawer from "@fb-components/layouts/LayoutsDrawer";
 import OptionsNavigationList from "@fb-components/layouts/OptionsNavigationList";
 import Wrapper from "@fb-components/common/Wrapper";
 import GroupsView from "@views/GroupsView";
+import LayoutDrawer from "@fb-components/layouts/LayoutsDrawer/LayoutDrawer";
+import LayoutDrawerLeftRail from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerLeftRail";
+import LayoutDrawerGridColumn from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerGridColumn";
 
 export default function Groups() {
   return (
     <ContainerMainNavigator>
-      <LayoutsDrawer.Drawer>
+      <LayoutDrawer>
         <Wrapper w="100%">
-          <LayoutsDrawer.GridColumn variant="left-rail fluid">
-            <LayoutsDrawer.LeftRail compact>
+          <LayoutDrawerGridColumn variant="left-rail fluid">
+            <LayoutDrawerLeftRail compact>
               <OptionsNavigationList />
-            </LayoutsDrawer.LeftRail>
+            </LayoutDrawerLeftRail>
             <GroupsView/>
-          </LayoutsDrawer.GridColumn>
+          </LayoutDrawerGridColumn>
         </Wrapper>
-      </LayoutsDrawer.Drawer>
+      </LayoutDrawer>
       <ContainerChatTabs />
     </ContainerMainNavigator>
   );

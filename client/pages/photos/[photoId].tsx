@@ -1,12 +1,18 @@
 import FacebookCloseWithAvatar from "@fb-components/application/FacebookCloseWithAvatar";
 import AccountControlSettings from "@fb-components/globals/AccountControlSettings";
-import LayoutsDrawer from "@fb-components/layouts/LayoutsDrawer";
+import LayoutDrawerAbsoluteFullScreen from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerAbsoluteFullScreen";
+import LayoutDrawerFlexFluid from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerFlexFluid";
+import LayoutDrawerFlexSidebar from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerFlexSidebar";
 
 const PreviewPhotoById = () => {
-  return <LayoutsDrawer.PreviewPublication>
-    <FacebookCloseWithAvatar onClose={()=>null} />
-    <AccountControlSettings/>
-  </LayoutsDrawer.PreviewPublication>;
+  return (
+    <LayoutDrawerAbsoluteFullScreen>
+      <LayoutDrawerFlexFluid></LayoutDrawerFlexFluid>
+      <LayoutDrawerFlexSidebar w="medium"></LayoutDrawerFlexSidebar>
+      <FacebookCloseWithAvatar onClose={() => null} />
+      <AccountControlSettings />
+    </LayoutDrawerAbsoluteFullScreen>
+  );
 };
 
 export default PreviewPhotoById;

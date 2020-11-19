@@ -5,7 +5,7 @@ import ListUSersWithStories from "./ListUsersWithStories";
 
 const ContainerListUserStories = () => {
   return (
-    <Wrapper>
+    <Wrapper style={{overflowY:"scroll",width:"100%"}}>
       <AddNewPublicStory />
       <ListUSersWithStories/>
     </Wrapper>

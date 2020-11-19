@@ -1,34 +1,59 @@
 import { FC, useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { AnimatePresence, motion } from "framer-motion";
+
 
 const StyledWrapper = styled.div`
   position: relative;
 `;
 
-const StyledTooltip = styled(motion.div)`
+/**
+ * Main dark tooltip to show in modals
+ */
+type StyledTooltipTypes = {
+  position ?: "left" | "right" | "top" | "bottom"
+}
+const StyledTooltip = styled(motion.div)<StyledTooltipTypes>`
+  font-size:${props => props.theme.fontSizes[200]};
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
+  box-shadow:0 5px 5px rgba(0,0,0,.3);
   padding: 7px 15px;
   border-radius: 7px;
   position: absolute;
   text-align: center;
-  bottom:-40px;
-  box-shadow:0 5px 5px rgba(0,0,0,.3);
+  z-index:2;
+  ${props => props.position === "bottom" && css`
+    bottom:-40px;
+    left:50%;
+    transform:translateX(-50%);
+  `}
+  ${props => props.position === "top" && css`
+    top : -40px;
+    left:50%;
+    transform:translateX(-50%);
+  `}
+  ${props => props.position === "left" && css`
+    left:0;
+    top:50%;
+    transform:translateY(-50%)translateX(-100%);
+  `}
+  ${props => props.position === "right" && css`
+    left:0;
+    top:50%;
+    transform:translateY(-50%)translateX(100%);  
+  `}
 `;
-
 StyledTooltip.defaultProps = {
+  position : "bottom",
   exit: {
-    y: -20,
     opacity: 0,
   },
   initial: {
     opacity: 0,
-    y: -20,
   },
   animate: {
     opacity: 1,
-    y: 0,
   },
 };
 

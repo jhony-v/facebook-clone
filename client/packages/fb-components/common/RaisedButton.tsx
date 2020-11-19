@@ -24,12 +24,12 @@ const StyledRaisedWrapper = styled.button<StyledRaisedWrapperTypes>`
     background-color:${props.theme.colors.vgPrimary};
     color: ${props.theme.colors.vgTextBlackAlpha00};
     &:hover {
-    background-color: ${props => props.theme.colors.vgPrimaryAlpha10};
-  }
+      background-color: ${props.theme.colors.vgPrimaryAlpha10};
+    }
   `}
   ${props => props.hover && css`
     &:hover {
-      background-color: ${props => props.theme.colors.vgBlackAlpha10};
+      background-color: ${props.theme.colors.vgBlackAlpha10};
     }
   `}
 `;

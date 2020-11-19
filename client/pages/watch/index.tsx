@@ -1,20 +1,22 @@
 import ContainerChatTabs from "@fb-containers/ContainerChatTabs";
 import ContainerMainNavigator from "@fb-containers/ContainerMainNavigator";
 import ContainerOptionsNavigation from "@fb-containers/ContainerOptionsNavigation";
-import LayoutsDrawer from "@fb-components/layouts/LayoutsDrawer";
 import WatchVideosView from "@views/WatchVideosView";
+import LayoutDrawerLeftRail from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerLeftRail";
+import LayoutDrawer from "@fb-components/layouts/LayoutsDrawer/LayoutDrawer";
+import LayoutDrawerGridColumn from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerGridColumn";
 
 export default function Watch() {
   return (
     <ContainerMainNavigator>
-      <LayoutsDrawer.Drawer>
-        <LayoutsDrawer.GridColumn variant="left-rail fluid">
-          <LayoutsDrawer.LeftRail compact>
+      <LayoutDrawer>
+        <LayoutDrawerGridColumn variant="left-rail fluid">
+          <LayoutDrawerLeftRail compact>
             <ContainerOptionsNavigation />
-          </LayoutsDrawer.LeftRail>
+          </LayoutDrawerLeftRail>
           <WatchVideosView/>
-        </LayoutsDrawer.GridColumn>
-      </LayoutsDrawer.Drawer>
+        </LayoutDrawerGridColumn>
+      </LayoutDrawer>
       <ContainerChatTabs />
     </ContainerMainNavigator>
   );

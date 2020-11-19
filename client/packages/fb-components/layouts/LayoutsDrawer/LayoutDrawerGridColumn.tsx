@@ -7,7 +7,7 @@ type GridColumnProps = {
   variant ?: "left-rail fluid" | "fluid right-rail";
 };
 
-const GridColumn: React.FC<GridColumnProps> = (props) => {
+const LayoutDrawerGridColumn: React.FC<GridColumnProps> = (props) => {
   const { variant, children } = props;
   const { layoutSizes } = useTheme();
   let columns;
@@ -29,4 +29,4 @@ const GridColumn: React.FC<GridColumnProps> = (props) => {
   );
 };
 
-export default GridColumn;
+export default LayoutDrawerGridColumn;

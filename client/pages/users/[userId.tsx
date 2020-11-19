@@ -1,14 +1,14 @@
 import ContainerChatTabs from "@fb-containers/ContainerChatTabs";
 import ContainerMainNavigator from "@fb-containers/ContainerMainNavigator";
-import LayoutsDrawer from "@fb-components/layouts/LayoutsDrawer";
 import UsersView from "@views/UsersView";
+import LayoutDrawer from "@fb-components/layouts/LayoutsDrawer/LayoutDrawer";
 
 export default function Users() {
   return (
     <ContainerMainNavigator>
-      <LayoutsDrawer.Drawer>
+      <LayoutDrawer>
         <UsersView />
-      </LayoutsDrawer.Drawer>
+      </LayoutDrawer>
       <ContainerChatTabs />
     </ContainerMainNavigator>
   );

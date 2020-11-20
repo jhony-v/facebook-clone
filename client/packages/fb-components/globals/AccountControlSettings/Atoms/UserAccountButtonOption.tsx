@@ -6,7 +6,7 @@ const UserAccountButtonOption = () => {
   return (
     <StyledUserAccountButton
       text={faker.name.firstName()}
-      image={<Avatar src={faker.image.avatar()} dimension="30px" />}
+      image={<Avatar src={faker.image.people()} dimension="30px" />}
     />
   );
 };

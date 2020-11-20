@@ -7,10 +7,12 @@ import UserAccountButtonOption from "./Atoms/UserAccountButtonOption";
 import ControlButtonOption from "./Atoms/ControlButtonOption";
 import ButtonToMoreOptionsAccount from "./Elements/ButtonToMoreOptionsAccount";
 
-const AccountControlSettings = () => {
+const AccountControlSettings = ({hideButtonAccount}:{hideButtonAccount?:boolean}) => {
   return (
     <StyledControlWrapper>
-      <UserAccountButtonOption />
+      {hideButtonAccount ? null : (
+        <UserAccountButtonOption />
+      )}
       <ControlButtonOption icon={FiPlus} />
       <ControlButtonOption icon={FaFacebookMessenger} />
       <ControlButtonOption icon={GoBell} />

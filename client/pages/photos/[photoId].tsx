@@ -11,7 +11,7 @@ const PreviewPhotoById = () => {
       <LayoutDrawerFlexSidebar w="medium">
       </LayoutDrawerFlexSidebar>
       <FacebookCloseWithAvatar onClose={() => null} />
-      <AccountControlSettings />
+      <AccountControlSettings hideButtonAccount />
     </LayoutDrawerAbsoluteFullScreen>
   );
 };

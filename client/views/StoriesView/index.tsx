@@ -13,9 +13,9 @@ const StoriesView = () => {
       <FacebookCloseWithAvatar onClose={() => null} />
       <AccountControlSettings hideButtonAccount />
       <LayoutDrawerAbsoluteFullScreen>
-        <LayoutDrawerFlexSidebar>
+        {/* <LayoutDrawerFlexSidebar>
           <ContainerListUserStories />
-        </LayoutDrawerFlexSidebar>
+        </LayoutDrawerFlexSidebar> */}
         <LayoutDrawerFlexFluid>
           <InstaStories/>
         </LayoutDrawerFlexFluid>

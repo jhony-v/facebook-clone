@@ -26,7 +26,7 @@ const HeaderWrapper = styled.div`
 const BodyWrapper = styled.div`
   height: 100%;
   overflow-y: auto;
-  padding: 20px 15px;
+  padding: 20px 10px;
   position: relative;
   &::-webkit-scrollbar {
     width: 14px;

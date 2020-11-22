@@ -8,7 +8,6 @@ import { useEffect, useReducer, useState } from "react";
 import { setTimeout } from "timers";
 import ProgressStory from "./Atoms/ProgressStory";
 
-
 const stories = [
   {
     image: faker.random.image(),
@@ -27,34 +26,46 @@ const stories = [
 const InstaStories = () => {
   const duration = 5;
 
-  const [state, dispatch] = useReducer( (state, action) => {
-      switch(action.type) {
-        case "NEXT" : return {
+  const [state, dispatch] = useReducer(
+    (state, action) => {
+      switch (action.type) {
+        case "NEXT": return {
+            ...state,
+            currentIndexStory:
+              (state.currentIndexStory + 1) % state.totalStories,
+          };
+        case "PREVIOUS": return { ...state };
+        case "STOP_PLAYING" : return {
           ...state,
-          currentIndexStory : (state.currentIndexStory + 1) % state.totalStories
-        };
-        case "PREVIOUS" : return { ...state }
-        default:  return state;
+          playing : false
+        }
+        default:
+          return state;
       }
     },
     {
       currentIndexStory: 0,
       totalStories: stories.length,
       stories: stories,
+      playing : true,
     }
   );
   useEffect(() => {
-    const timer = setTimeout(() => {
-      dispatch({type:"NEXT"})
-    }, duration * 1000);
-    return () => clearTimeout(timer);
+    if(state.playing) {
+      const timer = setTimeout(() => {
+        dispatch({ type: "NEXT" });
+      }, duration * 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [state.currentIndexStory,state.playing]);
+
+  useEffect(() => {
+    if(state.currentIndexStory === state.totalStories - 2) {
+      dispatch({type:"STOP_PLAYING"})
+    }
   }, [state.currentIndexStory]);
 
-  useEffect( () => {
-    console.table( state.stories[state.currentIndexStory] );
-  },[ state.currentIndexStory ])
-
-  const { image , text } = state.stories[state.currentIndexStory];
+  const { image, text } = state.stories[state.currentIndexStory];
   return (
     <OverflowCardBackgroundImage image={image}>
       <UserDetailStory
@@ -62,12 +73,11 @@ const InstaStories = () => {
         fullName={"Jhony Vega"}
         datetime="20m"
       />
-      {state.currentIndexStory}
-      
       <IconsOptionStory />
-      
       <TimerStatusProgressStory>
-        <ProgressStory duration={duration} />
+        {[...Array(state.totalStories)].map((_, index) => {
+          return <ProgressStory duration={duration} playing={state.currentIndexStory === index} />;
+        })}
       </TimerStatusProgressStory>
 
       <FooterStory text={text} />

@@ -9,6 +9,10 @@ const useProgressBarFromInterval = (props: UseProgressBarFromIntervalProps) => {
   const { playing = false, duration = 5 } = props;
   const [progress, setProgress] = useState(0);
 
+  const onResetProgress = () => {
+    setProgress(0);
+  }
+
   /**
    * Start progress if the state of playing property is true
    */
@@ -16,8 +20,8 @@ const useProgressBarFromInterval = (props: UseProgressBarFromIntervalProps) => {
     if (playing) {
       let startTime: number | null = null;
       let fn: number | null = null;
-      let millisecondsDuration = duration * 1000;
-      let maxPercent = 100;
+      let millisecondsDuration : number = duration * 1000;
+      let maxPercent : number = 100;
         
       let step = (timestamp: number) => {
         if (!startTime) startTime = timestamp;
@@ -39,6 +43,7 @@ const useProgressBarFromInterval = (props: UseProgressBarFromIntervalProps) => {
 
   return {
     progress,
+    onResetProgress
   };
 };
 

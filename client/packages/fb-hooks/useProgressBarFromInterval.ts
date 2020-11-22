@@ -12,7 +12,7 @@ const useProgressBarFromInterval = (props: UseProgressBarFromIntervalProps) => {
   const onResetProgress = () => {
     setProgress(0);
   }
-
+  
   /**
    * Start progress if the state of playing property is true
    */
@@ -22,7 +22,7 @@ const useProgressBarFromInterval = (props: UseProgressBarFromIntervalProps) => {
       let fn: number | null = null;
       let millisecondsDuration : number = duration * 1000;
       let maxPercent : number = 100;
-        
+     
       let step = (timestamp: number) => {
         if (!startTime) startTime = timestamp;
         let elapsedTime = timestamp - startTime;
@@ -34,7 +34,6 @@ const useProgressBarFromInterval = (props: UseProgressBarFromIntervalProps) => {
       };
 
       fn = requestAnimationFrame(step);
-
       return () => {
         fn && cancelAnimationFrame(fn);
       };

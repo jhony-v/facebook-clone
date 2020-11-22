@@ -17,10 +17,14 @@ const IconsStoryWrapper = styled(FlexWrapper)`
   }
 `;
 
-const IconsOptionStory = () => {
+
+type IconsOptionStoryProps = {
+  onTogglePlay : () => void;
+}
+const IconsOptionStory = (props : IconsOptionStoryProps) => {
   return (
     <IconsStoryWrapper>
-      <OptionIconStory icon={RiPlayFill} />
+      <OptionIconStory onClick={props.onTogglePlay}  icon={RiPlayFill} />
       <OptionIconStory icon={RiMoreFill} />
     </IconsStoryWrapper>
   );

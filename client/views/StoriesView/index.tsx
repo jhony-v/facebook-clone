@@ -8,6 +8,7 @@ import LayoutDrawerFlexFluid from "@fb-components/layouts/LayoutsDrawer/LayoutDr
 import InstaStories from "@fb-components/globals/InstaStories";
 
 const StoriesView = () => {
+
   return (
     <Wrapper>
       <FacebookCloseWithAvatar onClose={() => null} />

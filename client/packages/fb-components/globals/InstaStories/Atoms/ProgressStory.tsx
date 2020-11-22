@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useEffect } from "react";
 import Wrapper from "@fb-components/common/Wrapper";
 import useProgressBarFromInterval from "@fb-hooks/useProgressBarFromInterval";
 import styled from "styled-components";

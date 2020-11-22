@@ -5,12 +5,19 @@ type ScrollStackProps = {
   duration?: number;
 };
 
+/**
+ * Move to left and right
+ */
 type DirectionMove = 1 | -1;
 
 const useScrollStack = (props: ScrollStackProps) => {
   const { autoScroll = false, duration = 5 } = props;
   const ref = useRef() as MutableRefObject<HTMLDivElement>;
 
+  /**
+   * Move to left and right with smooth animations
+   * @param direction Direction to move
+   */
   const onMove = (direction: DirectionMove) => {
     const step = ref.current?.clientWidth / 2;
     ref.current.scrollTo({
@@ -19,6 +26,9 @@ const useScrollStack = (props: ScrollStackProps) => {
     });
   };
 
+  /**
+   * Move the slider if have property "autoScroll" in true
+   */
   useEffect(() => {
     if (autoScroll) {
       const interval = setInterval(() => {

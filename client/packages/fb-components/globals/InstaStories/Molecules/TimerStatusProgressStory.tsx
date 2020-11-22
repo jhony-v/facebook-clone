@@ -1,3 +1,4 @@
+import { FC } from "react";
 import styled from "styled-components";
 import { converMeasureCSSToNumber } from "@utils/transforms";
 import { InstaStoryPosition } from "../InstaConfig/config";
@@ -12,12 +13,10 @@ const ProgressStoryWrapper = styled.div`
   align-items: center;
 `;
 
-const TimerStatusProgressStory = () => {
+const TimerStatusProgressStory : FC = ({children}) => {
   return (
     <ProgressStoryWrapper>
-      <ProgressStory percentage={100} />
-      <ProgressStory percentage={100} />
-      <ProgressStory percentage={10} />
+      {children}
     </ProgressStoryWrapper>
   );
 };

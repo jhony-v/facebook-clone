@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
    input,button,textarea,select,details {
        outline:none;
        border-width:0;
+       background:none;
    }
    a {
        text-decoration:none;

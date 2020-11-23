@@ -32,7 +32,7 @@ const stories = [
 ];
 
 
-const AsyncInstaStories = dynamic(() => import("@fb-components/globals/InstaStories"),{
+const AsyncViewCurrentStory = dynamic(() => import("./ViewCurrentStory"),{
   ssr : false,
 })
 const AsyncInputCommentStoryWithReactions = dynamic(() => import("./InputCommentStoryWithReactions"),{
@@ -42,7 +42,7 @@ const AsyncInputCommentStoryWithReactions = dynamic(() => import("./InputComment
 const ContainerViewUserStory = () => {
   return (
     <FlexWrapper w="100%" css={{ background: "#111111" }} flexDirection="column">
-      <AsyncInstaStories stories={stories} user={userData} />
+      <AsyncViewCurrentStory stories={stories} user={userData} />
       <AsyncInputCommentStoryWithReactions/>
     </FlexWrapper>
   );

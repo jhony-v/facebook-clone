@@ -70,10 +70,4 @@ const OverflowCardStory = ( props  : OverflowCardBackgroundImage ) => {
   );
 };
 
-OverflowCardStory.defaultProps = {
-  w: "330px",
-  h: "550px",
-};
-
-
 export default OverflowCardStory;

@@ -7,11 +7,14 @@ import { FiPlus } from "react-icons/fi";
 const AddNewPublicStory = () => {
   return (
     <Wrapper p="10px 16px">
-      <FlexWrapper align="center" justify="space-between">
+      <FlexWrapper align="flex-end" justify="space-between">
         <TextLabel weight textColor="vgTextBlack" textSize={700}>Stories</TextLabel>
-        <Wrapper>
-          <TextLabel textColor="vgTextPrimary">Settings</TextLabel>
+        <FlexWrapper align="center">
+        <Wrapper m="0 10px 0 0">
+          <TextLabel textColor="vgTextPrimary" textSize={300}>Archive</TextLabel>
         </Wrapper>
+        <TextLabel textColor="vgTextPrimary" textSize={300}>Settings</TextLabel>
+        </FlexWrapper>
       </FlexWrapper>
       <Wrapper p="20px 0">
         <TextLabel weight textColor="vgTextBlack">Your story</TextLabel>

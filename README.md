@@ -15,7 +15,7 @@ Clone Facebook Components. :busts_in_silhouette:
 * [x] Marketplace
 * [ ] Photos
 * [x] Gaming
-* [ ] Stories
+* [x] Stories
 * [x] Users
 * [ ] Users/Photos
 * [x] Watch

@@ -12,17 +12,19 @@ interface InstaStoriesProps {
     fullName: string;
     userId: string;
   };
+  w?: string;
+  h ?: string;
   stories: Story[];
   onChangeStory?: (currentStory: Story) => void;
 }
 
 const InstaStories = (props: InstaStoriesProps) => {
-  const { user, stories, onChangeStory } = props;
+  const { user, stories, onChangeStory, w , h } = props;
   const duration = 5;
 
   return (
     <InstaStoriesProvider duration={duration} stories={stories}>
-      <OverflowCardStory>
+      <OverflowCardStory w={w} h={h}>
         <PreviewImageStory onChangeStory={onChangeStory} />
         <PreviewLoadingImage />
         <PreviewProgressStories />
@@ -31,5 +33,10 @@ const InstaStories = (props: InstaStoriesProps) => {
     </InstaStoriesProvider>
   );
 };
+
+InstaStories.defaultProps = {
+  w: "330px",
+  h: "580px",
+}
 
 export default InstaStories;

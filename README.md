@@ -17,6 +17,7 @@ Clone Facebook Components. :busts_in_silhouette:
 * [x] Gaming
 * [x] Stories
 * [x] Users
+* [x] Search
 * [ ] Users/Photos
 * [x] Watch
 * [x] 404

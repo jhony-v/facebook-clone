@@ -38,7 +38,7 @@ const UserResultSearchedCard = (props: UserResultSearchedCardProps) => {
             </Wrapper>
             {props.children}
           </FlexWrapper>
-          <Wrapper flexNone m="0 0 0 auto">
+          <Wrapper flexNone m="auto 0 auto auto">
               {props.rightComponent}
           </Wrapper>
         </FlexWrapper>

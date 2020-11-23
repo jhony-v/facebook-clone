@@ -11,10 +11,12 @@ const StyledWrapper = styled.div`
  * Main dark tooltip to show in modals
  */
 type StyledTooltipTypes = {
+  w ?: string;
   position ?: "left" | "right" | "top" | "bottom"
 }
 const StyledTooltip = styled(motion.div)<StyledTooltipTypes>`
   font-size:${props => props.theme.fontSizes[200]};
+  width:${ props => props.w};
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
   box-shadow:0 5px 5px rgba(0,0,0,.3);
@@ -60,7 +62,7 @@ StyledTooltip.defaultProps = {
 type DarkTooltipProps = {
   text?: string;
 } & StyledTooltipTypes;
-const DarkTooltip: FC<DarkTooltipProps> = ({ children, text, position }) => {
+const DarkTooltip: FC<DarkTooltipProps> = ({ children, text, position,w }) => {
   const [visible, setVisible ] = useState(false);
   const onHover = (state : boolean) => () => {
     setVisible(state)
@@ -72,7 +74,7 @@ const DarkTooltip: FC<DarkTooltipProps> = ({ children, text, position }) => {
     onMouseLeave={onHover(false)}>
       {children}
       <AnimatePresence>
-        {visible && <StyledTooltip position={position}>{text}</StyledTooltip>}
+        {visible && <StyledTooltip w={w} position={position}>{text}</StyledTooltip>}
       </AnimatePresence>
     </StyledWrapper>
   );

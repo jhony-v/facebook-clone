@@ -16,6 +16,7 @@ const StyledRoundButton = styled.button<StyledRoundButtonTypes>`
   justify-content: center;
   border-width: 0;
   outline: none;
+  cursor:pointer;
   background-color: ${props => props.theme.colors.vgBlackAlpha12};
   width: ${(props) => props.dimension || defaultSize};
   height: ${(props) => props.dimension || defaultSize};

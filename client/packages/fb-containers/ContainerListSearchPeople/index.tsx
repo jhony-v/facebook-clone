@@ -4,20 +4,19 @@ import RoundButton from "@fb-components/common/RoundButton";
 import { FaUserPlus } from "react-icons/fa";
 import DarkTooltip from "@fb-components/common/DarkTooltip";
 import Wrapper from "@fb-components/common/Wrapper";
+import { peopleSearchResult } from "@mocks/index";
 
 const ContainerListSearchPeople = () => {
   return (
     <Wrapper>
-      {Array(20)
-        .fill(0)
-        .map((e, i) => {
+      {peopleSearchResult.getPeople().map((e, i) => {
           return (
             <Wrapper m="10px auto 20px">
               <UserResultSearchedCard
                 avatar={faker.random.image()}
-                fullName="Jhony Vega"
-                subtitle="16 friends"
-                description="Owner and Founder at HELLO Ma Khaing Ma ChoUniversity of Yangon Main"
+                fullName={e.fullName}
+                subtitle={e.subtitle}
+                description={e.description}
                 rightComponent={
                   <DarkTooltip position="bottom" text="Add friend" w="100px">
                     <RoundButton dimension="40px">

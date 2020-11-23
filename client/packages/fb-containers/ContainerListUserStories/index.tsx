@@ -1,12 +1,14 @@
 import Wrapper from "@fb-components/common/Wrapper";
 import AddNewPublicStory from "./AddNewPublicStory";
-import ListUSersWithStories from "./ListUsersWithStories";
+import HeaderListUsers from "./HeaderListUsers";
+import ListUsersWithStories from "./ListUsersWithStories";
 
 const ContainerListUserStories = () => {
   return (
     <Wrapper>
+      <HeaderListUsers />
       <AddNewPublicStory />
-      <ListUSersWithStories/>
+      <ListUsersWithStories />
     </Wrapper>
   );
 };

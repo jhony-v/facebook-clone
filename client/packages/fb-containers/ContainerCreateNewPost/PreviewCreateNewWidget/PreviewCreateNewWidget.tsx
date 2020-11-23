@@ -7,7 +7,7 @@ const PreviewCreateNewWidget = () => {
     return (
         <CreateNewPost
         onClick={()=>toggleModal()}  
-        userImage={faker.image.avatar()}
+        userImage={faker.image.people()}
         inputPlaceholder="Escribir nueva publicación"/>
       )
 }

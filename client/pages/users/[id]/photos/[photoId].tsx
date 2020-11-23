@@ -1,10 +1,6 @@
-import React from 'react'
-
-const UserPhotosPulication = () => {
+export default function UserPhotosPulication() {
     return (
         <div>
         </div>
     )
 }
-
-export default UserPhotosPulication

@@ -6,7 +6,7 @@ import faker from "faker"
 const OptionsNavigationList = () => {
   return (
     <StyledNavigationListWrapper>
-      <RowItem  text={faker.name.firstName() + " " + faker.name.lastName()} image={faker.image.avatar()} />
+      <RowItem  text={faker.name.firstName() + " " + faker.name.lastName()} image={faker.image.people()} />
       {items.map((e, i) => (
         <RowItem
           key={i}

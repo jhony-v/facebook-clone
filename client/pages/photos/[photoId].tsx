@@ -4,7 +4,7 @@ import LayoutDrawerAbsoluteFullScreen from "@fb-components/layouts/LayoutsDrawer
 import LayoutDrawerFlexFluid from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerFlexFluid";
 import LayoutDrawerFlexSidebar from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerFlexSidebar";
 
-const PreviewPhotoById = () => {
+export default function PreviewPhotoById(){
   return (
     <LayoutDrawerAbsoluteFullScreen>
       <LayoutDrawerFlexFluid></LayoutDrawerFlexFluid>
@@ -15,5 +15,3 @@ const PreviewPhotoById = () => {
     </LayoutDrawerAbsoluteFullScreen>
   );
 };
-
-export default PreviewPhotoById;

@@ -59,8 +59,8 @@ StyledTooltip.defaultProps = {
 
 type DarkTooltipProps = {
   text?: string;
-} ;
-const DarkTooltip: FC<DarkTooltipProps> = ({ children, text }) => {
+} & StyledTooltipTypes;
+const DarkTooltip: FC<DarkTooltipProps> = ({ children, text, position }) => {
   const [visible, setVisible ] = useState(false);
   const onHover = (state : boolean) => () => {
     setVisible(state)
@@ -72,7 +72,7 @@ const DarkTooltip: FC<DarkTooltipProps> = ({ children, text }) => {
     onMouseLeave={onHover(false)}>
       {children}
       <AnimatePresence>
-        {visible && <StyledTooltip>{text}</StyledTooltip>}
+        {visible && <StyledTooltip position={position}>{text}</StyledTooltip>}
       </AnimatePresence>
     </StyledWrapper>
   );

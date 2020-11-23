@@ -11,7 +11,7 @@ const Spinner = styled.div`
   height: 30px;
   flex: none;
   border-radius: 100%;
-  margin: 1in auto;
+  margin: auto;
   border: 3px solid transparent;
   animation: 0.3s ${spinnerAnimation} infinite linear reverse;
   border-left-color: ${props => props.theme.colors.vgPrimary};

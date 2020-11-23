@@ -1,4 +1,4 @@
-import RoundButton, { StyledRoundButtonTypes } from "@fb-components/common/RoundButton";
+import RoundButton from "@fb-components/common/RoundButton";
 import styled from "styled-components";
 
 export const StyledPreviewStoriesWrapper = styled.div`
@@ -37,9 +37,9 @@ export const StyledCardBackgroundImage = styled.div<StyledCardBackgroundImagePro
     flex-direction:column;
 `
 
-export const StyledUserButtonAdd = styled(RoundButton).attrs<StyledRoundButtonTypes,StyledRoundButtonTypes>({
+export const StyledUserButtonAdd = styled(RoundButton).attrs({
     dimension: "36px",
-    colorIcon: "vgBlackAlpha00"
+    colorIcon: "vgBlackAlpha00",
 })`
     background-color:${props => props.theme.colors.vgPrimary};
     position:absolute;

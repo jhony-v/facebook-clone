@@ -13,8 +13,7 @@ const ProgressTrack = styled(ProgressBase)`
   background-color: rgba(220, 220, 220, 0.4);
 `;
 
-const ProgressThumb = styled(ProgressBase)<{ w?: number }>`
-  width: ${(props) => props.w}%;
+const ProgressThumb = styled(ProgressBase)`
   transition: width 0.3s linear;
   will-change: with;
   background-color: white;
@@ -23,15 +22,16 @@ const ProgressThumb = styled(ProgressBase)<{ w?: number }>`
 type ProgressStoryProps = {
   duration: number;
   playing?: boolean;
+  onClick ?: () => void
 };
 
-const ProgressStory = ({ duration, playing }: ProgressStoryProps) => {
+const ProgressStory = ({ duration, playing, onClick }: ProgressStoryProps) => {
   const { progress } = useProgressBarFromInterval({ duration, playing });
 
   return (
     <Wrapper m="0 5px 0 0" w="100%">
-      <ProgressTrack>
-        <ProgressThumb w={progress} />
+      <ProgressTrack onClick={onClick}>
+        <ProgressThumb style={{width:progress + "%"}} />
       </ProgressTrack>
     </Wrapper>
   );

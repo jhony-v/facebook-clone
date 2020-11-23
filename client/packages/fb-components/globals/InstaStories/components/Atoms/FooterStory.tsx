@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { InstaStoryPosition } from "../InstaConfig/config";
+import { InstaStoryPosition } from "../../InstaConfig/config";
 import TextStory from "./TextStory";
 
 const FooterStoryWrapper = styled.div`

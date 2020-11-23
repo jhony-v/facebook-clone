@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type UseProgressBarFromIntervalProps = {
-  duration?: number;
+  duration: number;
   playing?: boolean;
 };
 
-const useProgressBarFromInterval = (props: UseProgressBarFromIntervalProps) => {
-  const { playing = false, duration = 5 } = props;
+const useProgressBarFromInterval = ({playing,duration}: UseProgressBarFromIntervalProps) => {
   const [progress, setProgress] = useState(0);
-
   const onResetProgress = () => {
     setProgress(0);
   }
@@ -22,14 +20,13 @@ const useProgressBarFromInterval = (props: UseProgressBarFromIntervalProps) => {
       let fn: number | null = null;
       let millisecondsDuration : number = duration * 1000;
       let maxPercent : number = 100;
-     
       let step = (timestamp: number) => {
         if (!startTime) startTime = timestamp;
         let elapsedTime = timestamp - startTime;
         let progress = (elapsedTime / millisecondsDuration) * maxPercent;
         setProgress(progress);
         if (elapsedTime < millisecondsDuration) {
-          requestAnimationFrame(step);
+           requestAnimationFrame(step);
         }
       };
 
@@ -39,6 +36,7 @@ const useProgressBarFromInterval = (props: UseProgressBarFromIntervalProps) => {
       };
     }
   }, [playing]);
+
 
   return {
     progress,

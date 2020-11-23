@@ -4,7 +4,8 @@ import FlexWrapper from "@fb-components/common/FlexWrapper";
 import Wrapper from "@fb-components/common/Wrapper";
 import { converMeasureCSSToNumber } from "@utils/transforms";
 import TextStory from "./TextStory";
-import { InstaStoryPosition } from "../InstaConfig/config";
+import { InstaStoryPosition } from "../../InstaConfig/config";
+import { memo } from "react";
 
 const UserDetailStoryWrapper = styled.div`
   position: absolute;
@@ -12,7 +13,7 @@ const UserDetailStoryWrapper = styled.div`
   top: ${converMeasureCSSToNumber(InstaStoryPosition) * 2}px;
 `;
 
-type UserDetailStoryProps = {
+export type UserDetailStoryProps = {
   avatar ?: string;
   fullName ?: string;
   datetime ?: string;
@@ -27,7 +28,7 @@ const UserDetailStory = ({avatar,fullName,datetime}:UserDetailStoryProps) => {
         <FlexWrapper align="center">
           <TextStory weight={600}>{fullName}</TextStory>
           <Wrapper m="0 5px">
-  <TextStory>{datetime}</TextStory>
+          <TextStory>{datetime}</TextStory>
           </Wrapper>
         </FlexWrapper>
       </FlexWrapper>
@@ -35,4 +36,4 @@ const UserDetailStory = ({avatar,fullName,datetime}:UserDetailStoryProps) => {
   );
 };
 
-export default UserDetailStory;
+export default memo(UserDetailStory);

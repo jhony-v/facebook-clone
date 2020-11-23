@@ -21,7 +21,6 @@ type StatusFetchImageTypes = keyof typeof StatusFetchImage;
 
 const useFetchImage = (image: string) => {
   const cachedImage = cacheImage.get(image);
-  console.log(cachedImage);
   const initialStatusLoadedImage = cachedImage ? StatusFetchImage.COMPLETE : StatusFetchImage.LOADING;
   const [status, setStatus] = useState<StatusFetchImageTypes>(initialStatusLoadedImage);
   const mounted = useRef(false);

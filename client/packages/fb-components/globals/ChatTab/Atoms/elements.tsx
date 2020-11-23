@@ -25,9 +25,8 @@ export const StyledTabChatMainExpanded = styled.div`
   display: flex;
 `;
 
-export const StyledTabChatFillWrapper = styled(FlexWrapper).attrs({
-  flexDirection: "column",
-})`
+export const StyledTabChatFillWrapper = styled(FlexWrapper)`
+  flex-direction:column;
   width: 100%;
   height: 100%;
 `;

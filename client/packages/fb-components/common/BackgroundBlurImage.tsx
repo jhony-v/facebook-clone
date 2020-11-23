@@ -5,6 +5,7 @@ const BlurImage = styled.div<{ image?: string }>`
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(${(props) => props.image});
+  background-color:#000000;
   position: absolute;
   width: 100%;
   min-height: 100%;
@@ -15,8 +16,9 @@ const BlurImage = styled.div<{ image?: string }>`
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    background-color:rgba(0,0,0,.4);
   }
 `;
 

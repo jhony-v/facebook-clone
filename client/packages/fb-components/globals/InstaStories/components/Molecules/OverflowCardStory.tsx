@@ -1,5 +1,7 @@
-import React, { FC } from "react";
+import useFetchImage from "@fb-hooks/useFetchImage";
+import React from "react";
 import styled from "styled-components";
+import OverflowBackgroundImage from "../../../../common/OverflowBackgroundImage";
 
 type RootStoryOverflowTypes = {
   w?: string;
@@ -40,8 +42,8 @@ const RootStoryBody = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  display:flex;
 `;
-
 
 const ImageStory = styled.img`
   position: absolute;
@@ -49,34 +51,29 @@ const ImageStory = styled.img`
   height: 100%;
   left: 0;
   top: 0;
-  object-fit:cover;
+  object-fit: cover;
 `;
 
 type OverflowCardBackgroundImage = {
-  image?: string;
+  children ?: React.ReactNode;
 } & RootStoryOverflowTypes;
-const OverflowCardBackgroundImage: FC<OverflowCardBackgroundImage> = ({
-  children,
-  image,
-  w,
-  h,
-}) => {
+
+const OverflowCardStory = ( props  : OverflowCardBackgroundImage ) => {
+  const { children, w, h } = props;
+
   return (
     <RootStory w={w} h={h}>
       <RootMainStory>
-        <ImageStory draggable="false" src={image} />
-        <RootStoryBodyBackground />
-        <RootStoryBody>
-          {children}
-        </RootStoryBody>
+        <RootStoryBody>{children}</RootStoryBody>
       </RootMainStory>
     </RootStory>
   );
 };
 
-OverflowCardBackgroundImage.defaultProps = {
+OverflowCardStory.defaultProps = {
   w: "300px",
   h: "520px",
 };
 
-export default OverflowCardBackgroundImage;
+
+export default OverflowCardStory;

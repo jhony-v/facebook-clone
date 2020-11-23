@@ -1,6 +1,5 @@
+import dynamic from "next/dynamic";
 import FlexWrapper from "@fb-components/common/FlexWrapper";
-import InstaStories from "@fb-components/globals/InstaStories";
-import InputCommentStoryWithReactions from "./InputCommentStoryWithReactions";
 import faker from "faker";
 
 const userData = {
@@ -32,11 +31,19 @@ const stories = [
   },
 ];
 
+
+const AsyncInstaStories = dynamic(() => import("@fb-components/globals/InstaStories"),{
+  ssr : false,
+})
+const AsyncInputCommentStoryWithReactions = dynamic(() => import("./InputCommentStoryWithReactions"),{
+  ssr : false,
+})
+
 const ContainerViewUserStory = () => {
   return (
     <FlexWrapper w="100%" css={{ background: "#111111" }} flexDirection="column">
-      <InstaStories stories={stories} user={userData} />
-      <InputCommentStoryWithReactions/>
+      <AsyncInstaStories stories={stories} user={userData} />
+      <AsyncInputCommentStoryWithReactions/>
     </FlexWrapper>
   );
 };

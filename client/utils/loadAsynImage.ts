@@ -4,8 +4,8 @@ export default function loadAsyncImage({ image }: { image: string }) {
   const srcImage: HTMLImageElement = new Image();
 
   return new Promise<string>((resolve, reject) => {
-    const handlerLoad = (ev : SyntheticEvent<HTMLImageElement,Event>) => {
-      resolve(ev.currentTarget.src);
+    const handlerLoad = () => {
+      resolve(srcImage.src);
     };
     const handlerError = () => {
       srcImage.onload = null;

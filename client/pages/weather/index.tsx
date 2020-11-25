@@ -1,4 +1,5 @@
 import ChevronIconButtton from "@fb-components/common/ChevronIconButtton";
+import WeatherDetailCard from "@fb-components/globals/WeatherDetailCard";
 import LayoutDrawer from "@fb-components/layouts/LayoutsDrawer/LayoutDrawer";
 import LayoutDrawerGridColumn from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerGridColumn";
 import LayoutDrawerLeftRail from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerLeftRail";
@@ -12,6 +13,10 @@ const Weather = () => {
           <LayoutDrawerLeftRail compact>
             <ContainerOptionsNavigation />
           </LayoutDrawerLeftRail>
+          <div/>
+          <div>
+            <WeatherDetailCard/>
+          </div>
         </LayoutDrawerGridColumn>
       </LayoutDrawer>
   </ContainerMainNavigator>;

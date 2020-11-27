@@ -1,5 +1,5 @@
 import React from "react";
-import Avatar, { AvatarTypes } from "./Avatar";
+import Avatar, { AvatarTypes } from "../Avatar";
 
 const reaction = (image : string, alt: string)  => (props: AvatarTypes) => (
   <Avatar {...props} src={image} alt={alt} />

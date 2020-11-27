@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Reactions from "./Reactions";
-import FlexWrapper from "./FlexWrapper";
+import Reactions from "../Reactions";
+import FlexWrapper from "../FlexWrapper";
 
 type ItemTypes = {
   leftPosition : number

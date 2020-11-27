@@ -1,5 +1,5 @@
 import {Meta} from "@storybook/react/types-6-0"
-import FacebookAvatar from ".";
+import FacebookAvatar from "..";
 
 export default {
     title: "a/b",

@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import theme from "@theme/index";
+import styled from "styled-components";
 import { converMeasureCSSToNumber } from "@utils/transforms";
 
 const size = 40;

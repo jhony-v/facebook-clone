@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import React, { FC, useState } from "react";
 import styled, { css } from "styled-components";
 import { AnimatePresence, motion } from "framer-motion";
 

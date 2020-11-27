@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
-import Wrapper from "./Wrapper";
+import Wrapper from "../Wrapper";
 
 const defaultSize = "40px";
 const animation = keyframes`

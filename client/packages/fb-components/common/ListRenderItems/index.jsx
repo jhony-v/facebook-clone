@@ -2,7 +2,6 @@ import React from "react";
 import { useRef } from "react";
 import Scrollbars from "react-custom-scrollbars";
 import { AutoSizer, List } from "react-virtualized";
-import styled from "styled-components";
 
 const listStyle = {
   overflowX : false,

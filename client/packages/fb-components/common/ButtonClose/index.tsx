@@ -1,5 +1,5 @@
 import React from "react";
-import RoundButton from "./RoundButton";
+import RoundButton from "../RoundButton";
 import { VscChromeClose } from "react-icons/vsc";
 import { useTheme } from "styled-components";
 
@@ -10,7 +10,7 @@ type ButtonCloseProps = {
 const ButtonClose = ({ onClose }: ButtonCloseProps) => {
   const { colors } = useTheme();
   return (
-    <RoundButton onClick={onClose} dimension="42px">
+    <RoundButton onClick={onClose} dimension="42px" role="button">
       <VscChromeClose color={colors.vgBlackAlpha40} size={20} />
     </RoundButton>
   );

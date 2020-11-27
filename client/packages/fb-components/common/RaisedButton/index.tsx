@@ -1,5 +1,5 @@
-import { GetComponentProps } from "@utils/transforms";
 import React from "react";
+import { GetComponentProps } from "@utils/transforms";
 import styled, { css } from "styled-components";
 
 type StyledRaisedWrapperTypes = {

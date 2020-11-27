@@ -1,8 +1,8 @@
 import React from "react";
-import TextLabel from "./TextLabel";
-import Wrapper from "./Wrapper";
-import FlexWrapper from "./FlexWrapper";
-import RowDivider from "./RowDivider";
+import TextLabel from "../TextLabel";
+import Wrapper from "../Wrapper";
+import FlexWrapper from "../FlexWrapper";
+import RowDivider from "../RowDivider";
 
 export type RowItemSelectableProps = {
   image ?: React.ReactNode;

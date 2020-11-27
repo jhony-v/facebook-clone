@@ -1,3 +1,4 @@
+import React from 'react';
 import { StyledUserAccountButton } from "./elements";
 import Avatar from "@fb-components/common/Avatar";
 import faker from "faker";

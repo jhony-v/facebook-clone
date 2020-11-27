@@ -6,13 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "test",
-    "test:watch": "test --watch",
+    "test": "jest",
+    "test:watch": "jest --watch --env=jsdom",
     "storybook": "start-storybook -p 6006 --no-dll",
     "build-storybook": "build-storybook --no-dll"
   },
   "dependencies": {
     "@loadable/component": "^5.14.1",
+    "@testing-library/user-event": "^12.2.2",
     "@types/react-custom-scrollbars": "^4.0.7",
     "@types/react-virtualized": "^9.21.10",
     "@types/styled-components": "^5.1.4",
@@ -31,6 +32,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
     "@storybook/addon-actions": "^6.0.28",
     "@storybook/addon-essentials": "^6.0.28",
     "@storybook/addon-links": "^6.0.28",

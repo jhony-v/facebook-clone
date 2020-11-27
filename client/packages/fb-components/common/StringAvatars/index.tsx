@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Avatar from "./Avatar";
-import FlexWrapper from "./FlexWrapper";
+import Avatar from "../Avatar";
+import FlexWrapper from "../FlexWrapper";
 import { FiMoreHorizontal } from "react-icons/fi";
 
 const ItemAvatar = styled(Avatar)`

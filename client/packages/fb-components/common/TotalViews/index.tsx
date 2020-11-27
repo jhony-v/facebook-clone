@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { BsEyeFill } from "react-icons/bs";
-import Wrapper from "./Wrapper";
+import Wrapper from "../Wrapper";
 
 const StyledTotalViewsWrapper = styled.div`
   font-size: ${(props) => props.theme.fontSizes[200]};

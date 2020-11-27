@@ -1,6 +1,6 @@
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import styled from "styled-components";
-import Card from "./Card";
+import Card from "../Card";
 
 const WrapperButton = styled(Card)`
   width: 50px;

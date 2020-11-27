@@ -4,7 +4,7 @@
     "paths": {
       "@fb-components/*": [ "packages/fb-components/*" ],
       "@fb-contexts/*": [ "packages/fb-contexts/*" ],
-      "@fb-containers/*": [ "packages/fb-containers/*", ],
+      "@fb-containers/*": [ "packages/fb-containers/*" ],
       "@fb-hooks/*": [ "packages/fb-hooks/*" ],
       "@fb-features-recoil/*": [ "packages/fb-features-recoil/*" ],
       "@fb-services/*": [ "packages/fb-services/*" ],
@@ -12,8 +12,10 @@
       "@views/*": ["views/*" ],
       "@utils/*": [ "utils/*" ],
       "@theme/*": [ "theme/*" ],
-      "@config/*": [ "config/*" ]
+      "@config/*": [ "config/*" ],
+      "@test-utils" : ["test-utils"]
     },
+    "types": ["@types/jest","@testing-library/jest-dom"],
     "target": "es5",
     "module": "commonjs",
     "allowJs": true,
@@ -35,7 +37,7 @@
       "esnext"
     ],
     "noEmit": true,
-    "resolveJsonModule": true,
+    "resolveJsonModule": true
   },
   "exclude": [
     "/node_modules/**/*"
@@ -43,6 +45,6 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", ".storybook/Button.stories.tsx", 
+    "**/*.tsx", ".storybook/Button.stories.tsx"
   ]
 }

@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test" : "test",
-    "test:watch" : "test --watch",
+    "test": "test",
+    "test:watch": "test --watch",
     "storybook": "start-storybook -p 6006 --no-dll",
     "build-storybook": "build-storybook --no-dll"
   },

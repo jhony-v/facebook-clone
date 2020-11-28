@@ -1,10 +1,15 @@
-import React from "react";
-import {render} from "@testing-library/react";
+import React, { FC } from "react";
+import { render } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme/index";
 
+const Wrapper: FC = ({ children }) => (
+  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+);
+
 const customRender = (ui: any, options = {}) => {
-  return render(<ThemeProvider theme={theme}>{ui}</ThemeProvider>, {
+  return render(ui, {
+    wrapper: Wrapper,
     ...options,
   });
 };

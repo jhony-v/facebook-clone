@@ -34,7 +34,7 @@ const BackgroundGradient = styled.div`
 
 type OverflowBackgroundImage = {
   image: string;
-  onLoadingStatus: (loading: boolean) => void;
+  onLoadingStatus?: (loading: boolean) => void;
 } & React.HTMLAttributes<{}>;
 
 const OverflowBackgroundImage = (props: OverflowBackgroundImage) => {
@@ -43,12 +43,12 @@ const OverflowBackgroundImage = (props: OverflowBackgroundImage) => {
 
   React.useEffect(() => {
     let currentStatus = status === "LOADING";
-    onLoadingStatus(currentStatus);
+    onLoadingStatus && onLoadingStatus(currentStatus);
   }, [status]);
 
   return (
     <ImageWrapper {...restProps}>
-      <Image src={src} draggable="false" />
+      <Image src={src}  role="img" draggable="false" />
       <BackgroundGradient />
     </ImageWrapper>
   );

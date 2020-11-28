@@ -5,7 +5,7 @@ import Wrapper from "@fb-components/common/Wrapper";
 type AccountProfileBannerProps = {
     backgroundImage ?: string;
     avatar ?: string;
-    text ?: string;
+    text ?: string | null;
     children ?: React.ReactNode;
 }
 
@@ -16,12 +16,12 @@ const AccountProfileBanner = (props: AccountProfileBannerProps) => {
       <Wrapper>
         <BannerCardBackgroundImage image={backgroundImage}>
           {avatar && (
-              <BannerAvatar src={avatar} />
+              <BannerAvatar src={avatar} role="img" />
           )}  
         </BannerCardBackgroundImage>
-        <BannerNameAccount>{text}</BannerNameAccount>
+        {text && <BannerNameAccount>{text}</BannerNameAccount>}
       </Wrapper>
-      <Wrapper>{children}</Wrapper>
+      {children && <Wrapper>{children}</Wrapper>}
     </BannerCardContainer>
   );
 };

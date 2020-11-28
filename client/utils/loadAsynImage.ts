@@ -11,7 +11,7 @@ export default function loadAsyncImage({ image }: { image: string }) {
       srcImage.onload = null;
       srcImage.onerror = null;
       srcImage.onabort = null;
-      reject();
+      reject(false);
     };
     srcImage.onload = handlerLoad;
     srcImage.onerror = handlerError;

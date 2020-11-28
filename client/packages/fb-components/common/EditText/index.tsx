@@ -1,6 +1,13 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+type Ref = HTMLInputElement;
+type EditTextProps = StyledEditTextTypes & React.InputHTMLAttributes<{}>;
+const EditText = React.forwardRef<Ref,EditTextProps>((props,ref) => {
+  return <StyledEditText {...props} ref={ref} />;
+});
+
+
 const options = {
   primary: "primary",
   outline: "outline",
@@ -12,6 +19,7 @@ export type StyledEditTextTypes = {
   w ?: string;
   fluid ?: boolean;
 };
+
 const StyledEditText = styled.input<StyledEditTextTypes>`
   padding: 15px 20px;
   border-radius: 10px;
@@ -30,13 +38,6 @@ const StyledEditText = styled.input<StyledEditTextTypes>`
     background-color:${props => props.theme.colors.vgBlackAlpha20};
     color:${props => props.theme.colors.vgTextBlackAlpha30};
   `}
-
 `;
-
-type Ref = HTMLInputElement;
-type EditTextProps = StyledEditTextTypes & React.InputHTMLAttributes<{}>;
-const EditText = React.forwardRef<Ref,EditTextProps>((props,ref) => {
-  return <StyledEditText {...props} ref={ref} />;
-});
 
 export default EditText;

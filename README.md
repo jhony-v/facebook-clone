@@ -7,13 +7,13 @@
 </p>
 
 <p align="center">
-    <img src="./stack.png" width="360px"/>
+    <img src="./stack.png" width="560px"/>
 </p> 
 
 
 ## Preview
 
-![preview image](./preview.png)
+![preview image](./preview.PNG)
 
 ## Screens
 

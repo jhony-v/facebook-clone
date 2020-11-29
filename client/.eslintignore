@@ -2,3 +2,6 @@
 .storybook
 docs
 public
+__tests__/**/*
+theme
+public

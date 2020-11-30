@@ -1,11 +1,11 @@
 import { Meta } from '@storybook/react/types-6-0';
-import FacebookAvatar from '..';
+import WeatherDetailCard from '..';
 
 export default {
-  title: 'Application/FacebookAvatar',
-  component: FacebookAvatar,
+  title: 'Globals/WeatherDetailCard',
+  component: WeatherDetailCard,
 } as Meta;
 
 export const Default = () => (
-  <FacebookAvatar />
+  <WeatherDetailCard />
 );

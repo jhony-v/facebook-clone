@@ -1,4 +1,3 @@
-import faker from 'faker';
 import Wrapper from '@fb-components/common/Wrapper';
 import SuggestedPageWrapper from './Atoms/SuggestedPageWrapper';
 import CoverPageImage from './Atoms/CoverPageImage';

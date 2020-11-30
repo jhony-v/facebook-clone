@@ -9,19 +9,21 @@ export type PageInformationProps = {
   category ?: string;
   likes ?: number;
 };
-const PageInformation = (props: PageInformationProps) => (
+const PageInformation = ({
+  avatar, name, category, likes,
+}: PageInformationProps) => (
   <Wrapper m="0 0 20px">
     <FlexWrapper>
       <Wrapper m="0 10px 0 0">
-        <Avatar src={props.avatar} />
+        <Avatar src={avatar} />
       </Wrapper>
       <Wrapper>
-        <TextLabel weight textColor="vgTextBlack" textSize={600}>{props.name}</TextLabel>
+        <TextLabel weight textColor="vgTextBlack" textSize={600}>{name}</TextLabel>
         <Wrapper>
           <Wrapper>
-            <TextLabel textSize={200} weight>{props.category}</TextLabel>
+            <TextLabel textSize={200} weight>{category}</TextLabel>
           </Wrapper>
-          <TextLabel textSize={200}>{`${props.likes} people like this Page`}</TextLabel>
+          <TextLabel textSize={200}>{`${likes} people like this Page`}</TextLabel>
         </Wrapper>
       </Wrapper>
     </FlexWrapper>

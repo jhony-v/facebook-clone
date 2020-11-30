@@ -3,4 +3,5 @@
 docs
 public
 __tests__/**/*
+__stories/**/*
 public

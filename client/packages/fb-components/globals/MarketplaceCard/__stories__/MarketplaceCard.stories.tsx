@@ -1,4 +1,5 @@
 import { Meta } from '@storybook/react/types-6-0';
+import faker from 'faker';
 import MarketplaceCard from '..';
 
 export default {
@@ -7,5 +8,11 @@ export default {
 } as Meta;
 
 export const Default = () => (
-  <MarketplaceCard />
+  <MarketplaceCard
+    image={faker.random.image()}
+    description={faker.commerce.productDescription()}
+    location="Peru"
+    price="30"
+    onClick={() => null}
+  />
 );

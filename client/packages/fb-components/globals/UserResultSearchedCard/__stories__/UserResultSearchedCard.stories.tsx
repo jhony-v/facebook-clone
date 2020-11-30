@@ -1,4 +1,5 @@
 import { Meta } from '@storybook/react/types-6-0';
+import faker from 'faker';
 import UserResultSearchedCard from '..';
 
 export default {
@@ -7,5 +8,10 @@ export default {
 } as Meta;
 
 export const Default = () => (
-  <UserResultSearchedCard />
+  <UserResultSearchedCard
+    avatar={faker.random.image()}
+    fullName="Juan Mateo | Coder"
+    description="Software Developer at a Pinterest"
+    subtitle="124 Friends"
+  />
 );

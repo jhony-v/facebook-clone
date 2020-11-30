@@ -6,12 +6,12 @@ import { AppProps } from 'next/dist/next-server/lib/router/router';
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
-      <RecoilRoot>
-        <GlobalStyles />
-        <Component {...pageProps} />
-      </RecoilRoot>
-    </ThemeProvider>
+    <RecoilRoot>
+      <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <Component {...pageProps} />
+      </ThemeProvider>
+    </RecoilRoot>
   );
 }
 

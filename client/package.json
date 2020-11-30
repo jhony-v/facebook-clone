@@ -10,11 +10,9 @@
     "test:watch": "jest --watch --env=jsdom",
     "storybook": "start-storybook -p 6006 --no-dll",
     "build-storybook": "build-storybook --no-dll",
-    "eslint:fix": "npx eslint . --fix",
-    "eslint": "npx eslint ."
+    "eslint:fix": "npx eslint --fix packages"
   },
   "dependencies": {
-    "@loadable/component": "^5.14.1",
     "@types/react-custom-scrollbars": "^4.0.7",
     "@types/react-virtualized": "^9.21.10",
     "@types/styled-components": "^5.1.4",
@@ -37,9 +35,11 @@
     "@storybook/addon-actions": "^6.0.28",
     "@storybook/addon-essentials": "^6.0.28",
     "@storybook/addon-links": "^6.0.28",
+    "@storybook/addon-storysource": "^6.1.9",
     "@storybook/react": "^6.0.28",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
+    "@testing-library/react-hooks": "^3.4.2",
     "@testing-library/user-event": "^12.2.2",
     "@types/axios": "^0.14.0",
     "@types/faker": "^5.1.3",

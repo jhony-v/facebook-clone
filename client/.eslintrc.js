@@ -14,6 +14,7 @@ module.exports = {
     "max-len": ["error",{"code":500}],
     "react/jsx-sort-default-props": "off",
     "react/no-array-index-key" : "off",
-    "react/no-unescaped-entities" : "off"
+    "react/no-unescaped-entities" : "off",
+    "react/no-unused-prop-types" : "off"
   }
 };

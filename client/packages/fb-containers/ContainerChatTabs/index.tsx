@@ -1,5 +1,5 @@
 import faker from 'faker';
-import TabChat from '@fb-components/globals/ChatTab';
+import ChatTab from '@fb-components/globals/ChatTab';
 
 const dataTest = Array(20)
   .fill(0)
@@ -16,7 +16,7 @@ const dataTest2 = Array(20)
   }));
 
 const ContainerChatTabs = () => (
-  <TabChat
+  <ChatTab
     filterOptions={{
       friends: 0,
       actives: 1,
@@ -27,25 +27,25 @@ const ContainerChatTabs = () => (
       fillData(optionId === 0 ? dataTest : dataTest2);
     }}
   >
-    <TabChat.Options>
+    <ChatTab.Options>
       {(props) => (
         <>
-          <TabChat.Option optionId={props.friends} text="Friends" />
-          <TabChat.Option optionId={props.actives} text="Active (52)" />
+          <ChatTab.Option optionId={props.friends} text="Friends" />
+          <ChatTab.Option optionId={props.actives} text="Active (52)" />
         </>
       )}
-    </TabChat.Options>
-    <TabChat.List>
+    </ChatTab.Options>
+    <ChatTab.List>
       {(data, options) => (
-        <TabChat.ListItem
+        <ChatTab.ListItem
           key={options.key}
           style={options.style}
           image={data.image}
           text={data.title}
         />
       )}
-    </TabChat.List>
-  </TabChat>
+    </ChatTab.List>
+  </ChatTab>
 );
 
 export default ContainerChatTabs;

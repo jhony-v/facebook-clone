@@ -1,11 +1,11 @@
 import { Meta } from '@storybook/react/types-6-0';
-import FacebookAvatar from '..';
+import WriteNewPostModal from '..';
 
 export default {
-  title: 'Application/FacebookAvatar',
-  component: FacebookAvatar,
+  title: 'Globals/WriteNewPostModal',
+  component: WriteNewPostModal,
 } as Meta;
 
 export const Default = () => (
-  <FacebookAvatar />
+  <WriteNewPostModal actions={{ open: true, onClose: () => null }} />
 );

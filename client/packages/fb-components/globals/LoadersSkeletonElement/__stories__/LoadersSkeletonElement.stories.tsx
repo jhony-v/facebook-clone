@@ -1,11 +1,19 @@
 import { Meta } from '@storybook/react/types-6-0';
-import FacebookAvatar from '..';
+import { SkeletonElementRow, SkeletonElementCardGrid, SkeletonElementCard } from '..';
 
 export default {
-  title: 'Application/FacebookAvatar',
-  component: FacebookAvatar,
+  title: 'Globals/LoadersSkeletonElement',
+  component: SkeletonElementRow,
 } as Meta;
 
-export const Default = () => (
-  <FacebookAvatar />
+export const Row = () => (
+  <SkeletonElementRow />
+);
+
+export const CardGrid = () => (
+  <SkeletonElementCardGrid repeat={3} />
+);
+
+export const Card = () => (
+  <SkeletonElementCard repeat={3} />
 );

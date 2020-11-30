@@ -1,4 +1,5 @@
 import { Meta } from '@storybook/react/types-6-0';
+import faker from 'faker';
 import CreateNewPost from '..';
 
 export default {
@@ -7,5 +8,9 @@ export default {
 } as Meta;
 
 export const Default = () => (
-  <CreateNewPost />
+  <CreateNewPost
+    inputPlaceholder=""
+    onClick={() => null}
+    userImage={faker.random.image()}
+  />
 );

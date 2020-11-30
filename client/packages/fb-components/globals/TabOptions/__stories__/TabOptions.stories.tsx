@@ -1,11 +1,17 @@
 import { Meta } from '@storybook/react/types-6-0';
-import FacebookAvatar from '..';
+import TabOptions from '..';
 
 export default {
-  title: 'Application/FacebookAvatar',
-  component: FacebookAvatar,
+  title: 'Globals/TabOptions',
+  component: TabOptions,
 } as Meta;
 
 export const Default = () => (
-  <FacebookAvatar />
+  <TabOptions
+    initialId="a"
+  >
+    <TabOptions.Option optionId="a" text="Item a" />
+    <TabOptions.Option optionId="b" text="Item b" />
+    <TabOptions.Option optionId="c" text="Item c" />
+  </TabOptions>
 );

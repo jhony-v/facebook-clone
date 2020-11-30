@@ -1,5 +1,5 @@
 import faker from 'faker';
-import { StyledNavigationListWrapper } from './Atoms/elements';
+import StyledNavigationListWrapper from './Atoms/elements';
 import RowItem from './Atoms/RowItem';
 import items from './items';
 

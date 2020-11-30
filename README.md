@@ -2,12 +2,15 @@
     <img src="./facebook-logo.png" width="230px"/>
 </p> 
 
-<p align="center">
-    This is a web application of Clone UI Facebook :busts_in_silhouette: created with ReactJS. 
+<p align="center"> This is a web application of Clone UI Facebook created with ReactJS. </p>
+
+<p align="center"> 
+    <a href="https://facebook-clone-dev.vercel.app" >DEMO</a> - 
+    <a href="https://facebook-clone-design-system.netlify.app/" >DESIGN SYSTEM</a> 
 </p>
 
 <p align="center">
-    <img src="./stack.png" width="560px"/>
+    <img src="./stack.png" width="580px"/>
 </p> 
 
 

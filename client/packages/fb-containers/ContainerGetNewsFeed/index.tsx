@@ -1,7 +1,7 @@
-import NewsFeedCard from "@fb-components/globals/NewsFeedCard";
-import { ReactionsType } from "@fb-components/common/Reactions";
-import { useGetNewsFeed } from "@fb-features-recoil/newsFeed";
-import { FaGlobeAsia } from "react-icons/fa";
+import NewsFeedCard from '@fb-components/globals/NewsFeedCard';
+import { ReactionsType } from '@fb-components/common/Reactions';
+import { useGetNewsFeed } from '@fb-features-recoil/newsFeed';
+import { FaGlobeAsia } from 'react-icons/fa';
 
 const ContainerGetNewsFeed = () => {
   const { data } = useGetNewsFeed();

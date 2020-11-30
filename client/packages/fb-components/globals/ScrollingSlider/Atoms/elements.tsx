@@ -1,7 +1,7 @@
-import Card from "@fb-components/common/Card";
-import styled, { css } from "styled-components";
+import Card from '@fb-components/common/Card';
+import styled, { css } from 'styled-components';
 
-export const ButtonFloatingToMove = styled(Card)<{ position?: "left" | "right"}>`
+export const ButtonFloatingToMove = styled(Card)<{ position?: 'left' | 'right'}>`
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -13,14 +13,12 @@ export const ButtonFloatingToMove = styled(Card)<{ position?: "left" | "right"}>
   font-size: 1.5em;
   bottom: 0;
   margin: auto;
-  ${(props) =>
-    props.position === "left" &&
-    css`
+  ${(props) => props.position === 'left'
+    && css`
       left: -20px;
     `}
-  ${(props) =>
-    props.position === "right" &&
-    css`
+  ${(props) => props.position === 'right'
+    && css`
       right: -20px;
     `}
 `;

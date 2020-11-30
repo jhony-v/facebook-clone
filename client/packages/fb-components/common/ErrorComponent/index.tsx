@@ -1,13 +1,13 @@
-import React,{ Component } from "react";
+import React, { Component } from 'react';
 
 type ErrorComponentState = {
   error : boolean
-}
+};
 type ErrorComponentProps = {
   children ?: React.ReactNode
-}
+};
 
-export default class ErrorComponent extends Component<ErrorComponentProps,ErrorComponentState> {
+export default class ErrorComponent extends Component<ErrorComponentProps, ErrorComponentState> {
   state = {
     error: false,
   };

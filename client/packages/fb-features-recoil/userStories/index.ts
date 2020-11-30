@@ -1,8 +1,8 @@
-import { storiesMocks } from "@mocks/index";
-import { atom, useRecoilValue } from "recoil";
+import { storiesMocks } from '@mocks/index';
+import { atom, useRecoilValue } from 'recoil';
 
 export const listPreviewUserStoriesState = atom({
-  key: "listPreviewUserStoriesState",
+  key: 'listPreviewUserStoriesState',
   default: storiesMocks.getPreviewUserStories(),
 });
 

@@ -1,4 +1,4 @@
-import theme, { themeBaseHelperColors, themeBaseTextColors } from ".";
+import theme, { themeBaseHelperColors, themeBaseTextColors } from '.';
 
 export namespace ThemeBase {
   type PartialThemeType<T> = readonly (keyof T);

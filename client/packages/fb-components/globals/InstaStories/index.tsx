@@ -1,10 +1,10 @@
-import OverflowCardStory from "./components/Molecules/OverflowCardStory";
-import { Story } from "./hooks/useManagementStories/useManagementStoriesTypes";
-import InstaStoriesProvider from "./contexts/CTXInstaStories/InstaStoriesProvider";
-import PreviewImageStory from "./containers/PreviewImageStory";
-import PreviewLoadingImage from "./containers/PreviewLoadingImage";
-import PreviewProgressStories from "./containers/PreviewProgressStories";
-import PreviewUserDetailStory from "./containers/PreviewUserDetailStory";
+import OverflowCardStory from './components/Molecules/OverflowCardStory';
+import { Story } from './hooks/useManagementStories/useManagementStoriesTypes';
+import InstaStoriesProvider from './contexts/CTXInstaStories/InstaStoriesProvider';
+import PreviewImageStory from './containers/PreviewImageStory';
+import PreviewLoadingImage from './containers/PreviewLoadingImage';
+import PreviewProgressStories from './containers/PreviewProgressStories';
+import PreviewUserDetailStory from './containers/PreviewUserDetailStory';
 
 interface InstaStoriesProps {
   user: {
@@ -19,7 +19,9 @@ interface InstaStoriesProps {
 }
 
 const InstaStories = (props: InstaStoriesProps) => {
-  const { user, stories, onChangeStory, w , h } = props;
+  const {
+    user, stories, onChangeStory, w, h,
+  } = props;
   const duration = 5;
 
   return (
@@ -35,8 +37,8 @@ const InstaStories = (props: InstaStoriesProps) => {
 };
 
 InstaStories.defaultProps = {
-  w: "330px",
-  h: "580px",
-}
+  w: '330px',
+  h: '580px',
+};
 
 export default InstaStories;

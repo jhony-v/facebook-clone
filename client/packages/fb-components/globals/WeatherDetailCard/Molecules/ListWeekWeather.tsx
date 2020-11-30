@@ -1,8 +1,8 @@
-import Wrapper from "@fb-components/common/Wrapper";
-import { useRecoilValue } from "recoil";
-import ItemDayWeather from "../Atoms/ItemDayWeather";
-import { DAYS } from "../Config";
-import { weatherDescriptionSelector } from "../Store/Store";
+import Wrapper from '@fb-components/common/Wrapper';
+import { useRecoilValue } from 'recoil';
+import ItemDayWeather from '../Atoms/ItemDayWeather';
+import { DAYS } from '../Config';
+import { weatherDescriptionSelector } from '../Store/Store';
 
 const ListWeekWeather = () => {
   const { description } = useRecoilValue(weatherDescriptionSelector);
@@ -14,8 +14,8 @@ const ListWeekWeather = () => {
             day={e}
             description={description}
             celcius={{
-              min: "10° C",
-              max: "20° C",
+              min: '10° C',
+              max: '20° C',
             }}
           />
         </Wrapper>

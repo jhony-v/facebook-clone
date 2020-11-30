@@ -1,13 +1,12 @@
-import React from "react";
-import { useRef } from "react";
-import Scrollbars from "react-custom-scrollbars";
-import { AutoSizer, List } from "react-virtualized";
+import React, { useRef } from 'react';
+import Scrollbars from 'react-custom-scrollbars';
+import { AutoSizer, List } from 'react-virtualized';
 
 const listStyle = {
-  overflowX : false,
-  overflowY : false,
+  overflowX: false,
+  overflowY: false,
   outline: "none",
-}
+};
 
 const ListRenderItems = ({ data, render, renderHeight }) => {
   const scroll = useRef(null);
@@ -21,9 +20,10 @@ const ListRenderItems = ({ data, render, renderHeight }) => {
     <AutoSizer>
       {({ height, width }) => (
         <Scrollbars 
-        autoHide 
-        style={{ width, height }} 
-        onScroll={onScrolling}>
+          autoHide 
+          style={{ width, height }} 
+          onScroll={onScrolling}
+        >
           <List
             ref={scroll}
             width={width}
@@ -40,7 +40,7 @@ const ListRenderItems = ({ data, render, renderHeight }) => {
 };
 
 ListRenderItems.defaultProps = {
-  renderHeight : 80
-}
+  renderHeight: 80,
+};
 
 export default ListRenderItems;

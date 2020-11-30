@@ -1,4 +1,4 @@
-import { MutableRefObject, useEffect, useRef } from "react";
+import { MutableRefObject, useEffect, useRef } from 'react';
 
 type ScrollStackProps = {
   autoScroll?: boolean;
@@ -22,7 +22,7 @@ const useScrollStack = (props: ScrollStackProps) => {
     const step = ref.current?.clientWidth / 2;
     ref.current.scrollTo({
       left: ref.current?.scrollLeft + step * direction,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -38,7 +38,7 @@ const useScrollStack = (props: ScrollStackProps) => {
         }
         ref.current?.scrollTo({
           left: step,
-          behavior: "smooth",
+          behavior: 'smooth',
         });
       }, duration * 1000);
       return () => clearInterval(interval);

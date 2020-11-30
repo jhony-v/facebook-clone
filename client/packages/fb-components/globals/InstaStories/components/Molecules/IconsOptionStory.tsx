@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import FlexWrapper from "@fb-components/common/FlexWrapper";
-import Wrapper from "@fb-components/common/Wrapper";
-import OptionIconStory from "../Atoms/OptionIconStory";
-import { InstaStoryPosition } from "../../InstaConfig/config";
-import { converMeasureCSSToNumber } from "@utils/transforms";
-import { RiMoreFill, RiPlayFill } from "react-icons/ri";
+import styled from 'styled-components';
+import FlexWrapper from '@fb-components/common/FlexWrapper';
+import Wrapper from '@fb-components/common/Wrapper';
+import { converMeasureCSSToNumber } from '@utils/transforms';
+import { RiMoreFill, RiPlayFill } from 'react-icons/ri';
+import OptionIconStory from '../Atoms/OptionIconStory';
+import { InstaStoryPosition } from '../../InstaConfig/config';
 
 const IconsStoryWrapper = styled(FlexWrapper)`
   position: absolute;
@@ -17,17 +17,14 @@ const IconsStoryWrapper = styled(FlexWrapper)`
   }
 `;
 
-
 type IconsOptionStoryProps = {
   onTogglePlay : () => void;
-}
-const IconsOptionStory = (props : IconsOptionStoryProps) => {
-  return (
-    <IconsStoryWrapper>
-      <OptionIconStory onClick={props.onTogglePlay}  icon={RiPlayFill} />
-      <OptionIconStory icon={RiMoreFill} />
-    </IconsStoryWrapper>
-  );
 };
+const IconsOptionStory = (props : IconsOptionStoryProps) => (
+  <IconsStoryWrapper>
+    <OptionIconStory onClick={props.onTogglePlay} icon={RiPlayFill} />
+    <OptionIconStory icon={RiMoreFill} />
+  </IconsStoryWrapper>
+);
 
 export default IconsOptionStory;

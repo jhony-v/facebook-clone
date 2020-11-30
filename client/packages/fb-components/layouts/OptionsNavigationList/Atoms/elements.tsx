@@ -1,5 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const StyledNavigationListWrapper = styled.div`
-    width:${props => props.theme.layoutSizes.widthLeftRail};
-`
+const StyledNavigationListWrapper = styled.div`
+    width:${(props) => props.theme.layoutSizes.widthLeftRail};
+`;
+
+export default StyledNavigationListWrapper;

@@ -1,7 +1,6 @@
-import React, { FC, useState } from "react";
-import styled, { css } from "styled-components";
-import { AnimatePresence, motion } from "framer-motion";
-
+import React, { FC, useState } from 'react';
+import styled, { css } from 'styled-components';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -12,11 +11,11 @@ const StyledWrapper = styled.div`
  */
 type StyledTooltipTypes = {
   w ?: string;
-  position ?: "left" | "right" | "top" | "bottom"
-}
+  position ?: 'left' | 'right' | 'top' | 'bottom'
+};
 const StyledTooltip = styled(motion.div)<StyledTooltipTypes>`
-  font-size:${props => props.theme.fontSizes[200]};
-  width:${ props => props.w};
+  font-size:${(props) => props.theme.fontSizes[200]};
+  width:${(props) => props.w};
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
   box-shadow:0 5px 5px rgba(0,0,0,.3);
@@ -25,29 +24,29 @@ const StyledTooltip = styled(motion.div)<StyledTooltipTypes>`
   position: absolute;
   text-align: center;
   z-index:2;
-  ${props => props.position === "bottom" && css`
+  ${(props) => props.position === 'bottom' && css`
     bottom:-40px;
     left:50%;
     transform:translateX(-50%);
   `}
-  ${props => props.position === "top" && css`
+  ${(props) => props.position === 'top' && css`
     top : -40px;
     left:50%;
     transform:translateX(-50%);
   `}
-  ${props => props.position === "left" && css`
+  ${(props) => props.position === 'left' && css`
     left:0;
     top:50%;
     transform:translateY(-50%)translateX(-100%);
   `}
-  ${props => props.position === "right" && css`
+  ${(props) => props.position === 'right' && css`
     left:0;
     top:50%;
     transform:translateY(-50%)translateX(100%);  
   `}
 `;
 StyledTooltip.defaultProps = {
-  position : "bottom",
+  position: 'bottom',
   exit: {
     opacity: 0,
   },
@@ -59,19 +58,20 @@ StyledTooltip.defaultProps = {
   },
 };
 
-type DarkTooltipProps = {
-  text?: string;
-} & StyledTooltipTypes;
-const DarkTooltip: FC<DarkTooltipProps> = ({ children, text, position,w }) => {
-  const [visible, setVisible ] = useState(false);
+type DarkTooltipProps = { text?: string; } & StyledTooltipTypes;
+const DarkTooltip: FC<DarkTooltipProps> = ({
+  children, text, position, w,
+}) => {
+  const [visible, setVisible] = useState(false);
   const onHover = (state : boolean) => () => {
-    setVisible(state)
+    setVisible(state);
   };
 
   return (
-    <StyledWrapper 
-    onMouseEnter={onHover(true)} 
-    onMouseLeave={onHover(false)}>
+    <StyledWrapper
+      onMouseEnter={onHover(true)}
+      onMouseLeave={onHover(false)}
+    >
       {children}
       <AnimatePresence>
         {visible && <StyledTooltip w={w} position={position}>{text}</StyledTooltip>}

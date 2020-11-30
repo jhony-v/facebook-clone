@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import RaisedButton from "@fb-components/common/RaisedButton";
+import styled from 'styled-components';
+import RaisedButton from '@fb-components/common/RaisedButton';
 
 export const StyledRaisedButton = styled(RaisedButton)`
   width: 100%;
@@ -7,7 +7,7 @@ export const StyledRaisedButton = styled(RaisedButton)`
 `;
 
 export const StyledRaisedButtonPlaceholderInput = styled(RaisedButton)`
-  background-color: ${props => props.theme.colors.vgBlackAlpha10};
+  background-color: ${(props) => props.theme.colors.vgBlackAlpha10};
   border-radius: 30px;
   width: 100%;
   cursor: pointer;

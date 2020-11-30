@@ -1,6 +1,8 @@
-import React, { MutableRefObject, useEffect, useRef, useState } from "react";
-import ButtonPlayer from "./Atoms/ButtonPlayer";
-import { VideoPlayer, VideoPlayerContainer } from "./Atoms/element";
+import React, {
+  MutableRefObject, useEffect, useRef, useState,
+} from 'react';
+import ButtonPlayer from './Atoms/ButtonPlayer';
+import { VideoPlayer, VideoPlayerContainer } from './Atoms/element';
 
 type VideoMediaPlayerProps = {
   src?: string;
@@ -12,19 +14,20 @@ type VideoMediaPlayerProps = {
 };
 
 const VideoMediaPlayer = (props: VideoMediaPlayerProps) => {
-  const { src, poster, objectFit, w,h } = props;
+  const {
+    src, poster, objectFit, w, h, autoplay,
+  } = props;
   const [visible, setVisible] = useState<boolean>(false);
   const [playing, setPlaying] = useState<boolean>(false);
   const videoRef = useRef() as MutableRefObject<HTMLVideoElement>;
 
   useEffect(() => {
-    if(playing) videoRef.current.play();
+    if (playing) videoRef.current.play();
     else videoRef.current.pause();
-  },[videoRef,playing])
+  }, [videoRef, playing]);
 
-
-  const TypeButtonPlayer = ButtonPlayer[playing ? "Pause" : "Play"];
-  const playerButtonComponent =  <TypeButtonPlayer onClick={()=>setPlaying(prevState => !prevState)} />;
+  const TypeButtonPlayer = ButtonPlayer[playing ? 'Pause' : 'Play'];
+  const playerButtonComponent = <TypeButtonPlayer onClick={() => setPlaying((prevState) => !prevState)} />;
 
   return (
     <VideoPlayerContainer
@@ -33,12 +36,13 @@ const VideoMediaPlayer = (props: VideoMediaPlayerProps) => {
       onMouseEnter={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
     >
-      <VideoPlayer 
-      ref={videoRef} 
-      src={src} 
-      autoPlay={props.autoplay}
-      poster={poster} 
-      objectFit={objectFit} />
+      <VideoPlayer
+        ref={videoRef}
+        src={src}
+        autoPlay={autoplay}
+        poster={poster}
+        objectFit={objectFit}
+      />
       {visible && playerButtonComponent}
     </VideoPlayerContainer>
   );

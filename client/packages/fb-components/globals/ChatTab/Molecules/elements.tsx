@@ -1,5 +1,5 @@
-import FlexWrapper from "@fb-components/common/FlexWrapper";
-import styled from "styled-components";
+import FlexWrapper from '@fb-components/common/FlexWrapper';
+import styled from 'styled-components';
 
 export const StyledRowItem = styled(FlexWrapper)`
   padding: 10px;

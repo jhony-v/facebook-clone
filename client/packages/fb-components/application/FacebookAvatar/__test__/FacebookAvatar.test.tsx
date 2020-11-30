@@ -1,16 +1,16 @@
-import React from "react";
-import { render } from "@test-utils";
-import FacebookAvatar from "..";
-import { cleanup, screen } from "@testing-library/react";
+import React from 'react';
+import { render } from '@test-utils';
+import { cleanup, screen } from '@testing-library/react';
+import FacebookAvatar from '..';
 
 beforeAll(() => {
   cleanup();
-})
+});
 
-describe("Facebook avatar", () => {
-  it("should render facebook avatar component", () => {
+describe('Facebook avatar', () => {
+  it('should render facebook avatar component', () => {
     render(<FacebookAvatar />);
-    const avatarElement = screen.queryByRole("link");
+    const avatarElement = screen.queryByRole('link');
     expect(avatarElement).toBeInTheDocument();
   });
 });

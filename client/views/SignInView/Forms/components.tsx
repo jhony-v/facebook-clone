@@ -1,7 +1,7 @@
-import EditText from "@fb-components/common/EditText";
-import Wrapper from "@fb-components/common/Wrapper";
-import { Control, Controller, FieldError } from "react-hook-form";
-import { StyledGlobal } from "./elements";
+import EditText from '@fb-components/common/EditText';
+import Wrapper from '@fb-components/common/Wrapper';
+import { Control, Controller, FieldError } from 'react-hook-form';
+import StyledGlobal from './elements';
 
 type FormEditTextProps = {
   field : {
@@ -9,24 +9,31 @@ type FormEditTextProps = {
     placeholder : string;
     type : string;
   }
-  control: Control<Record<string,any>>;
+  control: Control<Record<string, any>>;
   errors: {
     error : boolean | undefined | FieldError;
     message: string;
   };
-}
-export const FormEditText = ({control,field,errors} : FormEditTextProps) => (
-  <Controller name={field.name} control={control} defaultValue="" rules={{
-      required:true
+};
+
+const FormEditText = ({ control, field, errors } : FormEditTextProps) => (
+  <Controller
+    name={field.name}
+    control={control}
+    defaultValue=""
+    rules={{
+      required: true,
     }}
-    render={(props)=>(
+    render={(props) => (
       <Wrapper m="20px 0">
-        <EditText 
-        type={field.type}
-        name={props.name}
-        onChange={props.onChange}
-        placeholder={field.placeholder}
-        variant="outline" fluid />
+        <EditText
+          type={field.type}
+          name={props.name}
+          onChange={props.onChange}
+          placeholder={field.placeholder}
+          variant="outline"
+          fluid
+        />
         {
           errors.error && (
             <StyledGlobal.TextDanger>{errors.message}</StyledGlobal.TextDanger>
@@ -34,5 +41,7 @@ export const FormEditText = ({control,field,errors} : FormEditTextProps) => (
         }
       </Wrapper>
     )}
-    />
+  />
 );
+
+export default FormEditText;

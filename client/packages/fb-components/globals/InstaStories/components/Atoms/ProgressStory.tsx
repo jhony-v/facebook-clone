@@ -1,7 +1,7 @@
-import { memo, useEffect } from "react";
-import Wrapper from "@fb-components/common/Wrapper";
-import useProgressBarFromInterval from "@fb-hooks/useProgressBarFromInterval";
-import styled from "styled-components";
+import { memo, useEffect } from 'react';
+import Wrapper from '@fb-components/common/Wrapper';
+import useProgressBarFromInterval from '@fb-hooks/useProgressBarFromInterval';
+import styled from 'styled-components';
 
 const ProgressBase = styled.div`
   border-radius: 10px;
@@ -31,7 +31,7 @@ const ProgressStory = ({ duration, playing, onClick }: ProgressStoryProps) => {
   return (
     <Wrapper m="0 5px 0 0" w="100%">
       <ProgressTrack onClick={onClick}>
-        <ProgressThumb style={{width:progress + "%"}} />
+        <ProgressThumb style={{ width: `${progress}%` }} />
       </ProgressTrack>
     </Wrapper>
   );

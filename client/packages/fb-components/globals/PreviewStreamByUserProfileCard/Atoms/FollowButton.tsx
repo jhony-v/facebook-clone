@@ -1,9 +1,9 @@
-import { ButtonFollowStreamUser } from "./elements";
+import { ButtonFollowStreamUser } from './elements';
 
-const FollowButton = ({ following }: { following?: boolean }) => {
-  return <ButtonFollowStreamUser>
-      {following ? "Following" : "Follow"}
-  </ButtonFollowStreamUser>;
-};
+const FollowButton = ({ following }: { following?: boolean }) => (
+  <ButtonFollowStreamUser>
+    {following ? 'Following' : 'Follow'}
+  </ButtonFollowStreamUser>
+);
 
 export default FollowButton;

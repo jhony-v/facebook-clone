@@ -1,5 +1,3 @@
-import { SyntheticEvent } from "react";
-
 export default function loadAsyncImage({ image }: { image: string }) {
   const srcImage: HTMLImageElement = new Image();
 
@@ -11,7 +9,7 @@ export default function loadAsyncImage({ image }: { image: string }) {
       srcImage.onload = null;
       srcImage.onerror = null;
       srcImage.onabort = null;
-      reject(false);
+      reject(new Error('Error to load image'));
     };
     srcImage.onload = handlerLoad;
     srcImage.onerror = handlerError;

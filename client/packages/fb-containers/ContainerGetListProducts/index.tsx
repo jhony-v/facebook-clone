@@ -1,6 +1,6 @@
-import Grid from "@fb-components/common/Grid";
-import MarketplaceCard from "@fb-components/globals/MarketplaceCard";
-import { useGetProducts } from "@fb-features-recoil/marketplace";
+import Grid from '@fb-components/common/Grid';
+import MarketplaceCard from '@fb-components/globals/MarketplaceCard';
+import { useGetProducts } from '@fb-features-recoil/marketplace';
 
 const ContainerGetListProducts = () => {
   const { data } = useGetProducts();
@@ -10,8 +10,8 @@ const ContainerGetListProducts = () => {
         <MarketplaceCard
           key={i}
           image={e.image}
-          price={"S/."  +  e.price}
-          description={e.description.substring(0 , 60) + "..."}
+          price={`S/.${e.price}`}
+          description={`${e.description.substring(0, 60)}...`}
           location={e.location}
         />
       ))}

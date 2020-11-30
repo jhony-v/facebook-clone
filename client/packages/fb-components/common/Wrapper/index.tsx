@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export type WrapperTypes = {
   p?: string;
@@ -20,11 +20,10 @@ const Wrapper = styled.div<WrapperTypes>`
   margin: ${(props) => props.m};
   width: ${(props) => props.w};
   height: ${(props) => props.h};
-  flex: ${(props) => props.flexNone && "none"};
-  display: ${(props) => props.inlineBlock && "inline-block"};
-  ${({ absolute }) =>
-    absolute &&
-    css`
+  flex: ${(props) => props.flexNone && 'none'};
+  display: ${(props) => props.inlineBlock && 'inline-block'};
+  ${({ absolute }) => absolute
+    && css`
       position:absolute;
       left: ${absolute.left};
       right: ${absolute.right};

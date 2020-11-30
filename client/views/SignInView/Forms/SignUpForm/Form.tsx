@@ -1,5 +1,5 @@
-import React from "react";
-import { useForm } from "react-hook-form";
+import React from 'react';
+import { useForm } from 'react-hook-form';
 
 type FormData = {
   email: string;
@@ -12,14 +12,12 @@ type FormData = {
 
 const Form = () => {
   const { handleSubmit } = useForm<FormData>();
-  const onSubmit = (payload: FormData) => {
-  }
-  
-  return(
-    <form onSubmit={handleSubmit(onSubmit)}>
+  const onSubmit = () => {
+  };
 
-    </form>
-  )
+  return (
+    <form onSubmit={handleSubmit(onSubmit)} />
+  );
 };
 
 export default Form;

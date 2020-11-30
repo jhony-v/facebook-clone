@@ -1,10 +1,10 @@
-import FlexWrapper from "@fb-components/common/FlexWrapper";
-import Wrapper from "@fb-components/common/Wrapper";
-import InstaStories from "@fb-components/globals/InstaStories";
-import styled from "styled-components";
-import { VscChevronLeft, VscChevronRight } from "react-icons/vsc"
+import FlexWrapper from '@fb-components/common/FlexWrapper';
+import Wrapper from '@fb-components/common/Wrapper';
+import InstaStories from '@fb-components/globals/InstaStories';
+import styled from 'styled-components';
+import { VscChevronLeft, VscChevronRight } from 'react-icons/vsc';
 
-const size = "50px";
+const size = '50px';
 
 const ButtonChangeStory = styled.div`
   border-radius: 100%;
@@ -23,16 +23,14 @@ const ButtonChangeStory = styled.div`
   }
 `;
 
-const ViewCurrentStory = ({ user, stories }) => {
-  return (
-    <Wrapper m="auto">
-      <FlexWrapper align="center">
-        <ButtonChangeStory><VscChevronLeft/></ButtonChangeStory>
-        <InstaStories user={user} stories={stories} />
-        <ButtonChangeStory><VscChevronRight/></ButtonChangeStory>
-      </FlexWrapper>
-    </Wrapper>
-  );
-};
+const ViewCurrentStory = ({ user, stories }) => (
+  <Wrapper m="auto">
+    <FlexWrapper align="center">
+      <ButtonChangeStory><VscChevronLeft /></ButtonChangeStory>
+      <InstaStories user={user} stories={stories} />
+      <ButtonChangeStory><VscChevronRight /></ButtonChangeStory>
+    </FlexWrapper>
+  </Wrapper>
+);
 
 export default ViewCurrentStory;

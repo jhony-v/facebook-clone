@@ -1,10 +1,10 @@
-import SuggestedPageWrapper from "./Atoms/SuggestedPageWrapper";
-import CoverPageImage from "./Atoms/CoverPageImage";
-import faker from "faker";
-import PageLikeButton from "./Atoms/PageLikeButton";
-import Wrapper from "@fb-components/common/Wrapper";
-import PageInformation, { PageInformationProps } from "./Molecules/PageInformation";
-import ButtonDeletePageItem from "./Atoms/ButtonDeletePageItem";
+import faker from 'faker';
+import Wrapper from '@fb-components/common/Wrapper';
+import SuggestedPageWrapper from './Atoms/SuggestedPageWrapper';
+import CoverPageImage from './Atoms/CoverPageImage';
+import PageLikeButton from './Atoms/PageLikeButton';
+import PageInformation, { PageInformationProps } from './Molecules/PageInformation';
+import ButtonDeletePageItem from './Atoms/ButtonDeletePageItem';
 
 type SuggestedPageItemCardProps = {
   image?: string;
@@ -16,7 +16,7 @@ const SuggestedPageItemCard = (props: SuggestedPageItemCardProps) => {
   return (
     <SuggestedPageWrapper>
       <CoverPageImage src={image} />
-      <ButtonDeletePageItem/>
+      <ButtonDeletePageItem />
       <Wrapper p="10px">
         <PageInformation {...pageInformation} />
         <PageLikeButton liked={liked} />

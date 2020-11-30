@@ -1,38 +1,36 @@
-import faker from "faker";
-import { FiSearch, FiSettings } from "react-icons/fi";
-import { RiVideoAddFill } from "react-icons/ri";
+import faker from 'faker';
+import { FiSearch, FiSettings } from 'react-icons/fi';
+import { RiVideoAddFill } from 'react-icons/ri';
 import ContactList from '@fb-components/globals/ContactList';
-
 
 const dataTest = Array(50)
   .fill(0)
-  .map((e, i) => ({
-    title: faker.name.findName() + " " + faker.name.lastName(),
+  .map(() => ({
+    title: `${faker.name.findName()} ${faker.name.lastName()}`,
     image: faker.random.image(),
   }));
 
+const ContainerOnlineContactFriendsList = () => (
+  <ContactList
+    title="Contacts"
+    data={dataTest}
+    options={(
+      <>
+        <ContactList.Option icon={RiVideoAddFill} onClick={() => null} />
+        <ContactList.Option icon={FiSearch} onClick={() => null} />
+        <ContactList.Option icon={FiSettings} onClick={() => null} />
+      </>
+)}
+  >
+    {(data, options) => (
+      <ContactList.ListItem
+        key={options.key}
+        style={options.style}
+        image={data.image}
+        text={data.title}
+      />
+    )}
+  </ContactList>
+);
 
-const ContainerOnlineContactFriendsList = () => {
-    return (
-        <ContactList
-        title="Contacts"
-        data={dataTest}
-        options={<>
-            <ContactList.Option icon={RiVideoAddFill} onClick={()=>alert()} />
-            <ContactList.Option icon={FiSearch} onClick={()=>alert(2)} />
-            <ContactList.Option icon={FiSettings} onClick={()=>alert(3)} />
-        </>}
-      >
-        {(data, options) => (
-          <ContactList.ListItem
-            key={options.key}
-            style={options.style}
-            image={data.image}
-            text={data.title}
-          />
-        )}
-      </ContactList>
-    )
-}
-
-export default ContainerOnlineContactFriendsList
+export default ContainerOnlineContactFriendsList;

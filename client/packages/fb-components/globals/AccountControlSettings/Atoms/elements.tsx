@@ -1,6 +1,6 @@
-import FlexWrapper from "@fb-components/common/FlexWrapper";
-import RowItemSelectable from "@fb-components/common/RowItemSelectable";
-import styled from "styled-components";
+import FlexWrapper from '@fb-components/common/FlexWrapper';
+import RowItemSelectable from '@fb-components/common/RowItemSelectable';
+import styled from 'styled-components';
 
 export const StyledControlWrapper = styled(FlexWrapper)`
   height: ${(props) => props.theme.layoutSizes.heightNavigator};

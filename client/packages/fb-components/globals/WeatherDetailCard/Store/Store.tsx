@@ -1,4 +1,4 @@
-import { atom, selector } from "recoil";
+import { atom, selector } from 'recoil';
 
 export interface IWeatherMain {
   temp: number;
@@ -16,12 +16,12 @@ export interface IWeatherDescription {
 }
 
 export const weatherState = atom({
-  key: "weatherState",
+  key: 'weatherState',
   default: {},
 });
 
 export const weatherDescriptionSelector = selector({
-  key: "weatherDescriptionSelector",
+  key: 'weatherDescriptionSelector',
   get: ({ get }) => {
     const { weather } = get(weatherState) as { weather: IWeatherDescription[] };
     return weather[0];
@@ -29,7 +29,7 @@ export const weatherDescriptionSelector = selector({
 });
 
 export const weatherLoadingSelector = selector({
-  key: "weatherLoadingSelector",
+  key: 'weatherLoadingSelector',
   get: ({ get }) => {
     const value = get(weatherState);
     return Object.keys(value).length === 0;
@@ -37,12 +37,12 @@ export const weatherLoadingSelector = selector({
 });
 
 export const weatherMainSelector = selector({
-  key: "weatherMainSelector",
+  key: 'weatherMainSelector',
   get: ({ get }) => {
     const { main } = get(weatherState) as { main: IWeatherMain };
     return {
       ...main,
-      temp: Math.floor(main.temp) + "°",
+      temp: `${Math.floor(main.temp)}°`,
     };
   },
 });

@@ -1,6 +1,6 @@
-import { useSetRecoilState } from "recoil";
-import styled from "styled-components";
-import { textPostState } from "../Store";
+import { useSetRecoilState } from 'recoil';
+import styled from 'styled-components';
+import { textPostState } from '../Store';
 
 const StyledFormTextArea = styled.textarea`
   font-size: ${(props) => props.theme.fontSizes[700]};

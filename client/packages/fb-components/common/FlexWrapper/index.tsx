@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export type FlexWrapperTypes = {
   w?: string;
@@ -17,9 +17,8 @@ const FlexWrapper = styled.div<FlexWrapperTypes>`
   align-items: ${(props) => props.align};
   justify-content: ${(props) => props.justify};
 
-  ${(props) =>
-    props.centerBetween &&
-    css`
+  ${(props) => props.centerBetween
+    && css`
       align-items: center;
       justify-content: space-between;
     `}

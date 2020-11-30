@@ -1,5 +1,5 @@
-import React from 'react'
-import styled, { keyframes } from "styled-components";
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 
 const animation = keyframes`
   from {
@@ -9,7 +9,7 @@ const animation = keyframes`
 
 const StyledListMicroText = styled.span`
   background-color: ${(props) => props.theme.colors.vgDanger};
-  font-size:${props => props.theme.fontSizes[200]};
+  font-size:${(props) => props.theme.fontSizes[200]};
   animation: ${animation} 0.8s infinite linear alternate;
   padding: 4px;
   border-radius: 5px;
@@ -17,8 +17,10 @@ const StyledListMicroText = styled.span`
   text-transform: uppercase;
 `;
 
-const LiveMicroText = ({live}:{live?:boolean}) => {
-  return live ? <StyledListMicroText>live</StyledListMicroText> : null;
+const LiveMicroText = ({ live }:{live?:boolean}) => (live ? <StyledListMicroText>live</StyledListMicroText> : null);
+
+LiveMicroText.defaultProps = {
+  live: false,
 };
 
 export default LiveMicroText;

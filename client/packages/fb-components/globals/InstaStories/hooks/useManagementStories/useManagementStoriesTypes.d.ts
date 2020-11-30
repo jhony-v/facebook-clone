@@ -13,22 +13,22 @@ export interface StoriesProps {
 
 export type Action =
   | {
-      type: "NEXT";
-    }
+    type: 'NEXT';
+  }
   | {
-      type: "PREVIOUS";
-    }
+    type: 'PREVIOUS';
+  }
   | {
-      type: "STOP_PLAYING";
-    }
+    type: 'STOP_PLAYING';
+  }
   | {
-      type: "START_PLAYING";
-    }
+    type: 'START_PLAYING';
+  }
   | {
-      type: "SET_CURRENT_INDEX_STORY";
-      payload: number;
-    }
+    type: 'SET_CURRENT_INDEX_STORY';
+    payload: number;
+  }
   | {
-      type: "SET_STATUS_LOADING";
-      payload: boolean;
-    };
+    type: 'SET_STATUS_LOADING';
+    payload: boolean;
+  };

@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const spinnerAnimation = keyframes`
     from {
@@ -14,7 +14,7 @@ const Spinner = styled.div`
   margin: auto;
   border: 3px solid transparent;
   animation: 0.3s ${spinnerAnimation} infinite linear reverse;
-  border-left-color: ${props => props.theme.colors.vgPrimary};
+  border-left-color: ${(props) => props.theme.colors.vgPrimary};
 `;
 
 export default Spinner;

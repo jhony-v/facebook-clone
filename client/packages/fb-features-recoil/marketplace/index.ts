@@ -1,8 +1,8 @@
-import { marketplaceMocks } from "@mocks/index";
-import { atom, useRecoilValue } from "recoil";
+import { marketplaceMocks } from '@mocks/index';
+import { atom, useRecoilValue } from 'recoil';
 
 export const listProductsState = atom({
-  key: "listProductsState",
+  key: 'listProductsState',
   default: marketplaceMocks.getProducts(),
 });
 

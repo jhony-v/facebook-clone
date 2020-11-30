@@ -1,5 +1,7 @@
-import loadAsyncImage from "@utils/loadAsynImage";
-import { useCallback, useEffect, useRef, useState } from "react";
+import loadAsyncImage from '@utils/loadAsynImage';
+import {
+  useCallback, useEffect, useRef, useState,
+} from 'react';
 
 /**
  * Save images in cache
@@ -7,14 +9,14 @@ import { useCallback, useEffect, useRef, useState } from "react";
 const cacheImage = new Map();
 
 interface StatusFetchImageProps {
-  LOADING: "LOADING";
-  ERROR: "ERROR";
-  COMPLETE: "COMPLETE";
+  LOADING: 'LOADING';
+  ERROR: 'ERROR';
+  COMPLETE: 'COMPLETE';
 }
 const StatusFetchImage: StatusFetchImageProps = {
-  LOADING: "LOADING",
-  ERROR: "ERROR",
-  COMPLETE: "COMPLETE",
+  LOADING: 'LOADING',
+  ERROR: 'ERROR',
+  COMPLETE: 'COMPLETE',
 };
 
 type StatusFetchImageTypes = keyof typeof StatusFetchImage;
@@ -46,10 +48,10 @@ const useFetchImage = (image: string) => {
   }, [image, status]);
 
   const onImageLoaded = useCallback((callback : () => void) => {
-      if(status === StatusFetchImage.COMPLETE) {
-          callback()
-      }
-  },[status]); 
+    if (status === StatusFetchImage.COMPLETE) {
+      callback();
+    }
+  }, [status]);
 
   return {
     status,

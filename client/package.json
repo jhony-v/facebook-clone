@@ -10,7 +10,7 @@
     "test:watch": "jest --watch --env=jsdom",
     "storybook": "start-storybook -p 6006 --no-dll",
     "build-storybook": "build-storybook --no-dll",
-    "eslint:fix": "npx eslint --fix",
+    "eslint:fix": "npx eslint . --fix",
     "eslint": "npx eslint ."
   },
   "dependencies": {

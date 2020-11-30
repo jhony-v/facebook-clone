@@ -1,9 +1,9 @@
-import FlexWrapper from "@fb-components/common/FlexWrapper";
-import TextLabel from "@fb-components/common/TextLabel";
-import Wrapper from "@fb-components/common/Wrapper";
-import { useRecoilValue } from "recoil";
-import SubtitleTextDetail from "../Atoms/SubtitleTextDetail";
-import { weatherDescriptionSelector, weatherMainSelector } from "../Store/Store";
+import FlexWrapper from '@fb-components/common/FlexWrapper';
+import TextLabel from '@fb-components/common/TextLabel';
+import Wrapper from '@fb-components/common/Wrapper';
+import { useRecoilValue } from 'recoil';
+import SubtitleTextDetail from '../Atoms/SubtitleTextDetail';
+import { weatherDescriptionSelector, weatherMainSelector } from '../Store/Store';
 
 const HeaderDetailWeather = () => {
   const { description } = useRecoilValue(weatherDescriptionSelector);
@@ -14,7 +14,9 @@ const HeaderDetailWeather = () => {
       <Wrapper>
         <Wrapper m="0 0 10px 0">
           <TextLabel weight textColor="vgTextBlack" textSize={800}>
-            Weather in {""}
+            Weather in
+            {' '}
+
           </TextLabel>
         </Wrapper>
         <FlexWrapper>

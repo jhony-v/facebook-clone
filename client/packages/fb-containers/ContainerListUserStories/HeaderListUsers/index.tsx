@@ -1,6 +1,6 @@
-import FlexWrapper from "@fb-components/common/FlexWrapper";
-import TextLabel from "@fb-components/common/TextLabel";
-import Wrapper from "@fb-components/common/Wrapper";
+import FlexWrapper from '@fb-components/common/FlexWrapper';
+import TextLabel from '@fb-components/common/TextLabel';
+import Wrapper from '@fb-components/common/Wrapper';
 
 const TextLabelPrimary = ({ text }: { text: string }) => (
   <TextLabel textColor="vgTextPrimary" textSize={300}>

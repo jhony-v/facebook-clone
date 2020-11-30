@@ -1,7 +1,7 @@
-import React from "react";
-import RoundButton from "../RoundButton";
-import { VscChromeClose } from "react-icons/vsc";
-import { useTheme } from "styled-components";
+import React from 'react';
+import { VscChromeClose } from 'react-icons/vsc';
+import { useTheme } from 'styled-components';
+import RoundButton from '../RoundButton';
 
 type ButtonCloseProps = {
   onClose: () => void;

@@ -1,7 +1,7 @@
-import useFetchImage from "@fb-hooks/useFetchImage";
-import React from "react";
-import styled from "styled-components";
-import OverflowBackgroundImage from "../../../../common/OverflowBackgroundImage";
+import useFetchImage from '@fb-hooks/useFetchImage';
+import React from 'react';
+import styled from 'styled-components';
+import OverflowBackgroundImage from '../../../../common/OverflowBackgroundImage';
 
 type RootStoryOverflowTypes = {
   w?: string;
@@ -58,7 +58,7 @@ type OverflowCardBackgroundImage = {
   children ?: React.ReactNode;
 } & RootStoryOverflowTypes;
 
-const OverflowCardStory = ( props  : OverflowCardBackgroundImage ) => {
+const OverflowCardStory = (props : OverflowCardBackgroundImage) => {
   const { children, w, h } = props;
 
   return (

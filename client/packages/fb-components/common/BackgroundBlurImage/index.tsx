@@ -1,5 +1,5 @@
-import { FC } from "react";
-import styled from "styled-components";
+import { FC } from 'react';
+import styled from 'styled-components';
 
 const BlurImage = styled.div<{ image?: string }>`
   background-size: cover;
@@ -34,13 +34,11 @@ const BlurImageContainer = styled.div`
 type BackgroundBlurImageProps = {
   image?: string;
 };
-const BackgroundBlurImage: FC<BackgroundBlurImageProps> = ({children, image}) => {
-  return (
-    <BlurImageContainer>
-      <BlurImage image={image} />
-      {children}
-    </BlurImageContainer>
-  );
-};
+const BackgroundBlurImage: FC<BackgroundBlurImageProps> = ({ children, image }) => (
+  <BlurImageContainer>
+    <BlurImage image={image} />
+    {children}
+  </BlurImageContainer>
+);
 
 export default BackgroundBlurImage;

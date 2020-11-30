@@ -1,5 +1,5 @@
-import { postsMocks } from "@mocks/index";
-import { atom, selector, useRecoilValue } from "recoil";
+import { postsMocks } from '@mocks/index';
+import { atom, selector, useRecoilValue } from 'recoil';
 
 interface NewsFeed {
   id: string;
@@ -27,19 +27,19 @@ interface NewsFeed {
     };
   };
   comments: {
-    total: string;
+    total: number;
   };
 }
 
 export const newsFeedState = atom({
-  key: "newsFeedState",
+  key: 'newsFeedState',
   default: postsMocks.getPosts(),
 });
 
 export const getNewsFeedSelector = selector({
-  key: "getNewsFeedSelector",
+  key: 'getNewsFeedSelector',
   get: ({ get }) => {
-    const data = get(newsFeedState);
+    const data = get(newsFeedState) as NewsFeed[];
     return {
       data,
       isEmpty: data.length,

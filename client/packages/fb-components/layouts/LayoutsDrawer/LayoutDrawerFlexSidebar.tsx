@@ -1,8 +1,8 @@
-import { FC } from "react";
-import styled from "styled-components";
+import { FC } from 'react';
+import styled from 'styled-components';
 
 type SidebarTypes = {
-  w?: "default" | "medium";
+  w?: 'default' | 'medium';
 };
 
 const SidebarWrapper = styled.div<SidebarTypes>`
@@ -10,11 +10,10 @@ const SidebarWrapper = styled.div<SidebarTypes>`
   flex: none;
   display: flex;
   flex-direction: column;
-  width: ${(props) =>
-    ({
-      medium: "380px",
-      default: "360px",
-    }[props.w || "default"])};
+  width: ${(props) => ({
+    medium: '380px',
+    default: '360px',
+  }[props.w || 'default'])};
 `;
 
 const HeaderWrapper = styled.div`
@@ -38,22 +37,20 @@ const BodyWrapper = styled.div`
   }
   &:hover {
     &::-webkit-scrollbar {
-      background-color: ${props => props.theme.colors.vgBlackAlpha12};
+      background-color: ${(props) => props.theme.colors.vgBlackAlpha12};
     }
     &::-webkit-scrollbar-thumb {
-      background-color: ${props => props.theme.colors.vgBlackAlpha30};
-      border:3px solid ${props => props.theme.colors.vgBlackAlpha12};
+      background-color: ${(props) => props.theme.colors.vgBlackAlpha30};
+      border:3px solid ${(props) => props.theme.colors.vgBlackAlpha12};
     }
   }
 `;
 
-const LayoutDrawerFlexSidebar: FC<SidebarTypes> = ({ children, w }) => {
-  return (
-    <SidebarWrapper w={w}>
-      <HeaderWrapper />
-      <BodyWrapper>{children}</BodyWrapper>
-    </SidebarWrapper>
-  );
-};
+const LayoutDrawerFlexSidebar: FC<SidebarTypes> = ({ children, w }) => (
+  <SidebarWrapper w={w}>
+    <HeaderWrapper />
+    <BodyWrapper>{children}</BodyWrapper>
+  </SidebarWrapper>
+);
 
 export default LayoutDrawerFlexSidebar;

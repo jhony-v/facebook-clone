@@ -1,7 +1,7 @@
-import ContainerMainNavigator from "@fb-containers/ContainerMainNavigator";
-import ContainerChatTabs from "@fb-containers/ContainerChatTabs";
-import LayoutDrawerAbsoluteFullScreen from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerAbsoluteFullScreen";
-import Error4040View from "@views/Error404View";
+import ContainerMainNavigator from '@fb-containers/ContainerMainNavigator';
+import ContainerChatTabs from '@fb-containers/ContainerChatTabs';
+import LayoutDrawerAbsoluteFullScreen from '@fb-components/layouts/LayoutsDrawer/LayoutDrawerAbsoluteFullScreen';
+import Error4040View from '@views/Error404View';
 
 export default function ErrorPage() {
   return (

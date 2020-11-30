@@ -1,8 +1,8 @@
-import React from "react";
-import { useRouter } from "next/router";
-import { StyledItemNavigation, StyledLinkButton, StyledNotificationPoint } from "./elements";
-import Link, { LinkProps } from "next/link"
-import DarkTooltip from "@fb-components/common/DarkTooltip";
+import React from 'react';
+import { useRouter } from 'next/router';
+import Link, { LinkProps } from 'next/link';
+import DarkTooltip from '@fb-components/common/DarkTooltip';
+import { StyledItemNavigation, StyledLinkButton, StyledNotificationPoint } from './elements';
 
 type LinkButtonProps = {
   isSelected ?: boolean;
@@ -11,26 +11,28 @@ type LinkButtonProps = {
   icon: React.JSXElementConstructor<{size:number}>
 } & LinkProps;
 
-const LinkButton = ({ isSelected,title,notifications, icon: IconComponent, ...restProps } : LinkButtonProps) => {
+const LinkButton = ({
+  isSelected, title, notifications, icon: IconComponent, ...restProps
+} : LinkButtonProps) => {
   const { asPath } = useRouter();
   return (
     <StyledItemNavigation>
       <DarkTooltip text={title}>
-      <Link {...restProps}>
-        <StyledLinkButton isSelected={asPath === restProps.href}>
-            {<IconComponent size={22} />}
+        <Link {...restProps}>
+          <StyledLinkButton isSelected={asPath === restProps.href}>
+            <IconComponent size={22} />
             {(notifications > 0) && (
-              <StyledNotificationPoint>{notifications}</StyledNotificationPoint>
-              )}
-        </StyledLinkButton>
-      </Link>
+            <StyledNotificationPoint>{notifications}</StyledNotificationPoint>
+            )}
+          </StyledLinkButton>
+        </Link>
       </DarkTooltip>
     </StyledItemNavigation>
   );
 };
 
 LinkButton.defaultProps = {
-  notifications : 0
-}
+  notifications: 0,
+};
 
 export default LinkButton;

@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
   position: fixed;
@@ -12,10 +12,10 @@ const StyledWrapper = styled.div`
 
 const FullScreenWrapper: React.FC<{}> = ({ children, ...restProps }) => {
   useEffect(() => {
-      document.documentElement.style.overflowY = "hidden";
-      return () => {
-        document.documentElement.style.overflowY = "auto";
-      }
+    document.documentElement.style.overflowY = 'hidden';
+    return () => {
+      document.documentElement.style.overflowY = 'auto';
+    };
   }, []);
   return <StyledWrapper {...restProps}>{children}</StyledWrapper>;
 };

@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const InputStory = styled.input.attrs({
-  placeholder: "Reply...",
+  placeholder: 'Reply...',
 })`
   border: 1px solid white;
   border-radius: 30px;
@@ -12,8 +12,6 @@ const InputStory = styled.input.attrs({
   font-size: ${(props) => props.theme.fontSizes[400]};
 `;
 
-const CommentEditText = () => {
-  return <InputStory />;
-};
+const CommentEditText = () => <InputStory />;
 
 export default CommentEditText;

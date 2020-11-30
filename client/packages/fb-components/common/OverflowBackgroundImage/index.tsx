@@ -1,6 +1,6 @@
-import React from "react";
-import useFetchImage from "@fb-hooks/useFetchImage";
-import styled from "styled-components";
+import React from 'react';
+import useFetchImage from '@fb-hooks/useFetchImage';
+import styled from 'styled-components';
 
 const ImageWrapper = styled.div`
   width: 100%;
@@ -32,26 +32,30 @@ const BackgroundGradient = styled.div`
   );
 `;
 
-type OverflowBackgroundImage = {
+type OverflowBackgroundImageProps = {
   image: string;
   onLoadingStatus?: (loading: boolean) => void;
 } & React.HTMLAttributes<{}>;
 
-const OverflowBackgroundImage = (props: OverflowBackgroundImage) => {
+const OverflowBackgroundImage = (props: OverflowBackgroundImageProps) => {
   const { image, onLoadingStatus, ...restProps } = props;
   const { image: src, status } = useFetchImage(image);
 
   React.useEffect(() => {
-    let currentStatus = status === "LOADING";
+    const currentStatus = status === 'LOADING';
     onLoadingStatus && onLoadingStatus(currentStatus);
   }, [status]);
 
   return (
     <ImageWrapper {...restProps}>
-      <Image src={src}  role="img" draggable="false" />
+      <Image src={src} role="img" draggable="false" />
       <BackgroundGradient />
     </ImageWrapper>
   );
+};
+
+OverflowBackgroundImage.defaultProps = {
+  onLoadingStatus: () => false,
 };
 
 export default OverflowBackgroundImage;

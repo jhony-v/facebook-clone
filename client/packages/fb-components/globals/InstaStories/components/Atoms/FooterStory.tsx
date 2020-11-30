@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { InstaStoryPosition } from "../../InstaConfig/config";
-import TextStory from "./TextStory";
+import styled from 'styled-components';
+import { InstaStoryPosition } from '../../InstaConfig/config';
+import TextStory from './TextStory';
 
 const FooterStoryWrapper = styled.div`
   position: absolute;
@@ -8,16 +8,13 @@ const FooterStoryWrapper = styled.div`
   left: ${InstaStoryPosition};
 `;
 
-
 type FooterStoryProps = {
   text ?: string;
-}
-const FooterStory = ({text}:FooterStoryProps) => {
-  return (
-    <FooterStoryWrapper>
-      <TextStory>{text}</TextStory>
-    </FooterStoryWrapper>
-  );
 };
+const FooterStory = ({ text }:FooterStoryProps) => (
+  <FooterStoryWrapper>
+    <TextStory>{text}</TextStory>
+  </FooterStoryWrapper>
+);
 
 export default FooterStory;

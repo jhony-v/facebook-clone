@@ -1,10 +1,10 @@
-import FlexWrapper from "@fb-components/common/FlexWrapper";
-import RaisedButton from "@fb-components/common/RaisedButton";
-import TextLabel from "@fb-components/common/TextLabel";
-import Wrapper from "@fb-components/common/Wrapper";
-import Link from "next/link";
-import React, { FC } from "react";
-import styled from "styled-components";
+import FlexWrapper from '@fb-components/common/FlexWrapper';
+import RaisedButton from '@fb-components/common/RaisedButton';
+import TextLabel from '@fb-components/common/TextLabel';
+import Wrapper from '@fb-components/common/Wrapper';
+import Link from 'next/link';
+import React, { FC } from 'react';
+import styled from 'styled-components';
 
 const StyledTextLinkMessage = styled(TextLabel)`
   font-weight: bold;
@@ -18,26 +18,22 @@ const StyledTextLinkMessage = styled(TextLabel)`
   }
 `;
 
-const TextLinkMessage: FC<{ href: string }> = ({ children, href }) => {
-  return (
-    <Link href={href}>
-      <StyledTextLinkMessage as="a">{children}</StyledTextLinkMessage>
-    </Link>
-  );
-};
+const TextLinkMessage: FC<{ href: string }> = ({ children, href }) => (
+  <Link href={href}>
+    <StyledTextLinkMessage as="a">{children}</StyledTextLinkMessage>
+  </Link>
+);
 
-const TextLinkMessages = () => {
-  return (
-    <>
-      <Wrapper m="15px auto">
-        <FlexWrapper justify="center">
-          <RaisedButton variant="primary">Go to news feed</RaisedButton>
-        </FlexWrapper>
-      </Wrapper>
-      <TextLinkMessage href="/">Go back</TextLinkMessage>
-      <TextLinkMessage href="/">Visit help center</TextLinkMessage>
-    </>
-  );
-};
+const TextLinkMessages = () => (
+  <>
+    <Wrapper m="15px auto">
+      <FlexWrapper justify="center">
+        <RaisedButton variant="primary">Go to news feed</RaisedButton>
+      </FlexWrapper>
+    </Wrapper>
+    <TextLinkMessage href="/">Go back</TextLinkMessage>
+    <TextLinkMessage href="/">Visit help center</TextLinkMessage>
+  </>
+);
 
 export default TextLinkMessages;

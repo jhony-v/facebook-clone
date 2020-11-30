@@ -1,23 +1,14 @@
-import React from "react";
-import styled, { css } from "styled-components";
+import React from 'react';
+import styled, { css } from 'styled-components';
 
 export type AvatarTypes = StyledAvatarTypes & StyledAvatarWrapperTypes & React.ImgHTMLAttributes<{}>;
-
-const Avatar = ({ isOnline, isFeature, ...restProps } : AvatarTypes) => {
-  if (isOnline) return (
-      <StyledAvatarWrapper isOnline>
-        <StyledAvatar {...restProps} isFeature={isFeature} />
-      </StyledAvatarWrapper>
-  )
-  return <StyledAvatar {...restProps} isFeature={isFeature} />;
-}
 
 export type StyledAvatarTypes = {
   dimension ?: string;
   isFeature ?: boolean
-}
+};
 
-const defaultSize = "40px";
+const defaultSize = '40px';
 const StyledAvatar = styled.img<StyledAvatarTypes>`
   border-radius: 100%;
   object-fit: cover;
@@ -32,11 +23,11 @@ const StyledAvatar = styled.img<StyledAvatarTypes>`
 
 export type StyledAvatarWrapperTypes = {
   isOnline ?: boolean;
-}
+};
 
 const StyledAvatarWrapper = styled.div<StyledAvatarWrapperTypes>`
   display:inline-flex;
-  ${props => props.isOnline && css`
+  ${(props) => props.isOnline && css`
     position:relative;
     &::after {
       content: "";
@@ -50,5 +41,17 @@ const StyledAvatarWrapper = styled.div<StyledAvatarWrapperTypes>`
       border-radius:100%;
     }
   `}
-`
+`;
+
+const Avatar = ({ isOnline, isFeature, ...restProps } : AvatarTypes) => {
+  if (isOnline) {
+    return (
+      <StyledAvatarWrapper isOnline>
+        <StyledAvatar {...restProps} isFeature={isFeature} />
+      </StyledAvatarWrapper>
+    );
+  }
+  return <StyledAvatar {...restProps} isFeature={isFeature} />;
+};
+
 export default Avatar;

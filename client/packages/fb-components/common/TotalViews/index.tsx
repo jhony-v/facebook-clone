@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { BsEyeFill } from "react-icons/bs";
-import Wrapper from "../Wrapper";
+import styled from 'styled-components';
+import { BsEyeFill } from 'react-icons/bs';
+import Wrapper from '../Wrapper';
 
 const StyledTotalViewsWrapper = styled.div`
   font-size: ${(props) => props.theme.fontSizes[200]};
@@ -15,14 +15,12 @@ const StyledTotalViewsWrapper = styled.div`
 type TotalViewsProps = {
   total?: number;
 };
-const TotalViews = ({ total }: TotalViewsProps) => {
-  return (
-    <StyledTotalViewsWrapper>
-      <BsEyeFill color="white" />
-      <Wrapper m="0 0 0 5px">{total}</Wrapper>
-    </StyledTotalViewsWrapper>
-  );
-};
+const TotalViews = ({ total }: TotalViewsProps) => (
+  <StyledTotalViewsWrapper>
+    <BsEyeFill color="white" />
+    <Wrapper m="0 0 0 5px">{total}</Wrapper>
+  </StyledTotalViewsWrapper>
+);
 
 TotalViews.defaultProps = {
   total: 0,

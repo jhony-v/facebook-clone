@@ -1,10 +1,10 @@
-import React, { useCallback } from "react";
-import SearchInput from "./Molecules/SearchInput";
-import { actionSearch, actionSelectFilter } from "./Context/ChatTabReducer";
-import { useChatTabContext } from "./Context/ChatTabContext";
-import TabOptions from "../TabOptions";
-import ErrorComponent from "@fb-components/common/ErrorComponent";
-import ListRenderItems from "@fb-components/common/ListRenderItems";
+import React, { useCallback } from 'react';
+import ErrorComponent from '@fb-components/common/ErrorComponent';
+import ListRenderItems from '@fb-components/common/ListRenderItems';
+import SearchInput from './Molecules/SearchInput';
+import { actionSearch, actionSelectFilter } from './Context/ChatTabReducer';
+import { useChatTabContext } from './Context/ChatTabContext';
+import TabOptions from '../TabOptions';
 
 /**
  * Input to search in the list
@@ -13,10 +13,10 @@ export const RenderSearchInput = () => {
   const { state, action, onSearch } = useChatTabContext();
   return (
     <SearchInput onKeyUp={(event: React.KeyboardEvent<HTMLInputElement>) => {
-        const value = (event.target as HTMLInputElement).value;
-        const filterValue = onSearch(state.data, value);
-        action(actionSearch({value,filterValue}));
-      }}
+      const { value } = event.target as HTMLInputElement;
+      const filterValue = onSearch(state.data, value);
+      action(actionSearch({ value, filterValue }));
+    }}
     />
   );
 };
@@ -27,13 +27,15 @@ export const RenderSearchInput = () => {
 
 export const RenderOptions = ({ children }) => {
   const { state, onSelectedOption, action } = useChatTabContext();
-  const handlerOnSelectedOption = useCallback((selectedFilterOption : string | number ) => {
-    onSelectedOption({ optionId : selectedFilterOption, fillData : ( data ) => {
-        action(actionSelectFilter({selectedFilterOption,data}))
-      }})
-    },
-    [onSelectedOption,action]
-  );
+  const handlerOnSelectedOption = useCallback((selectedFilterOption : string | number) => {
+    onSelectedOption({
+      optionId: selectedFilterOption,
+      fillData: (data) => {
+        action(actionSelectFilter({ selectedFilterOption, data }));
+      },
+    });
+  },
+  [onSelectedOption, action]);
 
   return (
     !state.searching ? (
@@ -49,12 +51,13 @@ export const RenderOptions = ({ children }) => {
  */
 export const RenderList = ({ children }) => {
   const { state } = useChatTabContext();
-  return (  
+  return (
     <ErrorComponent>
-      <ListRenderItems 
-      data={state.data}
-      renderHeight={70} 
-      render={(item, options) => children(item, options)} />
+      <ListRenderItems
+        data={state.data}
+        renderHeight={70}
+        render={(item, options) => children(item, options)}
+      />
     </ErrorComponent>
   );
 };

@@ -1,5 +1,5 @@
-import PointNotification from "@fb-components/common/PointNotification";
-import styled, { css } from "styled-components";
+import PointNotification from '@fb-components/common/PointNotification';
+import styled, { css } from 'styled-components';
 
 export const StyledNotificationPoint = styled(PointNotification)`
   position:absolute;
@@ -10,9 +10,9 @@ export const StyledNotificationPoint = styled(PointNotification)`
 
 type StyledLinkButtonTypes = {
   isSelected ?: boolean;
-}
+};
 export const StyledLinkButton = styled.a<StyledLinkButtonTypes>`
-  background-color: ${({theme}) => theme.colors.vgBlackAlpha00};
+  background-color: ${({ theme }) => theme.colors.vgBlackAlpha00};
   border-radius: 10px;
   padding: 5px 35px;
   display: flex;
@@ -22,7 +22,7 @@ export const StyledLinkButton = styled.a<StyledLinkButtonTypes>`
   margin:2px 10px;
   border-width:0;
   position:relative;
-  ${({theme,isSelected}) => isSelected && css`
+  ${({ theme, isSelected }) => isSelected && css`
     color:${theme.colors.vgPrimary};
     border-bottom:3px solid currentColor;
     border-radius:0;
@@ -30,7 +30,7 @@ export const StyledLinkButton = styled.a<StyledLinkButtonTypes>`
     padding-bottom:2px;
   `}
 
-  ${({theme,isSelected}) => !isSelected && css`
+  ${({ theme, isSelected }) => !isSelected && css`
     color: ${theme.colors.vgBlackAlpha40};
     &:hover {
         background-color:${theme.colors.vgBlackAlpha10};
@@ -43,12 +43,12 @@ export const StyledListItemsNavigation = styled.ul`
     padding:0;
     margin:0;
     list-style:none;
-    height:${props => props.theme.layoutSizes.heightNavigator};
-`
+    height:${(props) => props.theme.layoutSizes.heightNavigator};
+`;
 export const StyledItemNavigation = styled.li`
     display:flex;
     > * {
       height:100%;
       display:flex;
     }
-`
+`;

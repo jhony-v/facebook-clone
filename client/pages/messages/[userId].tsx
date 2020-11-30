@@ -1,11 +1,7 @@
-import ContainerMainNavigator from "@fb-containers/ContainerMainNavigator"
+import ContainerMainNavigator from '@fb-containers/ContainerMainNavigator';
 
-const MessagesUserId = () => {
-    return (
-        <ContainerMainNavigator>
-            
-        </ContainerMainNavigator>
-    )
-}
+const MessagesUserId = () => (
+  <ContainerMainNavigator />
+);
 
-export default MessagesUserId
+export default MessagesUserId;

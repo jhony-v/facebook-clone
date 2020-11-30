@@ -1,8 +1,8 @@
-import { watchMocks } from "@mocks/index";
-import { atom, useRecoilValue } from "recoil";
+import { watchMocks } from '@mocks/index';
+import { atom, useRecoilValue } from 'recoil';
 
 export const watchVideosState = atom({
-  key: "watchVideosState",
+  key: 'watchVideosState',
   default: watchMocks.getWatchs(),
 });
 

@@ -1,7 +1,7 @@
-import React, { Reducer } from "react";
+import React, { Reducer } from 'react';
 
 export namespace ChatTabMetadata {
-  type OptionID = string | number; 
+  type OptionID = string | number;
   type OnSelectedOption = (options: {
     optionId: OptionID;
     fillData: (data: any[]) => void;
@@ -35,11 +35,11 @@ export namespace ChatTabMetadata {
 
   export type ActionsUseReducer =
     | {
-        type: "TAB_SEARCH";
-        payload: any;
-      }
+      type: 'TAB_SEARCH';
+      payload: any;
+    }
     | {
-        type: "TAB_FILTER";
-        payload: any;
-      };
+      type: 'TAB_FILTER';
+      payload: any;
+    };
 }

@@ -1,13 +1,11 @@
-import PreviewCreateNewWidget from "./PreviewCreateNewWidget/PreviewCreateNewWidget";
-import CreateNewModalWidget from "./CreateNewModalWidget/CreateNewModalWidget";
+import PreviewCreateNewWidget from './PreviewCreateNewWidget/PreviewCreateNewWidget';
+import CreateNewModalWidget from './CreateNewModalWidget/CreateNewModalWidget';
 
-const ContainerCreateNewPost = () => {
-  return (
-    <>
-      <PreviewCreateNewWidget />
-      <CreateNewModalWidget />
-    </>
-  );
-};
+const ContainerCreateNewPost = () => (
+  <>
+    <PreviewCreateNewWidget />
+    <CreateNewModalWidget />
+  </>
+);
 
 export default ContainerCreateNewPost;

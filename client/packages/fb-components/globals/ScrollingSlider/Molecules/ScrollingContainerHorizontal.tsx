@@ -1,7 +1,7 @@
-import useScrollStack from "@fb-hooks/useScrollStack";
-import React from "react";
-import { ContainerScrolling } from "../Atoms/elements";
-import FloatingButtonToScrolling from "../Atoms/FloatingButtonToScrolling";
+import useScrollStack from '@fb-hooks/useScrollStack';
+import React from 'react';
+import { ContainerScrolling } from '../Atoms/elements';
+import FloatingButtonToScrolling from '../Atoms/FloatingButtonToScrolling';
 
 const ScrollingContainerHorizontal: React.FC = ({ children }) => {
   const { onMove, ref } = useScrollStack({});

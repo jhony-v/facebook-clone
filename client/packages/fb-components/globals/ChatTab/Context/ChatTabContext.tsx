@@ -1,6 +1,6 @@
-import { useContext, useReducer , createContext} from "react";
-import TabChatReducer from "./ChatTabReducer";
-import { ChatTabMetadata } from "./types";
+import { useContext, useReducer, createContext } from 'react';
+import TabChatReducer from './ChatTabReducer';
+import { ChatTabMetadata } from './types';
 
 const ChatTabContext = createContext<ChatTabMetadata.ContextState | null>(null);
 
@@ -9,17 +9,20 @@ export const ChatTabProvider = ({
   filterOptions,
   selectedFilterOption,
   onSelectedOption,
-  onSearch
-} : ChatTabMetadata.ChatTabProviderProps ) => {
-  const initialState : ChatTabMetadata.IStateReducer =  {
+  onSearch,
+} : ChatTabMetadata.ChatTabProviderProps) => {
+  const initialState : ChatTabMetadata.IStateReducer = {
     searching: false,
-    data : [],
+    data: [],
     filterOptions,
     selectedFilterOption,
-  }
-  const [state, action] = useReducer<ChatTabMetadata.StateUseReducer>(TabChatReducer,initialState);
+  };
+  const [state, action] = useReducer<ChatTabMetadata.StateUseReducer>(TabChatReducer, initialState);
   return (
-    <ChatTabContext.Provider value={{ state, action, onSelectedOption, onSearch }}>
+    <ChatTabContext.Provider value={{
+      state, action, onSelectedOption, onSearch,
+    }}
+    >
       {children}
     </ChatTabContext.Provider>
   );

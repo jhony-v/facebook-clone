@@ -1,10 +1,10 @@
-import ContainerChatTabs from "@fb-containers/ContainerChatTabs";
-import ContainerMainNavigator from "@fb-containers/ContainerMainNavigator";
-import ContainerOptionsNavigation from "@fb-containers/ContainerOptionsNavigation";
-import WatchVideosView from "@views/WatchVideosView";
-import LayoutDrawerLeftRail from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerLeftRail";
-import LayoutDrawer from "@fb-components/layouts/LayoutsDrawer/LayoutDrawer";
-import LayoutDrawerGridColumn from "@fb-components/layouts/LayoutsDrawer/LayoutDrawerGridColumn";
+import ContainerChatTabs from '@fb-containers/ContainerChatTabs';
+import ContainerMainNavigator from '@fb-containers/ContainerMainNavigator';
+import ContainerOptionsNavigation from '@fb-containers/ContainerOptionsNavigation';
+import WatchVideosView from '@views/WatchVideosView';
+import LayoutDrawerLeftRail from '@fb-components/layouts/LayoutsDrawer/LayoutDrawerLeftRail';
+import LayoutDrawer from '@fb-components/layouts/LayoutsDrawer/LayoutDrawer';
+import LayoutDrawerGridColumn from '@fb-components/layouts/LayoutsDrawer/LayoutDrawerGridColumn';
 
 export default function Watch() {
   return (
@@ -14,7 +14,7 @@ export default function Watch() {
           <LayoutDrawerLeftRail compact>
             <ContainerOptionsNavigation />
           </LayoutDrawerLeftRail>
-          <WatchVideosView/>
+          <WatchVideosView />
         </LayoutDrawerGridColumn>
       </LayoutDrawer>
       <ContainerChatTabs />

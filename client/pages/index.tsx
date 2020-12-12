@@ -1,3 +1,4 @@
+import SEOMetaTag from '@fb-components/application/SEO/SEOMetaTag';
 import LayoutDrawer from '@fb-components/layouts/LayoutsDrawer/LayoutDrawer';
 import LayoutDrawerLeftRail from '@fb-components/layouts/LayoutsDrawer/LayoutDrawerLeftRail';
 import LayoutDrawerRigthRail from '@fb-components/layouts/LayoutsDrawer/LayoutDrawerRigthRail';
@@ -10,6 +11,7 @@ import IndexView from '@views/IndexView';
 export default function Index() {
   return (
     <ContainerMainNavigator>
+      <SEOMetaTag mainTitle="Facebook" />
       <LayoutDrawer>
         <IndexView />
       </LayoutDrawer>

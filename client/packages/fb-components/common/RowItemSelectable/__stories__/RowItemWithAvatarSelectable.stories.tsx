@@ -9,8 +9,8 @@ export default {
 } as Meta;
 
 export const Default = () => (
-    <RowItemWithAvatarSelectable
-        text="Row item with avatar" 
-        image={<Avatar src={faker.random.image()} />} 
-    />
+  <RowItemWithAvatarSelectable
+    text="Row item with avatar"
+    image={<Avatar src={faker.random.image()} />}
+  />
 );

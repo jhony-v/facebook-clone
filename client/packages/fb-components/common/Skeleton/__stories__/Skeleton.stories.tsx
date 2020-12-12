@@ -1,4 +1,5 @@
 import { Meta } from '@storybook/react/types-6-0';
+import { GetStoryProps } from '@utils/transforms';
 import Skeleton from '..';
 
 export default {
@@ -6,7 +7,7 @@ export default {
   component: Skeleton,
 } as Meta;
 
-const Template = (props) => <Skeleton {...props} />;
+const Template : GetStoryProps<typeof Skeleton> = (props) => <Skeleton {...props} />;
 
 export const Circle = Template.bind({});
 Circle.args = {

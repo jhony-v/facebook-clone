@@ -1,3 +1,4 @@
+import { GetStoryProps } from '@utils/transforms';
 import { Meta } from '@storybook/react/types-6-0';
 import ChevronIconButton from '..';
 
@@ -6,7 +7,7 @@ export default {
   component: ChevronIconButton,
 } as Meta;
 
-const Template = (props) => <ChevronIconButton {...props} />;
+const Template : GetStoryProps<typeof ChevronIconButton> = (props) => <ChevronIconButton {...props} />;
 
 export const Left = Template.bind({});
 Left.args = {

@@ -5,3 +5,6 @@ public
 __tests__/**/*
 __stories/**/*
 public
+yarn.lock
+.eslintrc
+README.md

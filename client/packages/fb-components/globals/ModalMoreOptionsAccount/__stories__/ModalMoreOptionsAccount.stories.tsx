@@ -1,11 +1,10 @@
-import { Meta } from '@storybook/react/types-6-0';
-import ModalMoreOptionsAccount from '..';
+import {Meta} from "@storybook/react/types-6-0";
+import ModalMoreOptionsAccount from "..";
+
 
 export default {
-  title: 'Globals/ModalMoreOptionsAccount',
-  component: ModalMoreOptionsAccount,
+   title: "Globals/ModalMoreOptionsAccount",
+   component: ModalMoreOptionsAccount,
 } as Meta;
 
-export const Default = () => (
-  <ModalMoreOptionsAccount />
-);
+export const Default = () => <ModalMoreOptionsAccount />;

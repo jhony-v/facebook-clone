@@ -1,15 +1,16 @@
-import { Meta } from '@storybook/react/types-6-0';
-import ActionButtonsController from '..';
+import {Meta} from "@storybook/react/types-6-0";
+import ActionButtonsController from "..";
+
 
 export default {
-  title: 'Globals/ActionButtonsController',
-  component: ActionButtonsController,
+   title: "Globals/ActionButtonsController",
+   component: ActionButtonsController,
 } as Meta;
 
 export const Button = () => (
-  <ActionButtonsController.Button text="Button controller" />
+   <ActionButtonsController.Button text='Button controller' />
 );
 
 export const Input = () => (
-  <ActionButtonsController.Input placeholder="Input controller" />
+   <ActionButtonsController.Input placeholder='Input controller' />
 );

@@ -1,27 +1,31 @@
-import React, { Component } from 'react';
+import React, {Component} from "react";
+
 
 type ErrorComponentState = {
-  error : boolean
+   error: boolean;
 };
 type ErrorComponentProps = {
-  children ?: React.ReactNode
+   children?: React.ReactNode;
 };
 
-export default class ErrorComponent extends Component<ErrorComponentProps, ErrorComponentState> {
-  state = {
-    error: false,
-  };
+export default class ErrorComponent extends Component<
+   ErrorComponentProps,
+   ErrorComponentState
+> {
+   state = {
+      error: false,
+   };
 
-  componentDidCatch() {
-    this.setState({
-      error: true,
-    });
-  }
+   componentDidCatch() {
+      this.setState({
+         error: true,
+      });
+   }
 
-  render() {
-    if (this.state.error) {
-      return <p>Error</p>;
-    }
-    return this.props.children;
-  }
+   render() {
+      const {error} = this.state;
+      const {children} = this.props;
+      if (error) return <p>Error</p>;
+      return children;
+   }
 }

@@ -1,11 +1,10 @@
-import { Meta } from '@storybook/react/types-6-0';
-import WeatherDetailCard from '..';
+import {Meta} from "@storybook/react/types-6-0";
+import WeatherDetailCard from "..";
+
 
 export default {
-  title: 'Globals/WeatherDetailCard',
-  component: WeatherDetailCard,
+   title: "Globals/WeatherDetailCard",
+   component: WeatherDetailCard,
 } as Meta;
 
-export const Default = () => (
-  <WeatherDetailCard />
-);
+export const Default = () => <WeatherDetailCard />;

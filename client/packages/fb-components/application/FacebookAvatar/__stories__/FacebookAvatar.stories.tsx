@@ -1,11 +1,10 @@
-import { Meta } from '@storybook/react/types-6-0';
-import FacebookAvatar from '..';
+import {Meta} from "@storybook/react/types-6-0";
+import FacebookAvatar from "..";
+
 
 export default {
-  title: 'Application/FacebookAvatar',
-  component: FacebookAvatar,
+   title: "Application/FacebookAvatar",
+   component: FacebookAvatar,
 } as Meta;
 
-export const Default = () => (
-  <FacebookAvatar />
-);
+export const Default = () => <FacebookAvatar />;

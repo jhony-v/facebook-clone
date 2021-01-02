@@ -1,19 +1,22 @@
 {
-    "javascript.validate.enable": false,
-    "colorize.languages": [
-        "css",
-        "sass",
-        "scss",
-        "less",
-        "postcss",
-        "sss",
-        "stylus",
-        "xml",
-        "svg",
-        "javascript",
-        "typescript"
-    ],
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 500,
-    "git.ignoreLimitWarning": true
+   "editor.codeActionsOnSave": {
+      "source.fixAll": true
+   },
+   "javascript.validate.enable": false,
+   "colorize.languages": [
+      "css",
+      "sass",
+      "scss",
+      "less",
+      "postcss",
+      "sss",
+      "stylus",
+      "xml",
+      "svg",
+      "javascript",
+      "typescript"
+   ],
+   "files.autoSave": "afterDelay",
+   "files.autoSaveDelay": 500,
+   "git.ignoreLimitWarning": true
 }

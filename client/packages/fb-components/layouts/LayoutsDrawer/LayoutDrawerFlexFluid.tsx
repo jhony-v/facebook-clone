@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+
 
 export default styled.div`
-  width: 100%;
-  display: flex;
+   width: 100%;
+   display: flex;
 `;

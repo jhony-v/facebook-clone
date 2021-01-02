@@ -1,1 +1,1 @@
-export const InstaStoryPosition = '15px';
+export const InstaStoryPosition = "15px";

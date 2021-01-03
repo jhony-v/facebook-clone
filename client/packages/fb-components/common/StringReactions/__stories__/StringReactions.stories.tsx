@@ -7,4 +7,14 @@ export default {
    component: StringReactions,
 } as Meta;
 
-export const Default = () => <StringReactions />;
+export const Default = () => <StringReactions reactions={[
+   {
+      reaction : "Haha"
+   },
+   {
+      reaction : "Love",
+   },
+   {
+      reaction : "Like"
+   }
+]} />;

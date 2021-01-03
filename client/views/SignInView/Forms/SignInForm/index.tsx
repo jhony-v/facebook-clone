@@ -3,7 +3,7 @@ import {
    FormOptionsSignIn,
    FormSignInHeader,
 } from "./components";
-import {StyledGlobal} from "../elements";
+import StyledGlobal from "../elements";
 
 import Form from "./Form";
 

@@ -10,7 +10,7 @@ type ContactListProps = {
    data: any[];
    title: string;
    children: (item: any, options: any) => React.ReactNode;
-   options: React.ReactNode;
+   options?: React.ReactNode;
    sizes?: {
       w?: string;
       h?: string;

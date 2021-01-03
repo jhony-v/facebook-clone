@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 const AsyncContactList = dynamic(
    () => import("./ContainerOnlineContactFriendsList"),
    {
-      loading: () => <SkeletonElementRow repeat={10} p='10px' />,
+      loading: () => <SkeletonElementRow repeat={10} />,
       ssr: false,
    }
 );

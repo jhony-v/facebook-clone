@@ -10,14 +10,14 @@
       "start": "next start",
       "test": "jest",
       "test:watch": "jest --watch --env=jsdom",
-      "storybook": "start-storybook -p 6006 --no-dll",
+      "storybook": "start-storybook -s ./public -p 6006 --no-dll",
       "build-storybook": "build-storybook --no-dll",
       "lint": "npx eslint ./**/*",
       "lint:fix": "npx eslint --fix ./**/*",
       "format": "prettier --write . --config ./.prettierrc",
-      "analize": "cross-env ANALIZE=true yarn build",
-      "analyze:server": "cross-env BUNDLE_ANALYZE=server yarn build",
-      "analyze:browser": "cross-env BUNDLE_ANALYZE=browser yarn build"
+      "analize": "npx cross-env ANALIZE=true next build",
+      "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+      "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
    },
    "husky": {
       "hooks": {

@@ -8,9 +8,13 @@ export default {
 } as Meta;
 
 export const Default = () => (
-   <TabOptions initialId='a'>
-      <TabOptions.Option optionId='a' text='Item a' />
-      <TabOptions.Option optionId='b' text='Item b' />
-      <TabOptions.Option optionId='c' text='Item c' />
+   <TabOptions initialId='a' onSelectedOption={e => {
+      console.log(e);
+   }}>
+      <>
+         <TabOptions.Option optionId='a' text='Item a' />
+         <TabOptions.Option optionId='b' text='Item b' />
+         <TabOptions.Option optionId='c' text='Item c' />
+      </>
    </TabOptions>
 );

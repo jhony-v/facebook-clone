@@ -7,4 +7,4 @@ export default {
    component: HeaderNavigation,
 } as Meta;
 
-export const Default = () => <HeaderNavigation />;
+export const Default = () => <HeaderNavigation><p>Header navigation</p></HeaderNavigation>;

@@ -4,7 +4,7 @@ import {StyledFlexSearch, StyledTabOptionSearch} from "./elements";
 
 type TabOptionsTypes = {
    initialId: string | number;
-   children: React.ReactElement<any>;
+   children: JSX.Element;
    onSelectedOption: (selectedId: string | number) => void;
    style?: React.CSSProperties;
 };
@@ -26,8 +26,7 @@ const TabOptions = ({
    }, [selected]);
 
    // Verify is the children is a fragment or not
-   const crossChildren =
-      children.type === Fragment ? children.props.children : children;
+   const crossChildren = children.type === Fragment ? children.props.children : children;
 
    return (
       <StyledFlexSearch style={style}>

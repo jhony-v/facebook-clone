@@ -1,6 +1,7 @@
 import theme from "@theme/index";
 import {ThemeProvider} from "styled-components";
 import GlobalStyles from "@fb-components/application/GlobalStyles";
+import "@fb-services/routerEvents/NProgressChangeRoute";
 import {RecoilRoot} from "recoil";
 import {AppProps} from "next/dist/next-server/lib/router/router";
 

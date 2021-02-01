@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import FlexWrapper from "@fb-components/common/FlexWrapper";
 import faker from "faker";
 
@@ -32,20 +31,15 @@ const stories = [
    },
 ];
 
-const AsyncViewCurrentStory = dynamic(() => import("./ViewCurrentStory"), {
-   ssr: false,
-});
-const AsyncInputCommentStoryWithReactions = dynamic(
-   () => import("./InputCommentStoryWithReactions"),
-   {
-      ssr: false,
-   }
-);
+
+import ViewCurrentStory from "./ViewCurrentStory";
+import InputCommentStoryWithReactions from "./InputCommentStoryWithReactions"
+
 
 const ContainerViewUserStory = () => (
    <FlexWrapper w='100%' css={{background: "#111111"}} flexDirection='column'>
-      <AsyncViewCurrentStory stories={stories} user={userData} />
-      <AsyncInputCommentStoryWithReactions />
+      <ViewCurrentStory stories={stories} user={userData} />
+      <InputCommentStoryWithReactions />
    </FlexWrapper>
 );
 

@@ -1,15 +1,6 @@
-import {SkeletonElementRow} from "@fb-components/globals/LoadersSkeletonElement";
-import dynamic from "next/dynamic";
+import OptionsNavigationList from "@fb-components/layouts/OptionsNavigationList";
 
 
-const AsyncOptionsNavigationList = dynamic(
-   () => import("@fb-components/layouts/OptionsNavigationList"),
-   {
-      loading: () => <SkeletonElementRow repeat={10} />,
-      ssr: false,
-   }
-);
-
-const ContainerOptionsNavigation = () => <AsyncOptionsNavigationList />;
+const ContainerOptionsNavigation = () => <OptionsNavigationList />;
 
 export default ContainerOptionsNavigation;

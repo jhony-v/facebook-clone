@@ -45,6 +45,7 @@
    ],
    "dependencies": {
       "@next/bundle-analyzer": "^10.0.4",
+      "@stitches/react": "^0.1.4",
       "@types/react-custom-scrollbars": "^4.0.7",
       "@types/react-virtualized": "^9.21.10",
       "@types/styled-components": "^5.1.4",

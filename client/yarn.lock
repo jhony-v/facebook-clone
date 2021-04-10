@@ -2115,6 +2115,18 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@stitches/core@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@stitches/core/-/core-0.1.4.tgz#1b33c3ef55c044f006049d8310b784720d669798"
+  integrity sha512-jFZMpw6uD7BRvkPp3n0JsUlLO6d7oRwBgInEHDB1xlsRLqB4yaepyEyJ1CqMx8HidyW5QeLXH6IYPzERxCUM/Q==
+
+"@stitches/react@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@stitches/react/-/react-0.1.4.tgz#f1a37911683cfc192906b0710c9685bddb316abc"
+  integrity sha512-/YI/cuyd8tCGaq5ewDF2goGVa/LuIQZbb4SKQM/DroluOrZ4W1Pwczk/vkijhP3pH11ssEHtD9/v8VzXb01nvw==
+  dependencies:
+    "@stitches/core" "^0.1.4"
+
 "@storybook/addon-actions@6.0.28", "@storybook/addon-actions@^6.0.28":
   version "6.0.28"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.0.28.tgz#86c0353b597c2a41f6ac7efa7c0d5aeed6a456b2"

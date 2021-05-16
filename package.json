@@ -1,0 +1,32 @@
+{
+  "name": "facebook-clone",
+  "version": "1.0.0",
+  "description": "UI Facebook clone of facebook",
+  "main": "index.js",
+  "scripts": {
+    "dev:client": "",
+    "dev:server": "",
+    "dev": ""
+  },
+  "author": {
+    "url": "https://github.com/jhony-24",
+    "name": "Jhony Vega"
+  },
+  "keywords": [
+    "react",
+    "facebook clone",
+    "next",
+    "recoil",
+    "typescript",
+    "ui",
+    "facebook"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jhony-24/facebook-clone/issues"
+  },
+  "homepage": "https://github.com/jhony-24/facebook-clone#readme",
+  "dependencies": {
+    "commander": "^7.2.0"
+  }
+}

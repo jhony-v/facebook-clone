@@ -17,7 +17,7 @@ const useGetUserGeolocation = () => {
    );
    useEffect(() => {
       if (navigator.geolocation) {
-         navigator.geolocation.getCurrentPosition((position: Position) => {
+         navigator.geolocation.getCurrentPosition((position : GeolocationPosition) => {
             const {latitude, longitude} = position.coords;
             setDataGeolocation({
                latitude,

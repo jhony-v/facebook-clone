@@ -39,7 +39,7 @@ const SubtitleTextDetail = ({
          <FlexWrapper flexDirection={horizontal ? "row" : "column"}>
             <TextLabel {...titleProps}>{title}</TextLabel>
             <Wrapper {...(horizontal && {m: "0 0 0 5px"})}>
-               <TextLabel {...weightProp}>{subtitle}</TextLabel>
+               <TextLabel weight={weight && 600} >{subtitle}</TextLabel>
             </Wrapper>
          </FlexWrapper>
       </Wrapper>

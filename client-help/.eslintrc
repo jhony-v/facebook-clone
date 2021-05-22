@@ -1,0 +1,17 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "node": true,
+        "amd": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "ecmaFeatures": {
+            "jsx": true,
+            "spread": true
+        },
+        "sourceType": "module"
+    },
+    "rules": { }
+}

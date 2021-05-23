@@ -29,6 +29,7 @@ const WrapperAlignment = styled("div",{
 
 type TopicCardProps = {
   topic: TopicOptionItemType;
+  direction ?: "col" | "row"
 };
 
 const TopicCard = ({ topic }: TopicCardProps) => {
@@ -44,5 +45,9 @@ const TopicCard = ({ topic }: TopicCardProps) => {
     </Card>
   );
 };
+
+TopicCard.defaultProps = {
+  direction : "col"
+}
 
 export default TopicCard;

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, Fragment } from "react";
 import { RouteComponentProps } from "@reach/router";
 import { AppContentLayout } from "../../ui/layouts/AppContent";
 import HelpTopicsPreview from "./sections/HelpTopicsPreview";
@@ -7,18 +7,35 @@ import WrapperCenterContent from "../../components/WrapperCenterContent";
 import DividerSection from "../../ui/DividerSection";
 import HelpTopicSpacing from "./sections/HelpTopicSpacing";
 
+const sectionItems = [
+  {
+    Layout: HelpTopicSpacing,
+    title: "How can we help you?",
+    Section: HelpTopicsPreview,
+  },
+  {
+    Layout: Fragment,
+    title: "Popular topics",
+    Section: HelpTopicsList,
+  },
+  {
+    Layout: Fragment,
+    title: "Looking for something else?",
+    Section: HelpTopicsPreview,
+  },
+];
+
 const HomePage: FC<RouteComponentProps> = () => {
   return (
     <AppContentLayout>
       <WrapperCenterContent>
-        <HelpTopicSpacing>
-        <DividerSection title="How can we help you?">
-          <HelpTopicsPreview />
-        </DividerSection>
-        </HelpTopicSpacing>
-        <DividerSection title="Popular topics">
-        <HelpTopicsList />
-        </DividerSection>
+        {sectionItems.map((item, index) => (
+          <item.Layout key={index}>
+            <DividerSection title={item.title}>
+              <item.Section />
+            </DividerSection>
+          </item.Layout>
+        ))}
       </WrapperCenterContent>
     </AppContentLayout>
   );

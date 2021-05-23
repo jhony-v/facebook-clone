@@ -17,6 +17,7 @@ const InputWrapper = styled("div", {
 
 const InputEngine = styled("input", {
     marginLeft : "10px",
+    flex : 1,
     "&::placeholder" : {
         color : "$text500"
     }

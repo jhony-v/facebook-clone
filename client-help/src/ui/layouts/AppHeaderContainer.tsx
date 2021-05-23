@@ -4,7 +4,7 @@ import { styled } from "../../lib/stitches.config";
 const Wrapper = styled("header", {
   position: "fixed",
   top: "0",
-  background: "$bgLayout",
+  background: "$bg100",
   height: "$header-height",
   width: "$full",
   boxShadow: "0 2px 4px rgba(0,0,0,.08)",

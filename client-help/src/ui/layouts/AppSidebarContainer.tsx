@@ -6,7 +6,7 @@ const Wrapper = styled("nav", {
   position: "fixed",
   bottom : 0,
   left : 0,
-  background: "$bgLayout",
+  background: "$bg100",
   height: "$sidebar-height",
   width: "$sidebar-width",
   boxShadow: "0 2px 4px rgba(0,0,0,.08)",

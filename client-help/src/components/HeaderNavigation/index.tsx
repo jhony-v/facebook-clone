@@ -1,5 +1,5 @@
 import { useAtom } from "jotai";
-import { css, styled } from "../../lib/stitches.config";
+import { styled } from "../../lib/stitches.config";
 import { tabsAtom } from "../../stores/mainNavigation";
 import { toggleTheme } from "../../stores/theme";
 import AppHeaderContainer from "../../ui/layouts/AppHeaderContainer";

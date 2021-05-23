@@ -2,14 +2,6 @@ import React from "react";
 import { styled,css } from "../../../lib/stitches.config";
 import { FiSearch } from "react-icons/fi";
 
-const TopicsWrapper = styled("div", {
-  margin: "auto",
-  paddingTop: 100,
-  paddingBottom: 100,
-  width: "800px",
-  maxWidth: "95%",
-});
-
 const InputWrapper = styled("div", {
   backgroundColor: "$text200",
   borderRadius: "20px",
@@ -36,12 +28,10 @@ const colorIcon = css({
 
 const HelpTopicsPreview = () => {
   return (
-    <TopicsWrapper>
       <InputWrapper role="input">
         <FiSearch className={colorIcon()} size={20} />
         <InputEngine placeholder="Search help articles..." />
       </InputWrapper>
-    </TopicsWrapper>
   );
 };
 

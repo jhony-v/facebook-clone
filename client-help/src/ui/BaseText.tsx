@@ -14,7 +14,7 @@ const BaseText = styled("p", {
         color: "$primary",
       },
       secondary: {
-        color: "$text400",
+        color: "$text500",
       },
       base: {
         color: "$text",

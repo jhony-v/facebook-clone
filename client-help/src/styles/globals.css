@@ -4,13 +4,11 @@ html {
   padding: 0;
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
   display: flex;
 }
 
 #root {
   width: 100%;
-  height: 100%;
   display: flex;
 }
 

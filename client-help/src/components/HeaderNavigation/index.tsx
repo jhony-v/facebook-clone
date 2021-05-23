@@ -11,6 +11,7 @@ import HelpCenterTopNavTab from "./components/HelpCenterTopNavTab";
 import {HiOutlineSun} from "react-icons/hi"
 import { useUpdateAtom } from "jotai/utils";
 import { Link } from "@reach/router";
+import BaseButtonAvatarAction from "../../ui/BaseButtonAvatarAction";
 
 const LayoutHeaderNavigation = styled(AppHeaderContainer, {
   padding: "5px 10px",
@@ -23,13 +24,6 @@ const WrapperOptions = styled("div", {
   "& > button + *" : {
     marginLeft : "10px"
   }
-});
-
-const circleButton = css({
-  borderRadius: "100%",
-  size: "40px",
-  padding: "0px",
-  alignment: "center",
 });
 
 const HeaderNavigation = () => {
@@ -46,19 +40,16 @@ const HeaderNavigation = () => {
         ))}
       </WrapperOptions>
       <WrapperOptions>
-        <BaseButton
+        <BaseButtonAvatarAction
           variant="secondary"
-          className={circleButton()}
           icon={FiSearch}
         />
-        <BaseButton
+        <BaseButtonAvatarAction
           variant="secondary"
-          className={circleButton()}
           icon={AiOutlineInbox}
         />
-        <BaseButton
+        <BaseButtonAvatarAction
           variant="secondary"
-          className={circleButton()}
           icon={HiOutlineSun}
           onClick={() => onToggleTheme()}
         />

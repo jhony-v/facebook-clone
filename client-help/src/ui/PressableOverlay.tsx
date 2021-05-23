@@ -5,7 +5,7 @@ const PressableOverlay = styled("div", {
   cursor : "pointer",
   display: "flex",
   alignItems: "center",
-  transition: ".3s",
+  transition: "backgroundColor .3s",
   padding : "7px 10px",
   variants: {
     hoverable: {

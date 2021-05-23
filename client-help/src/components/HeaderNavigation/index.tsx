@@ -2,7 +2,7 @@ import { useAtom } from "jotai";
 import { css, styled } from "../../lib/stitches.config";
 import { tabsAtom } from "../../stores/useNavigation.store";
 import { toggleTheme } from "../../stores/useTheme.store";
-import AppHeaderContainer from "../../ui/AppHeaderContainer";
+import AppHeaderContainer from "../../ui/layouts/AppHeaderContainer";
 import BaseButton from "../../ui/BaseButton";
 import TetraText from "../../ui/TetraText";
 import { FiSearch } from "react-icons/fi";
@@ -10,6 +10,7 @@ import { AiOutlineInbox } from "react-icons/ai";
 import HelpCenterTopNavTab from "./components/HelpCenterTopNavTab";
 import {HiOutlineSun} from "react-icons/hi"
 import { useUpdateAtom } from "jotai/utils";
+import { Link } from "@reach/router";
 
 const LayoutHeaderNavigation = styled(AppHeaderContainer, {
   padding: "5px 10px",
@@ -36,7 +37,9 @@ const HeaderNavigation = () => {
   const onToggleTheme = useUpdateAtom(toggleTheme)
   return (
     <LayoutHeaderNavigation>
-      <TetraText>Help Center</TetraText>
+      <Link to="/">
+        <TetraText>Help Center</TetraText>
+      </Link>
       <WrapperOptions>
         {state.map((item) => (
           <HelpCenterTopNavTab key={item.id} item={item} />

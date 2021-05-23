@@ -1,12 +1,17 @@
-import AppContainer from './ui/AppContainer';
+import AppContainer from './ui/layouts/AppContainer';
 import HeaderNavigation from './components/HeaderNavigation';
-import SidebarNavigation from './components/SidebarNavigation';
+import HelpMainContentPage from './pages/HelpMAinContentPage/HelpMainContentPage';
+import HomePage from './pages/HomePage/HomePage';
+import { Router } from '@reach/router';
 
 function App() {
   return (
     <AppContainer>
       <HeaderNavigation/>
-      <SidebarNavigation/>
+      <Router>
+        <HomePage path="/" />
+        <HelpMainContentPage path="/:helpId" />
+      </Router>
     </AppContainer>
   );
 }

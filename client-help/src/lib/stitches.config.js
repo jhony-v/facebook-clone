@@ -64,10 +64,10 @@ export const { styled, css, theme } = createCss({
   },
 });
 
-export const darkTheme = theme({
+export const darkTheme = theme("dark",{
   colors: {
     bg: "rgb(20,20,20)",
-    bgLayout : "rgb(25,25,25)",
+    bgLayout : "rgb(35,35,35)",
     bg100 : "rgb(40,40,40)",
     primaryAlpha100: "rgb(40,40,40)",
     text: "#FFFFFF",

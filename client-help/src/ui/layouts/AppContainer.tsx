@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import { themeAtom } from "../stores/useTheme.store";
+import { themeAtom } from "../../stores/useTheme.store";
 import { useAtomValue } from "jotai/utils";
 import clsx from "clsx";
-import { styled } from "../lib/stitches.config";
+import { styled } from "../../lib/stitches.config";
 
 const Wrapper = styled("div", {
   background: "$bg",

@@ -1,4 +1,5 @@
-import { AiOutlineUser } from "react-icons/ai"
+import { AiOutlineUser } from "react-icons/ai";
+import { v4 } from "uuid";
 export const headerTabOptionsData = [
   {
     text: "Using facebook",
@@ -7,78 +8,78 @@ export const headerTabOptionsData = [
       {
         icon: AiOutlineUser,
         text: "Creating an account",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Friending",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Your home page",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Messaging",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Stories",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Your photos and Videos",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Videos on Watch",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Pages",
-        id: "",
+        id: v4(),
       },
 
       {
         icon: AiOutlineUser,
         text: "Groups",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Events",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Facebook pay",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Marketplace",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Apps",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Facebook and apps",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Accesibility",
-        id: "",
+        id: v4(),
       },
     ],
   },
@@ -89,27 +90,27 @@ export const headerTabOptionsData = [
       {
         icon: AiOutlineUser,
         text: "Login and password",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Your profile and settings",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Names of Facebook",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Notification",
-        id: "",
-      },  
+        id: v4(),
+      },
       {
         icon: AiOutlineUser,
         text: "Accesing & Downloading yout information",
-        id: "",
+        id: v4(),
       },
     ],
   },
@@ -120,22 +121,22 @@ export const headerTabOptionsData = [
       {
         icon: AiOutlineUser,
         text: "Your privacity",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Staying safe",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Keeping your acocunt secure",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Unfriending or blocking someone",
-        id: "",
+        id: v4(),
       },
     ],
   },
@@ -146,41 +147,41 @@ export const headerTabOptionsData = [
       {
         icon: AiOutlineUser,
         text: "Reporting abuse",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Reporting a Problem with Facebook",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Reporting a Privacy Violation",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Hacked and Fake Accounts",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Managing a Deceased Person's Account",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "Intellectual Property",
-        id: "",
+        id: v4(),
       },
       {
         icon: AiOutlineUser,
         text: "About out polices",
-        id: "",
+        id: v4(),
       },
     ],
   },
 ];
 
-export type HeaderTabsOptionDataType = typeof headerTabOptionsData; 
-export type HeaderTabsOptionDataItemType = typeof headerTabOptionsData[0]; 
+export type HeaderTabsOptionDataType = typeof headerTabOptionsData;
+export type HeaderTabsOptionDataItemType = typeof headerTabOptionsData[0];

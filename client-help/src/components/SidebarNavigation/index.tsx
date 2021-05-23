@@ -1,4 +1,4 @@
-import AppSidebarContainer from "../../ui/AppSidebarContainer";
+import AppSidebarContainer from "../../ui/layouts/AppSidebarContainer";
 
 const SidebarNavigation = () => {
   return (

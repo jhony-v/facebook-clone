@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { styled } from "../lib/stitches.config";
+import { styled } from "../../lib/stitches.config";
 
 const Wrapper = styled("header", {
   position: "fixed",

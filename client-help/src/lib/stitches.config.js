@@ -4,6 +4,7 @@ export const { styled, css, theme } = createCss({
   theme: {
     colors: {
       bg: "white",
+      bgLayout : "white",
       bg100 : "white",
       primary: "#1877F2",
       primaryAlpha100: "rgba(107, 171, 245, 0.2)",
@@ -16,10 +17,10 @@ export const { styled, css, theme } = createCss({
     },
     sizes: {
       "header-height": "50px",
-      "sidebar-height": "var(100% - $header-navigator)",
-      "sidebar-width": "200px",
-      "content-height": "var(100% - $header-navigator)",
-      "content-width": "var(100% - $sidebar-width)",
+      "sidebar-height": "calc(100% - $header-height)",
+      "sidebar-width": "330px",
+      "content-height": "calc(100% - $header-height)",
+      "content-width": "calc(100% - $sidebar-width)",
       full: "100%",
     },
     space: {
@@ -66,6 +67,7 @@ export const { styled, css, theme } = createCss({
 export const darkTheme = theme({
   colors: {
     bg: "rgb(20,20,20)",
+    bgLayout : "rgb(25,25,25)",
     bg100 : "rgb(40,40,40)",
     primaryAlpha100: "rgb(40,40,40)",
     text: "#FFFFFF",

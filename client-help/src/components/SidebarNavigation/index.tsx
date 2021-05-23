@@ -8,7 +8,7 @@ import {
 } from "./components/SidebarWrapper";
 import { Scrollbars } from "react-custom-scrollbars";
 import PressableItemOption from "../../ui/PressableItemOption";
-import { useParams } from "@reach/router";
+import { navigate, useParams } from "@reach/router";
 import { css } from "../../lib/stitches.config";
 
 
@@ -39,6 +39,7 @@ const SidebarNavigation = () => {
             <PressableItemOption
               key={currentOption.id}
               icon={currentOption.icon}
+              onClick={() => navigate(currentOption.id)}
               pressableButton={{
                 hoverable: true,
                 pressed: params.helpId === currentOption.id,

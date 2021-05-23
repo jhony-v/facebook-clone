@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import { css, styled } from "../../lib/stitches.config";
-import { tabsAtom } from "../../stores/useNavigation.store";
-import { toggleTheme } from "../../stores/useTheme.store";
+import { tabsAtom } from "../../stores/mainNavigation";
+import { toggleTheme } from "../../stores/theme";
 import AppHeaderContainer from "../../ui/layouts/AppHeaderContainer";
 import BaseButton from "../../ui/BaseButton";
 import TetraText from "../../ui/TetraText";

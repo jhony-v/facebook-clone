@@ -25,6 +25,10 @@ textarea {
   outline: none;
 }
 
+input,textarea {
+  background: none;
+}
+
 a {
   text-decoration: none;
 }

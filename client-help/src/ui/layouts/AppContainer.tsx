@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { themeAtom } from "../../stores/useTheme.store";
+import { themeAtom } from "../../stores/theme";
 import { useAtomValue } from "jotai/utils";
 import clsx from "clsx";
 import { styled } from "../../lib/stitches.config";

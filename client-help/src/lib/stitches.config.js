@@ -25,6 +25,31 @@ export const { styled, css, theme } = createCss({
       "from-header" : "var(--sizes-header-height)"
     }
   },
+  utils : {
+    mx: (_config) => (value) => ({
+      marginLeft: value,
+      marginRight: value,
+    }),
+    my: (_config) => (value) => ({
+      marginTop: value,
+      marginBottom: value,
+    }),
+    px: (_config) => (value) => ({
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    py: (_config) => (value) => ({
+      paddingTop: value,
+      paddingBottom: value,
+    }),
+    size: (_config) => (value) => ({
+      width: value,
+      height: value,
+    }),
+    linearGradient: (_config) => (value) => ({
+      backgroundImage: `linear-gradient(${value})`,
+    }),
+  }
 });
 
 

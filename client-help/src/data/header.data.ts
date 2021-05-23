@@ -120,22 +120,22 @@ export const headerTabOptionsData = [
       {
         icon: AiOutlineUser,
         text: "Your privacity",
-        id: "a20",
-      },
-      {
-        icon: AiOutlineUser,
-        text: "Staying safe",
         id: "a21",
       },
       {
         icon: AiOutlineUser,
-        text: "Keeping your acocunt secure",
+        text: "Staying safe",
         id: "a22",
       },
       {
         icon: AiOutlineUser,
-        text: "Unfriending or blocking someone",
+        text: "Keeping your acocunt secure",
         id: "a23",
+      },
+      {
+        icon: AiOutlineUser,
+        text: "Unfriending or blocking someone",
+        id: "a24",
       },
     ],
   },
@@ -146,43 +146,43 @@ export const headerTabOptionsData = [
       {
         icon: AiOutlineUser,
         text: "Reporting abuse",
-        id: "a24",
-
-      },
-      {
-        icon: AiOutlineUser,
-        text: "Reporting a Problem with Facebook",
         id: "a25",
 
       },
       {
         icon: AiOutlineUser,
-        text: "Reporting a Privacy Violation",
+        text: "Reporting a Problem with Facebook",
         id: "a26",
 
       },
       {
         icon: AiOutlineUser,
-        text: "Hacked and Fake Accounts",
+        text: "Reporting a Privacy Violation",
         id: "a27",
 
       },
       {
         icon: AiOutlineUser,
-        text: "Managing a Deceased Person's Account",
+        text: "Hacked and Fake Accounts",
         id: "a28",
 
       },
       {
         icon: AiOutlineUser,
-        text: "Intellectual Property",
+        text: "Managing a Deceased Person's Account",
         id: "a29",
 
       },
       {
         icon: AiOutlineUser,
+        text: "Intellectual Property",
+        id: "a30",
+
+      },
+      {
+        icon: AiOutlineUser,
         text: "About out polices",
-        id: "a40",
+        id: "a31",
 
       },
     ],

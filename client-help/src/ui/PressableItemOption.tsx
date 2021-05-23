@@ -13,16 +13,18 @@ const cssIcon = css({
 
 interface PressableItemOptionProps {
   pressableButton: React.ComponentProps<typeof PressableOverlay>;
-  icon ?: React.JSXElementConstructor<{size:number,className:string}> | string
+  icon ?: React.JSXElementConstructor<{size:number,className:string}> | string,
+  onClick ?: React.MouseEventHandler<HTMLDivElement>
 }
 
 const PressableItemOption: FC<PressableItemOptionProps> = ({
   children,
   pressableButton,
-  icon : IconComponent
+  icon : IconComponent,
+  onClick
 }) => {
   return (
-    <PressableOverlay {...pressableButton}>
+    <PressableOverlay {...pressableButton} onClick={onClick}>
         {(IconComponent) && <IconComponent size={20} className={cssIcon()} />}
       <TextPressableOption>{children}</TextPressableOption>
     </PressableOverlay>

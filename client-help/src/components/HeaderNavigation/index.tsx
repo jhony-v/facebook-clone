@@ -1,6 +1,6 @@
 import { useAtom } from "jotai";
 import { css, styled } from "../../lib/stitches.config";
-import { headerTabsAtom } from "../../stores/useNavigation.store";
+import { tabsAtom } from "../../stores/useNavigation.store";
 import { toggleTheme } from "../../stores/useTheme.store";
 import AppHeaderContainer from "../../ui/AppHeaderContainer";
 import BaseButton from "../../ui/BaseButton";
@@ -32,7 +32,7 @@ const circleButton = css({
 });
 
 const HeaderNavigation = () => {
-  const [state] = useAtom(headerTabsAtom);
+  const [state] = useAtom(tabsAtom);
   const onToggleTheme = useUpdateAtom(toggleTheme)
   return (
     <LayoutHeaderNavigation>

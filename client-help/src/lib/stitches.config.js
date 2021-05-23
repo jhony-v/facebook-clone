@@ -67,7 +67,7 @@ export const darkTheme = theme("dark",{
   colors: {
     bg: "rgb(20,20,20)",
     bg100 : "rgb(40,40,40)",
-    primaryAlpha100: "rgb(40,40,40)",
+    primaryAlpha100: "rgba(107, 171, 245, 0.2)",
     text: "#FFFFFF",
     text100: "rgb(200,200,200)",
     text200: "rgb(70,70,70)",

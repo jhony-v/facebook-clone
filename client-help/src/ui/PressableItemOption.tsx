@@ -5,7 +5,7 @@ import PressableOverlay from "./PressableOverlay";
 
 const TextPressableOption = styled(BaseText, {
   color : "inherit",
-  fontSize : ".8rem"
+  fontSize : ".9rem"
 });
 
 const cssIcon = css({

@@ -6,7 +6,6 @@ const PressableOverlay = styled("div", {
   display: "flex",
   alignItems: "center",
   transition: "backgroundColor .3s",
-  padding : "7px 10px",
   color : "$text",
   variants: {
     hoverable: {
@@ -27,7 +26,21 @@ const PressableOverlay = styled("div", {
         color : "$primary"
       },
     },
+    spacing : {
+      small : {
+        padding : "7px 10px",
+      },
+      base : {
+        padding : "10px 10px",
+      },
+      medium : {
+        padding : "13px 10px",
+      }
+    }
   },
+  defaultVariants : {
+    spacing : "small"
+  }
 });
 
 export default PressableOverlay;

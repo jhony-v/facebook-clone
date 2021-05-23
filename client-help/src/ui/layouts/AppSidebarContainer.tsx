@@ -9,8 +9,9 @@ const Wrapper = styled("nav", {
   background: "$bg100",
   height: "$sidebar-height",
   width: "$sidebar-width",
-  boxShadow: "0 2px 4px rgba(0,0,0,.08)",
+  boxShadow: "2px 2px 4px rgba(0,0,0,.1)",
   display: "flex",
+  flexDirection : "column",
   boxSizing : "border-box",
 });
 

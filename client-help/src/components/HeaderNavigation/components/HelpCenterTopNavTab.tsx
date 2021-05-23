@@ -2,6 +2,7 @@ import { useSelect } from "downshift";
 import { FC } from "react";
 import { HeaderTabsOptionDataItemType } from "../../../data/header.data";
 import { styled } from "../../../lib/stitches.config";
+import { CurrentNavigationOption } from "../../../stores/mainNavigation.store";
 import PressableItemOption from "../../../ui/PressableItemOption";
 import PressableOverlay from "../../../ui/PressableOverlay";
 import TetraText from "../../../ui/TetraText";
@@ -27,8 +28,9 @@ const WrapperSelectMenuOptions = styled("div", {
 
 type HelpCenterTopNavTabProps = {
   item: HeaderTabsOptionDataItemType;
-  onSelectOption?: (option: { id: string; option: { id: string } }) => void;
+  onSelectOption?: (option: CurrentNavigationOption) => void;
 };
+
 const HelpCenterTopNavTab: FC<HelpCenterTopNavTabProps> = ({
   item,
   onSelectOption,

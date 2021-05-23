@@ -1,7 +1,8 @@
 import { useAtom } from "jotai";
 import { styled } from "../../lib/stitches.config";
-import { tabsAtom } from "../../stores/mainNavigation";
-import { toggleTheme } from "../../stores/theme";
+import { tabsAtom } from "../../stores/mainNavigation.store";
+import { toggleTheme } from "../../stores/theme.store";
+import { selectCurrentTab } from "../../stores/mainNavigation.store";
 import AppHeaderContainer from "../../ui/layouts/AppHeaderContainer";
 import BaseButton from "../../ui/BaseButton";
 import TetraText from "../../ui/TetraText";
@@ -28,7 +29,9 @@ const WrapperOptions = styled("div", {
 
 const HeaderNavigation = () => {
   const [state] = useAtom(tabsAtom);
-  const onToggleTheme = useUpdateAtom(toggleTheme)
+  const onToggleTheme = useUpdateAtom(toggleTheme);
+  const onSelectCurrentTab = useUpdateAtom(selectCurrentTab);
+  
   return (
     <LayoutHeaderNavigation>
       <Link to="/">
@@ -36,7 +39,7 @@ const HeaderNavigation = () => {
       </Link>
       <WrapperOptions>
         {state.map((item) => (
-          <HelpCenterTopNavTab key={item.id} item={item} />
+          <HelpCenterTopNavTab key={item.id} item={item} onSelectOption={onSelectCurrentTab} />
         ))}
       </WrapperOptions>
       <WrapperOptions>

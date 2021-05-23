@@ -7,6 +7,7 @@ const PressableOverlay = styled("div", {
   alignItems: "center",
   transition: "backgroundColor .3s",
   padding : "7px 10px",
+  color : "$text",
   variants: {
     hoverable: {
       true: {

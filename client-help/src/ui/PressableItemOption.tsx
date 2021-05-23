@@ -1,14 +1,16 @@
 import { FC } from "react";
 import { css, styled } from "../lib/stitches.config";
+import BaseText from "./BaseText";
 import PressableOverlay from "./PressableOverlay";
 
-const TextPressableOption = styled("span", {
-  fontSize: ".9rem",
-  color : "$text"
+const TextPressableOption = styled(BaseText, {
+  color : "inherit",
+  fontSize : ".9rem"
 });
 
 const cssIcon = css({
-    marginRight  :"8px"
+    marginRight  :"8px",
+    color : "inherit"
 })
 
 interface PressableItemOptionProps {
@@ -26,7 +28,7 @@ const PressableItemOption: FC<PressableItemOptionProps> = ({
   return (
     <PressableOverlay {...pressableButton} onClick={onClick}>
         {(IconComponent) && <IconComponent size={20} className={cssIcon()} />}
-      <TextPressableOption>{children}</TextPressableOption>
+      <TextPressableOption >{children}</TextPressableOption>
     </PressableOverlay>
   );
 };

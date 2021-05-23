@@ -3,7 +3,7 @@ import { styled } from "../lib/stitches.config";
 
 const Wrapper = styled("div", {
   margin: "auto",
-  width: "720px",
+  width: "780px",
   maxWidth: "95%",
 });
 

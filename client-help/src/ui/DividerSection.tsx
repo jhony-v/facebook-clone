@@ -18,7 +18,7 @@ const DividerSection: FC<DividerSectionProps> = ({ title, children }) => {
     <Wrapper>
       {title && (
         <WrapperTitle>
-          <BaseText as="h3" weight size="medium">
+          <BaseText as="h3" weight size="large">
             {title}
           </BaseText>
         </WrapperTitle>

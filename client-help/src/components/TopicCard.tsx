@@ -87,7 +87,7 @@ const TopicCard = ({ topic, direction, onClick,to  }: TopicCardProps) => {
       </WrapperAlignmentImage>
       <WrapperAlignmentText>
         <BaseText weight>{topic.name}</BaseText>
-        <BaseText color="secondary" size="small">
+        <BaseText color="secondary" size="base">
           {topic.description}
         </BaseText>
       </WrapperAlignmentText>

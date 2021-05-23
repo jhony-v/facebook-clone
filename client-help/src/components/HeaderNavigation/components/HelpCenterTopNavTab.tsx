@@ -17,7 +17,7 @@ const WrapperSelectMenuOptions = styled("div", {
   left: 0,
   background: "$bg100",
   padding: "5px",
-  boxSizing : "border-box",
+  boxSizing: "border-box",
   width: "300px",
   zIndex: 50,
   top: "$from-header",
@@ -27,8 +27,12 @@ const WrapperSelectMenuOptions = styled("div", {
 
 type HelpCenterTopNavTabProps = {
   item: HeaderTabsOptionDataItemType;
+  onSelectOption?: (option: { id: string; option: { id: string } }) => void;
 };
-const HelpCenterTopNavTab: FC<HelpCenterTopNavTabProps> = ({ item }) => {
+const HelpCenterTopNavTab: FC<HelpCenterTopNavTabProps> = ({
+  item,
+  onSelectOption,
+}) => {
   const { text, options } = item;
   const {
     getToggleButtonProps,
@@ -36,13 +40,29 @@ const HelpCenterTopNavTab: FC<HelpCenterTopNavTabProps> = ({ item }) => {
     getMenuProps,
     isOpen,
     highlightedIndex,
+    closeMenu,
+    selectedItem,
   } = useSelect({
     items: options,
   });
 
+  const onSelectMenuOptions = (
+    option: HeaderTabsOptionDataItemType["options"][0]
+  ) => {
+    closeMenu();
+    onSelectOption &&
+      onSelectOption({
+        id: item.id,
+        option: {
+          id: option.id,
+        },
+      });
+  };
+
   return (
     <Wrapper>
-      <PressableOverlay hoverable {...getToggleButtonProps()}>
+      {selectedItem?.id}
+      <PressableOverlay hoverable hovered={isOpen} {...getToggleButtonProps()}>
         <TetraText color="secondary">{text}</TetraText>
       </PressableOverlay>
       <div {...getMenuProps()}>
@@ -57,6 +77,7 @@ const HelpCenterTopNavTab: FC<HelpCenterTopNavTabProps> = ({ item }) => {
                   hovered: highlightedIndex === index,
                   hoverable: true,
                 }}
+                onClick={() => onSelectMenuOptions(currentItem)}
               >
                 {currentItem.text}
               </PressableItemOption>

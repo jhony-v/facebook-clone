@@ -1,13 +1,11 @@
 import React from 'react';
-import { useUpdateAtom } from 'jotai/utils';
-import { toggleTheme } from './stores/useTheme';
 import AppContainer from './ui/AppContainer';
+import HeaderNavigation from './components/HeaderNavigation';
 
 function App() {
-  const updateTheme = useUpdateAtom(toggleTheme);
   return (
     <AppContainer>
-      <button onClick={updateTheme}>change</button>
+      <HeaderNavigation/>
     </AppContainer>
   );
 }

@@ -9,7 +9,7 @@ import {
 import { Scrollbars } from "react-custom-scrollbars";
 
 const SidebarNavigation = () => {
-  const [state] = useAtom(currentContentNavigationAtom);
+  const [{ text, options }] = useAtom(currentContentNavigationAtom);
   return (
     <AppSidebarContainer>
       <SidebarWrapperHeader>
@@ -19,6 +19,8 @@ const SidebarNavigation = () => {
       </SidebarWrapperHeader>
       <SidebarWrapperContent>
         <Scrollbars autoHeight autoHide autoHeightMin="100%" autoHeightMax="100%">
+            {JSON.stringify(options)}
+            
         </Scrollbars>
       </SidebarWrapperContent>
     </AppSidebarContainer>

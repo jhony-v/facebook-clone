@@ -1,4 +1,3 @@
-import { useParams } from "@reach/router";
 import { atom } from "jotai";
 import { headerTabOptionsData } from "../data/header.data";
 import Fuse from "fuse.js";

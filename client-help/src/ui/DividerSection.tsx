@@ -1,13 +1,13 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { styled } from "../lib/stitches.config";
 import BaseText from "./BaseText";
 
 const Wrapper = styled("section", {
-  py: "10px",
+  py: "25px",
   boxSizing : "border-box"
 });
 const WrapperTitle = styled("div", {
-  marginBottom: "10px",
+  marginBottom: "20px",
 });
 
 type DividerSectionProps = {
@@ -18,7 +18,7 @@ const DividerSection: FC<DividerSectionProps> = ({ title, children }) => {
     <Wrapper>
       {title && (
         <WrapperTitle>
-          <BaseText as="h3" weight size="base">
+          <BaseText as="h3" weight size="medium">
             {title}
           </BaseText>
         </WrapperTitle>

@@ -1,53 +1,105 @@
 import { TopicOptionItemType } from "../data/topics.data";
 import { styled } from "../lib/stitches.config";
 import BaseText from "../ui/BaseText";
+import { BsArrowRight } from "react-icons/bs"
+import React from "react";
+import { navigate } from "@reach/router";
+
+const WrapperAlignmentImage = styled("div", {
+  boxSizing: "border-box",
+});
+
+const WrapperAlignmentText = styled("div", {
+  [`& ${BaseText}:first-child`] : {
+    marginBottom : "8px"
+  }
+});
+
+const Image = styled("img",{
+  width : "80px",
+  height : "80px"
+})
+
+const ArrowRight = styled(BsArrowRight,{
+  marginLeft : "auto",
+  color : "$text500"
+}) 
 
 const Card = styled("div", {
   borderRadius: 10,
   backgroundColor: "$text200",
   display: "flex",
-  flexDirection: "column",
-  padding: 30,
   cursor: "pointer",
-});
-
-const WrapperAlignment = styled("div",{
-  variants : {
-    variant : {
-      image : {
-        alignment : "center",
-        marginBottom : "20px"
+  "&:hover" : {
+    backgroundColor : "$text300"
+  },
+  variants: {
+    direction: {
+      col: {
+        flexDirection: "column",
+        padding: "50px 30px",
+        [`& ${WrapperAlignmentImage}`]: {
+          marginBottom: "20px",
+          display: "flex",
+          justifyContent: "center",
+        },
+      },
+      row: {
+        flexDirection: "row",
+        alignItems : "center",
+        padding: "30px",
+        [`& ${WrapperAlignmentText}`] : {
+          marginLeft : "10px"
+        }
       },
     },
-    mb : {
-      true : {
-        marginBottom : "10px"        
-      }
-    } 
-  }
-})
+  },
+});
+
+const DIRECTION = {
+  ROW : "row",
+  COL : "col"
+};
 
 type TopicCardProps = {
   topic: TopicOptionItemType;
-  direction ?: "col" | "row"
+  direction?: "row" | "col";
+  to ?: string;
+  onClick ?: React.MouseEvent<HTMLDivElement>,
 };
 
-const TopicCard = ({ topic }: TopicCardProps) => {
+const TopicCard = ({ topic, direction, onClick,to  }: TopicCardProps) => {
+  const isRow = direction === DIRECTION.ROW;
+
+  const handlerOnClick = (ev : React.MouseEvent<HTMLDivElement>) => {
+    if(to) {
+      navigate(to);
+    }
+    else {
+      // @ts-ignore
+     onClick && onClick(ev);
+    }
+  }
   return (
-    <Card>
-      <WrapperAlignment variant="image">
-        <img src={topic.icon} width="80" height="80" alt={topic.icon} />
-      </WrapperAlignment>
-      <WrapperAlignment mb>
+    <Card direction={direction} onClick={handlerOnClick}>
+      <WrapperAlignmentImage>
+        <Image src={topic.icon} alt={topic.icon} />
+      </WrapperAlignmentImage>
+      <WrapperAlignmentText>
         <BaseText weight>{topic.name}</BaseText>
-      </WrapperAlignment>
-      <BaseText color="secondary" size="small">{topic.description}</BaseText>
+        <BaseText color="secondary" size="small">
+          {topic.description}
+        </BaseText>
+      </WrapperAlignmentText>
+      {isRow && (
+        <ArrowRight size={26} />
+      )}
     </Card>
   );
 };
 
 TopicCard.defaultProps = {
-  direction : "col"
-}
+  direction: "col",
+};
 
 export default TopicCard;

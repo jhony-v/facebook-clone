@@ -7,9 +7,13 @@ import {
   SidebarWrapperHeader,
 } from "./components/SidebarWrapper";
 import { Scrollbars } from "react-custom-scrollbars";
+import PressableItemOption from "../../ui/PressableItemOption";
+import { useParams } from "@reach/router";
 
 const SidebarNavigation = () => {
-  const [{ text, options }] = useAtom(currentContentNavigationAtom);
+  const [state] = useAtom(currentContentNavigationAtom);
+  const params = useParams();
+
   return (
     <AppSidebarContainer>
       <SidebarWrapperHeader>
@@ -18,9 +22,24 @@ const SidebarNavigation = () => {
         </BaseText>
       </SidebarWrapperHeader>
       <SidebarWrapperContent>
-        <Scrollbars autoHeight autoHide autoHeightMin="100%" autoHeightMax="100%">
-            {JSON.stringify(options)}
-            
+        <Scrollbars
+          autoHeight
+          autoHide
+          autoHeightMin="100%"
+          autoHeightMax="100%"
+        >
+          {state?.options.map((currentOption) => (
+            <PressableItemOption
+              key={currentOption.id}
+              icon={currentOption.icon}
+              pressableButton={{
+                hoverable: true,
+                pressed: params.helpId === currentOption.id,
+              }}
+            >
+              {currentOption.text}
+            </PressableItemOption>
+          ))}
         </Scrollbars>
       </SidebarWrapperContent>
     </AppSidebarContainer>

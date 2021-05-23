@@ -1,6 +1,7 @@
-import { navigate } from "@reach/router";
+import { useParams } from "@reach/router";
 import { atom } from "jotai";
 import { headerTabOptionsData } from "../data/header.data";
+import Fuse from "fuse.js";
 
 /* ---------------------------------- atoms --------------------------------- */
 
@@ -12,6 +13,7 @@ export type CurrentNavigationOption = {
 };
 
 export const tabsAtom = atom(headerTabOptionsData);
+
 export const currenNavigationtAtom = atom<CurrentNavigationOption>({
   id: "",
   option: {
@@ -29,10 +31,19 @@ export const currentContentNavigationAtom = atom((get) => {
 
 /* --------------------------------- actions -------------------------------- */
 
-export const selectCurrentTab = atom(
-  null,
-  (_get, set, payload: CurrentNavigationOption) => {
-    set(currenNavigationtAtom, payload);
-    navigate(payload.option.id);
+export const selectCurrentTabInitialState = atom(null, (get, set,helpId: string) => {
+  const data = get(tabsAtom);
+  const searchData = new Fuse(data, {
+    useExtendedSearch: true,
+    keys: ["options.id"],
+  });
+  const current = searchData.search(`=${helpId}`)[0]?.item;
+  if (current) {
+    set(currenNavigationtAtom, {
+      id: current.id,
+      option: {
+        id: current.id,
+      },
+    });
   }
-);
+});

@@ -9,6 +9,7 @@ const Wrapper = styled("header", {
   width: "$full",
   boxShadow: "0 2px 4px rgba(0,0,0,.08)",
   display: "flex",
+  boxSizing : "border-box",
   alignItems: "center",
 });
 

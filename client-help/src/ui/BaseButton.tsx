@@ -3,7 +3,7 @@ import { styled } from "../lib/stitches.config";
 import PressableOverlay from "./PressableOverlay";
 
 const PressableButtonWrapper = styled(PressableOverlay, {
-  fontWeight : "bold",
+  fontWeight: "bold",
   variants: {
     variant: {
       secondary: {
@@ -11,7 +11,7 @@ const PressableButtonWrapper = styled(PressableOverlay, {
         color: "$text",
         "&:hover": {
           backgroundColor: "$text300",
-        }
+        },
       },
       primary: {
         backgroundColor: "$primary",
@@ -21,14 +21,24 @@ const PressableButtonWrapper = styled(PressableOverlay, {
   },
 });
 
-
 type BaseButtonProps = {
   variant?: keyof typeof PressableButtonWrapper["variants"]["variant"];
+  className?: string;
+  icon?: React.JSXElementConstructor<{ size: number }>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const BaseButton: FC<BaseButtonProps> = ({ children, variant }) => {
+const BaseButton: FC<BaseButtonProps> = (props) => {
+  const { children, variant, className, icon: IconComponent, onClick } = props;
+
   return (
-    <PressableButtonWrapper as="button" variant={variant}>
+    <PressableButtonWrapper
+      as="button"
+      variant={variant}
+      className={className}
+      onClick={onClick}
+    >
+      {IconComponent && <IconComponent size={18} />}
       {children}
     </PressableButtonWrapper>
   );

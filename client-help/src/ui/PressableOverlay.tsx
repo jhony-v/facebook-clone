@@ -15,9 +15,15 @@ const PressableOverlay = styled("div", {
         },
       },
     },
+    hovered : {
+      true : {
+        backgroundColor: "$text200",
+      }
+    },
     pressed: {
       true: {
         backgroundColor: "$primaryAlpha100",
+        color : "$primary"
       },
     },
   },

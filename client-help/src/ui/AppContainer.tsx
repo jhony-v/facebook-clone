@@ -8,6 +8,7 @@ const Wrapper = styled("div", {
   background: "$bg",
   position : "relative",
   width:"100%",
+  height : "100%",
 });
 
 const AppContainer: FC = ({ children }) => {

@@ -11,7 +11,7 @@ import BaseButtonAvatarAction from "../../ui/BaseButtonAvatarAction";
 import ListHelpCenterTopNavTab from "./components/ListHelpCenterTopNavTab";
 
 const LayoutHeaderNavigation = styled(AppHeaderContainer, {
-  padding: "5px 10px",
+  padding: "5px 15px",
   justifyContent: "space-between",
 });
 
@@ -23,14 +23,25 @@ const WrapperOptions = styled("div", {
   },
 });
 
+const FacebookTitleWrapper = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  [`& ${TetraText}`] : {
+    marginLeft : "10px"
+  }
+});
+
 const HeaderNavigation = () => {
   const onToggleTheme = useUpdateAtom(toggleTheme);
 
   return (
     <LayoutHeaderNavigation>
-      <TetraText onClick={() => (window.location.href = "/")}>
-        Help Center
-      </TetraText>
+      <FacebookTitleWrapper>
+        <img src="/favicon.ico" alt="facebook help center logo" width="35" />
+        <TetraText onClick={() => (window.location.href = "/")}>
+          Help Center
+        </TetraText>
+      </FacebookTitleWrapper>
       <WrapperOptions>
         <ListHelpCenterTopNavTab />
       </WrapperOptions>

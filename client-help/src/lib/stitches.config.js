@@ -15,7 +15,7 @@ export const { styled, css, theme } = createCss({
       text500: "#65676B",
     },
     sizes: {
-      "header-height": "50px",
+      "header-height": "55px",
       "sidebar-height": "calc(100% - $header-height)",
       "sidebar-width": "330px",
       "content-height": "calc(100% - $header-height)",

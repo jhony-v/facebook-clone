@@ -2,7 +2,7 @@ import { styled } from "../lib/stitches.config";
 
 const TetraText = styled("span", {
   fontWeight: "bold",
-  fontSize : ".9rem",
+  fontSize : ".95rem",
   variants: {
     color: {
       primary: {

@@ -8,6 +8,7 @@ type ShareButtonProps = {
 
 const shareButtonStyles = css({
     color : "$primary",
+    background : "$bgWhite",
     [`& ${IoMdShareAlt}`] : {
         marginRight : "20px"
     }

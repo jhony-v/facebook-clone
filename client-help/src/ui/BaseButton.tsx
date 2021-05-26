@@ -4,6 +4,7 @@ import PressableOverlay from "./PressableOverlay";
 
 const PressableButtonWrapper = styled(PressableOverlay, {
   fontWeight: "bold",
+  fontSize : ".9em",
   variants: {
     variant: {
       secondary: {
@@ -23,18 +24,20 @@ const PressableButtonWrapper = styled(PressableOverlay, {
 
 type BaseButtonProps = {
   variant?: keyof typeof PressableButtonWrapper["variants"]["variant"];
+  size?: keyof typeof PressableButtonWrapper["variants"]["spacing"];
   className?: string;
   icon?: React.JSXElementConstructor<{ size: number }>;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 const BaseButton: FC<BaseButtonProps> = (props) => {
-  const { children, variant, className, icon: IconComponent, onClick } = props;
+  const { children, variant,size, className, icon: IconComponent, onClick } = props;
 
   return (
     <PressableButtonWrapper
       as="button"
       variant={variant}
+      spacing={size}
       className={className}
       onClick={onClick}
     >

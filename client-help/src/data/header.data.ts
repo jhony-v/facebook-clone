@@ -1,26 +1,51 @@
-import { AiOutlineUser } from "react-icons/ai";
+import {
+  AiOutlineUser,
+  AiOutlineUserAdd,
+  AiOutlineHome,
+  AiOutlineMessage,
+  AiOutlineCamera,
+  AiOutlineCalendar,
+  AiOutlineAppstoreAdd,
+  AiOutlineDesktop,
+  AiOutlineSetting,
+  AiOutlineBell,
+  AiOutlineLock,
+  AiOutlineCheckCircle,
+  AiOutlineBug,
+  AiOutlineUnlock
+} from "react-icons/ai";
+import { FiPlayCircle, FiFlag,FiKey, FiUserX } from "react-icons/fi";
+import { IoIosInformationCircleOutline, IoMdDocument, IoMdPeople } from 'react-icons/io'
+import { MdPayment,MdStore }from "react-icons/md"
+import { BiUserCheck } from "react-icons/bi"
+import { RiErrorWarningLine, RiShieldUserLine } from "react-icons/ri"
+import { BsFillShieldLockFill } from "react-icons/bs";
+import { FaRegUserCircle } from "react-icons/fa"
+import {HiOutlineDocumentText } from "react-icons/hi"
+import { VscSymbolFile, VscSymbolMethod } from "react-icons/vsc"
+
 export const headerTabOptionsData = [
   {
     text: "Using facebook",
     id: "using",
     options: [
       {
-        icon: AiOutlineUser,
+        icon: FaRegUserCircle,
         text: "Creating an account",
         id: "a1",
       },
       {
-        icon: AiOutlineUser,
+        icon: AiOutlineUserAdd,
         text: "Friending",
         id: "a2",
       },
       {
-        icon: AiOutlineUser,
+        icon: AiOutlineHome,
         text: "Your home page",
         id: "a3",
       },
       {
-        icon: AiOutlineUser,
+        icon: AiOutlineMessage,
         text: "Messaging",
         id: "a4",
       },
@@ -30,53 +55,53 @@ export const headerTabOptionsData = [
         id: "a5",
       },
       {
-        icon: AiOutlineUser,
+        icon: AiOutlineCamera,
         text: "Your photos and Videos",
         id: "a6",
       },
       {
-        icon: AiOutlineUser,
+        icon: FiPlayCircle,
         text: "Videos on Watch",
         id: "a7",
       },
       {
-        icon: AiOutlineUser,
+        icon: FiFlag,
         text: "Pages",
         id: "a8",
       },
 
       {
-        icon: AiOutlineUser,
+        icon: IoMdPeople,
         text: "Groups",
         id: "a9",
       },
       {
-        icon: AiOutlineUser,
+        icon: AiOutlineCalendar,
         text: "Events",
         id: "a10",
       },
       {
-        icon: AiOutlineUser,
+        icon: MdPayment,
         text: "Facebook pay",
         id: "a11",
       },
       {
-        icon: AiOutlineUser,
+        icon: MdStore,
         text: "Marketplace",
         id: "a12",
       },
       {
-        icon: AiOutlineUser,
+        icon: AiOutlineAppstoreAdd,
         text: "Apps",
         id: "a13",
       },
       {
-        icon: AiOutlineUser,
+        icon: AiOutlineDesktop,
         text: "Facebook and apps",
         id: "a14",
       },
       {
-        icon: AiOutlineUser,
+        icon: BiUserCheck,
         text: "Accesibility",
         id: "a15",
       },
@@ -87,27 +112,27 @@ export const headerTabOptionsData = [
     id: "account",
     options: [
       {
-        icon: AiOutlineUser,
+        icon: FiKey,
         text: "Login and password",
         id: "a16",
       },
       {
-        icon: AiOutlineUser,
+        icon: AiOutlineSetting,
         text: "Your profile and settings",
         id: "a17",
       },
       {
-        icon: AiOutlineUser,
+        icon: IoMdDocument,
         text: "Names of Facebook",
         id: "a18",
       },
       {
-        icon: AiOutlineUser,
+        icon: AiOutlineBell,
         text: "Notification",
         id: "a19",
       },
       {
-        icon: AiOutlineUser,
+        icon: RiErrorWarningLine,
         text: "Accesing & Downloading yout information",
         id: "a20",
       },
@@ -118,22 +143,22 @@ export const headerTabOptionsData = [
     id: "privacity",
     options: [
       {
-        icon: AiOutlineUser,
+        icon: AiOutlineLock,
         text: "Your privacity",
         id: "a21",
       },
       {
-        icon: AiOutlineUser,
+        icon: AiOutlineCheckCircle,
         text: "Staying safe",
         id: "a22",
       },
       {
-        icon: AiOutlineUser,
+        icon: BsFillShieldLockFill,
         text: "Keeping your acocunt secure",
         id: "a23",
       },
       {
-        icon: AiOutlineUser,
+        icon: RiShieldUserLine,
         text: "Unfriending or blocking someone",
         id: "a24",
       },
@@ -144,46 +169,39 @@ export const headerTabOptionsData = [
     id: "policies",
     options: [
       {
-        icon: AiOutlineUser,
+        icon: IoIosInformationCircleOutline,
         text: "Reporting abuse",
         id: "a25",
-
       },
       {
-        icon: AiOutlineUser,
+        icon: AiOutlineBug,
         text: "Reporting a Problem with Facebook",
         id: "a26",
-
       },
       {
-        icon: AiOutlineUser,
+        icon: AiOutlineUnlock,
         text: "Reporting a Privacy Violation",
         id: "a27",
-
       },
       {
-        icon: AiOutlineUser,
+        icon: VscSymbolFile,
         text: "Hacked and Fake Accounts",
         id: "a28",
-
       },
       {
-        icon: AiOutlineUser,
+        icon: FiUserX,
         text: "Managing a Deceased Person's Account",
         id: "a29",
-
       },
       {
-        icon: AiOutlineUser,
+        icon: VscSymbolMethod,
         text: "Intellectual Property",
         id: "a30",
-
       },
       {
-        icon: AiOutlineUser,
+        icon: HiOutlineDocumentText,
         text: "About out polices",
         id: "a31",
-
       },
     ],
   },

@@ -21,7 +21,7 @@ const WrapperSelectMenuOptions = styled("div", {
   boxSizing: "border-box",
   width: "300px",
   zIndex: 50,
-  top: "$from-header",
+  top: "calc($from-header - 5px)",
   boxShadow: "0 10px 20px rgba(0,0,0,.2)",
   borderRadius: "10px",
 });

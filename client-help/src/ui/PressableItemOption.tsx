@@ -27,7 +27,7 @@ const PressableItemOption: FC<PressableItemOptionProps> = ({
 }) => {
   return (
     <PressableOverlay {...pressableButton} onClick={onClick}>
-        {(IconComponent) && <IconComponent size={20} className={cssIcon()} />}
+        {(IconComponent) && <IconComponent size={24} className={cssIcon()} />}
       <TextPressableOption >{children}</TextPressableOption>
     </PressableOverlay>
   );

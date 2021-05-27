@@ -26,6 +26,7 @@ const WrapperOptions = styled("div", {
 const FacebookTitleWrapper = styled("div", {
   display: "flex",
   alignItems: "center",
+  cursor : "pointer",
   [`& ${TetraText}`] : {
     marginLeft : "10px"
   }

@@ -41,9 +41,9 @@ const Anchor = ({ text, underline, weight, to }: AnchorProps) => {
   return (
     <StyledLink to={to}>
       {weight ? (
-        <TetraTextAnchor>{text}</TetraTextAnchor>
+        <TetraTextAnchor as="span">{text}</TetraTextAnchor>
       ) : (
-        <BaseTextAnchor underline={underline} weight={weight}>
+        <BaseTextAnchor underline={underline} weight={weight} as="span">
           {text}
         </BaseTextAnchor>
       )}

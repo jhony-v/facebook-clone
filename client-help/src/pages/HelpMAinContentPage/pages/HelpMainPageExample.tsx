@@ -1,4 +1,4 @@
-import React from "react";
+import { useAtomValue } from "jotai/utils";
 import HelpCenterAboutPageHeaderBanner from "../../../components/HelpCenterAboutPageHeaderBanner";
 import WrapperCenterContent from "../../../components/WrapperCenterContent";
 import Anchor from "../../../ui/Anchor";
@@ -6,13 +6,14 @@ import BaseText from "../../../ui/BaseText";
 import BulletedList from "../../../ui/BulletedList";
 import DividerSection from "../../../ui/DividerSection";
 import Paragraph from "../../../ui/Paragraph";
-import TetraText from "../../../ui/TetraText";
+import { currentNavigationContentAtom } from "../../../stores/mainNavigation.store"
 
 const HelpMainPageExample = () => {
+  const e = useAtomValue(currentNavigationContentAtom);
   return (
     <div>
       <HelpCenterAboutPageHeaderBanner
-        pageTitle="Your photos and videos"
+        pageTitle={e.text || ""}
         bannerURL="https://static.xx.fbcdn.net/assets/?revision=169610231193999&name=desktop-your-home-page-banner&density=1"
       />
       <WrapperCenterContent>

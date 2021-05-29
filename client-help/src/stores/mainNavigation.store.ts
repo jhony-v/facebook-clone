@@ -1,6 +1,7 @@
 import { atom } from "jotai";
 import { headerTabOptionsData } from "../data/header.data";
 import Fuse from "fuse.js";
+import { ReactNode } from "react";
 
 /* ---------------------------------- atoms --------------------------------- */
 
@@ -9,6 +10,13 @@ export type CurrentNavigationOption = {
   option: {
     id: string;
   };
+};
+
+
+export type CurrentNavigationContentOption = {
+  id: string;
+  text : string;
+  icon : ReactNode
 };
 
 export const tabsAtom = atom(headerTabOptionsData);
@@ -28,6 +36,14 @@ export const currentContentNavigationAtom = atom((get) => {
   );
 });
 
+
+export const currentNavigationContentAtom = atom<Partial<CurrentNavigationContentOption>>((get) => {
+  const currentNavigationOptionId =  get(currenNavigationtAtom).option.id;
+  const currentContentNavigation = get(currentContentNavigationAtom);
+  const searchCurrentOption = currentContentNavigation?.options.find(item => item.id === currentNavigationOptionId) || {};
+  return searchCurrentOption;
+});
+
 /* --------------------------------- actions -------------------------------- */
 
 export const selectCurrentTabInitialState = atom(null, (get, set,helpId: string) => {
@@ -41,7 +57,7 @@ export const selectCurrentTabInitialState = atom(null, (get, set,helpId: string)
     set(currenNavigationtAtom, {
       id: current.id,
       option: {
-        id: current.id,
+        id: helpId,
       },
     });
   }

@@ -15,8 +15,12 @@ type BulletedListProps = {
 };
 
 const BulletedList = (props: BulletedListProps) => {
-  const orderedListItems = props.ordered && props.ordered.map((item) => <LiItem>{item}</LiItem>);
-  const unorderedListItems = props.unrodered && props.unrodered.map((item) => <OlItem>{item}</OlItem>);
+  const orderedListItems = props.ordered && props.ordered.map(
+    (item,index) => <LiItem key={index}>{item}</LiItem>
+  );
+  const unorderedListItems = props.unrodered && props.unrodered.map(
+    (item,index) => <OlItem key={index}>{item}</OlItem>
+  );
   return (
     <ul>
       {orderedListItems}

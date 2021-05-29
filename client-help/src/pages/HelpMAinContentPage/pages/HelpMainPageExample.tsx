@@ -7,13 +7,15 @@ import BulletedList from "../../../ui/BulletedList";
 import DividerSection from "../../../ui/DividerSection";
 import Paragraph from "../../../ui/Paragraph";
 import { currentNavigationContentAtom } from "../../../stores/mainNavigation.store"
+import useChangeBrowserTitle from "../../../hooks/useChangeBrowserTitle";
 
 const HelpMainPageExample = () => {
-  const e = useAtomValue(currentNavigationContentAtom);
+  const currentNavigationContent = useAtomValue(currentNavigationContentAtom);
+  useChangeBrowserTitle();
   return (
     <div>
       <HelpCenterAboutPageHeaderBanner
-        pageTitle={e.text || ""}
+        pageTitle={currentNavigationContent.text || ""}
         bannerURL="https://static.xx.fbcdn.net/assets/?revision=169610231193999&name=desktop-your-home-page-banner&density=1"
       />
       <WrapperCenterContent>

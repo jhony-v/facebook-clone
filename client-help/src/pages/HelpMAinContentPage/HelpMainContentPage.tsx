@@ -9,7 +9,7 @@ import HelpMainPageExample from "./pages/HelpMainPageExample";
 const HelpMainContentPage: FC<RouteComponentProps> = () => {
   const onSelectCurrentTab = useUpdateAtom(selectCurrentTabInitialState);
   const params = useParams();
-
+  
   useEffect(() => {
     onSelectCurrentTab(params.helpId);
   }, [params.helpId, onSelectCurrentTab]);

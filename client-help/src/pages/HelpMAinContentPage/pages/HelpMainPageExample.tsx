@@ -8,6 +8,7 @@ import DividerSection from "../../../ui/DividerSection";
 import Paragraph from "../../../ui/Paragraph";
 import { currentNavigationContentAtom } from "../../../stores/mainNavigation.store"
 import useChangeBrowserTitle from "../../../hooks/useChangeBrowserTitle";
+import FloatingMessageVerifyConfirmation from "../../../components/FloatingMessageVerifyConfirmation";
 
 const HelpMainPageExample = () => {
   const currentNavigationContent = useAtomValue(currentNavigationContentAtom);
@@ -81,6 +82,7 @@ const HelpMainPageExample = () => {
           />
         </DividerSection>
         <DividerSection title="Related Topics"></DividerSection>
+        <FloatingMessageVerifyConfirmation/>
       </WrapperCenterContent>
     </div>
   );

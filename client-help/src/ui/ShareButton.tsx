@@ -20,8 +20,7 @@ const ShareIcon = styled(IoMdShareAlt,{
 
 const ShareButton = (props: ShareButtonProps) => {
   return (
-    <BaseButton size="medium" className={shareButtonStyles()}>
-      <ShareIcon size={20} />
+    <BaseButton size="base" className={shareButtonStyles()} icon={ShareIcon}>
       {props.text}
     </BaseButton>
   );

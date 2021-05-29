@@ -1,12 +1,19 @@
-import React, { FC } from "react";
-import { styled } from "../lib/stitches.config";
+import clsx from "clsx";
+import React from "react";
+import { css, styled } from "../lib/stitches.config";
 import PressableOverlay from "./PressableOverlay";
 
 const PressableButtonWrapper = styled(PressableOverlay, {
   fontWeight: "bold",
   fontSize : ".9em",
+  display : "flex",
+  justifyContent : "center",
+  alignItems : "center",
   variants: {
     variant: {
+      base : {
+        background : "$button",
+      },
       secondary: {
         backgroundColor: "$text200",
         color: "$text",
@@ -19,32 +26,58 @@ const PressableButtonWrapper = styled(PressableOverlay, {
         color: "$text100",
       },
     },
+    autoWidth : {
+      true : {
+        width : "100%"
+      }
+    }
   },
+  defaultVariants : {
+    variant : "base"
+  }
 });
+const iconCSS = css({
+  marginRight : 5,
+  lineHeight : 0,
+})
 
 type BaseButtonProps = {
   variant?: keyof typeof PressableButtonWrapper["variants"]["variant"];
   size?: keyof typeof PressableButtonWrapper["variants"]["spacing"];
   className?: string;
+  children ?: React.ReactNode;
   icon?: React.JSXElementConstructor<{ size: number }>;
+  autoWidth?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const BaseButton: FC<BaseButtonProps> = (props) => {
-  const { children, variant,size, className, icon: IconComponent, onClick } = props;
+
+const BaseButton = (props : BaseButtonProps) => {
+  const { children, variant,size, className, icon: IconComponent, onClick, autoWidth } = props;
+
+  const iconClassnames = clsx((typeof IconComponent === "function" && children) && iconCSS().toString())
 
   return (
     <PressableButtonWrapper
       as="button"
       variant={variant}
       spacing={size}
+      autoWidth={autoWidth}
       className={className}
       onClick={onClick}
     >
-      {IconComponent && <IconComponent size={18} />}
+      {IconComponent && (
+        <span className={iconClassnames}>
+          <IconComponent size={20} />
+        </span>
+      )}
       {children}
     </PressableButtonWrapper>
   );
 };
+
+BaseButton.defaultProps = {
+  children : null
+}
 
 export default BaseButton;

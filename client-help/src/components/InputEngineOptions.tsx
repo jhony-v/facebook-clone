@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import Downshift, { GetInputPropsOptions } from "downshift";
+import PressableOverlay from "../ui/PressableOverlay";
 
 type classNames = {
   content?: string;
@@ -10,15 +11,16 @@ type classNames = {
 
 type InputEngineOptionsProps<T> = {
   renderItem: (currentValue: T) => React.ReactNode;
-  renderInput: (currentValue: GetInputPropsOptions) => React.ReactNode;
+  renderInput: (currentValue: () => GetInputPropsOptions) => React.ReactNode;
   onItemSelected?: (currentValue: T) => void;
   onInputValueChange?: (currentValue: string) => void;
-  classNames: classNames;
+  classNames?: classNames;
   data: T[];
+  itemToString ?: (item : any) => string
 };
 
 function InputEngineOptions<T>(props: InputEngineOptionsProps<T>) {
-  const { content, item, container, itemActive } = props.classNames;
+  const { classNames } = props;
   return (
     <Downshift
       onInputValueChange={(value) => {
@@ -27,6 +29,7 @@ function InputEngineOptions<T>(props: InputEngineOptionsProps<T>) {
       onChange={(selection) => {
         props.onItemSelected && props.onItemSelected(selection);
       }}
+      itemToString={props.itemToString}
     >
       {({
         getInputProps,
@@ -36,24 +39,25 @@ function InputEngineOptions<T>(props: InputEngineOptionsProps<T>) {
         isOpen,
       }) => {
         return (
-          <div className={container}>
-            {props.renderInput(getInputProps())}
+          <div className={classNames?.container}>
+            {props.renderInput(getInputProps)}
             <div {...getMenuProps()}>
               {isOpen && (
-                <div className={content}>
-                  {props.data.map((dataItem, index) => (
-                    <div
+                <div className={classNames?.content}>
+                  {(props.data || []).map((dataItem, index) => (
+                    <PressableOverlay
                       {...getItemProps({
                         key: index,
-                        item,
+                        item : dataItem,
                       })}
                       className={clsx(
-                        itemActive,
-                        highlightedIndex === index ? itemActive : "",
+                        classNames?.itemActive,
                       )}
+                      hoverable
+                      hovered={highlightedIndex === index}
                     >
                       {props.renderItem(dataItem)}
-                    </div>
+                    </PressableOverlay>
                   ))}
                 </div>
               )}
@@ -63,6 +67,15 @@ function InputEngineOptions<T>(props: InputEngineOptionsProps<T>) {
       }}
     </Downshift>
   );
+}
+
+InputEngineOptions.defaultProps = {
+  classNames : {
+    container : "",
+    item : "",
+    itemActive : "",
+    content : "",
+  }
 }
 
 export default InputEngineOptions;

@@ -9,9 +9,12 @@ import Paragraph from "../../../ui/Paragraph";
 import { currentNavigationContentAtom } from "../../../stores/mainNavigation.store"
 import useChangeBrowserTitle from "../../../hooks/useChangeBrowserTitle";
 import FloatingMessageVerifyConfirmation from "../../../components/FloatingMessageVerifyConfirmation";
+import { relatedTopicsAtom } from "../../../stores/topics.store";
+import ListOfHelpTopicList from "../../../components/ListOfHelpTopicList";
 
 const HelpMainPageExample = () => {
   const currentNavigationContent = useAtomValue(currentNavigationContentAtom);
+  const listOfRelatedTopics = useAtomValue(relatedTopicsAtom);
   useChangeBrowserTitle();
   return (
     <div>
@@ -81,7 +84,9 @@ const HelpMainPageExample = () => {
             text="How do I tag my friends at a location on Facebook?"
           />
         </DividerSection>
-        <DividerSection title="Related Topics"></DividerSection>
+        <DividerSection title="Related Topics">
+          <ListOfHelpTopicList data={listOfRelatedTopics} />
+        </DividerSection>
         <FloatingMessageVerifyConfirmation/>
       </WrapperCenterContent>
     </div>

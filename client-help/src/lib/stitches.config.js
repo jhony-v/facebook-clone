@@ -64,6 +64,12 @@ export const { styled, css, theme } = createCss({
     linearGradient: (_config) => (value) => ({
       backgroundImage: `linear-gradient(${value})`,
     }),
+    inset : (_config) => value => ({
+      left : value,
+      right : value,
+      top : value,
+      bottom : value
+    })
   },
 });
 

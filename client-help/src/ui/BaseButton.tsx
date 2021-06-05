@@ -23,7 +23,7 @@ const PressableButtonWrapper = styled(PressableOverlay, {
       },
       primary: {
         backgroundColor: "$primary",
-        color: "$text100",
+        color: "$textWhite",
       },
     },
     autoWidth : {

@@ -65,9 +65,7 @@ const HelpCenterButtonSearchTopics = () => {
     setTextFilter(target.value);
   }
 
-  useClickOutside(refSearchModal,() => {
-    onToggle();
-  })
+  useClickOutside(refSearchModal,onToggle);
  
   return (
     <div>

@@ -63,7 +63,6 @@ const HelpCenterTopNavTab: FC<HelpCenterTopNavTabProps> = ({
 
   return (
     <Wrapper>
-      {selectedItem?.id}
       <PressableOverlay hoverable hovered={isOpen} {...getToggleButtonProps()}>
         <TetraText color="secondary">{text}</TetraText>
       </PressableOverlay>

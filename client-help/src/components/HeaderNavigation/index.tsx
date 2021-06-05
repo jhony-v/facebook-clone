@@ -1,7 +1,6 @@
 import { styled } from "../../lib/stitches.config";
 import { toggleTheme } from "../../stores/theme.store";
 import AppHeaderContainer from "../../ui/layouts/AppHeaderContainer";
-import BaseButton from "../../ui/BaseButton";
 import TetraText from "../../ui/TetraText";
 import { AiOutlineInbox } from "react-icons/ai";
 import { HiOutlineSun } from "react-icons/hi";
@@ -9,6 +8,7 @@ import { useUpdateAtom } from "jotai/utils";
 import BaseButtonAvatarAction from "../../ui/BaseButtonAvatarAction";
 import ListHelpCenterTopNavTab from "./components/ListHelpCenterTopNavTab";
 import HelpCenterButtonSearchTopics from "./components/HelpCenterButtonSearchTopics";
+import HelpCenterButtonLanguageTopics from "./components/HelpCenterButtonLanguageTopics";
 
 const LayoutHeaderNavigation = styled(AppHeaderContainer, {
   padding: "5px 15px",
@@ -61,7 +61,7 @@ const HeaderNavigation = () => {
           icon={HiOutlineSun}
           onClick={() => onToggleTheme()}
         />
-        <BaseButton variant="secondary">English(US)</BaseButton>
+        <HelpCenterButtonLanguageTopics/>
       </WrapperOptions>
     </LayoutHeaderNavigation>
   );

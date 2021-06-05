@@ -9,6 +9,11 @@ const PressableButtonWrapper = styled(PressableOverlay, {
   display : "flex",
   justifyContent : "center",
   alignItems : "center",
+  "&:disabled" : {
+    background : "$buttonDisabled",
+    color : "$buttonTextDisabled",
+    cursor : "not-allowed"
+  },
   variants: {
     variant: {
       base : {
@@ -61,11 +66,12 @@ type BaseButtonProps = {
   icon?: React.JSXElementConstructor<{ size: number }>;
   autoWidth?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  disabled ?: boolean;
 };
 
 
 const BaseButton = (props : BaseButtonProps) => {
-  const { children, variant,size, className, icon: IconComponent, onClick, autoWidth } = props;
+  const { children, variant,size, className, icon: IconComponent, onClick, autoWidth, disabled } = props;
 
   const iconClassnames = clsx((typeof IconComponent === "function" && children) && iconCSS().toString())
 
@@ -77,6 +83,7 @@ const BaseButton = (props : BaseButtonProps) => {
       autoWidth={autoWidth}
       className={className}
       onClick={onClick}
+      disabled={disabled}
     >
       {IconComponent && (
         <span className={iconClassnames}>

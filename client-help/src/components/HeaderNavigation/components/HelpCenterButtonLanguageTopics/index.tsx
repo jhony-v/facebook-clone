@@ -66,7 +66,7 @@ const HelpCenterButtonLanguageTopics = () => {
                 <BaseButton variant="secondary" onClick={onToggle}>
                   Cancel
                 </BaseButton>
-                <BaseButton variant="primary">Save changes</BaseButton>
+                <BaseButton disabled variant="primary">Save changes</BaseButton>
               </ModalFooterOptions>
             </ModalBodySpacing>
           </BaseModal.Body>

@@ -80,7 +80,7 @@ const HelpCenterButtonSearchTopics = () => {
           <BaseModal.Header onClose={() => setOpen(false)}>
             <InputEngineWrapper>
               <FiSearch size={20} />
-              <input placeholder="Search help articles..." onKeyUp={handleOnKeyUpArticles} />
+              <input autoFocus placeholder="Search help articles..." onKeyUp={handleOnKeyUpArticles} />
             </InputEngineWrapper>
           </BaseModal.Header>
           <BaseModal.Body>

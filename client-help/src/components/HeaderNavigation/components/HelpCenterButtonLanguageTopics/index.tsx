@@ -1,10 +1,11 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useClickOutside } from "../../../../hooks/useClickOutside";
 import useToggle from "../../../../hooks/useToggle";
 import { styled } from "../../../../lib/stitches.config";
 import BaseButton from "../../../../ui/BaseButton";
 import BaseModal from "../../../../ui/BaseModal";
 import BaseText from "../../../../ui/BaseText";
+import InputEngineLanguages from "./InputEngineLanguages";
 
 const ModalFooterOptions = styled("div", {
   display: "flex",
@@ -24,35 +25,57 @@ const ModalBodySpacing = styled("div", {
   padding: 15,
 });
 
-const InputEngineLanguages = styled("input", {
-  padding: 17,
-  borderRadius: 5,
-  border: "1px solid $button",
-  color: "$text",
-  width : "100%",
-  boxSizing  :"border-box",
-  marginBottom : 40,
-  fontSize : "1em",
-  "&:focus" : {
-      borderColor : "$text",
-      borderWidth : 2
-  }
-});
+
+type Language = {
+  code : string;
+  name : string;
+}
 
 const HelpCenterButtonLanguageTopics = () => {
   const { active: open, onToggle } = useToggle();
   const refModal = useRef();
+  const [ isSelected, setIsSelected ] = useState(false);
+  const [ language, selectLanguage ] = useState<Language>({
+    code : "US",
+    name : "English"
+  });
 
-  useClickOutside(refModal, onToggle);
+  const normalizeTextButtonLanguage = `${language.name} (${language.code.toUpperCase()})`
+
+  const onCancel = () => {
+    selectLanguage({
+      code : "US",
+      name : "English"
+    })
+    setIsSelected(false);
+    onToggle();
+  }
+  const onSelectLanguage = (language : Language) => {
+    selectLanguage(language);
+    setIsSelected(true);
+  }
+
+  const onSaveChanges = () => {
+    onToggle();
+  }
+
+  const onOpen = () => {
+    setIsSelected(false);
+    onToggle();
+  }
+
+  useClickOutside(refModal, onCancel);
+
+
 
   return (
     <div>
-      <BaseButton variant="secondary" onClick={onToggle}>
-        English(US)
+      <BaseButton variant="secondary" onClick={onOpen}>
+        {normalizeTextButtonLanguage} 
       </BaseButton>
       {open && (
         <BaseModal refModal={refModal}>
-          <BaseModal.Header onClose={onToggle}>
+          <BaseModal.Header onClose={onCancel}>
             <ModalHeaderTitle>
               <BaseText weight size="large">
                 Select Your Language
@@ -61,12 +84,19 @@ const HelpCenterButtonLanguageTopics = () => {
           </BaseModal.Header>
           <BaseModal.Body>
             <ModalBodySpacing>
-              <InputEngineLanguages placeholder="Search languages..." />
+              <InputEngineLanguages onItemLanguageSelected={onSelectLanguage} />
               <ModalFooterOptions>
-                <BaseButton variant="secondary" onClick={onToggle}>
+                <BaseButton 
+                  variant="secondary" 
+                  onClick={onCancel}>
                   Cancel
                 </BaseButton>
-                <BaseButton disabled variant="primary">Save changes</BaseButton>
+                <BaseButton 
+                  disabled={!isSelected} 
+                  variant="primary"
+                  onClick={onSaveChanges}>
+                  Save changes
+                </BaseButton>
               </ModalFooterOptions>
             </ModalBodySpacing>
           </BaseModal.Body>
@@ -75,5 +105,4 @@ const HelpCenterButtonLanguageTopics = () => {
     </div>
   );
 };
-
 export default HelpCenterButtonLanguageTopics;

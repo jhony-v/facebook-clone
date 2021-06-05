@@ -43,7 +43,6 @@ const HelpCenterTopNavTab: FC<HelpCenterTopNavTabProps> = ({
     isOpen,
     highlightedIndex,
     closeMenu,
-    selectedItem,
   } = useSelect({
     items: options,
   });

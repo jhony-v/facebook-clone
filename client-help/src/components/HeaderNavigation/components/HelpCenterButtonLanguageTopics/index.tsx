@@ -34,7 +34,8 @@ const InputEngineLanguages = styled("input", {
   marginBottom : 40,
   fontSize : "1em",
   "&:focus" : {
-      borderColor : "$primary",
+      borderColor : "$text",
+      borderWidth : 2
   }
 });
 

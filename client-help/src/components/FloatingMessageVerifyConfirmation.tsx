@@ -1,25 +1,18 @@
-import { css, styled } from "../lib/stitches.config";
+import { styled } from "../lib/stitches.config";
 import BaseButton from "../ui/BaseButton";
 import TetraText from "../ui/TetraText";
 import { CgSmileSad } from "react-icons/cg";
 import { RiEmotionHappyLine } from "react-icons/ri";
-import { VscClose } from "react-icons/vsc";
-import { useState } from "react";
+import { useReducer } from "react";
 import BaseText from "../ui/BaseText";
 import Anchor from "../ui/Anchor";
 import BaseRadioButton from "../ui/BaseRadioButton";
+import FloatingCard from "../ui/FloatingCard";
+import FloatingMessage from "../ui/FloatingMessage";
+import CloseActionIcon from "../ui/CloseActionIcon";
 
-const FixedCard = styled("div", {
-  position: "fixed",
-  bottom: "40px",
-  right: "40px",
-  background: "$bg100",
-  boxShadow: "0 10px 20px rgba(0,0,0,.13)",
-  borderRadius: "5px",
-  padding: "10px",
+const FixedCard = styled(FloatingCard, {
   width: "300px",
-  display: "flex",
-  flexDirection: "column",
 });
 
 const Spacing = styled("div", {
@@ -56,70 +49,112 @@ const InputSubmitDataInformation = styled("textarea", {
   color: "$text",
 });
 
-const cssCloseConfirmationIcon = css({
-  color: "$text500",
-  cursor: "pointer",
-});
+
 
 enum HELPFUL_ACTIONS {
   YES = "YES",
   NO = "NO",
 }
+enum Actions {
+  OPTION_YES,
+  OPTION_NOT,
+  SUBMIT,
+  ON_CLOSE,
+  SET_NEGATIVE_OPTION_CHECKED,
+}
+
+type FloatingMessageAction = {
+  type :  Actions;
+  payload ?: any
+}
+
+
+type FloatingMessageState = {
+  selected : HELPFUL_ACTIONS | "",
+  open : boolean;
+  showingMessage : boolean;
+  negativeOptionChecked : string;
+}
+
+const floatingMessageInitialState : FloatingMessageState = {
+  selected : "",
+  open : true,
+  showingMessage : false,
+  negativeOptionChecked : "",
+}
+
+
+const floatingMessageReducer = (state : FloatingMessageState,action:FloatingMessageAction) : FloatingMessageState => {
+  switch(action.type) {
+    case Actions.OPTION_YES:
+      return {
+        ...state,
+        selected : HELPFUL_ACTIONS.YES,
+        showingMessage : true,
+      };
+    case Actions.OPTION_NOT:
+      return {
+        ...state,
+        selected : HELPFUL_ACTIONS.NO,
+      }
+    case Actions.SUBMIT:
+      return {
+        ...state,
+        open : false,
+      }
+    case Actions.ON_CLOSE:
+      return {
+        ...state,
+        selected : "",
+        open : false,
+      }
+    case Actions.SET_NEGATIVE_OPTION_CHECKED:
+      return {
+        ...state,
+        negativeOptionChecked : action.payload,
+        showingMessage : true,
+      }
+    default:
+      return state;
+  }
+}
+
 
 const FloatingMessageVerifyConfirmation = () => {
-  const [selected, setSelected] = useState<HELPFUL_ACTIONS | "">("");
-  const [open, setOpen] = useState(true);
-  const [showingMessage, setShowingMessage] = useState(false);
-  const [ negativeOptionChecked, setNegativeOptionChecked ] = useState("");
+  const [ state, dispatch ] = useReducer(floatingMessageReducer,floatingMessageInitialState);
 
-  const showingNoOption = HELPFUL_ACTIONS.NO === selected && !showingMessage;
-  const showingAllOptionsFinally =
-    (selected === HELPFUL_ACTIONS.YES || selected === HELPFUL_ACTIONS.NO) &&
-    showingMessage;
+  const showingNoOption = HELPFUL_ACTIONS.NO === state.selected && !state.showingMessage;
+  const showingAllOptionsFinally = (state.selected === HELPFUL_ACTIONS.YES || 
+                                    state.selected === HELPFUL_ACTIONS.NO) &&
+                                    state.showingMessage;
 
-  const onYes = () => {
-    setSelected(HELPFUL_ACTIONS.YES);
-    setShowingMessage(true);
-  };
+  const emit = (type:Actions,payload?:any) => dispatch({type,payload});
 
-  const onNot = () => {
-    setSelected(HELPFUL_ACTIONS.NO);
-  };
-
-  const onSubmit = () => {
-    setOpen(false);
-  };
-
-  const titleOFConfirmation = () =>
+  const titleConfirmation = () =>
     ({
       [HELPFUL_ACTIONS.YES]: "How could it be better?",
       [HELPFUL_ACTIONS.NO]: "What went wrong?",
       "": "Was this helpful?",
-    }[selected]);
+    }[state.selected]);
 
-  const onCheckNegativeOption  = (name : string) => ({
+  const getCheckNegativeOption  = (name : string) => ({
     onChange : (e : string) => {
-      setNegativeOptionChecked(e);
-      setShowingMessage(true);
+      emit(Actions.SET_NEGATIVE_OPTION_CHECKED,e);
     },
     value : name,
-    checked : name === negativeOptionChecked
+    checked : name === state.negativeOptionChecked
   })
 
-  if (open)
+  if (state.open)
     return (
-      <FixedCard>
+      <FixedCard position="bottom-right">
         <FlexWrapperHeaderDetail>
-          <TetraText>{titleOFConfirmation()}</TetraText>
-          <VscClose
-            size={22}
-            onClick={() => setOpen(false)}
-            className={cssCloseConfirmationIcon()}
-          />
+          <TetraText>{titleConfirmation()}</TetraText>
+          <CloseActionIcon onClick={() => emit(Actions.ON_CLOSE)} />
         </FlexWrapperHeaderDetail>
-        {selected && (
+        {state.selected && (
           <div>
-            {showingMessage && (
+            {state.showingMessage && (
               <BaseText size="small">
                 Keep in mind that this form is for feedback only and you won’t
                 receive a reply. Please don’t include personal information about
@@ -131,34 +166,34 @@ const FloatingMessageVerifyConfirmation = () => {
                 />
               </BaseText>
             )}
-            {(showingNoOption) && (
+            {showingNoOption && (
               <div>
                 <Spacing>
                   <BaseRadioButton
                     label="The information is confusing"
                     name="negativeOption"
-                    {...onCheckNegativeOption("a")}
+                    {...getCheckNegativeOption("a")}
                   />
                 </Spacing>
                 <Spacing>
                   <BaseRadioButton
                     label="The solution doesn't work"
                     name="negativeOption"
-                    {...onCheckNegativeOption("b")}
+                    {...getCheckNegativeOption("b")}
                   />
                 </Spacing>
                 <Spacing>
                   <BaseRadioButton
                     label="I don't like the product or policy"
                     name="negativeOption"
-                    {...onCheckNegativeOption("c")}
+                    {...getCheckNegativeOption("c")}
                   />
                 </Spacing>
                 <Spacing>
                   <BaseRadioButton
                     label="Other"
                     name="negativeOption"
-                    {...onCheckNegativeOption("d")}
+                    {...getCheckNegativeOption("d")}
                   />
                 </Spacing>
               </div>
@@ -166,16 +201,16 @@ const FloatingMessageVerifyConfirmation = () => {
           </div>
         )}
         {showingAllOptionsFinally && (
-          <BaseButton size="base" autoWidth onClick={onSubmit}>
+          <BaseButton size="base" autoWidth onClick={() => emit(Actions.SUBMIT)}>
             Submit
           </BaseButton>
         )}
-        {!selected && (
+        {!state.selected && (
           <FlexWrapperOptions>
-            <BaseButton size="base" icon={RiEmotionHappyLine} onClick={onYes}>
+            <BaseButton size="base" icon={RiEmotionHappyLine} onClick={() => emit(Actions.OPTION_YES)}>
               Yes
             </BaseButton>
-            <BaseButton size="base" icon={CgSmileSad} onClick={onNot}>
+            <BaseButton size="base" icon={CgSmileSad} onClick={() => emit(Actions.OPTION_NOT)}>
               No
             </BaseButton>
           </FlexWrapperOptions>
@@ -183,7 +218,10 @@ const FloatingMessageVerifyConfirmation = () => {
       </FixedCard>
     );
 
-  return null;
+  return state.selected ? (
+    <FloatingMessage title="Tanks" message="Your feedback helps improve this answer for everyone." />
+  ) : null;
+
 };
 
 export default FloatingMessageVerifyConfirmation;

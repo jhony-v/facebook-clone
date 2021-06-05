@@ -7,6 +7,7 @@ const circleButton = css({
   size: "40px",
   padding: "0px",
   alignment: "center",
+  flex : "none",
 });
 
 interface BaseButtonAvatarActionProps

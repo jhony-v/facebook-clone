@@ -17,6 +17,8 @@ export const toggleTheme = atom(null, (get, set) => {
 });
 
 
+export const isDarkThemeAtom = atom(get => get(themeAtom) !== DEFAULT_THEME);
+
 themeAtom.onMount = setAtom => {
   const storageTheme = localStorage.getItem(THEME);
   if(storageTheme) {

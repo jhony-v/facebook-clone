@@ -1,10 +1,32 @@
-import React from "react";
+import { useAtomValue } from "jotai/utils";
+import React, { RefObject } from "react";
 import { VscClose } from "react-icons/vsc";
-import { styled } from "../lib/stitches.config";
+import { css, styled } from "../lib/stitches.config";
 import BaseButtonAvatarAction from "./BaseButtonAvatarAction";
+import { isDarkThemeAtom } from "../stores/theme.store"
+
+
+const cssModal = {
+  dark : {
+    backdrop :  css({
+      backgroundColor: "rgba(0,0,0,.4)",
+    }),
+    content: css({
+      boxShadow: "0 5px 10px rgba(0,0,0,.3),0 10px 20px rgba(0,0,0,.4)",
+    })
+  },
+  light : {
+    backdrop :  css({
+      backgroundColor: "rgba(255,255,255,.8)",
+    }),
+    content: css({
+      boxShadow: "0 8px 30px rgba(100,100,100,.3),0 2px 6px rgba(0,0,0,.03)",
+    })
+  }
+
+}
 
 const Backdrop = styled("div", {
-  backgroundColor: "rgba(0,0,0,.4)",
   position: "fixed",
   inset: 0,
   display: "flex",
@@ -14,7 +36,6 @@ const Backdrop = styled("div", {
 
 const ContentLayoutBody = styled("div", {
   background: "$bg",
-  boxShadow: "0 5px 10px rgba(0,0,0,.3),0 10px 20px rgba(0,0,0,.4)",
   borderRadius : 10,
   variants : {
       size : {
@@ -56,7 +77,8 @@ const FlexibleLayout =  styled("div",{
 
 type BaseModalProps = {
   children: React.ReactNode;
-  size ?: keyof typeof ContentLayoutBody["variants"]["size"]
+  size ?: keyof typeof ContentLayoutBody["variants"]["size"];
+  refModal ?: RefObject<any>;
 };
 
 type BaseModalHeaderProps = BaseModalProps & {
@@ -66,10 +88,19 @@ type BaseModalHeaderProps = BaseModalProps & {
 type BaseModalMainProps = BaseModalProps;
 
 
-const BaseModal = ({ children,size }: BaseModalProps) => {
+const BaseModal = ({ children,size, refModal }: BaseModalProps) => {
+  const isDarkTheme = useAtomValue(isDarkThemeAtom);
+  const backdropClassname  = isDarkTheme ? cssModal.dark.backdrop : cssModal.light.backdrop;
+  const contentClassname = isDarkTheme ? cssModal.dark.content : cssModal.light.content;
   return (
-    <Backdrop>
-      <ContentLayoutBody size={size}>{children}</ContentLayoutBody>
+    <Backdrop className={backdropClassname()}>
+      <ContentLayoutBody 
+        ref={refModal} 
+        size={size}
+        className={contentClassname()}
+      > 
+        {children}
+      </ContentLayoutBody>
     </Backdrop>
   );
 };

@@ -37,7 +37,7 @@
 - [ ] [Jobs](https://facebook-clone-dev.vercel.app/jobs)
 - [ ] [Create new page](https://facebook-clone-dev.vercel.app/create-page)
 - [ ] [Recent activities](https://facebook-clone-dev.vercel.app/recent-activities)
-- [x] [Help](https://facebook-clone-dev.vercel.app/help)
+- [x] [Help](https://facebook-help.surge.sh)
 - [ ] [Campus](https://facebook-clone-dev.vercel.app/campus)
 - [ ] [Blooddonations](https://facebook-clone-dev.vercel.app/blooddonations)
 - [ ] [Friends](https://facebook-clone-dev.vercel.app/friends)

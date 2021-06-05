@@ -11,6 +11,7 @@ type Topic = {
   name: string;
   icon: string;
   description: string;
+  id : string;
 };
 
 type ListOfHelpTopicListProps = {
@@ -21,7 +22,7 @@ const ListOfHelpTopicList = (props: ListOfHelpTopicListProps) => {
   return (
     <TopicListCardGrid>
       {props.data.map((topic, index) => (
-        <TopicCard topic={topic} key={index} />
+        <TopicCard topic={topic} key={index} to={topic.id} />
       ))}
     </TopicListCardGrid>
   );

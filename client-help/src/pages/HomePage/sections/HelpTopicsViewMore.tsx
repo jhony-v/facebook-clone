@@ -7,7 +7,8 @@ const HelpTopicsViewMore = () => {
         topic={{
           name: "Visit Business Help Center",
           description: "Learn more about promoting your business on Facebook",
-          icon : "/images/help/business.png"
+          icon : "/images/help/business.png",
+          id : "a20"
         }}
         direction="row"
       />

@@ -2,7 +2,11 @@ import AppContainer from './ui/layouts/AppContainer';
 import HeaderNavigation from './components/HeaderNavigation';
 import HelpMainContentPage from './pages/HelpMainContentPage/HelpMainContentPage';
 import HomePage from './pages/HomePage/HomePage';
-import { Router } from '@reach/router';
+import { Router, globalHistory } from '@reach/router';
+
+globalHistory.listen(() => {
+  document.documentElement.scrollTop = 0;
+})
 
 function App() {
   return (

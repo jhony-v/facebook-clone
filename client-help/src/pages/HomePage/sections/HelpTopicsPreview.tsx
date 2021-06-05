@@ -20,6 +20,10 @@ const InputWrapper = styled("div", {
   width: "$full",
   display: "flex",
   boxSizing: "border-box",
+  color : "$text",
+  "& input" : {
+    color : "inherit"
+  }
 });
 
 const cssInputEngine = css({

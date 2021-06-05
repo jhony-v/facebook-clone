@@ -1,8 +1,9 @@
 import { useAtom } from "jotai";
 import { useAtomValue } from "jotai/utils";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { FiSearch } from "react-icons/fi";
 import { useClickOutside } from "../../../../hooks/useClickOutside";
+import useToggle from "../../../../hooks/useToggle";
 import { styled } from "../../../../lib/stitches.config";
 import { filterDetailInformationIdAtom, textFilterInformationAtom } from "../../../../stores/searchDetailInformation";
 import BaseButtonAvatarAction from "../../../../ui/BaseButtonAvatarAction";
@@ -50,7 +51,7 @@ const OptionResultItem = ({ text } : {text: string}) => (
 
 
 const HelpCenterButtonSearchTopics = () => {
-  const [open, setOpen] = useState<boolean>(false);
+  const { active : open, onToggle } = useToggle();
   const [ textFilter , setTextFilter ] = useAtom(textFilterInformationAtom);
   const filterDetailInformation = useAtomValue(filterDetailInformationIdAtom);
   const refSearchModal = useRef<HTMLDivElement>(null);
@@ -65,7 +66,7 @@ const HelpCenterButtonSearchTopics = () => {
   }
 
   useClickOutside(refSearchModal,() => {
-    setOpen(false);
+    onToggle();
   })
  
   return (
@@ -73,11 +74,11 @@ const HelpCenterButtonSearchTopics = () => {
       <BaseButtonAvatarAction
         variant="secondary"
         icon={FiSearch}
-        onClick={() => setOpen(true)}
+        onClick={onToggle}
       />
       {open && (
         <BaseModal size="medium" refModal={refSearchModal}>
-          <BaseModal.Header onClose={() => setOpen(false)}>
+          <BaseModal.Header onClose={onToggle}>
             <InputEngineWrapper>
               <FiSearch size={20} />
               <input autoFocus placeholder="Search help articles..." onKeyUp={handleOnKeyUpArticles} />

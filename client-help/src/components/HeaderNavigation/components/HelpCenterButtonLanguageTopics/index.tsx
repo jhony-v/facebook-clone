@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { useClickOutside } from "../../../../hooks/useClickOutside";
 import useToggle from "../../../../hooks/useToggle";
@@ -73,35 +74,44 @@ const HelpCenterButtonLanguageTopics = () => {
       <BaseButton variant="secondary" onClick={onOpen}>
         {normalizeTextButtonLanguage} 
       </BaseButton>
-      {open && (
-        <BaseModal refModal={refModal}>
-          <BaseModal.Header onClose={onCancel}>
-            <ModalHeaderTitle>
-              <BaseText weight size="large">
-                Select Your Language
-              </BaseText>
-            </ModalHeaderTitle>
-          </BaseModal.Header>
-          <BaseModal.Body>
-            <ModalBodySpacing>
-              <InputEngineLanguages onItemLanguageSelected={onSelectLanguage} />
-              <ModalFooterOptions>
-                <BaseButton 
-                  variant="secondary" 
-                  onClick={onCancel}>
-                  Cancel
-                </BaseButton>
-                <BaseButton 
-                  disabled={!isSelected} 
-                  variant="primary"
-                  onClick={onSaveChanges}>
-                  Save changes
-                </BaseButton>
-              </ModalFooterOptions>
-            </ModalBodySpacing>
-          </BaseModal.Body>
-        </BaseModal>
-      )}
+      <AnimatePresence>
+        {open && (
+          <motion.div 
+            initial={{opacity:0}} 
+            animate={{opacity:1}} 
+            exit={{opacity:0}} 
+            transition={{duration:.1}}
+          >
+            <BaseModal refModal={refModal}>
+              <BaseModal.Header onClose={onCancel}>
+                <ModalHeaderTitle>
+                  <BaseText weight size="large">
+                    Select Your Language
+                  </BaseText>
+                </ModalHeaderTitle>
+              </BaseModal.Header>
+              <BaseModal.Body>
+                <ModalBodySpacing>
+                  <InputEngineLanguages onItemLanguageSelected={onSelectLanguage} />
+                  <ModalFooterOptions>
+                    <BaseButton 
+                      variant="secondary" 
+                      onClick={onCancel}>
+                      Cancel
+                    </BaseButton>
+                    <BaseButton 
+                      disabled={!isSelected} 
+                      variant="primary"
+                      onClick={onSaveChanges}>
+                      Save changes
+                    </BaseButton>
+                  </ModalFooterOptions>
+                </ModalBodySpacing>
+              </BaseModal.Body>
+            </BaseModal>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

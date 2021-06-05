@@ -30,10 +30,22 @@ const PressableButtonWrapper = styled(PressableOverlay, {
       true : {
         width : "100%"
       }
+    },
+    size : {
+      small : {
+        height : "25px",
+      },
+      base : {
+        height : "40px",
+      },
+      medium : {
+        height : "46px",
+      }
     }
   },
   defaultVariants : {
-    variant : "base"
+    variant : "base",
+    size : "base"
   }
 });
 const iconCSS = css({
@@ -43,7 +55,7 @@ const iconCSS = css({
 
 type BaseButtonProps = {
   variant?: keyof typeof PressableButtonWrapper["variants"]["variant"];
-  size?: keyof typeof PressableButtonWrapper["variants"]["spacing"];
+  size?: keyof typeof PressableButtonWrapper["variants"]["size"];
   className?: string;
   children ?: React.ReactNode;
   icon?: React.JSXElementConstructor<{ size: number }>;
@@ -77,7 +89,7 @@ const BaseButton = (props : BaseButtonProps) => {
 };
 
 BaseButton.defaultProps = {
-  children : null
+  children : null,
 }
 
 export default BaseButton;

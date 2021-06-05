@@ -19,11 +19,12 @@ const WrapperOptions = styled("div", {
   display: "flex",
   height: "100%",
   variants : {
-    grid  : {
+    options  : {
       true : {
+        alignItems : "center",
         " & > * + *" : {
           marginLeft : "10px",
-        }
+        },
       }
     }
   }
@@ -52,7 +53,7 @@ const HeaderNavigation = () => {
       <WrapperOptions>
         <ListHelpCenterTopNavTab />
       </WrapperOptions>
-      <WrapperOptions grid>
+      <WrapperOptions options>
         <HelpCenterButtonSearchTopics/>
         <BaseButtonAvatarAction variant="secondary" icon={AiOutlineInbox} />
         <BaseButtonAvatarAction

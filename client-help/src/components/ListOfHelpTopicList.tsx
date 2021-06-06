@@ -5,6 +5,9 @@ const TopicListCardGrid = styled("div", {
   display: "grid",
   gridTemplateColumns: "repeat(3,1fr)",
   gap: "20px",
+  "@max3" : {
+    gridTemplateColumns: "repeat(2,1fr)",
+  }
 });
 
 type Topic = {

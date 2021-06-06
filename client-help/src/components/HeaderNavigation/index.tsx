@@ -46,14 +46,28 @@ const HeaderNavigation = () => {
     <LayoutHeaderNavigation>
       <FacebookTitleWrapper>
         <img src="/favicon.ico" alt="facebook help center logo" width="35" />
-        <TetraText onClick={() => (window.location.href = "/")}>
-          Help Center
+        <TetraText 
+          css={{
+            "@max3" : {
+              display : "none"
+            }
+          }} 
+          onClick={() => (window.location.href = "/")}
+        >
+            Help Center
         </TetraText>
       </FacebookTitleWrapper>
       <WrapperOptions>
         <ListHelpCenterTopNavTab />
       </WrapperOptions>
-      <WrapperOptions options>
+      <WrapperOptions 
+        css={{
+          "@max3" : {
+            display : "none"
+          }
+        }}  
+        options
+      >
         <HelpCenterButtonSearchTopics/>
         <BaseButtonAvatarAction variant="secondary" icon={AiOutlineInbox} />
         <BaseButtonAvatarAction

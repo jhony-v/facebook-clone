@@ -38,6 +38,9 @@ const Card = styled("div", {
       col: {
         flexDirection: "column",
         padding: "50px 30px",
+        "@max3" : {
+          padding : 15,
+        },
         [`& ${WrapperAlignmentImage}`]: {
           marginBottom: "20px",
           display: "flex",
@@ -47,7 +50,13 @@ const Card = styled("div", {
       row: {
         flexDirection: "row",
         alignItems : "center",
-        padding: "30px",
+        padding: 30,
+        "@max3" : {
+          padding : 15,
+        },
+        "@max2" : {
+          flexDirection : "column",
+        },
         [`& ${WrapperAlignmentText}`] : {
           marginLeft : "10px"
         }

@@ -1,13 +1,27 @@
 import { navigate } from "@reach/router";
 import { useAtom } from "jotai";
-import { Fragment } from "react";
+import { styled } from "../../../lib/stitches.config";
 import { tabsAtom } from "../../../stores/mainNavigation.store";
 import HelpCenterTopNavTab from "./HelpCenterTopNavTab";
+
+
+const Wrapper = styled("div",{
+  display : "flex",
+  "@max3" : {
+    display : "block",
+    background : "$bg100",
+    height : "100%",
+    position : "fixed",
+    left : 0,
+    width : "100%",
+    overflowY : "auto",
+  }
+})
 
 const ListHelpCenterTopNavTab = () => {
   const [state] = useAtom(tabsAtom);
   return (
-    <Fragment>
+    <Wrapper>
       {state.map((item) => (
         <HelpCenterTopNavTab
           key={item.id}
@@ -15,7 +29,7 @@ const ListHelpCenterTopNavTab = () => {
           onSelectOption={(e) => navigate(e.option.id)}
         />
       ))}
-    </Fragment>
+    </Wrapper>
   );
 };
 

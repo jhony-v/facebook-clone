@@ -6,6 +6,7 @@ const PressableOverlay = styled("div", {
   alignItems: "center",
   transition: "backgroundColor .3s",
   color: "$text",
+  boxSizing : "border-box",
   "@min2" : {
     cursor: "pointer",
   },

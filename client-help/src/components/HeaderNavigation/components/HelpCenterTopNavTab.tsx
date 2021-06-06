@@ -13,18 +13,19 @@ const Wrapper = styled("div", {
   position: "relative",
   "@max3" : {
     padding : 10,
+    boxSizing : "border-box",
     flexDirection : "column"
   }
 });
 
 const WrapperSelectMenuOptions = styled("div", {
   background: "$bg100",
-  padding: "5px",
   boxSizing: "border-box",
   boxShadow: "0 10px 20px rgba(0,0,0,.2)",
-  borderRadius: "10px",
-  width: "300px",
+  borderRadius: 10,
+  padding: 5,
   "@min3" : {
+    width: 300,
     left: 0,
     zIndex: 50,
     position: "absolute",

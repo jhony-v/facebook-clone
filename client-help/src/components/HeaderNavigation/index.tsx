@@ -6,9 +6,10 @@ import { AiOutlineInbox } from "react-icons/ai";
 import { HiOutlineSun } from "react-icons/hi";
 import { useUpdateAtom } from "jotai/utils";
 import BaseButtonAvatarAction from "../../ui/BaseButtonAvatarAction";
-import ListHelpCenterTopNavTab from "./components/ListHelpCenterTopNavTab";
 import HelpCenterButtonSearchTopics from "./components/HelpCenterButtonSearchTopics";
 import HelpCenterButtonLanguageTopics from "./components/HelpCenterButtonLanguageTopics";
+import HelpCenterTopNavTabTopics from "./components/HelpCenterTopNavTabTopics";
+import Facebook from "../../ui/Facebook";
 
 const LayoutHeaderNavigation = styled(AppHeaderContainer, {
   padding: "5px 15px",
@@ -18,6 +19,7 @@ const LayoutHeaderNavigation = styled(AppHeaderContainer, {
 const WrapperOptions = styled("div", {
   display: "flex",
   height: "100%",
+  alignItems : "center",
   variants : {
     options  : {
       true : {
@@ -30,19 +32,6 @@ const WrapperOptions = styled("div", {
   }
 });
 
-const WrapperNavigationListHelpNavOptions = styled("div",{
-  display : "flex",
-  "@max3" : {
-    visibility : "hidden",
-    display : "block",
-    background : "$bg100",
-    height : "100%",
-    position : "fixed",
-    left : 0,
-    width : "100%",
-    overflowY : "auto",
-  }
-})
 
 const FacebookTitleWrapper = styled("div", {
   display: "flex",
@@ -61,7 +50,7 @@ const HeaderNavigation = () => {
   return (
     <LayoutHeaderNavigation>
       <FacebookTitleWrapper>
-        <img src="/favicon.ico" alt="facebook help center logo" width="35" />
+        <Facebook/>
         <TetraText 
           css={{
             "@max3" : {
@@ -74,9 +63,7 @@ const HeaderNavigation = () => {
         </TetraText>
       </FacebookTitleWrapper>
       <WrapperOptions>
-        <WrapperNavigationListHelpNavOptions>
-          <ListHelpCenterTopNavTab  />
-        </WrapperNavigationListHelpNavOptions>
+          <HelpCenterTopNavTabTopics/>
       </WrapperOptions>
       <WrapperOptions options >
         <HelpCenterButtonSearchTopics/>

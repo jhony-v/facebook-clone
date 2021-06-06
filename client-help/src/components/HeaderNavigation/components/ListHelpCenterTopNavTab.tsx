@@ -10,6 +10,7 @@ const Wrapper = styled("div",{
   "@max3" : {
     display : "block",
     background : "$bg100",
+    width : "100%",
   }
 })
 

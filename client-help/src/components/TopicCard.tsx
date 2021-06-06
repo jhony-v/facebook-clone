@@ -29,9 +29,11 @@ const Card = styled("div", {
   borderRadius: 10,
   backgroundColor: "$text200",
   display: "flex",
-  cursor: "pointer",
   "&:hover" : {
     backgroundColor : "$text300"
+  },
+  "@min2" : {
+    cursor: "pointer",
   },
   variants: {
     direction: {

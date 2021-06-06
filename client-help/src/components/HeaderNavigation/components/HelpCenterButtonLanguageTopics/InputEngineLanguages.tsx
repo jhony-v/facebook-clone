@@ -11,25 +11,33 @@ const cssInputEngine = css({
   color: "$text",
   width: "100%",
   boxSizing: "border-box",
-  marginBottom: 40,
   fontSize: "1em",
+  marginBottom : 20,
   "&:focus": {
     borderColor: "$text",
     borderWidth: 2,
   },
+  "@min2" : {
+    marginBottom: 40,
+  }
 });
 
 const cssEngine = {
-    contentItems : css({
-        position : "absolute",
-        width : "100%",
-        top : 60,
-        background : "$bg",
-        boxShadow : "0 10px 20px rgba(0,0,0,.1)"
-    }),
-    container : css({
-        position : "relative"
-    })
+  contentItems : css({
+    width : "100%",
+    "@min2" : {
+      background : "$bg",
+      boxShadow : "0 10px 20px rgba(0,0,0,.1)",
+      position : "absolute",
+      top : 60,
+    },
+    "@max2" : {
+      marginBottom : 10,
+    }
+  }),
+  container : css({
+    position : "relative"
+  })
 }
 
 

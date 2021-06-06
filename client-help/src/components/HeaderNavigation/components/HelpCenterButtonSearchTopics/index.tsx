@@ -17,14 +17,17 @@ const InputEngineWrapper = styled("div", {
   borderRadius: 10,
   flex: 1,
   marginRight: 20,
-  padding: 15,
   display: "flex",
   alignItems: "center",
+  padding : 10,
   "& input": {
     marginLeft: 10,
     width : "100%",
     color : "inherit"
   },
+  "@min2" : {
+    padding: 15,
+  }
 });
 
 
@@ -34,11 +37,13 @@ const PressableOverlayArticleItem = styled(PressableOverlay, {
 });
 
 const ListOfResultArticlesWrapper = styled("div",{
-  maxHeight : "400px",
   overflowY : "auto",
   px : 10,
   my : 10,
-  marginRight : 60
+  "@min2" : {
+    marginRight : 60,
+    maxHeight : "400px",
+  }
 })
 
 

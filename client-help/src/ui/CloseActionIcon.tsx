@@ -3,7 +3,9 @@ import { css } from "../lib/stitches.config";
 
 const cssCloseIcon = css({
   color: "$text500",
-  cursor: "pointer",
+  "@min2" : {
+    cursor: "pointer",
+  }
 });
 
 type CloseActionIconProps = {

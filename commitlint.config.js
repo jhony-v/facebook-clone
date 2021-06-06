@@ -4,11 +4,14 @@
 module.exports = {
   extends: "@commitlint/config-conventional",
   rules: {
+    "subject-empty" : [
+      2,
+      "never"
+    ],
     "scope-enum": [
       2,
       "always",
       [
-        "global",
         "client-app",
         "client-help",
         "client-live-audio",
@@ -16,7 +19,5 @@ module.exports = {
         "server-app",
       ],
     ],
-    "body-empty": [2, "never"],
-    "header-case": "sentence-case",
   },
 };

@@ -4,9 +4,8 @@
   "description": "UI Facebook clone of facebook",
   "main": "index.js",
   "scripts": {
-    "dev:client": "",
-    "dev:server": "",
-    "dev": ""
+    "prepare": "husky install",
+    "postinstall": "husky install"
   },
   "author": {
     "url": "https://github.com/jhony-24",

@@ -27,6 +27,9 @@
   },
   "homepage": "https://github.com/jhony-24/facebook-clone#readme",
   "dependencies": {
-    "commander": "^7.2.0"
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "commander": "^7.2.0",
+    "husky": "^6.0.0"
   }
 }

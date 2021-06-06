@@ -37,7 +37,10 @@ export const { styled, css, theme } = createCss({
     max2: '(max-width: 640px)',
     max3: '(max-width: 768px)',
     max4: '(max-width: 1024px)',
-    
+    min1: '(min-width: 420px)',
+    min2: '(min-width: 640px)',
+    min3: '(min-width: 768px)',
+    min4: '(min-width: 1024px)',
   },
   utils: {
     mx: (_config) => (value) => ({

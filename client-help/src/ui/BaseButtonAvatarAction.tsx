@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { FC } from "react";
 import { css } from "../lib/stitches.config";
 import BaseButton from "./BaseButton";
@@ -15,10 +16,12 @@ interface BaseButtonAvatarActionProps
 
 const BaseButtonAvatarAction: FC<BaseButtonAvatarActionProps> = ({
   children,
+  className,
   ...restProps
 }) => {
+  const classNamesButton = clsx(circleButton().toString(),className?.toString());
   return (
-    <BaseButton {...restProps} className={circleButton()}>
+    <BaseButton {...restProps} className={classNamesButton}>
       {children}
     </BaseButton>
   );

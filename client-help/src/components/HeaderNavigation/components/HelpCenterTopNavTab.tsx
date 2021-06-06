@@ -18,23 +18,20 @@ const Wrapper = styled("div", {
 });
 
 const WrapperSelectMenuOptions = styled("div", {
-  position: "absolute",
-  left: 0,
   background: "$bg100",
   padding: "5px",
   boxSizing: "border-box",
-  width: "300px",
-  zIndex: 50,
-  top: "calc($from-header - 5px)",
   boxShadow: "0 10px 20px rgba(0,0,0,.2)",
   borderRadius: "10px",
+  width: "300px",
+  "@min3" : {
+    left: 0,
+    zIndex: 50,
+    position: "absolute",
+    top: "calc($from-header - 5px)",
+  }
 });
 
-const MainPressableOverlay = styled(PressableOverlay,{
-  "@max3" : {
-    width : "100%"
-  }
-})
 
 type HelpCenterTopNavTabProps = {
   item: HeaderTabsOptionDataItemType;
@@ -72,9 +69,18 @@ const HelpCenterTopNavTab: FC<HelpCenterTopNavTabProps> = ({
 
   return (
     <Wrapper>
-      <MainPressableOverlay hoverable hovered={isOpen} {...getToggleButtonProps()}>
+      <PressableOverlay 
+        hoverable
+        hovered={isOpen} 
+        {...getToggleButtonProps()} 
+        css={{
+          "@max3" : {
+            width : "100%"
+          }
+        }}
+      >
         <TetraText color="secondary">{text}</TetraText>
-      </MainPressableOverlay>
+      </PressableOverlay>
       <div {...getMenuProps()}>
         {isOpen && (
           <WrapperSelectMenuOptions>

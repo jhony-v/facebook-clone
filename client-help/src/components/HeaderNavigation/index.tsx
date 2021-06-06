@@ -30,6 +30,20 @@ const WrapperOptions = styled("div", {
   }
 });
 
+const WrapperNavigationListHelpNavOptions = styled("div",{
+  display : "flex",
+  "@max3" : {
+    visibility : "hidden",
+    display : "block",
+    background : "$bg100",
+    height : "100%",
+    position : "fixed",
+    left : 0,
+    width : "100%",
+    overflowY : "auto",
+  }
+})
+
 const FacebookTitleWrapper = styled("div", {
   display: "flex",
   alignItems: "center",
@@ -38,6 +52,8 @@ const FacebookTitleWrapper = styled("div", {
     marginLeft : "10px"
   }
 });
+
+
 
 const HeaderNavigation = () => {
   const onToggleTheme = useUpdateAtom(toggleTheme);
@@ -58,16 +74,11 @@ const HeaderNavigation = () => {
         </TetraText>
       </FacebookTitleWrapper>
       <WrapperOptions>
-        <ListHelpCenterTopNavTab />
+        <WrapperNavigationListHelpNavOptions>
+          <ListHelpCenterTopNavTab  />
+        </WrapperNavigationListHelpNavOptions>
       </WrapperOptions>
-      <WrapperOptions 
-        css={{
-          "@max3" : {
-            display : "none"
-          }
-        }}  
-        options
-      >
+      <WrapperOptions options >
         <HelpCenterButtonSearchTopics/>
         <BaseButtonAvatarAction variant="secondary" icon={AiOutlineInbox} />
         <BaseButtonAvatarAction

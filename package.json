@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "description": "UI Facebook clone of facebook",
   "main": "index.js",
+  "private" : true,
+  "workspaces" : [
+    "shared/*",
+    "client-app",
+    "client-help",
+    "client-live-audio",
+    "client-messenger",
+    "service-app"
+  ],
   "scripts": {
     "prepare": "husky install",
     "postinstall": "husky install"

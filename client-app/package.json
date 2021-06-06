@@ -19,16 +19,6 @@
       "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
       "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
    },
-   "husky": {
-      "hooks": {
-         "pre-commit": "lint-staged"
-      }
-   },
-   "lint-staged": {
-      "./**/*.{ts,tsx}": [
-         "yarn run lint:fix"
-      ]
-   },
    "repository": {
       "url": "https://github.com/jhony-24/facebook-clone"
    },
@@ -107,9 +97,7 @@
       "eslint-plugin-react": "^7.22.0",
       "eslint-plugin-react-hooks": "^4.2.0",
       "faker": "^5.1.0",
-      "husky": "^4.3.6",
       "jest": "^26.6.3",
-      "lint-staged": "^10.5.3",
       "prettier": "^2.2.1",
       "react-is": "^17.0.1",
       "ts-jest": "^26.4.4",

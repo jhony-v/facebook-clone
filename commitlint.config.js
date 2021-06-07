@@ -4,9 +4,9 @@
 module.exports = {
   extends: "@commitlint/config-conventional",
   rules: {
-    "subject-empty" : [
+    "subject-min-length" : [
       2,
-      "never"
+      "always",
     ],
     "scope-enum": [
       2,
@@ -15,8 +15,14 @@ module.exports = {
         "client-app",
         "client-help",
         "client-live-audio",
+        "client-auth",
+        "client-settings",
+        "client-streaming",
+        "client-gaming",
         "client-messenger",
-        "server-app",
+        "client-messenger-kids",
+        "service-app",
+        "shared",
       ],
     ],
   },

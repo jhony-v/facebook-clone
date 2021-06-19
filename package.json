@@ -3,17 +3,19 @@
   "version": "1.0.0",
   "description": "UI Facebook clone of facebook",
   "main": "index.js",
-  "private" : true,
-  "workspaces" :{ 
+  "private": true,
+  "workspaces": {
     "packages": [
-        "shared/*",
-        "client-app",
-        "client-help",
-        "client-live-audio",
-        "client-messenger",
-        "service-app"
+      "shared/*",
+      "client-app",
+      "client-help",
+      "client-live-audio",
+      "client-messenger",
+      "service-app"
     ],
-    "nohoist": [ "**" ]
+    "nohoist": [
+      "**"
+    ]
   },
   "scripts": {
     "prepare": "husky install",

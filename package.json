@@ -4,17 +4,10 @@
   "description": "UI Facebook clone of facebook",
   "main": "index.js",
   "private": true,
-  "workspaces": {
+  "workspaces" : {
     "packages": [
-      "shared/*",
-      "client-app",
-      "client-help",
-      "client-live-audio",
-      "client-messenger",
-      "service-app"
-    ],
-    "nohoist": [
-      "**"
+      "packages/*",
+      "apps/*"
     ]
   },
   "scripts": {
@@ -43,6 +36,7 @@
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "commander": "^7.2.0",
-    "husky": "^6.0.0"
+    "husky": "^6.0.0",
+    "lerna": "^4.0.0"
   }
 }

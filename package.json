@@ -4,19 +4,18 @@
   "description": "UI Facebook clone of facebook",
   "main": "index.js",
   "private": true,
-  "workspaces" : {
+  "workspaces": {
     "packages": [
       "packages/*",
       "apps/*"
+    ],
+    "nohoist": [
+      "**"
     ]
   },
   "scripts": {
     "prepare": "husky install",
     "postinstall": "husky install"
-  },
-  "author": {
-    "url": "https://github.com/jhony-24",
-    "name": "Jhony Vega"
   },
   "keywords": [
     "react",
@@ -32,7 +31,7 @@
     "url": "https://github.com/jhony-24/facebook-clone/issues"
   },
   "homepage": "https://github.com/jhony-24/facebook-clone#readme",
-  "dependencies": {
+  "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "commander": "^7.2.0",

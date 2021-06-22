@@ -1,5 +1,5 @@
 {
-  "name": "client-messenger",
+  "name": "@facebook-clone/client-messenger",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",

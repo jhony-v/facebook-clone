@@ -1,5 +1,5 @@
 {
-   "name": "fabook-clone",
+   "name": "@facebook-clone/client-app",
    "version": "0.1.0",
    "private": true,
    "description": "UI Facebook clone of facebook",

@@ -30,7 +30,7 @@ const WrapperRadioCircle = styled("div", {
   },
 });
 
-const CircleChecked = styled("div",{
+const CircleChecked = styled("div", {
     size : "14px",
     backgroundColor : "$primary",
     borderRadius : "100%"
@@ -45,7 +45,7 @@ type BaseRadioButtonProps = {
   checked ?: boolean;
 };
 const BaseRadioButton = (props: BaseRadioButtonProps) => {
-  const { checked, name, value, onChange,label} = props;  
+  const { checked, name, value, onChange, label} = props;  
   const onChecked = (event : React.ChangeEvent<HTMLInputElement>) => {
     onChange && onChange(event.target.value);
   }

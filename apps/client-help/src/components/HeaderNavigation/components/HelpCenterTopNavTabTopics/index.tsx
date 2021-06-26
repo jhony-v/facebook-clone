@@ -43,12 +43,12 @@ const MenuButtonMobileWrapper = styled("span", {
   },
 });
 
-const HeaderNavWrapperTitle = styled("div",{
+const HeaderNavWrapperTitle = styled("div", {
   display : "flex",
   alignItems : "center",
 })
 
-const HeaderNavWrapper = styled("div",{
+const HeaderNavWrapper = styled("div", {
   display : "flex",
   alignItems : "center",
   justifyContent : "space-between",

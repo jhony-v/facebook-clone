@@ -64,7 +64,7 @@ const HeaderLayoutBody = styled("header", {
 });
 const MainLayoutBody = styled("div", {});
 
-const FlexibleLayout =  styled("div",{
+const FlexibleLayout =  styled("div", {
     variants : {
         ml : {
             true : {
@@ -88,7 +88,7 @@ type BaseModalHeaderProps = BaseModalProps & {
 type BaseModalMainProps = BaseModalProps;
 
 
-const BaseModal = ({ children,size, refModal }: BaseModalProps) => {
+const BaseModal = ({ children, size, refModal }: BaseModalProps) => {
   const isDarkTheme = useAtomValue(isDarkThemeAtom);
   const backdropClassname  = isDarkTheme ? cssModal.dark.backdrop : cssModal.light.backdrop;
   const contentClassname = isDarkTheme ? cssModal.dark.content : cssModal.light.content;
@@ -105,7 +105,7 @@ const BaseModal = ({ children,size, refModal }: BaseModalProps) => {
   );
 };
 
-BaseModal.Header = ({ children,onClose, allowClose = true }: BaseModalHeaderProps) => {
+BaseModal.Header = ({ children, onClose, allowClose = true }: BaseModalHeaderProps) => {
   return <HeaderLayoutBody>
       {children}
       {allowClose && (

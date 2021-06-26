@@ -71,7 +71,7 @@ type BaseButtonProps = {
 
 
 const BaseButton = (props : BaseButtonProps) => {
-  const { children, variant,size, className, icon: IconComponent, onClick, autoWidth, disabled } = props;
+  const { children, variant, size, className, icon: IconComponent, onClick, autoWidth, disabled } = props;
 
   const iconClassnames = clsx((typeof IconComponent === "function" && children) && iconCSS().toString())
 

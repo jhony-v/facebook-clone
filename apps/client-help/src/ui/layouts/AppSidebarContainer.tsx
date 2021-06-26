@@ -15,7 +15,7 @@ const Wrapper = styled("nav", {
   boxSizing : "border-box",
 });
 
-const AppSidebarContainer : FC<React.ComponentPropsWithRef<typeof Wrapper>> = ({children,...restProps}) => {
+const AppSidebarContainer : FC<React.ComponentPropsWithRef<typeof Wrapper>> = ({children, ...restProps}) => {
     return (
         <Wrapper {...restProps}>{children}</Wrapper>
     )

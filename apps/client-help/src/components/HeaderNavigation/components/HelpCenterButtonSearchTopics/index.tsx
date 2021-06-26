@@ -36,7 +36,7 @@ const PressableOverlayArticleItem = styled(PressableOverlay, {
   alignItems: "center",
 });
 
-const ListOfResultArticlesWrapper = styled("div",{
+const ListOfResultArticlesWrapper = styled("div", {
   overflowY : "auto",
   px : 10,
   my : 10,
@@ -57,12 +57,12 @@ const OptionResultItem = ({ text } : {text: string}) => (
 
 const HelpCenterButtonSearchTopics = () => {
   const { active : open, onToggle } = useToggle();
-  const [ textFilter , setTextFilter ] = useAtom(textFilterInformationAtom);
+  const [ textFilter, setTextFilter ] = useAtom(textFilterInformationAtom);
   const filterDetailInformation = useAtomValue(filterDetailInformationIdAtom);
   const refSearchModal = useRef<HTMLDivElement>(null);
 
 
-  const getOnlySixItems = [...filterDetailInformation].slice(0,6);
+  const getOnlySixItems = [...filterDetailInformation].slice(0, 6);
   const isEmptyResultItems = getOnlySixItems.length === 0;
 
   const handleOnKeyUpArticles = (event : React.KeyboardEvent<HTMLInputElement>) => {
@@ -70,7 +70,7 @@ const HelpCenterButtonSearchTopics = () => {
     setTextFilter(target.value);
   }
 
-  useClickOutside(refSearchModal,onToggle);
+  useClickOutside(refSearchModal, onToggle);
  
   return (
     <div>

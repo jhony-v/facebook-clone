@@ -85,7 +85,7 @@ export const { styled, css, theme } = createCss({
   },
 });
 
-export const darkTheme = theme("dark",{
+export const darkTheme = theme("dark", {
   colors: {
     bg: "rgb(30,30,30)",
     bg100 : "rgb(40,40,40)",

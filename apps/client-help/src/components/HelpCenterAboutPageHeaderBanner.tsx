@@ -3,12 +3,12 @@ import ShareButton from "../ui/ShareButton"
 import TetraText from "../ui/TetraText"
 
 
-const WrapperContent = styled("div",{
+const WrapperContent = styled("div", {
     $$height : "300px",
     backgroundImage : "linear-gradient($primary,transparent 80%)"
 })
 
-const WrapperBanner = styled("div",{
+const WrapperBanner = styled("div", {
     borderBottomLeftRadius : "20px",
     borderBottomRightRadius : "20px",
     backgroundColor : "$primary",
@@ -22,18 +22,18 @@ const WrapperBanner = styled("div",{
     boxSizing : "border-box"
 })
 
-const WrapperFooterBanner = styled("div",{
+const WrapperFooterBanner = styled("div", {
     display : "flex",
     width : "100%",
     alignItems : "center",
     justifyContent : "space-between"
 })
 
-const TitleBanner = styled(TetraText,{
+const TitleBanner = styled(TetraText, {
     color : "$textWhite",
 })
 
-const ImageBanner = styled("img",{
+const ImageBanner = styled("img", {
     height : "160px",
     display : "block",
     margin : "auto",

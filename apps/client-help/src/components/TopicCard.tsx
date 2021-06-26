@@ -15,12 +15,12 @@ const WrapperAlignmentText = styled("div", {
   }
 });
 
-const Image = styled("img",{
+const Image = styled("img", {
   width : "80px",
   height : "80px"
 })
 
-const ArrowRight = styled(BsArrowRight,{
+const ArrowRight = styled(BsArrowRight, {
   marginLeft : "auto",
   color : "$text500"
 }) 
@@ -79,7 +79,7 @@ type TopicCardProps = {
   onClick ?: React.MouseEvent<HTMLDivElement>,
 };
 
-const TopicCard = ({ topic, direction, onClick,to  }: TopicCardProps) => {
+const TopicCard = ({ topic, direction, onClick, to  }: TopicCardProps) => {
   const isRow = direction === DIRECTION.ROW;
 
   const handlerOnClick = (ev : React.MouseEvent<HTMLDivElement>) => {
@@ -87,7 +87,6 @@ const TopicCard = ({ topic, direction, onClick,to  }: TopicCardProps) => {
       navigate(to);
     }
     else {
-      // @ts-ignore
      onClick && onClick(ev);
     }
   }

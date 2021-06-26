@@ -7,7 +7,7 @@ import FloatingCard from "./FloatingCard";
 import TetraText from "./TetraText";
 
 
-const FloatingCardMessage = styled(FloatingCard,{
+const FloatingCardMessage = styled(FloatingCard, {
   width : "300px",
 })
 
@@ -15,7 +15,7 @@ const Wrapper = styled("div", {
   display: "flex",
 });
 
-const WrapperContentMessage = styled("div",{
+const WrapperContentMessage = styled("div", {
   mx : "10px"
 })
 

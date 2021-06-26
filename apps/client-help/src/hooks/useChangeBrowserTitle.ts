@@ -7,5 +7,5 @@ export default function useChangeBrowserTitle() {
 
     useEffect(() => {
         document.title = `${state.text} | Facebook Help center`
-    },[state])
+    }, [state])
 }

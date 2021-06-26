@@ -46,7 +46,7 @@ export const currentNavigationContentAtom = atom<Partial<CurrentNavigationConten
 
 /* --------------------------------- actions -------------------------------- */
 
-export const selectCurrentTabInitialState = atom(null, (get, set,helpId: string) => {
+export const selectCurrentTabInitialState = atom(null, (get, set, helpId: string) => {
   const data = get(tabsAtom);
   const searchData = new Fuse(data, {
     useExtendedSearch: true,

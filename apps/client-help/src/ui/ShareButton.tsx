@@ -14,7 +14,7 @@ const shareButtonStyles = css({
     }
 })
 
-const ShareIcon = styled(IoMdShareAlt,{
+const ShareIcon = styled(IoMdShareAlt, {
     marginRight  :"6px",
 })
 

@@ -19,7 +19,7 @@ const BaseButtonAvatarAction: FC<BaseButtonAvatarActionProps> = ({
   className,
   ...restProps
 }) => {
-  const classNamesButton = clsx(circleButton().toString(),className?.toString());
+  const classNamesButton = clsx(circleButton().toString(), className?.toString());
   return (
     <BaseButton {...restProps} className={classNamesButton}>
       {children}

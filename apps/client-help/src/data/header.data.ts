@@ -14,9 +14,9 @@ import {
   AiOutlineBug,
   AiOutlineUnlock
 } from "react-icons/ai";
-import { FiPlayCircle, FiFlag,FiKey, FiUserX } from "react-icons/fi";
+import { FiPlayCircle, FiFlag, FiKey, FiUserX } from "react-icons/fi";
 import { IoIosInformationCircleOutline, IoMdDocument, IoMdPeople } from 'react-icons/io'
-import { MdPayment,MdStore }from "react-icons/md"
+import { MdPayment, MdStore }from "react-icons/md"
 import { BiUserCheck } from "react-icons/bi"
 import { RiErrorWarningLine, RiShieldUserLine } from "react-icons/ri"
 import { BsFillShieldLockFill } from "react-icons/bs";

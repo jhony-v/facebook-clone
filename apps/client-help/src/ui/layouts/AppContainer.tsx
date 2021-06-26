@@ -13,7 +13,7 @@ const Wrapper = styled("div", {
 
 const AppContainer: FC = ({ children }) => {
   const theme = useAtomValue(themeAtom);
-  const wrapperClassnames = clsx(theme.toString(),"app");
+  const wrapperClassnames = clsx(theme.toString(), "app");
   return <Wrapper className={wrapperClassnames}>{children}</Wrapper>;
 };
 

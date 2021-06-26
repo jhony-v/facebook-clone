@@ -84,7 +84,7 @@ const floatingMessageInitialState : FloatingMessageState = {
 }
 
 
-const floatingMessageReducer = (state : FloatingMessageState,action:FloatingMessageAction) : FloatingMessageState => {
+const floatingMessageReducer = (state : FloatingMessageState, action:FloatingMessageAction) : FloatingMessageState => {
   switch(action.type) {
     case Actions.OPTION_YES:
       return {
@@ -121,14 +121,14 @@ const floatingMessageReducer = (state : FloatingMessageState,action:FloatingMess
 
 
 const FloatingMessageVerifyConfirmation = () => {
-  const [ state, dispatch ] = useReducer(floatingMessageReducer,floatingMessageInitialState);
+  const [ state, dispatch ] = useReducer(floatingMessageReducer, floatingMessageInitialState);
 
   const showingNoOption = HELPFUL_ACTIONS.NO === state.selected && !state.showingMessage;
   const showingAllOptionsFinally = (state.selected === HELPFUL_ACTIONS.YES || 
                                     state.selected === HELPFUL_ACTIONS.NO) &&
                                     state.showingMessage;
 
-  const emit = (type:Actions,payload?:any) => dispatch({type,payload});
+  const emit = (type:Actions, payload?:any) => dispatch({type, payload});
 
   const titleConfirmation = () =>
     ({
@@ -139,7 +139,7 @@ const FloatingMessageVerifyConfirmation = () => {
 
   const getCheckNegativeOption  = (name : string) => ({
     onChange : (e : string) => {
-      emit(Actions.SET_NEGATIVE_OPTION_CHECKED,e);
+      emit(Actions.SET_NEGATIVE_OPTION_CHECKED, e);
     },
     value : name,
     checked : name === state.negativeOptionChecked

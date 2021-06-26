@@ -5,7 +5,7 @@ import { tabsAtom } from "../../../stores/mainNavigation.store";
 import HelpCenterTopNavTab from "./HelpCenterTopNavTab";
 
 
-const Wrapper = styled("div",{
+const Wrapper = styled("div", {
   display : "flex",
   "@max3" : {
     display : "block",

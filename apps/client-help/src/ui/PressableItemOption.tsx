@@ -15,7 +15,7 @@ const cssIcon = css({
 
 interface PressableItemOptionProps {
   pressableButton: React.ComponentProps<typeof PressableOverlay>;
-  icon ?: React.JSXElementConstructor<{size:number,className:string}> | string,
+  icon ?: React.JSXElementConstructor<{size:number, className:string}> | string,
   onClick ?: React.MouseEventHandler<HTMLDivElement>
 }
 

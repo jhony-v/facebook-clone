@@ -2,7 +2,7 @@ import { FC } from "react"
 import WrapperCenterContent from "../../../components/WrapperCenterContent";
 import { styled } from '../../../lib/stitches.config'
 
-const Spacing = styled("div",{
+const Spacing = styled("div", {
     my : "90px"
 })
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { styled } from "../lib/stitches.config";
 
-const LiItem = styled("li",{
+const LiItem = styled("li", {
     paddingBottom : "15px",
 })
 
-const OlItem = styled("ol",{
+const OlItem = styled("ol", {
     paddingBottom : "15px",
 })
 
@@ -16,10 +16,10 @@ type BulletedListProps = {
 
 const BulletedList = (props: BulletedListProps) => {
   const orderedListItems = props.ordered && props.ordered.map(
-    (item,index) => <LiItem key={index}>{item}</LiItem>
+    (item, index) => <LiItem key={index}>{item}</LiItem>
   );
   const unorderedListItems = props.unrodered && props.unrodered.map(
-    (item,index) => <OlItem key={index}>{item}</OlItem>
+    (item, index) => <OlItem key={index}>{item}</OlItem>
   );
   return (
     <ul>

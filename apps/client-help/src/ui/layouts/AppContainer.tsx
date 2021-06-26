@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { themeAtom } from "../../stores/theme.store";
 import { useAtomValue } from "jotai/utils";
 import clsx from "clsx";

@@ -1,6 +1,6 @@
 const Facebook = () => (
   <img
-    src="/favicon.ico"
+    src="/assets/icons/favicon.ico"
     alt="facebook help center logo"
     width="35"
     onClick={() => (window.location.href = "/")}

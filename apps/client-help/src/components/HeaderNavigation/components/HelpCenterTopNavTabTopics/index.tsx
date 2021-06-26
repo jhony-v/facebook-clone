@@ -28,7 +28,9 @@ const WrapperNavigationListHelpNavOptions = styled("div", {
         }
       },
       false : {
-        visibility : "hidden"
+        "@max3" : {
+          visibility : "hidden"
+        }
       }
     },
   }

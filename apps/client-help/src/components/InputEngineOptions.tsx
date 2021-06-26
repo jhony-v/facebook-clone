@@ -50,6 +50,7 @@ function InputEngineOptions<T>(props: InputEngineOptionsProps<T>) {
                         key: index,
                         item : dataItem,
                       })}
+                      key={index}
                       className={clsx(
                         classNames?.itemActive,
                       )}

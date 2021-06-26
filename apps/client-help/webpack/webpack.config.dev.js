@@ -12,7 +12,10 @@ const configuration = {
     port: 3000,
     hot: true,
     open: true,
+    compress: true,
     contentBase: path.resolve(__dirname, "../dist"),
+    index : "index.html",
+    historyApiFallback: true,
   },
   mode: "development",
   plugins: [

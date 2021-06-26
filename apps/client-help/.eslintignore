@@ -2,3 +2,6 @@ node_modules
 public
 package.json
 tsconfig.json
+dist
+build
+public

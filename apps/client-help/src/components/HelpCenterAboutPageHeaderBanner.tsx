@@ -29,8 +29,9 @@ const WrapperFooterBanner = styled("div", {
     justifyContent : "space-between"
 })
 
-const TitleBanner = styled(TetraText, {
+const TitleBanner = styled("h2", {
     color : "$textWhite",
+    fontSize : "1.6rem"
 })
 
 const ImageBanner = styled("img", {
@@ -50,7 +51,7 @@ const HelpCenterAboutPageHeaderBanner = (props : HelpCenterAboutPageHeaderBanner
             <WrapperBanner>
                 <ImageBanner src={props.bannerURL} alt="banner image" />
                 <WrapperFooterBanner>
-                    <TitleBanner size="medium">{props.pageTitle}</TitleBanner>
+                    <TitleBanner>{props.pageTitle}</TitleBanner>
                     <ShareButton/>
                 </WrapperFooterBanner>
             </WrapperBanner>

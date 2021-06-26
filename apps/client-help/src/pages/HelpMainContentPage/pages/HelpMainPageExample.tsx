@@ -1,16 +1,16 @@
-import { useAtomValue } from "jotai/utils";
-import HelpCenterAboutPageHeaderBanner from "../../../components/HelpCenterAboutPageHeaderBanner";
-import WrapperCenterContent from "../../../components/WrapperCenterContent";
-import Anchor from "../../../ui/Anchor";
-import BaseText from "../../../ui/BaseText";
-import BulletedList from "../../../ui/BulletedList";
-import DividerSection from "../../../ui/DividerSection";
-import Paragraph from "../../../ui/Paragraph";
-import { currentNavigationContentAtom } from "../../../stores/mainNavigation.store"
-import useChangeBrowserTitle from "../../../hooks/useChangeBrowserTitle";
-import FloatingMessageVerifyConfirmation from "../../../components/FloatingMessageVerifyConfirmation";
-import { relatedTopicsAtom } from "../../../stores/topics.store";
-import ListOfHelpTopicList from "../../../components/ListOfHelpTopicList";
+import { useAtomValue } from 'jotai/utils';
+import HelpCenterAboutPageHeaderBanner from '../../../components/HelpCenterAboutPageHeaderBanner';
+import WrapperCenterContent from '../../../components/WrapperCenterContent';
+import Anchor from '../../../ui/Anchor';
+import BaseText from '../../../ui/BaseText';
+import BulletedList from '../../../ui/BulletedList';
+import DividerSection from '../../../ui/DividerSection';
+import Paragraph from '../../../ui/Paragraph';
+import { currentNavigationContentAtom } from '../../../stores/mainNavigation.store';
+import useChangeBrowserTitle from '../../../hooks/useChangeBrowserTitle';
+import FloatingMessageVerifyConfirmation from '../../../components/FloatingMessageVerifyConfirmation';
+import { relatedTopicsAtom } from '../../../stores/topics.store';
+import ListOfHelpTopicList from '../../../components/ListOfHelpTopicList';
 
 const HelpMainPageExample = () => {
   const currentNavigationContent = useAtomValue(currentNavigationContentAtom);
@@ -19,7 +19,7 @@ const HelpMainPageExample = () => {
   return (
     <div>
       <HelpCenterAboutPageHeaderBanner
-        pageTitle={currentNavigationContent.text || ""}
+        pageTitle={currentNavigationContent.text || ''}
         bannerURL="https://static.xx.fbcdn.net/assets/?revision=169610231193999&name=desktop-your-home-page-banner&density=1"
       />
       <WrapperCenterContent>
@@ -33,29 +33,37 @@ const HelpMainPageExample = () => {
         </Paragraph>
         <BulletedList
           ordered={[
-            <BaseText>
-              You should send friend requests to people you know and trust. 
-              <Anchor to="/" underline text="Add a friend" /> by
-              searching for them or directly from
+            <BaseText key={1}>
+              You should send friend requests to people you know and trust.
+              <Anchor to="/" underline text="Add a friend" /> by searching for
+              them or directly from
               <Anchor to="/" underline text="People You May Know" />
             </BaseText>,
-            <BaseText>
-              You can <Anchor to="/" underline text="control who can friend and follow you" /> by editing your
-              privacy settings.
+            <BaseText key={2}>
+              You can{' '}
+              <Anchor
+                to="/"
+                underline
+                text="control who can friend and follow you"
+              />{' '}
+              by editing your privacy settings.
             </BaseText>,
-            <BaseText>
+            <BaseText key={3}>
               If you don’t want someone to see you on Facebook, learn how to
               <Anchor to="/" underline text="unfriend or block them." />
             </BaseText>,
-            <BaseText>You can have up to <Anchor to="/" underline text="5,000 friends" /> at a time.</BaseText>,
+            <BaseText key={4}>
+              You can have up to{' '}
+              <Anchor to="/" underline text="5,000 friends" /> at a time.
+            </BaseText>,
           ]}
         />
         <Paragraph>
           If you'd like to see updates from people you find interesting but
           don't know personally, like a journalist or celebrity,
           <Anchor to="/" underline text="try following them instead." />
-           If you're getting unwanted or inappropriate friend
-          requests, you can <Anchor to="/" underline text="report the account." />
+          If you're getting unwanted or inappropriate friend requests, you can{' '}
+          <Anchor to="/" underline text="report the account." />
         </Paragraph>
         <DividerSection title="Popular articles">
           <Anchor
@@ -87,7 +95,7 @@ const HelpMainPageExample = () => {
         <DividerSection title="Related Topics">
           <ListOfHelpTopicList data={listOfRelatedTopics} />
         </DividerSection>
-        <FloatingMessageVerifyConfirmation/>
+        <FloatingMessageVerifyConfirmation />
       </WrapperCenterContent>
     </div>
   );

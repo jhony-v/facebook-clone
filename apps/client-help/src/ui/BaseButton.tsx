@@ -18,6 +18,7 @@ const PressableButtonWrapper = styled(PressableOverlay, {
     variant: {
       base : {
         background : "$button",
+        color : "$text",
       },
       secondary: {
         backgroundColor: "$text200",

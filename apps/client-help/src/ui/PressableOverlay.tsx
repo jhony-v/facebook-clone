@@ -1,15 +1,15 @@
 import { styled } from "../lib/stitches.config";
 
 const PressableOverlay = styled("div", {
-  borderRadius: "6px",
   display: "flex",
   alignItems: "center",
   transition: "backgroundColor .3s",
-  color: "$text",
+  borderRadius: "6px",
   boxSizing : "border-box",
   "@min2" : {
     cursor: "pointer",
   },
+  color : "$text",
   variants: {
     hoverable: {
       true: {

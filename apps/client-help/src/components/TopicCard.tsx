@@ -76,7 +76,7 @@ type TopicCardProps = {
   topic: TopicOptionItemType;
   direction?: "row" | "col";
   to ?: string;
-  onClick ?: React.MouseEvent<HTMLDivElement>,
+  onClick ?: (ev:React.MouseEvent<HTMLDivElement>) => void,
 };
 
 const TopicCard = ({ topic, direction, onClick, to  }: TopicCardProps) => {

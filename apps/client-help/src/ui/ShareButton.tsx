@@ -1,17 +1,26 @@
-import BaseButton from "./BaseButton";
 import { IoMdShareAlt } from "react-icons/io";
-import { css, styled } from "../lib/stitches.config";
+import { styled } from "../lib/stitches.config";
 
 type ShareButtonProps = {
   text?: string;
 };
 
-const shareButtonStyles = css({
-    color : "$primary",
-    background : "$bgWhite",
-    [`& ${IoMdShareAlt}`] : {
-        marginRight : "20px"
-    }
+
+const ShareButtonStyled = styled("button", {
+  color : "$primary",
+  background : "$bgWhite",
+  fontWeight: "bold",
+  fontSize : ".9em",
+  display : "flex",
+  justifyContent : "center",
+  alignItems : "center",
+  height : "46px",
+  borderRadius: "6px",
+  boxSizing : "border-box",
+  padding: "7px 10px",
+  [`& ${IoMdShareAlt}`] : {
+      marginRight : "20px"
+  }
 })
 
 const ShareIcon = styled(IoMdShareAlt, {
@@ -20,9 +29,10 @@ const ShareIcon = styled(IoMdShareAlt, {
 
 const ShareButton = (props: ShareButtonProps) => {
   return (
-    <BaseButton size="base" className={shareButtonStyles()} icon={ShareIcon}>
+    <ShareButtonStyled>
+      <ShareIcon/>
       {props.text}
-    </BaseButton>
+    </ShareButtonStyled>
   );
 };
 

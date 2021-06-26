@@ -2,6 +2,27 @@
   "name": "@facebook-clone/client-help",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "dev": "npx webpack serve --config webpack/webpack.config.dev.js --progress",
+    "build": "npx webpack --config webpack/webpack.config.prod.js",
+    "build:report": "npx webpack --config webpack/webpack.config.prod.js --env report=true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@reach/router": "^1.3.4",
+    "@stitches/react": "^0.2.2",
+    "clsx": "^1.1.1",
+    "compression-webpack-plugin": "^8.0.1",
+    "downshift": "^6.1.3",
+    "framer-motion": "^4.1.17",
+    "fuse.js": "^6.4.6",
+    "jotai": "^1.1.0",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-icons": "^4.2.0",
+    "surge": "^0.23.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
@@ -9,7 +30,9 @@
     "@babel/preset-typescript": "^7.14.5",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@types/node": "^15.12.4",
+    "@types/reach__router": "^1.3.8",
     "@types/react": "^17.0.11",
+    "@types/react-custom-scrollbars": "^4.0.7",
     "@types/react-dom": "^17.0.8",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
@@ -24,27 +47,9 @@
     "typescript": "^4.3.4",
     "url-loader": "^4.1.1",
     "webpack": "^5.40.0",
+    "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
-  },
-  "scripts": {
-    "dev": "npx webpack serve --config webpack/webpack.config.dev.js --open",
-    "build": "npx webpack --config webpack/webpack.config.dev.js --mode=production"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@reach/router": "^1.3.4",
-    "@stitches/react": "^0.2.2",
-    "@types/reach__router": "^1.3.8",
-    "@types/react-custom-scrollbars": "^4.0.7",
-    "clsx": "^1.1.1",
-    "downshift": "^6.1.3",
-    "framer-motion": "^4.1.17",
-    "fuse.js": "^6.4.6",
-    "jotai": "^1.1.0",
-    "react-custom-scrollbars": "^4.2.1",
-    "react-icons": "^4.2.0"
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
   }
 }

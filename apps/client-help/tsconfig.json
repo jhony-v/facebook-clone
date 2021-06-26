@@ -19,8 +19,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "rootDir": "./src",
-    "outDir": "./build"
   },
   "include": [
     "src"

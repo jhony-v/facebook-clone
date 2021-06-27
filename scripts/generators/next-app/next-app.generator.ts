@@ -14,8 +14,11 @@ export default function nextAppGenerator(plop: NodePlopAPI) {
       {
         type: "addMany",
         destination: "examples/client-{{name}}",
-        base : "next-app/templates",
-        templateFiles: "next-app/templates/**/*.hbs",
+        base: "next-app/templates",
+        templateFiles: [
+          "next-app/templates/**/*.hbs",
+          "next-app/templates/public/favicon.ico",
+        ],
       },
     ],
   });

@@ -15,7 +15,10 @@ export default function reactAppGenerator(plop: NodePlopAPI) {
         type: "addMany",
         destination: "examples/client-{{name}}/",
         base: "react-app/templates",
-        templateFiles: "react-app/templates/**/*.hbs",
+        templateFiles: [
+          "react-app/templates/**/*.hbs",
+          "react-app/templates/public/favicon.ico",
+        ],
       },
     ],
   });

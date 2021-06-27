@@ -1,0 +1,18 @@
+const withPlugins = require("next-compose-plugins");
+const withTM = require("next-transpile-modules")([ /*package names*/ ]);
+
+const withBundleAnalizer = require("@next/bundle-analyzer")({
+   enabled: process.env.ANALYZE === "true",
+});
+
+const nextPlugins = [
+   withBundleAnalizer({}),
+   withTM({})
+];
+
+module.exports = withPlugins(nextPlugins,{
+   webpack: (config) => {
+      // custom webpack configuration
+      return config;
+   }
+});

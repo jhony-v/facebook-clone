@@ -1,0 +1,39 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "prettier",
+    "@typescript-eslint",
+    "eslint-plugin-jsx-a11y",
+    "eslint-plugin-import"
+  ],
+  "rules": {
+    "arrow-spacing":"error",
+    "comma-spacing":"error",
+    "array-bracket-spacing":"warn",
+    "object-curly-spacing":"warn",
+    "space-in-parens":"warn",
+    "block-spacing": "error",
+    "react/destructuring-assignment": "error",
+    "space-before-blocks": "warn",
+    "react/jsx-indent": ["error", 3],
+    "import/newline-after-import": ["error", { "count": 2 }]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "generators",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "plop --config plopfile.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "plop": "^2.7.4"
+  }
+}

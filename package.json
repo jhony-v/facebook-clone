@@ -2,7 +2,6 @@
   "name": "facebook-clone",
   "version": "1.0.0",
   "description": "UI Facebook clone of facebook",
-  "main": "index.js",
   "private": true,
   "workspaces": {
     "packages": [
@@ -15,7 +14,8 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "generate": "plop --plopfile scripts/generators/plopfile.ts"
   },
   "keywords": [
     "react",
@@ -24,7 +24,12 @@
     "recoil",
     "typescript",
     "ui",
-    "facebook"
+    "facebook",
+    "ui",
+    "redux",
+    "web",
+    "styled-components",
+    "monorepo"
   ],
   "license": "MIT",
   "bugs": {
@@ -36,6 +41,8 @@
     "@commitlint/config-conventional": "^12.1.4",
     "commander": "^7.2.0",
     "husky": "^6.0.0",
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "plop": "^2.7.4",
+    "ts-node": "^10.0.0"
   }
 }

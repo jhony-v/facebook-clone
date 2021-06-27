@@ -13,7 +13,7 @@ export default function nextAppGenerator(plop: NodePlopAPI) {
     actions: [
       {
         type: "addMany",
-        destination: "examples/client-{{name}}",
+        destination: "../../apps/client-{{name}}",
         base: "next-app/templates",
         templateFiles: [
           "next-app/templates/**/*.hbs",

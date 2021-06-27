@@ -13,7 +13,7 @@ export default function reactAppGenerator(plop: NodePlopAPI) {
     actions: [
       {
         type: "addMany",
-        destination: "examples/client-{{name}}/",
+        destination: "../../apps/client-{{name}}/",
         base: "react-app/templates",
         templateFiles: [
           "react-app/templates/**/*.hbs",

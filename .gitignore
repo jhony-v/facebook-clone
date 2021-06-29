@@ -2,3 +2,7 @@
 package-lock.json
 yarn.lock
 yarn-error.log
+.yarn
+.env*
+npm-debug.log*
+yarn-debug.log*

@@ -1,21 +1,12 @@
 import AppContainer from './ui/layouts/AppContainer';
 import HeaderNavigation from './components/HeaderNavigation';
-import HelpMainContentPage from './pages/HelpMainContentPage/HelpMainContentPage';
-import HomePage from './pages/HomePage/HomePage';
-import { Router, globalHistory } from '@reach/router';
-
-globalHistory.listen(() => {
-  document.documentElement.scrollTop = 0;
-})
+import RoutesApplication from './routes/RoutesApplication';
 
 function App() {
   return (
     <AppContainer>
       <HeaderNavigation/>
-      <Router>
-        <HomePage path="/" />
-        <HelpMainContentPage path="/:helpId" />
-      </Router>
+      <RoutesApplication/>
     </AppContainer>
   );
 }

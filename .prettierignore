@@ -1,0 +1,16 @@
+**/node_modules/*
+**/build/*
+**/public/*
+
+.vscode
+.husky
+docs
+
+**/babel.*
+**/webpack.*
+**/jest.config.*
+**/package-lock.json
+**/package.json
+**/yarn.lock
+**/yarn-error.log
+**/*.json

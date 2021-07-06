@@ -1,0 +1,65 @@
+{
+    "root": true,
+    "env": {
+      "es2021": true,
+      "browser": true,
+      "node": true,
+      "jest": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "extends": ["prettier", "plugin:@typescript-eslint/recommended", "airbnb"],
+    "plugins": [
+      "prettier",
+      "react",
+      "react-hooks",
+      "import",
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-filename-extension": [
+        1,
+        { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+      ],
+      "import/extensions": "off",
+      "max-len": "off",
+      "import/prefer-default-export": "off",
+      "react/require-default-props": "off",
+      "no-alert": "off",
+      "no-console": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "no-use-before-define": "off",
+      "import/no-extraneous-dependencies": "off",
+      "react/jsx-props-no-spreading": "off",
+      "import/no-unresolved": "off",
+      "class-methods-use-this": "off",
+      "linebreak-style": "off",
+      "arrow-spacing":"error",
+      "comma-spacing":"error",
+      "array-bracket-spacing":"warn",
+      "object-curly-spacing":"warn",
+      "space-in-parens":"warn",
+      "block-spacing": "error",
+      "react/destructuring-assignment": "error",
+      "space-before-blocks": "warn",
+      "react/jsx-indent": ["error", 3],
+      "import/newline-after-import": ["error", { "count": 2 }]
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      },
+      "import/resolver": {
+        "typescript": {
+          "project": "packages/*/tsconfig.json"
+        }
+      }
+    }
+}

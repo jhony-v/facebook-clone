@@ -2,9 +2,7 @@ name: facebook clone
 on:
   push:
     branches:
-      - main
       - production
-      - dev
   pull_request:
     branches:
       - main

@@ -7,9 +7,6 @@
     "packages": [
       "packages/*",
       "apps/*"
-    ],
-    "nohoist": [
-      "**"
     ]
   },
   "scripts": {

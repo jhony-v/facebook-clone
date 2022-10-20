@@ -1,3 +1,3 @@
 # Messenger
 
-![preview image](./preview.PNG)
+![preview image](./preview.png)

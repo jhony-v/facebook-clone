@@ -2,7 +2,7 @@
     <img src="./facebook-logo.png" width="230px"/>
 </p> 
 
-<p align="center"> This is a web application of Clone UI Facebook created with ReactJS. </p>
+<p align="center"> This is a web application of Facebook UI created with React technologies and his ecosystem. </p>
 
 <p align="center"> 
     <a href="https://facebook-clone-dev.vercel.app" >DEMO</a> - 
@@ -43,3 +43,6 @@
 - [ ] [Friends](https://facebook-clone-dev.vercel.app/friends)
 - [ ] [Settings](https://facebook-clone-dev.vercel.app/settings)
 - [ ] [Policies](https://facebook-clone-dev.vercel.app/policies)
+
+
+> This a big facebook clone 💙 if you want to add a new feature, app or anything to improve them, do it 😃

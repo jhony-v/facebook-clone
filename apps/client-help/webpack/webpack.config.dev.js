@@ -1,28 +1,28 @@
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
-const path = require("path");
-const webpack = require("webpack");
-const { merge } = require("webpack-merge");
+const { HotModuleReplacementPlugin } = require("webpack");
 const commonWebpack = require("./webpack.config.common");
+const { merge } = require("webpack-merge");
+const path = require("path");
 
 /**
  * @type import("webpack").Configuration
  */
 const configuration = {
+  mode: "development",
   devServer: {
-    port: 3000,
     hot: true,
     open: true,
-    compress: true,
+    port: 3000,
     contentBase: path.resolve(__dirname, "../dist"),
     index : "index.html",
     historyApiFallback: true,
   },
-  mode: "development",
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    new HotModuleReplacementPlugin(),
     new ReactRefreshWebpackPlugin(),
   ],
-  devtool: "eval",
+  devtool: "eval-source-map",
+  target: "web"
 };
 
 module.exports = merge(commonWebpack, configuration);

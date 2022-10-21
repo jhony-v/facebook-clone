@@ -1,5 +1,4 @@
-import {styled} from "../config/stitches.config";
-
+import { styled } from "../config/stitches.config";
 
 const Button = styled("button", {
   borderRadius: "6px",
@@ -12,39 +11,39 @@ const Button = styled("button", {
     variant: {
       default: {
         "&:hover": {
-          backgroundColor: "$hover-overlay",
-        },
+          backgroundColor: "$hover-overlay"
+        }
       },
       light: {
         backgroundColor: "$light",
-        color: "$black",
+        color: "$black"
       },
       primary: {
         backgroundColor: "$blue60",
-        color: "$light",
+        color: "$light"
       },
       neutral: {
         backgroundColor: "$hover-overlay",
         color: "$black",
         "&:hover": {
-          backgroundColor: "$media-hover",
-        },
-      },
+          backgroundColor: "$media-hover"
+        }
+      }
     },
-    circle : {
-      medium : {
-        width : "45px",
-        height : "45px",
-        borderRadius : "100%",
-        display : "flex",
-        alignItems : "center",
-        justifyContent : "center"
+    circle: {
+      medium: {
+        width: "45px",
+        height: "45px",
+        borderRadius: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
       }
     }
   },
   defaultVariants: {
-    variant: "default",
-  },
+    variant: "default"
+  }
 });
 
 export default Button;

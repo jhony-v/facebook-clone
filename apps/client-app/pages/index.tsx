@@ -8,21 +8,20 @@ import ContainerOnlineContactFriendsList from "@fb-containers/ContainerOnlineCon
 import ContainerOptionsNavigation from "@fb-containers/ContainerOptionsNavigation";
 import IndexView from "@views/IndexView";
 
-
 export default function Index() {
-   return (
-      <ContainerMainNavigator>
-         <SEOMetaTag mainTitle='Facebook' />
-         <LayoutDrawer>
-            <IndexView />
-         </LayoutDrawer>
-         <LayoutDrawerRigthRail>
-            <ContainerOnlineContactFriendsList />
-         </LayoutDrawerRigthRail>
-         <LayoutDrawerLeftRail>
-            <ContainerOptionsNavigation />
-         </LayoutDrawerLeftRail>
-         <ContainerChatTabs />
-      </ContainerMainNavigator>
-   );
+  return (
+    <ContainerMainNavigator>
+      <SEOMetaTag mainTitle="Facebook" />
+      <LayoutDrawer>
+        <IndexView />
+      </LayoutDrawer>
+      <LayoutDrawerRigthRail>
+        <ContainerOnlineContactFriendsList />
+      </LayoutDrawerRigthRail>
+      <LayoutDrawerLeftRail>
+        <ContainerOptionsNavigation />
+      </LayoutDrawerLeftRail>
+      <ContainerChatTabs />
+    </ContainerMainNavigator>
+  );
 }

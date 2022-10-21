@@ -1,14 +1,13 @@
-import {Meta} from "@storybook/react/types-6-0";
+import { Meta } from "@storybook/react/types-6-0";
 import {
-   SkeletonElementRow,
-   SkeletonElementCardGrid,
-   SkeletonElementCard,
+  SkeletonElementRow,
+  SkeletonElementCardGrid,
+  SkeletonElementCard
 } from "..";
 
-
 export default {
-   title: "Globals/LoadersSkeletonElement",
-   component: SkeletonElementRow,
+  title: "Globals/LoadersSkeletonElement",
+  component: SkeletonElementRow
 } as Meta;
 
 export const Row = () => <SkeletonElementRow />;

@@ -1,10 +1,9 @@
-import {Meta} from "@storybook/react/types-6-0";
+import { Meta } from "@storybook/react/types-6-0";
 import RoundButton from "..";
 
-
 export default {
-   title: "Common/RoundButton",
-   component: RoundButton,
+  title: "Common/RoundButton",
+  component: RoundButton
 } as Meta;
 
 export const Default = () => <RoundButton />;

@@ -10,6 +10,7 @@
         ],
       "composite": false,
       "declarationMap": true,
+      "incremental": true,
       "esModuleInterop": true,
       "forceConsistentCasingInFileNames": true,
       "inlineSources": false,

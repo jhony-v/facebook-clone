@@ -1,23 +1,22 @@
 import {
-   FormOptionsAccessWithSocial,
-   FormOptionsSignIn,
-   FormSignInHeader,
+  FormOptionsAccessWithSocial,
+  FormOptionsSignIn,
+  FormSignInHeader
 } from "./components";
 import StyledGlobal from "../elements";
 
 import Form from "./Form";
 
-
 export default function SignInForm() {
-   return (
-      <>
-         <StyledGlobal.FormContainer>
-            <FormSignInHeader />
-            <Form />
-            <FormOptionsSignIn>
-               <FormOptionsAccessWithSocial />
-            </FormOptionsSignIn>
-         </StyledGlobal.FormContainer>
-      </>
-   );
+  return (
+    <>
+      <StyledGlobal.FormContainer>
+        <FormSignInHeader />
+        <Form />
+        <FormOptionsSignIn>
+          <FormOptionsAccessWithSocial />
+        </FormOptionsSignIn>
+      </StyledGlobal.FormContainer>
+    </>
+  );
 }

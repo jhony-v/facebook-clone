@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
+const CreateNewPageView = () => <div />;
 
-const CreateNewPageView = () => (
-   <div>           
-   </div>
-)
-
-export default CreateNewPageView
+export default CreateNewPageView;

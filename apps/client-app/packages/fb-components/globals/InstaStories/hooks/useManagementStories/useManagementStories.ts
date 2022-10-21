@@ -6,32 +6,32 @@ const reducer = (state: StoriesProps, action: Action): StoriesProps => {
     case "NEXT":
       return {
         ...state,
-        currentIndexStory: state.currentIndexStory + 1,
+        currentIndexStory: state.currentIndexStory + 1
       };
     case "PREVIOUS":
       return {
         ...state,
-        currentIndexStory: state.currentIndexStory - 1,
+        currentIndexStory: state.currentIndexStory - 1
       };
     case "STOP_PLAYING":
       return {
         ...state,
-        playing: false,
+        playing: false
       };
     case "START_PLAYING":
       return {
         ...state,
-        playing: true,
+        playing: true
       };
     case "SET_CURRENT_INDEX_STORY":
       return {
         ...state,
-        currentIndexStory: action.payload,
+        currentIndexStory: action.payload
       };
     case "SET_STATUS_LOADING":
       return {
         ...state,
-        loading: action.payload,
+        loading: action.payload
       };
     default:
       return state;
@@ -44,14 +44,14 @@ type ManagementStoriesProps = {
 };
 const useManagementStories = ({
   stories,
-  duration,
+  duration
 }: ManagementStoriesProps) => {
   const [state, dispatch] = useReducer(reducer, {
     currentIndexStory: 0,
     totalStories: stories.length,
     stories,
     playing: false,
-    loading: true,
+    loading: true
   });
 
   const setLoading = (loading: boolean) => {
@@ -80,7 +80,7 @@ const useManagementStories = ({
     ...state,
     currentStory: stories[state.currentIndexStory],
     setLoading,
-    setCurrentIndexStory,
+    setCurrentIndexStory
   };
 };
 

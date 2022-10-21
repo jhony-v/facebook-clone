@@ -17,7 +17,7 @@ const ListWatchVideoGlobals = () => (
                 reactions={[
                   { reaction: "Like" },
                   { reaction: "Haha" },
-                  { reaction: "Love" },
+                  { reaction: "Love" }
                 ]}
               />
             }
@@ -25,11 +25,11 @@ const ListWatchVideoGlobals = () => (
             <WatchVideoCard.Header
               user={{
                 avatar: faker.random.image(),
-                name: faker.name.title(),
+                name: faker.name.title()
               }}
               detail={{
                 icon: FaGlobeAsia,
-                text: "welcome",
+                text: "welcome"
               }}
             />
           </WatchVideoCard>

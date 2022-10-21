@@ -21,7 +21,7 @@ const LiveMicroText = ({ live }: { live?: boolean }) =>
   live ? <StyledListMicroText>live</StyledListMicroText> : null;
 
 LiveMicroText.defaultProps = {
-  live: false,
+  live: false
 };
 
 export default LiveMicroText;

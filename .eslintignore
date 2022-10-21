@@ -7,9 +7,9 @@ docs
 **/babel.*
 **/webpack.*
 **/jest.*
-*.png
-*.jpg
-*.svg
+**/*.png
+**/*.jpg
+**/*.svg
 *.json
 package-lock.json
 package.json

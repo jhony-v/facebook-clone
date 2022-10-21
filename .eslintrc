@@ -11,7 +11,7 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 10,
+    "ecmaVersion": 6,
     "sourceType": "module"
   },
   "extends": [
@@ -34,6 +34,7 @@
       1,
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
+    "prettier/prettier": "error",
     "import/extensions": "off",
     "max-len": "off",
     "import/prefer-default-export": "off",

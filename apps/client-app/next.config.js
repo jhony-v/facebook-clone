@@ -1,7 +1,11 @@
 const withBundleAnalizer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true"
+  enabled: process.env.ANALYZE === "true",
 });
 
-const config = withBundleAnalizer({});
+const config = withBundleAnalizer({
+  experimental: {
+    forceSwcTransforms: true
+  }
+});
 
 module.exports = config;

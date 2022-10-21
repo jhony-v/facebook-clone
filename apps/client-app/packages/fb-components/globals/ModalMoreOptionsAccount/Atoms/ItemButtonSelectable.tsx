@@ -4,6 +4,7 @@ import RaisedButton from "@fb-components/common/RaisedButton";
 import TextLabel from "@fb-components/common/TextLabel";
 import Wrapper from "@fb-components/common/Wrapper";
 import { IoIosArrowForward } from "react-icons/io";
+import { FCWithChildren } from "@utils/types";
 import { RoundButtonIcon } from "./elements";
 
 type ItemButtonSelectableProps = {
@@ -12,7 +13,7 @@ type ItemButtonSelectableProps = {
   hideNextArrow?: boolean;
 };
 
-const ItemButtonSelectable: React.FC<ItemButtonSelectableProps> = ({
+const ItemButtonSelectable: FCWithChildren<ItemButtonSelectableProps> = ({
   icon: IconComponent,
   onClick,
   children,

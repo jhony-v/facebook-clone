@@ -1,6 +1,6 @@
-import React from "react";
 import Card from "@fb-components/common/Card";
 import Wrapper from "@fb-components/common/Wrapper";
+import { FCWithChildren } from "@utils/types";
 import AbsoluteCloseButton from "./AbsoluteCloseButton";
 import { StyledBackdropScreenWrapper, WrapperBodyAnimatable } from "./elements";
 
@@ -9,7 +9,7 @@ type BackdropModalProps = {
   onClose: () => void;
 };
 
-const BackdropModal: React.FC<BackdropModalProps> = ({
+const BackdropModal: FCWithChildren<BackdropModalProps> = ({
   w,
   children,
   onClose

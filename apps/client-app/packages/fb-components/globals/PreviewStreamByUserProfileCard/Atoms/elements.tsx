@@ -18,7 +18,7 @@ export const TextLabelStreamUser = styled(TextLabel)<{ isTitle?: boolean }>`
     props.isTitle &&
     css`
       font-weight: bold;
-      font-size: ${(props) => props.theme.fontSizes[300]};
+      font-size: ${props.theme.fontSizes[300]};
     `}
 `;
 

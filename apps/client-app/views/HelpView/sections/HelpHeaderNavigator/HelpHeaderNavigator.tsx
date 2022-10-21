@@ -46,7 +46,7 @@ const HelpHeaderNavigator = () => {
           Servicio de ayuda
         </TextLabel>
       </FlexWrapper>
-      <FlexWrapper className="header__navigation" css={{ margin: "0 auto" }}>
+      <FlexWrapper className="header__navigation">
         {navigationOptionsState.map((option, index) => (
           <Button key={index}>{option.name}</Button>
         ))}

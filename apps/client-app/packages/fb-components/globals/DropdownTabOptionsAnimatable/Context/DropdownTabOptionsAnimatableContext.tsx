@@ -1,4 +1,5 @@
-import React, { createContext, FC, useContext, useMemo, useState } from "react";
+import { FCWithChildren } from "@utils/types";
+import React, { createContext, useContext, useState } from "react";
 
 interface DropdownTabAnimatableState {
   idSelected?: string;
@@ -12,7 +13,7 @@ interface DropdownProviderState {
 const DropdownTabAnimatableContext =
   createContext<DropdownTabAnimatableState | null>(null);
 
-export const DropdownTabOptionsAnimatableProvider: FC<
+export const DropdownTabOptionsAnimatableProvider: FCWithChildren<
   DropdownProviderState
 > = ({ children, initialId }) => {
   const [id, setId] = useState<string>(initialId);

@@ -4,12 +4,13 @@ import RoundButton from "@fb-components/common/RoundButton";
 import TextLabel from "@fb-components/common/TextLabel";
 import Wrapper from "@fb-components/common/Wrapper";
 import { BiArrowBack } from "react-icons/bi";
+import { FCWithChildren } from "@utils/types";
 
 type HeaderSubItemProps = {
   title: string;
   onBack: () => void;
 };
-const HeaderSubItem: React.FC<HeaderSubItemProps> = ({
+const HeaderSubItem: FCWithChildren<HeaderSubItemProps> = ({
   onBack,
   title,
   children

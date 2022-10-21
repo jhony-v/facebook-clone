@@ -1,9 +1,10 @@
-import React, { FC, PropsWithChildren } from "react";
+import React from "react";
 import { render } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
+import { FCWithChildren } from "@utils/types";
 import theme from "./theme/index";
 
-const Wrapper: FC<PropsWithChildren<{}>> = ({ children }) => (
+const Wrapper: FCWithChildren = ({ children }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );
 

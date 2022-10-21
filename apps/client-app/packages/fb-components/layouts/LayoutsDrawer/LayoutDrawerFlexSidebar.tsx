@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from "react";
+import { FCWithChildren } from "@utils/types";
 import styled from "styled-components";
 
 type SidebarTypes = {
@@ -47,9 +47,10 @@ const BodyWrapper = styled.div`
   }
 `;
 
-const LayoutDrawerFlexSidebar: FC<
-  PropsWithChildren<{ w?: "default" | "medium" }>
-> = ({ children, w }) => (
+const LayoutDrawerFlexSidebar: FCWithChildren<{ w?: "default" | "medium" }> = ({
+  children,
+  w
+}) => (
   <SidebarWrapper w={w}>
     <HeaderWrapper />
     <BodyWrapper>{children}</BodyWrapper>

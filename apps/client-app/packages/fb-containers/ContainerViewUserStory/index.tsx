@@ -34,7 +34,11 @@ const stories = [
 ];
 
 const ContainerViewUserStory = () => (
-  <FlexWrapper w="100%" css={{ background: "#111111" }} flexDirection="column">
+  <FlexWrapper
+    w="100%"
+    style={{ background: "#111111" }}
+    flexDirection="column"
+  >
     <ViewCurrentStory stories={stories} user={userData} />
     <InputCommentStoryWithReactions />
   </FlexWrapper>

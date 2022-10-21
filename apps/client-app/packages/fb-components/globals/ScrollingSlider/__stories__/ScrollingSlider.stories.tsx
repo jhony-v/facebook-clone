@@ -1,5 +1,4 @@
 import FlexWrapper from "@fb-components/common/FlexWrapper";
-import HistoryUserItem from "@fb-components/globals/PreviewStories/Atoms/HistoryUserItem";
 import { Meta } from "@storybook/react/types-6-0";
 import ScrollingSlider from "..";
 
@@ -17,7 +16,7 @@ export default {
 
 const TextItem = () => (
   <FlexWrapper
-    css={{
+    style={{
       marginRight: "20px",
       width: "200px",
       height: "100px",

@@ -1,4 +1,5 @@
-import React, { PropsWithChildren, useEffect } from "react";
+import { FCWithChildren } from "@utils/types";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
@@ -10,10 +11,7 @@ const StyledWrapper = styled.div`
   z-index: 10;
 `;
 
-const FullScreenWrapper: React.FC<PropsWithChildren<{}>> = ({
-  children,
-  ...restProps
-}) => {
+const FullScreenWrapper: FCWithChildren = ({ children, ...restProps }) => {
   useEffect(() => {
     document.documentElement.style.overflowY = "hidden";
     return () => {

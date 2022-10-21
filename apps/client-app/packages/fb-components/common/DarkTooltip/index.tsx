@@ -1,6 +1,7 @@
-import React, { FC, PropsWithChildren, useState } from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { AnimatePresence, motion } from "framer-motion";
+import { FCWithChildren } from "@utils/types";
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -67,7 +68,7 @@ StyledTooltip.defaultProps = {
 };
 
 type DarkTooltipProps = { text?: string } & StyledTooltipTypes;
-const DarkTooltip: FC<PropsWithChildren<DarkTooltipProps>> = ({
+const DarkTooltip: FCWithChildren<DarkTooltipProps> = ({
   children,
   text,
   position,

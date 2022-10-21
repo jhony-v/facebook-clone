@@ -1,3 +1,3 @@
 export default function Jobs() {
-  return <div />;
+  return <div>jobs</div>;
 }

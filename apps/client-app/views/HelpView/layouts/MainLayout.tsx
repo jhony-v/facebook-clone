@@ -1,7 +1,7 @@
-import { FC, PropsWithChildren } from "react";
+import { FCWithChildren } from "@utils/types";
 import StitchesLayoutGenerator from "./StitchesLayoutGenerator";
 
-const MainLayout: FC<PropsWithChildren<{}>> = ({ children }) => (
+const MainLayout: FCWithChildren = ({ children }) => (
   <StitchesLayoutGenerator>{children}</StitchesLayoutGenerator>
 );
 

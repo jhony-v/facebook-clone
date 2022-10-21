@@ -1,7 +1,7 @@
+import { FCWithChildren } from "@utils/types";
 import Head from "next/head";
-import React from "react";
 
-const RootConfigLayout: React.FC = ({ children }) => (
+const RootConfigLayout: FCWithChildren = ({ children }) => (
   <>
     <Head>
       <link

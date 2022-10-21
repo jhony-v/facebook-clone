@@ -1,3 +1,3 @@
 export default function RecentActivities() {
-  return <div />;
+  return <div>activities</div>;
 }

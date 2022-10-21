@@ -1,13 +1,13 @@
-import React from "react";
 import Grid from "@fb-components/common/Grid";
 import Wrapper from "@fb-components/common/Wrapper";
 import { useTheme } from "styled-components";
+import { FCWithChildren } from "@utils/types";
 
 type GridColumnProps = {
   variant?: "left-rail fluid" | "fluid right-rail";
 };
 
-const LayoutDrawerGridColumn: React.FC<GridColumnProps> = (props) => {
+const LayoutDrawerGridColumn: FCWithChildren<GridColumnProps> = (props) => {
   const { variant, children } = props;
   const { layoutSizes } = useTheme();
   let columns;

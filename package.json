@@ -12,7 +12,8 @@
   "scripts": {
     "prepare": "husky install",
     "postinstall": "husky install",
-    "generate": "plop --plopfile scripts/generators/plopfile.ts"
+    "generate": "plop --plopfile scripts/generators/plopfile.ts",
+    "lint:style": "stylelint \"**/*.css\""
   },
   "keywords": [
     "react",

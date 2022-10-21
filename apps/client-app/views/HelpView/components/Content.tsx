@@ -1,4 +1,4 @@
-import React, { FC, PropsWithChildren } from "react";
+import { FCWithChildren } from "@utils/types";
 import { styled } from "../config/stitches.config";
 
 const StyledContent = styled("div", {
@@ -7,7 +7,7 @@ const StyledContent = styled("div", {
   width: "$full"
 });
 
-const Content: FC<PropsWithChildren<{}>> = ({ children }) => (
+const Content: FCWithChildren = ({ children }) => (
   <StyledContent>{children}</StyledContent>
 );
 

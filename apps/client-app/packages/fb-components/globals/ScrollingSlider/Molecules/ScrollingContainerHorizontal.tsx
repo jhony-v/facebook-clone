@@ -1,9 +1,10 @@
 import useScrollStack from "@fb-hooks/useScrollStack";
+import { FCWithChildren } from "@utils/types";
 import React from "react";
 import { ContainerScrolling } from "../Atoms/elements";
 import FloatingButtonToScrolling from "../Atoms/FloatingButtonToScrolling";
 
-const ScrollingContainerHorizontal: React.FC = ({ children }) => {
+const ScrollingContainerHorizontal: FCWithChildren = ({ children }) => {
   const { onMove, ref } = useScrollStack({});
   return (
     <ContainerScrolling.Main>

@@ -2,8 +2,8 @@ import FlexWrapper from "@fb-components/common/FlexWrapper";
 import RaisedButton from "@fb-components/common/RaisedButton";
 import TextLabel from "@fb-components/common/TextLabel";
 import Wrapper from "@fb-components/common/Wrapper";
+import { FCWithChildren } from "@utils/types";
 import Link from "next/link";
-import React, { FC } from "react";
 import styled from "styled-components";
 
 const StyledTextLinkMessage = styled(TextLabel)`
@@ -18,7 +18,10 @@ const StyledTextLinkMessage = styled(TextLabel)`
   }
 `;
 
-const TextLinkMessage: FC<{ href: string }> = ({ children, href }) => (
+const TextLinkMessage: FCWithChildren<{ href: string }> = ({
+  children,
+  href
+}) => (
   <Link href={href}>
     <StyledTextLinkMessage as="a">{children}</StyledTextLinkMessage>
   </Link>

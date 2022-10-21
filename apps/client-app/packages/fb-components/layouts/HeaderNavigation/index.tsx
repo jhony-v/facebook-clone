@@ -1,10 +1,7 @@
-import React from "react";
+import { FCWithChildren } from "@utils/types";
 import { HeaderWrapper } from "./Atoms/elements";
 
-type HeaderNavigationProps = {
-  children: React.ReactNode;
-};
-const HeaderNavigation = ({ children }: HeaderNavigationProps) => (
+const HeaderNavigation: FCWithChildren = ({ children }) => (
   <HeaderWrapper>{children}</HeaderWrapper>
 );
 

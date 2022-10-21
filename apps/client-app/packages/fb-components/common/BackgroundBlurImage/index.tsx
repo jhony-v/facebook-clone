@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from "react";
+import { FCWithChildren } from "@utils/types";
 import styled from "styled-components";
 
 const BlurImage = styled.div<{ image?: string }>`
@@ -34,7 +34,7 @@ const BlurImageContainer = styled.div`
 type BackgroundBlurImageProps = {
   image?: string;
 };
-const BackgroundBlurImage: FC<PropsWithChildren<BackgroundBlurImageProps>> = ({
+const BackgroundBlurImage: FCWithChildren<BackgroundBlurImageProps> = ({
   children,
   image
 }) => (

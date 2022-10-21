@@ -1,9 +1,9 @@
-import React from "react";
+import faker from "faker";
 import AccountProfileBanner from "@fb-components/globals/AccountProfileBanner";
 import Wrapper from "@fb-components/common/Wrapper";
-import faker from "faker";
+import { FCWithChildren } from "@utils/types";
 
-const PreviewProfile: React.FC = ({ children }) => (
+const PreviewProfile: FCWithChildren = ({ children }) => (
   <AccountProfileBanner
     backgroundImage={faker.random.image()}
     text={`${faker.name.findName()} ${faker.name.lastName()} | ${faker.address.country()}`}

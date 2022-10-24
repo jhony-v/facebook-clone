@@ -1,6 +1,5 @@
-import React from "react";
-import Avatar from "@fb-components/common/Avatar";
 import faker from "faker";
+import Avatar from "@fb-components/common/Avatar";
 import { StyledUserAccountButton } from "./elements";
 
 const UserAccountButtonOption = () => (

@@ -20,12 +20,12 @@ export default class ServerDocument extends Document {
 
       const initialProps = await Document.getInitialProps(ctx);
       // add styles to document
-      const styles = (
+      const styles = [
         <>
           {initialProps.styles}
           {sheet.getStyleElement()}
         </>
-      );
+      ];
 
       return {
         ...initialProps,

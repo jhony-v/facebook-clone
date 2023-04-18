@@ -1,22 +1,21 @@
-import {BsFillPlayFill, BsPause} from "react-icons/bs";
-import {ButtonPlayerContainer} from "./element";
-
+import { BsFillPlayFill, BsPause } from "react-icons/bs";
+import { ButtonPlayerContainer } from "./element";
 
 type ButtonPlayerProps = {
-   onClick?: () => void;
+  onClick?: () => void;
 };
 
 const ButtonPlayer = {
-   Play: ({onClick}: ButtonPlayerProps) => (
-      <ButtonPlayerContainer onClick={onClick}>
-         <BsFillPlayFill color='white' />
-      </ButtonPlayerContainer>
-   ),
-   Pause: ({onClick}: ButtonPlayerProps) => (
-      <ButtonPlayerContainer onClick={onClick}>
-         <BsPause color='white' />
-      </ButtonPlayerContainer>
-   ),
+  Play: ({ onClick }: ButtonPlayerProps) => (
+    <ButtonPlayerContainer onClick={onClick}>
+      <BsFillPlayFill color="white" />
+    </ButtonPlayerContainer>
+  ),
+  Pause: ({ onClick }: ButtonPlayerProps) => (
+    <ButtonPlayerContainer onClick={onClick}>
+      <BsPause color="white" />
+    </ButtonPlayerContainer>
+  )
 };
 
 export default ButtonPlayer;

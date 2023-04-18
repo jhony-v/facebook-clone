@@ -1,3 +1,3 @@
 export default function UserPhotosPulication() {
-   return <div />;
+  return <div />;
 }

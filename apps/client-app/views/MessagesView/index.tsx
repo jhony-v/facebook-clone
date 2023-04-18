@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
+const MessagesView = () => <div />;
 
-const MessagesView = () =>  (
-   <div>            
-   </div>
-)
-
-export default MessagesView
+export default MessagesView;

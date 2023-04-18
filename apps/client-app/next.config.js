@@ -1,8 +1,11 @@
 const withBundleAnalizer = require("@next/bundle-analyzer")({
-   enabled: process.env.ANALYZE === "true",
+  enabled: JSON.parse(process.env.ANALYZE || false)
 });
 
-
-const config = withBundleAnalizer({});
+const config = withBundleAnalizer({
+  experimental: {
+    forceSwcTransforms: true
+  }
+});
 
 module.exports = config;

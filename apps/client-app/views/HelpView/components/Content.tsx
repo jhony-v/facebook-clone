@@ -1,19 +1,14 @@
-import React, {FC} from 'react'
-import {styled} from '../config/stitches.config'
-
+import { FCWithChildren } from "@utils/types";
+import { styled } from "../config/stitches.config";
 
 const StyledContent = styled("div", {
-    marginTop : "$from-header",
-    backgroundColor : "$light",
-    width : "$full"
-})
+  marginTop: "$from-header",
+  backgroundColor: "$light",
+  width: "$full"
+});
 
-const Content : FC = ({children}) => {
-    return (
-       <StyledContent>
-          {children}
-       </StyledContent>
-    )
-}
+const Content: FCWithChildren = ({ children }) => (
+  <StyledContent>{children}</StyledContent>
+);
 
-export default Content
+export default Content;

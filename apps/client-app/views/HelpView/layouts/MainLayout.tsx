@@ -1,13 +1,8 @@
-import {FC} from 'react'
-import StitchesLayoutGenerator from './StitchesLayoutGenerator'
+import { FCWithChildren } from "@utils/types";
+import StitchesLayoutGenerator from "./StitchesLayoutGenerator";
 
+const MainLayout: FCWithChildren = ({ children }) => (
+  <StitchesLayoutGenerator>{children}</StitchesLayoutGenerator>
+);
 
-const MainLayout : FC = ({children}) => {
-   return(
-      <StitchesLayoutGenerator>
-         {children}
-      </StitchesLayoutGenerator>
-   )
-}
-
-export default MainLayout
+export default MainLayout;

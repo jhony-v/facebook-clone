@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
+const JobsView = () => <div />;
 
-const JobsView = () =>  (
-   <div>            
-   </div>
-)
-
-export default JobsView
+export default JobsView;

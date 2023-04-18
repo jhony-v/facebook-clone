@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
+const RecentActivitiesView = () => <div />;
 
-const RecentActivitiesView = () =>  (
-   <div>            
-   </div>
-)
-
-export default RecentActivitiesView
+export default RecentActivitiesView;

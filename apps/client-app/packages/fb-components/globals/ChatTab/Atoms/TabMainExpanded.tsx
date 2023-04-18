@@ -1,13 +1,13 @@
+import { FC, PropsWithChildren } from "react";
 import {
-   StyledTabChatFillWrapper,
-   StyledTabChatMainExpanded,
+  StyledTabChatFillWrapper,
+  StyledTabChatMainExpanded
 } from "./elements";
 
-
-const TabMainExpanded: React.FC = ({children}) => (
-   <StyledTabChatMainExpanded>
-      <StyledTabChatFillWrapper>{children}</StyledTabChatFillWrapper>
-   </StyledTabChatMainExpanded>
+const TabMainExpanded: FC<PropsWithChildren<{}>> = ({ children }) => (
+  <StyledTabChatMainExpanded>
+    <StyledTabChatFillWrapper>{children}</StyledTabChatFillWrapper>
+  </StyledTabChatMainExpanded>
 );
 
 export default TabMainExpanded;

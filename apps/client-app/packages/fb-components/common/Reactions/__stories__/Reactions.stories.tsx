@@ -1,10 +1,9 @@
-import {Meta} from "@storybook/react/types-6-0";
+import { Meta } from "@storybook/react/types-6-0";
 import Reactions from "..";
 
-
 export default {
-   title: "Common/Reactions",
-   component: Reactions.Like,
+  title: "Common/Reactions",
+  component: Reactions.Like
 } as Meta;
 
 export const Like = () => <Reactions.Like />;

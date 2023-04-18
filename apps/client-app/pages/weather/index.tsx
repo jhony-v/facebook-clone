@@ -5,21 +5,20 @@ import LayoutDrawerLeftRail from "@fb-components/layouts/LayoutsDrawer/LayoutDra
 import ContainerMainNavigator from "@fb-containers/ContainerMainNavigator";
 import ContainerOptionsNavigation from "@fb-containers/ContainerOptionsNavigation";
 
-
 const Weather = () => (
-   <ContainerMainNavigator>
-      <LayoutDrawer>
-         <LayoutDrawerGridColumn variant='left-rail fluid'>
-            <LayoutDrawerLeftRail compact>
-               <ContainerOptionsNavigation />
-            </LayoutDrawerLeftRail>
-            <div />
-            <div>
-               <WeatherDetailCard />
-            </div>
-         </LayoutDrawerGridColumn>
-      </LayoutDrawer>
-   </ContainerMainNavigator>
+  <ContainerMainNavigator>
+    <LayoutDrawer>
+      <LayoutDrawerGridColumn variant="left-rail fluid">
+        <LayoutDrawerLeftRail compact>
+          <ContainerOptionsNavigation />
+        </LayoutDrawerLeftRail>
+        <div />
+        <div>
+          <WeatherDetailCard />
+        </div>
+      </LayoutDrawerGridColumn>
+    </LayoutDrawer>
+  </ContainerMainNavigator>
 );
 
 export default Weather;

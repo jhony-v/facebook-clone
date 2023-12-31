@@ -1,21 +1,20 @@
 <p align="center">
-    <img src="./facebook-logo.png" width="230px"/>
+    <img src="./logo.png" width="230px"/>
 </p>
 
 <p align="center"> This is a web application of Facebook UI created with React technologies and his ecosystem. </p>
 
 <p align="center"> 
-    <a href="https://facebook-clone-dev.vercel.app" >DEMO</a> - 
-    <a href="https://facebook-clone-design-system.netlify.app/" >DESIGN SYSTEM</a> 
+    <a href="https://facebook-clone-dev.vercel.app" >DEMO</a> 
 </p>
 
 <p align="center">
-    <img src="./stack.png" width="580px"/>
+    <img src="./static/stack.png" width="580px"/>
 </p>
 
 ## Preview
 
-![preview image](./preview.png)
+![preview image](./static/preview.png)
 
 ## Screens
 

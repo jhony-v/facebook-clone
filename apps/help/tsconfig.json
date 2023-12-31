@@ -1,0 +1,7 @@
+{
+  "extends": "@fb/tsconfig/react-vite.json",
+  "compilerOptions": {
+    "types": ["vitest/globals"]
+  },
+  "include": ["./src/**/*", "vite.config.ts"]
+}

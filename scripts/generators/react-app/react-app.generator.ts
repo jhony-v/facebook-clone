@@ -7,19 +7,19 @@ export default function reactAppGenerator(plop: NodePlopAPI) {
       {
         type: "input",
         name: "name",
-        message: "Type a name for the react project:",
-      },
+        message: "Type a name for the react project:"
+      }
     ],
     actions: [
       {
         type: "addMany",
-        destination: "../../apps/client-{{name}}/",
+        destination: "../../apps/{{name}}/",
         base: "react-app/templates",
         templateFiles: [
           "react-app/templates/**/*.hbs",
-          "react-app/templates/public/favicon.ico",
-        ],
-      },
-    ],
+          "react-app/templates/public/favicon.ico"
+        ]
+      }
+    ]
   });
 }

@@ -1,0 +1,54 @@
+{
+  "extends": "@fb/tsconfig/nextjs.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@fb-components/*": [
+        "packages/fb-components/*"
+      ],
+      "@fb-contexts/*": [
+        "packages/fb-contexts/*"
+      ],
+      "@fb-containers/*": [
+        "packages/fb-containers/*"
+      ],
+      "@fb-hooks/*": [
+        "packages/fb-hooks/*"
+      ],
+      "@fb-features-recoil/*": [
+        "packages/fb-features-recoil/*"
+      ],
+      "@fb-services/*": [
+        "packages/fb-services/*"
+      ],
+      "@mocks/*": [
+        "mocks/*"
+      ],
+      "@views/*": [
+        "views/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@theme/*": [
+        "theme/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@test-utils": [
+        "test-utils"
+      ]
+    },
+    "strictNullChecks": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

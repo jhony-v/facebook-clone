@@ -1,21 +1,25 @@
 {
-  "name": "facebook-clone",
+  "name": "fb",
   "version": "1.0.0",
   "description": "UI Facebook clone of facebook",
-  "main": "index.js",
   "private": true,
   "workspaces": {
     "packages": [
       "packages/*",
-      "apps/*"
-    ],
-    "nohoist": [
-      "**"
+      "apps/*",
+      "services/*"
     ]
   },
   "scripts": {
-    "prepare": "husky install",
-    "postinstall": "husky install"
+    "generate": "plop --plopfile scripts/generators/plopfile.ts",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "preview": "turbo preview",
+    "lint": "turbo lint",
+    "lint:types": "turbo lint:types",
+    "format": "turbo format",
+    "pkg:check": "npx manypkg check",
+    "pkg:fix": "npx manypkg fix"
   },
   "keywords": [
     "react",
@@ -24,18 +28,34 @@
     "recoil",
     "typescript",
     "ui",
-    "facebook"
+    "facebook",
+    "ui",
+    "redux",
+    "web",
+    "styled-components",
+    "monorepo"
   ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jhony-24/facebook-clone/issues"
   },
   "homepage": "https://github.com/jhony-24/facebook-clone#readme",
+  "dependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@fb/eslint-config": "1.0.0",
+    "@fb/tsconfig": "1.0.0",
+    "@manypkg/cli": "^0.21.1",
+    "eslint": "^8.56.0",
+    "eslint-config-turbo": "^1.11.2",
+    "husky": "^8.0.3",
+    "plop": "^4.0.1",
+    "prettier": "^3.1.1",
+    "turbo": "^1.11.2"
+  },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
-    "commander": "^7.2.0",
-    "husky": "^6.0.0",
-    "lerna": "^4.0.0"
+    "rimraf": "^5.0.5",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard-scss": "^12.0.0"
   }
 }

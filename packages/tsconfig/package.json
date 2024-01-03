@@ -1,0 +1,11 @@
+{
+  "name": "@fb/tsconfig",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react-vite.json"
+  ]
+}

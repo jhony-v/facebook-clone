@@ -1,0 +1,78 @@
+{
+   "name": "@facebook-clone/client-{{name}}",
+   "version": "1.0.0",
+   "private": true,
+   "description": "UI clone of facebook application",
+   "license": "MIT",
+   "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "export": "next build && next export",
+      "start": "next start",
+      "test": "jest",
+      "test:watch": "jest --watch --env=jsdom",
+      "cy:install": "cypress install",
+      "cy:run": "cypress run --headless --browser chrome",
+      "cy:open": "cypress open",
+      "lint": "npx eslint ./**/*",
+      "lint:fix": "npx eslint --fix ./**/*",
+      "format": "prettier --write . --config ./.prettierrc",
+      "analize": "npx cross-env ANALIZE=true next build",
+      "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+      "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
+   },
+   "dependencies": {
+      "next-transpile-modules": "^8.0.0",
+      "next-compose-plugins": "^2.2.1",
+      "next": "latest",
+      "react": "17.0.1",
+      "react-dom": "17.0.1"
+   },
+   "devDependencies": {
+      "eslint-plugin-cypress": "^2.11.3",
+      "@next/bundle-analyzer": "^10.0.4",
+      "@testing-library/jest-dom": "^5.11.6",
+      "@testing-library/react": "^11.1.2",
+      "@testing-library/react-hooks": "^3.4.2",
+      "@testing-library/user-event": "^12.2.2",
+      "@types/jest": "^26.0.15",
+      "@types/node": "^12.12.21",
+      "@types/react": "^17.0.2",
+      "@types/react-dom": "^17.0.1",
+      "@typescript-eslint/eslint-plugin": "^4.11.1",
+      "@typescript-eslint/parser": "^4.11.1",
+      "cross-env": "^7.0.3",
+      "cypress": "^6.0.0",
+      "eslint": "^7.14.0",
+      "eslint-config-prettier": "^7.1.0",
+      "eslint-plugin-import": "^2.22.1",
+      "eslint-plugin-jsx-a11y": "^6.4.1",
+      "eslint-plugin-prettier": "^3.3.0",
+      "eslint-plugin-react": "^7.22.0",
+      "eslint-plugin-react-hooks": "^4.2.0",
+      "jest": "^26.6.3",
+      "prettier": "^2.2.1",
+      "ts-jest": "^26.4.4",
+      "typescript": "^4.0.5"
+   },
+   "repository": {
+      "url": "https://github.com/jhony-24/facebook-clone"
+   },
+   "bugs": {
+      "url": "https://github.com/jhony-24/facebook-clone/issues"
+   },
+   "keywords": [
+      "react",
+      "facebook clone",
+      "next",
+      "recoil",
+      "typescript",
+      "ui",
+      "facebook",
+      "ui",
+      "redux",
+      "web",
+      "styled-components",
+      "monorepo"
+   ]
+}

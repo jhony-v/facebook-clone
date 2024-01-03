@@ -1,0 +1,13 @@
+module.exports = {
+   preset: "ts-jest",
+   setupFilesAfterEnv: ["./setupTests.ts"],
+   testEnvironment: "node",
+   globals: {
+      "ts-jest": {
+         tsconfig: "./tsconfig.jest.json",
+      },
+   },
+   moduleNameMapper: {
+      "@fb-components/(.*)": "<rootDir>/packages/fb-components/$1",
+   },
+};

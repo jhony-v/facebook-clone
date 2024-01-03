@@ -8,14 +8,14 @@ import { StyledRootSearchEngine } from "./Atoms/elements";
 
 const RootSearchEngine = () => (
   <StyledRootSearchEngine>
-    <Wrapper flexNone>
+    <Wrapper $flexNone>
       <FacebookAvatar />
     </Wrapper>
-    <Wrapper m="0 10px">
+    <Wrapper $m="0 10px">
       <ActionButtonsController.Input
         placeholder={
-          <Wrapper p="0 100px 0 0">
-            <FlexWrapper align="center">
+          <Wrapper $p="0 100px 0 0">
+            <FlexWrapper $align="center">
               <FiSearch style={{ marginRight: "10px" }} size={20} />
               Buscar en Facebook
             </FlexWrapper>

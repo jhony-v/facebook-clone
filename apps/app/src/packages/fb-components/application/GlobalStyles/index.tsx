@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
    * {
        box-sizing:border-box;
-       font-family:'Montserrat', Arial, Helvetica, sans-serif;
+       font-family:var(--font-inter), Arial, Helvetica, sans-serif;
    }
    input,button,textarea,select,details {
        outline:none;

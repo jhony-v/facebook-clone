@@ -10,13 +10,13 @@ const ItemAvatar = styled(Avatar)`
 
 const defaultDimension = 40;
 type Dimension = {
-  w?: number;
-  h?: number;
+  $w?: number;
+  $h?: number;
 };
 const ItemWrapperAvatar = styled.div<Dimension>`
   position: relative;
-  width: ${(props) => (props.w || defaultDimension) - 10}px;
-  height: ${(props) => props.h || defaultDimension}px;
+  width: ${(props) => (props.$w || defaultDimension) - 10}px;
+  height: ${(props) => props.$h || defaultDimension}px;
   :last-of-type {
     ${ItemAvatar} {
       border: none;
@@ -25,8 +25,8 @@ const ItemWrapperAvatar = styled.div<Dimension>`
 `;
 
 const PlaceholderButton = styled.div<Dimension>`
-  width: ${(props) => props.w || defaultDimension}px;
-  height: ${(props) => props.h || defaultDimension}px;
+  width: ${(props) => props.$w || defaultDimension}px;
+  height: ${(props) => props.$h || defaultDimension}px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,8 +40,8 @@ type ButtonProps = {
   onClick?: () => void;
 } & Dimension;
 
-const PlaceholderButtonMoreAvatar = ({ onClick, w, h }: ButtonProps) => (
-  <PlaceholderButton w={w} h={h} onClick={onClick}>
+const PlaceholderButtonMoreAvatar = ({ onClick, $w, $h }: ButtonProps) => (
+  <PlaceholderButton $w={$w} $h={$h} onClick={onClick}>
     <FiMoreHorizontal color="white" size="20px" />
   </PlaceholderButton>
 );
@@ -53,18 +53,18 @@ type StringAvatarsProps = {
   dimension?: number;
 };
 const StringAvatars = (props: StringAvatarsProps) => {
-  const { images, placeholder, dimension } = props;
+  const { images, placeholder, dimension = 40 } = props;
   const len = images.length;
 
   return (
     <FlexWrapper>
       {images.map((image, i) => (
-        <ItemWrapperAvatar key={i} w={dimension} h={dimension}>
-          <ItemAvatar src={image} dimension={`${dimension}px`} />
+        <ItemWrapperAvatar key={i} $w={dimension} $h={dimension}>
+          <ItemAvatar src={image} $dimension={`${dimension}px`} />
           {placeholder && i + 1 === len && (
             <PlaceholderButtonMoreAvatar
-              w={dimension}
-              h={dimension}
+              $w={dimension}
+              $h={dimension}
               onClick={props.onClickPlaceholder}
             />
           )}
@@ -74,8 +74,5 @@ const StringAvatars = (props: StringAvatarsProps) => {
   );
 };
 
-StringAvatars.defaultProps = {
-  dimension: 40
-};
 
 export default StringAvatars;

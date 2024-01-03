@@ -11,13 +11,13 @@ import Wrapper from "@fb-components/common/Wrapper";
 const GroupsView = () => (
   <ContainerMainNavigator>
     <LayoutDrawer>
-      <Wrapper w="100%">
+      <Wrapper $w="100%">
         <LayoutDrawerGridColumn variant="left-rail fluid">
-          <LayoutDrawerLeftRail compact>
+          <LayoutDrawerLeftRail $compact>
             <OptionsNavigationList />
           </LayoutDrawerLeftRail>
           <Wrapper />
-          <Wrapper m="auto" w="50%">
+          <Wrapper $m="auto" $w="50%">
             <ContainerGetNewsFeed />
           </Wrapper>
         </LayoutDrawerGridColumn>

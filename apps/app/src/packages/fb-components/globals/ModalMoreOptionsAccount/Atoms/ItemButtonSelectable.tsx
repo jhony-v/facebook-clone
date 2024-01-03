@@ -19,16 +19,16 @@ const ItemButtonSelectable: FCWithChildren<ItemButtonSelectableProps> = ({
   children,
   hideNextArrow
 }) => (
-  <Wrapper m="10px 0">
-    <RaisedButton hover fluid onClick={onClick}>
-      <FlexWrapper align="center" w="100%">
+  <Wrapper $m="10px 0">
+    <RaisedButton $hover $fluid onClick={onClick}>
+      <FlexWrapper $align="center" $w="100%">
         {IconComponent && (
           <RoundButtonIcon>
             <IconComponent size="20px" />
           </RoundButtonIcon>
         )}
-        <Wrapper m="0 auto 0 10px">
-          <TextLabel weight textColor="vgTextBlackAlpha30" textAlign="left">
+        <Wrapper $m="0 auto 0 10px">
+          <TextLabel $weight $textColor="vgTextBlackAlpha30" $textAlign="left">
             {children}
           </TextLabel>
         </Wrapper>

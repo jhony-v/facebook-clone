@@ -39,7 +39,7 @@ export const BannerNameAccount = styled(TextLabel)`
 `;
 
 export const BannerCardContainer = styled(Card).attrs({
-  variant: "compact"
+  $variant: "compact"
 })`
   width: 100%;
   border-radius: 0;

@@ -18,7 +18,7 @@ const SuggestedPageItemCard = (props: SuggestedPageItemCardProps) => {
     <SuggestedPageWrapper>
       <CoverPageImage src={image} />
       <ButtonDeletePageItem />
-      <Wrapper p="10px">
+      <Wrapper $p="10px">
         <PageInformation {...pageInformation} />
         <PageLikeButton liked={liked} />
       </Wrapper>

@@ -4,7 +4,7 @@ import FlexWrapper from "@fb-components/common/FlexWrapper";
 import { FCWithChildren } from "@utils/types";
 
 const PageWrapper = styled(Card).attrs({
-  variant: "compact"
+  $variant: "compact"
 })`
   overflow: hidden;
   > ${FlexWrapper} {

@@ -4,7 +4,7 @@ import { WeatherDetailCardWrapper } from "./elements";
 
 const MainWrapper: FCWithChildren = ({ children }) => (
   <WeatherDetailCardWrapper>
-    <Wrapper m="20px">{children}</Wrapper>
+    <Wrapper $m="20px">{children}</Wrapper>
   </WeatherDetailCardWrapper>
 );
 

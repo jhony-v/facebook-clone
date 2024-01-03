@@ -3,8 +3,8 @@ import { ThemeBase } from "@theme/theme";
 import styled from "styled-components";
 
 export type StyledRoundButtonTypes = {
-  dimension?: string;
-  colorIcon?: ThemeBase.ColorsTypes;
+  $dimension?: string;
+  $colorIcon?: ThemeBase.ColorsTypes;
 };
 
 const defaultSize = "50px";
@@ -17,10 +17,10 @@ const StyledRoundButton = styled.button<StyledRoundButtonTypes>`
   outline: none;
   cursor: pointer;
   background-color: ${(props) => props.theme.colors.vgBlackAlpha12};
-  width: ${(props) => props.dimension || defaultSize};
-  height: ${(props) => props.dimension || defaultSize};
-  color: ${({ colorIcon, theme }) =>
-    theme.colors[colorIcon || "vgBlackAlpha50"]};
+  width: ${(props) => props.$dimension || defaultSize};
+  height: ${(props) => props.$dimension || defaultSize};
+  color: ${({ $colorIcon, theme }) =>
+    theme.colors[$colorIcon || "vgBlackAlpha50"]};
 `;
 
 export type RoundButtonProps = StyledRoundButtonTypes &

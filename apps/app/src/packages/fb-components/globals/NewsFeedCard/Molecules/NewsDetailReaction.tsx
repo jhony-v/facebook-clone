@@ -7,7 +7,7 @@ import Wrapper from "@fb-components/common/Wrapper";
 
 type NewsDetailReactionProps = {
   reactions?: StringReactionType[];
-  totalReactions?: number;
+  totalReactions?: string;
   textTotalDetail?: string;
 };
 
@@ -16,14 +16,14 @@ const NewsDetailReaction = ({
   totalReactions,
   textTotalDetail
 }: NewsDetailReactionProps) => (
-  <Wrapper p="5px 10px">
-    <FlexWrapper justify="space-between" align="center">
-      <FlexWrapper align="center">
+  <Wrapper $p="5px 10px">
+    <FlexWrapper $justify="space-between" $align="center">
+      <FlexWrapper $align="center">
         {reactions && <StringReactions reactions={reactions} />}
-        <TextLabel textSize={300}>{totalReactions}</TextLabel>
+        <TextLabel $textSize={300}>{totalReactions}</TextLabel>
       </FlexWrapper>
       <Wrapper>
-        <TextLabel textSize={300}>{textTotalDetail}</TextLabel>
+        <TextLabel $textSize={300}>{textTotalDetail}</TextLabel>
       </Wrapper>
     </FlexWrapper>
   </Wrapper>

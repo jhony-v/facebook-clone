@@ -18,7 +18,7 @@ const FloatingButtonToScrolling = ({
     IconComponent = FiChevronRight;
   }
   return (
-    <ButtonFloatingToMove onClick={onClick} position={position}>
+    <ButtonFloatingToMove onClick={onClick} $position={position}>
       <IconComponent />
     </ButtonFloatingToMove>
   );

@@ -13,12 +13,12 @@ const WatchVideosView = () => (
   <ContainerMainNavigator>
     <LayoutDrawer>
       <LayoutDrawerGridColumn variant="left-rail fluid">
-        <LayoutDrawerLeftRail compact>
+        <LayoutDrawerLeftRail $compact>
           <ContainerOptionsNavigation />
         </LayoutDrawerLeftRail>
         <Wrapper />
-        <FlexWrapper align="center" flexDirection="column">
-          <Wrapper w="75%">
+        <FlexWrapper $align="center" $flexDirection="column">
+          <Wrapper $w="75%">
             <ListWatchVideoGlobals />
           </Wrapper>
         </FlexWrapper>

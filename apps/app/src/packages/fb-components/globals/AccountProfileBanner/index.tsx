@@ -29,8 +29,4 @@ const AccountProfileBanner = (props: AccountProfileBannerProps) => {
   );
 };
 
-AccountProfileBanner.defaultProps = {
-  children: null
-};
-
 export default memo(AccountProfileBanner);

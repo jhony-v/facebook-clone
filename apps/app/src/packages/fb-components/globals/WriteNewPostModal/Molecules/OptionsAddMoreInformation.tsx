@@ -25,17 +25,17 @@ type IconOptionProps = {
   icon: React.JSXElementConstructor<{ [key: string]: any }>;
 };
 const IconOption = ({ icon: Icon, onClick, color }: IconOptionProps) => (
-  <Wrapper m="0 15px 0 0" onClick={onClick}>
+  <Wrapper $m="0 15px 0 0" onClick={onClick}>
     <Icon color={color} size={25} />
   </Wrapper>
 );
 
 const OptionsAddMoreInformation = () => (
   <S.Card>
-    <TextLabel weight textColor="vgTextBlack">
+    <TextLabel $weight $textColor="vgTextBlack">
       Add to your post
     </TextLabel>
-    <FlexWrapper align="center">
+    <FlexWrapper $align="center">
       <IconOption color="#9575cd" icon={RiVideoAddFill} />
       <IconOption color="#00c853" icon={MdPhotoLibrary} />
       <IconOption color="rgb(30,130,230)" icon={FaUserPlus} />

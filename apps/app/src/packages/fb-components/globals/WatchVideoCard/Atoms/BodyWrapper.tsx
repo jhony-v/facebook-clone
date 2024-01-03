@@ -7,9 +7,9 @@ type BodyWrapperProps = {
   video?: string;
 };
 const BodyWrapper = ({ text, video }: BodyWrapperProps) => (
-  <Wrapper p="20px 0">
-    <Wrapper p="10px 10px 20px">
-      <TextLabel textColor="vgTextBlack" weight>
+  <Wrapper $p="20px 0">
+    <Wrapper $p="10px 10px 20px">
+      <TextLabel $textColor="vgTextBlack" $weight>
         {text}
       </TextLabel>
     </Wrapper>

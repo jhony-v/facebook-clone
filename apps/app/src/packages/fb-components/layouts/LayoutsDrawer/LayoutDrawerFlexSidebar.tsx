@@ -2,7 +2,7 @@ import { FCWithChildren } from "@utils/types";
 import styled from "styled-components";
 
 type SidebarTypes = {
-  w?: "default" | "medium";
+  $w?: "default" | "medium";
 };
 
 const SidebarWrapper = styled.div<SidebarTypes>`
@@ -14,7 +14,7 @@ const SidebarWrapper = styled.div<SidebarTypes>`
     ({
       medium: "380px",
       default: "360px"
-    }[props.w || "default"])};
+    }[props.$w || "default"])};
 `;
 
 const HeaderWrapper = styled.div`
@@ -51,7 +51,7 @@ const LayoutDrawerFlexSidebar: FCWithChildren<{ w?: "default" | "medium" }> = ({
   children,
   w
 }) => (
-  <SidebarWrapper w={w}>
+  <SidebarWrapper $w={w}>
     <HeaderWrapper />
     <BodyWrapper>{children}</BodyWrapper>
   </SidebarWrapper>

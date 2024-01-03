@@ -8,7 +8,7 @@ import ControlButtonOption from "./Atoms/ControlButtonOption";
 import ButtonToMoreOptionsAccount from "./Elements/ButtonToMoreOptionsAccount";
 
 const AccountControlSettings = ({
-  hideButtonAccount
+  hideButtonAccount = false
 }: {
   hideButtonAccount?: boolean;
 }) => (
@@ -20,9 +20,5 @@ const AccountControlSettings = ({
     <ButtonToMoreOptionsAccount />
   </StyledControlWrapper>
 );
-
-AccountControlSettings.defaultProps = {
-  hideButtonAccount: false
-};
 
 export default AccountControlSettings;

@@ -13,14 +13,14 @@ const DetailUser = ({
   detail,
   icon: IconComponent
 }: DetailtUserProps) => (
-  <FlexWrapper flexDirection="column" w="100%">
-    <TextLabel textSize={300} weight textColor="vgTextBlack">
+  <FlexWrapper $flexDirection="column" $w="100%">
+    <TextLabel $textSize={300} $weight $textColor="vgTextBlack">
       {title}
     </TextLabel>
-    <Wrapper p="5px 0">
-      <FlexWrapper align="center">
-        <Wrapper m="0 5px 0 0">
-          <TextLabel textSize={200} textColor="vgTextBlackAlpha20">
+    <Wrapper $p="5px 0">
+      <FlexWrapper $align="center">
+        <Wrapper $m="0 5px 0 0">
+          <TextLabel $textSize={200} $textColor="vgTextBlackAlpha20">
             {detail}
           </TextLabel>
         </Wrapper>

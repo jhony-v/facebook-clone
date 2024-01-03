@@ -15,16 +15,16 @@ const GamingView = () => (
   <ContainerMainNavigator>
     <LayoutDrawer>
       <LayoutDrawerGridColumn variant="left-rail fluid">
-        <LayoutDrawerLeftRail compact>
+        <LayoutDrawerLeftRail $compact>
           <ContainerOptionsNavigation />
         </LayoutDrawerLeftRail>
         <Wrapper />
-        <Wrapper p="40px">
+        <Wrapper $p="40px">
           <ScrollingSlider title="Suggested live now">
             {Array(20)
               .fill(0)
               .map((e, i) => (
-                <Wrapper key={i} w="310px" m="0 10px 0 0">
+                <Wrapper key={i} $w="310px" $m="0 10px 0 0">
                   <PreviewStreamWatchVideoCard
                     poster={faker.image.url()}
                     live
@@ -42,7 +42,7 @@ const GamingView = () => (
             {Array(20)
               .fill(0)
               .map((e, i) => (
-                <Wrapper key={i} w="180px" m="0 10px 0 0">
+                <Wrapper key={i} $w="180px" $m="0 10px 0 0">
                   <PreviewStreamByUserProfileCard
                     description="oeapfje"
                     title="AmogUs Game by Juan"
@@ -63,7 +63,7 @@ const GamingView = () => (
             {Array(20)
               .fill(0)
               .map((e, i) => (
-                <Wrapper key={i} w="310px" m="0 10px 0 0">
+                <Wrapper key={i} $w="310px" $m="0 10px 0 0">
                   <PreviewStreamWatchVideoCard
                     poster={faker.image.url()}
                     detailStream={{

@@ -13,10 +13,10 @@ type WriteNewPostModalProps = {
 };
 const WriteNewPostModal = ({ actions }: WriteNewPostModalProps) => (
   <ModalDialog w="500px" open={actions.open} onClose={actions.onClose}>
-    <ModalDialog.Header p="20px" border>
+    <ModalDialog.Header $p="20px" $border>
       <HeaderTitle />
     </ModalDialog.Header>
-    <ModalDialog.Body p="20px">
+    <ModalDialog.Body $p="20px">
       <DetailUser />
       <TextAreaMessage />
       <OptionsAddMoreInformation />

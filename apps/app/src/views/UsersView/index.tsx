@@ -8,7 +8,7 @@ import LayoutDrawer from "@fb-components/layouts/LayoutsDrawer/LayoutDrawer";
 const UsersView = () => (
   <ContainerMainNavigator>
     <LayoutDrawer>
-      <Wrapper w="100%">
+      <Wrapper $w="100%">
         <ContainerAccountProfileBannerDetail />
       </Wrapper>
     </LayoutDrawer>

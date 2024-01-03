@@ -43,12 +43,12 @@ const OverflowBackgroundImage = (props: OverflowBackgroundImageProps) => {
 
   React.useEffect(() => {
     const currentStatus = status === "LOADING";
-    onLoadingStatus && onLoadingStatus(currentStatus);
-  }, [status]);
+    onLoadingStatus?.(currentStatus);
+  }, [status, onLoadingStatus]);
 
   return (
     <ImageWrapper {...restProps}>
-      <Image src={src} role="img" draggable="false" />
+      <Image src={src} role="img" draggable="false" alt={src} />
       <BackgroundGradient />
     </ImageWrapper>
   );

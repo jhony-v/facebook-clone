@@ -2,7 +2,7 @@ import LinksPrivacityApplication from "@fb-components/application/LinksPrivacity
 import Wrapper from "@fb-components/common/Wrapper";
 
 const LinksPrivacity = () => (
-  <Wrapper p="10px">
+  <Wrapper $p="10px">
     <LinksPrivacityApplication />
   </Wrapper>
 );

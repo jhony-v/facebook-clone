@@ -15,8 +15,8 @@ const BackdropModal: FCWithChildren<BackdropModalProps> = ({
   onClose
 }) => (
   <StyledBackdropScreenWrapper>
-    <Wrapper m="auto" role="dialog">
-      <WrapperBodyAnimatable w={w}>
+    <Wrapper $m="auto" role="dialog">
+      <WrapperBodyAnimatable $w={w}>
         <Card>
           <AbsoluteCloseButton onClose={onClose} />
           {children}

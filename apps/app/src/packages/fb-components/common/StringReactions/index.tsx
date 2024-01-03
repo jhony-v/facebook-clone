@@ -4,11 +4,11 @@ import Reactions from "../Reactions";
 import FlexWrapper from "../FlexWrapper";
 
 type ItemTypes = {
-  leftPosition: number;
+  $leftPosition: number;
 };
 const Item = styled.div<ItemTypes>`
   position: relative;
-  left: ${(props) => `${-props.leftPosition * 4}px`};
+  left: ${(props) => `${-props.$leftPosition * 4}px`};
   border: 2px solid white;
   border-radius: 100%;
 `;
@@ -35,8 +35,8 @@ const StringReactions = ({ reactions }: StringReactionsProps) => {
   return (
     <Container>
       {transformReactionsToMap?.map(({ Component, Props }, i) => (
-        <Item key={i} leftPosition={i}>
-          <Component {...Props} dimension="20px" />
+        <Item key={i} $leftPosition={i}>
+          <Component {...Props} $dimension="20px" />
         </Item>
       ))}
     </Container>

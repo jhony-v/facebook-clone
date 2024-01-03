@@ -74,7 +74,7 @@ const useManagementStories = ({
     }
 
     dispatch({ type: "STOP_PLAYING" });
-  }, [state.loading]);
+  }, [state,duration]);
 
   return {
     ...state,

@@ -5,7 +5,7 @@ import { useGetProducts } from "@fb-features-recoil/marketplace";
 const ContainerGetListProducts = () => {
   const { data } = useGetProducts();
   return (
-    <Grid repeatColumns={3} gap="15px">
+    <Grid $repeatColumns={3} $gap="15px">
       {data.map((e, i) => (
         <MarketplaceCard
           key={i}

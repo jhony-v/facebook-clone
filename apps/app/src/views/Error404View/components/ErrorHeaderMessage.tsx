@@ -20,7 +20,7 @@ const ErrorImage = styled(SquareImage)`
 const ErrorHeaderMessage = () => (
   <>
     <ErrorImage src="https://simpleicon.com/wp-content/uploads/paper-clip-1.png" />
-    <TextSpacing weight textSize={600}>
+    <TextSpacing $weight $textSize={600}>
       This Page Isn't Available
     </TextSpacing>
     <TextSpacing>

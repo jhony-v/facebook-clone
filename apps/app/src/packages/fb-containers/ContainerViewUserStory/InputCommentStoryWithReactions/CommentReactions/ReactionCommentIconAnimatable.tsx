@@ -35,7 +35,7 @@ const ReactionCommentIconAnimatable = ({
   const [open, setOpen] = useState<"close" | "open">("close");
   const IconComponent = Reactions[icon];
   return (
-    <DarkTooltip text={icon} position="top">
+    <DarkTooltip text={icon} $position="top">
       <WrapperMotion
         onHoverStart={() => setOpen("open")}
         onHoverEnd={() => setOpen("close")}

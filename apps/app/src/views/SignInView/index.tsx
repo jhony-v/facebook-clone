@@ -5,7 +5,7 @@ import SignInForm from "./Forms/SignInForm";
 
 const SignInView = () => (
   <StyledGlobal.Background>
-    <Grid sizeColumns={[400, "1fr"]}>
+    <Grid $sizeColumns={[400, "1fr"]}>
       <SignInForm />
     </Grid>
   </StyledGlobal.Background>

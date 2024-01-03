@@ -1,17 +1,23 @@
 import PointNotification from "@fb-components/common/PointNotification";
+import Link from "next/link";
 import styled, { css } from "styled-components";
 
-export const StyledNotificationPoint = styled(PointNotification)`
+export const StyledPointNotification = styled(PointNotification)`
   position: absolute;
   top: 9%;
   left: 70%;
   transform: translateX(-50%);
 `;
 
+
+export const StyledLink = styled(Link)`
+  display: flex;;
+`;
+
 type StyledLinkButtonTypes = {
-  isSelected?: boolean;
+  $isSelected?: boolean;
 };
-export const StyledLinkButton = styled.a<StyledLinkButtonTypes>`
+export const StyledLinkButton = styled.div<StyledLinkButtonTypes>`
   background-color: ${({ theme }) => theme.colors.vgBlackAlpha00};
   border-radius: 10px;
   padding: 5px 35px;
@@ -22,8 +28,8 @@ export const StyledLinkButton = styled.a<StyledLinkButtonTypes>`
   margin: 2px 10px;
   border-width: 0;
   position: relative;
-  ${({ theme, isSelected }) =>
-    isSelected &&
+  ${({ theme, $isSelected }) =>
+    $isSelected &&
     css`
       color: ${theme.colors.vgPrimary};
       border-bottom: 3px solid currentColor;
@@ -32,8 +38,8 @@ export const StyledLinkButton = styled.a<StyledLinkButtonTypes>`
       padding-bottom: 2px;
     `}
 
-  ${({ theme, isSelected }) =>
-    !isSelected &&
+  ${({ theme, $isSelected }) =>
+    !$isSelected &&
     css`
       color: ${theme.colors.vgBlackAlpha40};
       &:hover {

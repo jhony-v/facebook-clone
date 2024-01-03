@@ -35,9 +35,9 @@ const stories = [
 
 const ContainerViewUserStory = () => (
   <FlexWrapper
-    w="100%"
+    $w="100%"
     style={{ background: "#111111" }}
-    flexDirection="column"
+    $flexDirection="column"
   >
     <ViewCurrentStory stories={stories} user={userData} />
     <InputCommentStoryWithReactions />

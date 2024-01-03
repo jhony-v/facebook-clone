@@ -15,6 +15,7 @@ export default function useVisibilityObserver(
      * Event to observer a element intersecting
      */
     const onIntersection: IntersectionObserverCallback = ([entry]) => {
+      if(!entry) return;
       setVisibility(entry.isIntersecting);
       if (options.autoDisconnect && entry.isIntersecting) {
         observer.disconnect();
@@ -30,7 +31,7 @@ export default function useVisibilityObserver(
     return () => {
       element && observer.unobserve(element);
     };
-  }, [element, visibility]);
+  }, [element, visibility,options]);
 
   return {
     visibility,

@@ -11,7 +11,7 @@ export const WrapperModalOptions = styled.div`
 `;
 
 export const RoundButtonIcon = styled(RoundButton).attrs({
-  dimension: "40px"
+  $dimension: "40px"
 })`
   background-color: ${(props) => props.theme.colors.vgBlackAlpha20};
 `;

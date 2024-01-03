@@ -29,8 +29,8 @@ const VideoMediaPlayer = (props: VideoMediaPlayerProps) => {
 
   return (
     <VideoPlayerContainer
-      w={w}
-      h={h}
+      $w={w}
+      $h={h}
       onMouseEnter={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
     >
@@ -39,7 +39,7 @@ const VideoMediaPlayer = (props: VideoMediaPlayerProps) => {
         src={src}
         autoPlay={autoplay}
         poster={poster}
-        objectFit={objectFit}
+        $objectFit={objectFit}
       />
       {visible && playerButtonComponent}
     </VideoPlayerContainer>

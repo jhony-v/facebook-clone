@@ -16,13 +16,13 @@ type ContactListProps = {
   };
 };
 const ContactList = ({
-  data,
+  data = [],
   title,
   children,
   options,
   sizes
 }: ContactListProps) => (
-  <StyledListContainer w={sizes?.w} h={sizes?.h}>
+  <StyledListContainer $w={sizes?.w} $h={sizes?.h}>
     <ListHeaderOptions title={title}>{options}</ListHeaderOptions>
     <ListRenderItems
       data={data}
@@ -31,10 +31,6 @@ const ContactList = ({
     />
   </StyledListContainer>
 );
-
-ContactList.defaultProps = {
-  data: []
-};
 
 ContactList.ListItem = RowItem;
 ContactList.Option = ButtonOption;

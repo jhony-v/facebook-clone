@@ -1,4 +1,4 @@
-import { memo, useEffect } from "react";
+import { memo } from "react";
 import Wrapper from "@fb-components/common/Wrapper";
 import useProgressBarFromInterval from "@fb-hooks/useProgressBarFromInterval";
 import styled from "styled-components";
@@ -29,7 +29,7 @@ const ProgressStory = ({ duration, playing, onClick }: ProgressStoryProps) => {
   const { progress } = useProgressBarFromInterval({ duration, playing });
 
   return (
-    <Wrapper m="0 5px 0 0" w="100%">
+    <Wrapper $m="0 5px 0 0" $w="100%">
       <ProgressTrack onClick={onClick}>
         <ProgressThumb style={{ width: `${progress}%` }} />
       </ProgressTrack>

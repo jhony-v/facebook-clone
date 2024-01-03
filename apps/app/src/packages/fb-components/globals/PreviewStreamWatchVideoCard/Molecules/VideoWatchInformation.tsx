@@ -16,7 +16,7 @@ const VideoWatchInformation = ({
   totalViews
 }: VideoWatchInformationProps) => (
   <Wrapper>
-    <SquareImage src={poster} h="180px" />
+    <SquareImage src={poster} $h="180px" />
     <StreamWrapperMicroOptions>
       {live && <LiveMicroText live={live} />}
       {totalViews && <TotalViews total={totalViews} />}

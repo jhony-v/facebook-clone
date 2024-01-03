@@ -24,7 +24,7 @@ type ChevronIconButtonProps = {
 };
 
 const ChevronIconButtton = (props: ChevronIconButtonProps) => {
-  const { onClick, direction } = props;
+  const { onClick = () => null, direction } = props;
   let IconComponent;
   if (direction === "left") {
     IconComponent = FiChevronLeft;
@@ -37,10 +37,6 @@ const ChevronIconButtton = (props: ChevronIconButtonProps) => {
       <IconComponent />
     </WrapperButton>
   );
-};
-
-ChevronIconButtton.defaultProps = {
-  onClick: () => null
 };
 
 export default ChevronIconButtton;

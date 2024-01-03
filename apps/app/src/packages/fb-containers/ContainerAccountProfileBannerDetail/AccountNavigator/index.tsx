@@ -8,8 +8,8 @@ import { RaisedButtonMoreOptions } from "./Atoms/elements";
 
 const AccountNavigator = () => (
   <Wrapper className="profile__pagelet">
-    <FlexWrapper justify="space-between" align="center">
-      <Wrapper w="60%">
+    <FlexWrapper $justify="space-between" $align="center">
+      <Wrapper $w="60%">
         <TabOptions
           onSelectedOption={(e) => {}}
           initialId="a"

@@ -16,7 +16,7 @@ const DropdownTabOptionsAnimatable = ({
 }: DropdownTabOptionsAnimatableProps) => (
   <DropdownTabOptionsAnimatableProvider initialId={initialId}>
     <AnimateSharedLayout>
-      <ContainerAnimatable layout w={w}>
+      <ContainerAnimatable layout $w={w}>
         {children}
       </ContainerAnimatable>
     </AnimateSharedLayout>

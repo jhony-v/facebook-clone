@@ -8,7 +8,7 @@ import ContainerMainNavigator from "@fb-containers/ContainerMainNavigator";
 const Error4040View = () => (
   <ContainerMainNavigator>
     <LayoutDrawerAbsoluteFullScreen>
-      <Wrapper m="auto" w="400px">
+      <Wrapper $m="auto" $w="400px">
         <ErrorHeaderMessage />
         <TextLinkMessages />
       </Wrapper>

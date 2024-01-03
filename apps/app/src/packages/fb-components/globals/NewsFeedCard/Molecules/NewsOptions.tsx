@@ -5,7 +5,7 @@ import Wrapper from "@fb-components/common/Wrapper";
 import ActionButtonsController from "../../ActionButtonsController";
 
 const NewsOptions = () => (
-  <Wrapper p="3px 10px">
+  <Wrapper $p="3px 10px">
     <ActionButtonsController repeatColumns={3}>
       <ActionButtonsController.Button
         text="Like"

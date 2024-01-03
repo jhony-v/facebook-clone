@@ -52,7 +52,7 @@ TabOptions.Option = React.memo(
   ({ text, optionId, ...restProps }: OptionTypes) => (
     <StyledTabOptionSearch
       {...restProps}
-      optionId={optionId}
+      $optionId={optionId}
       data-testid={optionId}
     >
       {text}

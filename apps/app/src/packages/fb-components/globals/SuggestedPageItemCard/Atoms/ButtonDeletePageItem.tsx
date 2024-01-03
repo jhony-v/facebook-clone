@@ -9,13 +9,13 @@ const RoundCloseButton = styled(RoundButton)`
 
 const ButtonDeletePageItem = () => (
   <Wrapper
-    absolute={{
+    $absolute={{
       right: "0px",
       top: "0px"
     }}
-    m="10px"
+    $m="10px"
   >
-    <RoundCloseButton colorIcon="vgBlackAlpha00" dimension="35px">
+    <RoundCloseButton $colorIcon="vgBlackAlpha00" $dimension="35px">
       <VscChromeClose size={20} />
     </RoundCloseButton>
   </Wrapper>

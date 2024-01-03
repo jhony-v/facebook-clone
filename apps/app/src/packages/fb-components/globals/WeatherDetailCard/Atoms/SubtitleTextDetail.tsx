@@ -34,11 +34,11 @@ const SubtitleTextDetail = ({
   };
 
   return (
-    <Wrapper m="0 0 0 10px">
-      <FlexWrapper flexDirection={horizontal ? "row" : "column"}>
+    <Wrapper $m="0 0 0 10px">
+      <FlexWrapper $flexDirection={horizontal ? "row" : "column"}>
         <TextLabel {...titleProps}>{title}</TextLabel>
         <Wrapper {...(horizontal && { m: "0 0 0 5px" })}>
-          <TextLabel weight={weight && 600}>{subtitle}</TextLabel>
+          <TextLabel $weight={weight && 600}>{subtitle}</TextLabel>
         </Wrapper>
       </FlexWrapper>
     </Wrapper>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default styled.div<{ compact?: boolean }>`
+export default styled.div<{ $compact?: boolean }>`
   position: fixed;
   left: 0;
   bottom: 0;
@@ -9,5 +9,5 @@ export default styled.div<{ compact?: boolean }>`
   height: ${(props) => props.theme.layoutSizes.heightMainDrawer};
   width: ${(props) => props.theme.layoutSizes.widthLeftRail};
   background-color: ${(props) =>
-    props.compact && props.theme.colors.vgBlackAlpha00};
+    props.$compact && props.theme.colors.vgBlackAlpha00};
 `;

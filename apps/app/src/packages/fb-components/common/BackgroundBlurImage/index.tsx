@@ -1,10 +1,10 @@
 import { FCWithChildren } from "@utils/types";
 import styled from "styled-components";
 
-const BlurImage = styled.div<{ image?: string }>`
+const BlurImage = styled.div<{ $image?: string }>`
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(${(props) => props.image});
+  background-image: url(${(props) => props.$image});
   background-color: #000000;
   position: absolute;
   width: 100%;
@@ -39,7 +39,7 @@ const BackgroundBlurImage: FCWithChildren<BackgroundBlurImageProps> = ({
   image
 }) => (
   <BlurImageContainer>
-    <BlurImage image={image} />
+    <BlurImage $image={image} />
     {children}
   </BlurImageContainer>
 );

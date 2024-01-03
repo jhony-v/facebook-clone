@@ -29,9 +29,9 @@ const TextLinkMessage: FCWithChildren<{ href: string }> = ({
 
 const TextLinkMessages = () => (
   <>
-    <Wrapper m="15px auto">
-      <FlexWrapper justify="center">
-        <RaisedButton variant="primary">Go to news feed</RaisedButton>
+    <Wrapper $m="15px auto">
+      <FlexWrapper $justify="center">
+        <RaisedButton $variant="primary">Go to news feed</RaisedButton>
       </FlexWrapper>
     </Wrapper>
     <TextLinkMessage href="/">Go back</TextLinkMessage>

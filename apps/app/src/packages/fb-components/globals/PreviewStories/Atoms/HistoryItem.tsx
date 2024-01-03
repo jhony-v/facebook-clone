@@ -12,12 +12,12 @@ type HistoryItemProps = {
 };
 const HistoryItem = ({ user, image }: HistoryItemProps) => (
   <StyledCardOverflow>
-    <StyledCardBackgroundImage image={image}>
-      <Wrapper p="10px">
-        <Avatar dimension="30px" isFeature src={user.avatar} />
+    <StyledCardBackgroundImage $image={image}>
+      <Wrapper $p="10px">
+        <Avatar $dimension="30px" $isFeature src={user.avatar} />
       </Wrapper>
-      <Wrapper m="auto 10px 10px" w="90%">
-        <TextLabel weight textColor="vgTextBlackAlpha00" textSize={300}>
+      <Wrapper $m="auto 10px 10px" $w="90%">
+        <TextLabel $weight $textColor="vgTextBlackAlpha00" $textSize={300}>
           {user.username}
         </TextLabel>
       </Wrapper>

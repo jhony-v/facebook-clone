@@ -9,25 +9,25 @@ import {
 } from "../Store/Store";
 
 const HeaderDetailWeather = () => {
-  const { description } = useRecoilValue(weatherDescriptionSelector);
+  const data = useRecoilValue(weatherDescriptionSelector);
   const { temp } = useRecoilValue(weatherMainSelector);
 
   return (
-    <FlexWrapper flexDirection="column">
+    <FlexWrapper $flexDirection="column">
       <Wrapper>
-        <Wrapper m="0 0 10px 0">
-          <TextLabel weight textColor="vgTextBlack" textSize={800}>
+        <Wrapper $m="0 0 10px 0">
+          <TextLabel $weight $textColor="vgTextBlack" $textSize={800}>
             Weather in{" "}
           </TextLabel>
         </Wrapper>
         <FlexWrapper>
-          <Wrapper m="0 20px 0 0">
-            <TextLabel weight textColor="vgTextBlack" textSize={800}>
+          <Wrapper $m="0 20px 0 0">
+            <TextLabel $weight $textColor="vgTextBlack" $textSize={800}>
               {temp}
             </TextLabel>
           </Wrapper>
           <FlexWrapper>
-            <SubtitleTextDetail title={temp} subtitle={description} weight />
+            <SubtitleTextDetail title={temp} subtitle={data?.description || ''} weight />
           </FlexWrapper>
         </FlexWrapper>
       </Wrapper>

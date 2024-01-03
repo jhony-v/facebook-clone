@@ -3,10 +3,10 @@ import { GetComponentProps } from "@utils/transforms";
 import styled, { css } from "styled-components";
 
 type StyledRaisedWrapperTypes = {
-  variant?: "primary";
-  w?: string;
-  fluid?: boolean;
-  hover?: boolean;
+  $variant?: "primary";
+  $w?: string;
+  $fluid?: boolean;
+  $hover?: boolean;
 };
 const StyledRaisedWrapper = styled.button<StyledRaisedWrapperTypes>`
   display: flex;
@@ -19,9 +19,9 @@ const StyledRaisedWrapper = styled.button<StyledRaisedWrapperTypes>`
   background: none;
   transition: background-color 0.3s;
   cursor: pointer;
-  width: ${(props) => (props.fluid ? "100%" : props.w || "auto")};
+  width: ${(props) => (props.$fluid ? "100%" : props.$w || "auto")};
   ${(props) =>
-    props.variant === "primary" &&
+    props.$variant === "primary" &&
     css`
       background-color: ${props.theme.colors.vgPrimary};
       color: ${props.theme.colors.vgTextBlackAlpha00};
@@ -30,7 +30,7 @@ const StyledRaisedWrapper = styled.button<StyledRaisedWrapperTypes>`
       }
     `}
   ${(props) =>
-    props.hover &&
+    props.$hover &&
     css`
       &:hover {
         background-color: ${props.theme.colors.vgBlackAlpha10};

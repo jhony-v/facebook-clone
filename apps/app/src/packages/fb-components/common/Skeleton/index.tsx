@@ -9,16 +9,16 @@ const animation = keyframes`
 `;
 
 export type SkeletonTypes = {
-  dimension?: string;
-  w?: string;
-  h?: string;
-  type?: "rect" | "circle";
-  inline?: boolean;
-  r?: number;
+  $dimension?: string;
+  $w?: string;
+  $h?: string;
+  $type?: "rect" | "circle";
+  $inline?: boolean;
+  $r?: number;
 };
 
 const Skeleton = styled(Wrapper)<SkeletonTypes>`
-  display: ${(props) => props.inline && "inline-block"};
+  display: ${(props) => props.$inline && "inline-block"};
   background: linear-gradient(
     to right,
     ${(props) => props.theme.colors.vgBlackAlpha20} 0%,
@@ -29,17 +29,17 @@ const Skeleton = styled(Wrapper)<SkeletonTypes>`
   animation: ${animation} 4s linear infinite;
 
   ${(props) =>
-    props.type === "rect" &&
+    props.$type === "rect" &&
     css`
-      height: ${props.h};
-      width: ${props.w};
-      border-radius: ${props.r || 4}px;
+      height: ${props.$h};
+      width: ${props.$w};
+      border-radius: ${props.$r || 4}px;
     `}
   ${(props) =>
-    props.type === "circle" &&
+    props.$type === "circle" &&
     css`
-      width: ${props.dimension || defaultSize};
-      height: ${props.dimension || defaultSize};
+      width: ${props.$dimension || defaultSize};
+      height: ${props.$dimension || defaultSize};
       border-radius: 100%;
     `}
 `;

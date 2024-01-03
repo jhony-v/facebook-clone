@@ -15,14 +15,11 @@ const StyledTotalViewsWrapper = styled.div`
 type TotalViewsProps = {
   total?: number;
 };
-const TotalViews = ({ total }: TotalViewsProps) => (
+const TotalViews = ({ total = 0 }: TotalViewsProps) => (
   <StyledTotalViewsWrapper>
     <BsEyeFill color="white" />
-    <Wrapper m="0 0 0 5px">{total}</Wrapper>
+    <Wrapper $m="0 0 0 5px">{total}</Wrapper>
   </StyledTotalViewsWrapper>
 );
 
-TotalViews.defaultProps = {
-  total: 0
-};
 export default TotalViews;

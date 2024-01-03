@@ -8,9 +8,9 @@ type ListHeaderOptionsProps = {
   children?: React.ReactNode;
 };
 const ListHeaderOptions = ({ title, children }: ListHeaderOptionsProps) => (
-  <Wrapper p="20px 20px 0">
-    <FlexWrapper justify="space-between" align="center">
-      <TextLabel weight role="heading">
+  <Wrapper $p="20px 20px 0">
+    <FlexWrapper $justify="space-between" $align="center">
+      <TextLabel $weight role="heading">
         {title}
       </TextLabel>
       <FlexWrapper>{children}</FlexWrapper>

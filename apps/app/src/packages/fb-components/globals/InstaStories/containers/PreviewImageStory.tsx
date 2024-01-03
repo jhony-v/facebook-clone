@@ -15,8 +15,8 @@ export const PreviewImageStory = ({
   const arrayStories = [...Array(totalStories)];
 
   useEffect(() => {
-    onChangeStory && onChangeStory(currentStory);
-  }, [currentStory]);
+    onChangeStory?.(currentStory);
+  }, [currentStory,onChangeStory]);
 
   return (
     <>

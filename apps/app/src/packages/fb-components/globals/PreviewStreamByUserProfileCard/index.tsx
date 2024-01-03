@@ -37,11 +37,11 @@ const PreviewStreamByUserProfileCard = (
     <CardStreamUser>
       <ImageStreamUser src={image} />
       <CardWrapperDetailStreamUser>
-        <TextLabelStreamUser isTitle>{title}</TextLabelStreamUser>
+        <TextLabelStreamUser $isTitle>{title}</TextLabelStreamUser>
         {description && (
           <TextLabelStreamUser>{description}</TextLabelStreamUser>
         )}
-        <Wrapper m="25px 0 0">
+        <Wrapper $m="25px 0 0">
           {stringAvatars && (
             <StringAvatars images={stringAvatars} dimension={26} />
           )}

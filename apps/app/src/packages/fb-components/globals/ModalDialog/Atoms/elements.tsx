@@ -13,8 +13,8 @@ export const StyledBackdropScreenWrapper = styled(FullScreenWrapper)`
   }
 `;
 
-export const WrapperBodyAnimatable = styled(motion.div)<{ w?: string }>`
-  width: ${(props) => props.w};
+export const WrapperBodyAnimatable = styled(motion.div)<{ $w?: string }>`
+  width: ${(props) => props.$w};
 `;
 WrapperBodyAnimatable.defaultProps = {
   initial: {
@@ -36,11 +36,11 @@ WrapperBodyAnimatable.defaultProps = {
 };
 
 type StyledHeaderWrapperProps = {
-  border?: boolean;
+  $border?: boolean;
 };
 export const StyledHeaderWrapper = styled(Wrapper)<StyledHeaderWrapperProps>`
   ${(props) =>
-    props.border &&
+    props.$border &&
     css`
       border-bottom: 1px solid ${props.theme.colors.vgBlackAlpha20};
     `}

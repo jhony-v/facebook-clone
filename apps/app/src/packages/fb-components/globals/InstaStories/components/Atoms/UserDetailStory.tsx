@@ -24,13 +24,13 @@ const UserDetailStory = ({
   datetime
 }: UserDetailStoryProps) => (
   <UserDetailStoryWrapper>
-    <FlexWrapper align="center">
-      <Wrapper m="0 10px 0 0">
+    <FlexWrapper $align="center">
+      <Wrapper $m="0 10px 0 0">
         <Avatar src={avatar} />
       </Wrapper>
-      <FlexWrapper align="center">
-        <TextStory weight={600}>{fullName}</TextStory>
-        <Wrapper m="0 5px">
+      <FlexWrapper $align="center">
+        <TextStory $weight={600}>{fullName}</TextStory>
+        <Wrapper $m="0 5px">
           <TextStory>{datetime}</TextStory>
         </Wrapper>
       </FlexWrapper>

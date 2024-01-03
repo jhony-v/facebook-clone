@@ -1,16 +1,17 @@
 import React from "react";
 import { usePathname } from "next/navigation";
-import Link, { LinkProps } from "next/link";
+import { LinkProps } from "next/link";
 import DarkTooltip from "@fb-components/common/DarkTooltip";
 import {
   StyledItemNavigation,
+  StyledLink,
   StyledLinkButton,
-  StyledNotificationPoint
+  StyledPointNotification
 } from "./elements";
 
 type LinkButtonProps = {
   isSelected?: boolean;
-  notifications: number;
+  notifications?: number;
   title: string;
   icon: React.JSXElementConstructor<{ size: number }>;
 } & LinkProps;
@@ -18,7 +19,7 @@ type LinkButtonProps = {
 const LinkButton = ({
   isSelected,
   title,
-  notifications,
+  notifications = 0,
   icon: IconComponent,
   ...restProps
 }: LinkButtonProps) => {
@@ -26,21 +27,17 @@ const LinkButton = ({
   return (
     <StyledItemNavigation>
       <DarkTooltip text={title}>
-        <Link {...restProps}>
-          <StyledLinkButton isSelected={asPath === restProps.href}>
+        <StyledLink {...restProps}>
+          <StyledLinkButton $isSelected={asPath === restProps.href}>
             <IconComponent size={22} />
             {notifications > 0 && (
-              <StyledNotificationPoint>{notifications}</StyledNotificationPoint>
+              <StyledPointNotification>{notifications}</StyledPointNotification>
             )}
           </StyledLinkButton>
-        </Link>
+        </StyledLink>
       </DarkTooltip>
     </StyledItemNavigation>
   );
-};
-
-LinkButton.defaultProps = {
-  notifications: 0
 };
 
 export default LinkButton;

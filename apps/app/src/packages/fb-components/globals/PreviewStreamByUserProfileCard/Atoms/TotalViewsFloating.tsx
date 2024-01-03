@@ -4,7 +4,7 @@ import React from "react";
 
 const TotalViewsFloating = ({ total }: { total: number }) => (
   <Wrapper
-    absolute={{
+    $absolute={{
       top: "5px",
       left: "5px"
     }}

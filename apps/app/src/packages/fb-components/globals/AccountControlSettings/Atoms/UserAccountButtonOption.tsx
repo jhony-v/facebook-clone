@@ -2,13 +2,18 @@ import { faker } from "@faker-js/faker";
 import Avatar from "@fb-components/common/Avatar";
 import { StyledUserAccountButton } from "./elements";
 
+const data = {
+  text: faker.person.firstName(),
+  src: faker.image.urlLoremFlickr({ category: "people" })
+}
+
 const UserAccountButtonOption = () => (
   <StyledUserAccountButton
-    text={faker.person.firstName()}
+    text={data.text}
     image={
       <Avatar
-        src={faker.image.urlLoremFlickr({ category: "people" })}
-        dimension="30px"
+        src={data.src}
+        $dimension="30px"
       />
     }
   />

@@ -7,9 +7,9 @@ type RowItemProps = {
   image?: string;
 };
 const RowItem = ({ text, image }: RowItemProps) => (
-  <Wrapper p="5px 10px">
+  <Wrapper $p="5px 10px">
     <RowItemSelectable
-      image={<Avatar src={image} dimension="32px" />}
+      image={<Avatar src={image} $dimension="32px" />}
       text={text}
     />
   </Wrapper>

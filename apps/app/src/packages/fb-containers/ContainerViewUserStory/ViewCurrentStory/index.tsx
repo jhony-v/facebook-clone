@@ -24,8 +24,8 @@ const ButtonChangeStory = styled.div`
 `;
 
 const ViewCurrentStory = ({ user, stories }) => (
-  <Wrapper m="auto">
-    <FlexWrapper align="center">
+  <Wrapper $m="auto">
+    <FlexWrapper $align="center">
       <ButtonChangeStory>
         <VscChevronLeft />
       </ButtonChangeStory>

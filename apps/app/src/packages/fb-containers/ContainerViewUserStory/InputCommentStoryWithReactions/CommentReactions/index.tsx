@@ -5,7 +5,7 @@ import ReactionCommentIconAnimatable from "./ReactionCommentIconAnimatable";
 const icons: ReactionsType[] = ["Like", "Love", "Haha", "Care", "Sad", "Angry"];
 
 const CommentReactions = () => (
-  <FlexWrapper align="center">
+  <FlexWrapper $align="center">
     {icons.map((e, i) => (
       <ReactionCommentIconAnimatable icon={e} key={i} />
     ))}

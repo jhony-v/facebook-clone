@@ -8,7 +8,7 @@ const InstaStoriesProvider: FC<
 > = ({ children, stories, duration }) => {
   const valueStories = useManagementStories({ stories, duration });
   return (
-    <InstaStoriesContext.Provider value={{ ...valueStories, duration }}>
+    <InstaStoriesContext.Provider value={{ ...valueStories, duration } as InstaStoriesTypes.InstaStoriesContextStateProps}>
       {children}
     </InstaStoriesContext.Provider>
   );

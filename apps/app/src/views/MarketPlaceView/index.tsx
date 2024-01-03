@@ -13,17 +13,17 @@ const MarketPlaceView = () => (
   <ContainerMainNavigator>
     <LayoutDrawer>
       <LayoutDrawerGridColumn variant="left-rail fluid">
-        <LayoutDrawerLeftRail compact>
+        <LayoutDrawerLeftRail $compact>
           <ContainerOptionsNavigation />
         </LayoutDrawerLeftRail>
         <Wrapper />
-        <Wrapper m="auto">
-          <Wrapper m="40px 0">
-            <TextLabel weight textColor="vgTextBlack" textSize={600}>
+        <Wrapper $m="auto">
+          <Wrapper $m="40px 0">
+            <TextLabel $weight $textColor="vgTextBlack" $textSize={600}>
               Today's Picks for You
             </TextLabel>
           </Wrapper>
-          <Wrapper w="65%">
+          <Wrapper $w="65%">
             <ContainerGetListProducts />
           </Wrapper>
         </Wrapper>

@@ -16,7 +16,7 @@ const ActionButtonController = ({
   text,
   icon: IconComponent,
   colorIcon,
-  onClick
+  onClick = () => null
 }: ActionButtonControllerProps) => (
   <StyledRaisedButton onClick={onClick}>
     {IconComponent && (
@@ -26,14 +26,10 @@ const ActionButtonController = ({
         color={colorIcon}
       />
     )}
-    <TextLabel textSize={300} weight>
+    <TextLabel $textSize={300} $weight>
       {text}
     </TextLabel>
   </StyledRaisedButton>
 );
-
-ActionButtonController.defaultProps = {
-  onClick: () => null
-};
 
 export default ActionButtonController;

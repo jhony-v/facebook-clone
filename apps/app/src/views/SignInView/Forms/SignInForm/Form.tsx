@@ -9,7 +9,7 @@ type FormData = {
 };
 
 const Form = () => {
-  const { handleSubmit, control, errors } = useForm<FormData>();
+  const { handleSubmit, control, formState: { errors } } = useForm<FormData>();
   const onSubmit = () => {};
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -38,11 +38,10 @@ const Form = () => {
         }}
       />
       <RaisedButton
-        as="input"
         type="submit"
         value="Sign in"
-        variant="primary"
-        fluid
+        $variant="primary"
+        $fluid
       />
     </form>
   );

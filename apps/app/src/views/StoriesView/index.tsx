@@ -8,10 +8,13 @@ import LayoutDrawerFlexFluid from "@fb-components/layouts/LayoutsDrawer/LayoutDr
 import ContainerViewUserStory from "@fb-containers/ContainerViewUserStory";
 import dynamic from "next/dynamic";
 import { SkeletonElementRow } from "@fb-components/globals/LoadersSkeletonElement";
-import { Suspense } from "react";
 
 const AsyncContainerListUserStories = dynamic(
-  () => import("@fb-containers/ContainerListUserStories")
+  () => import("@fb-containers/ContainerListUserStories"),
+  {
+    ssr: false,
+    loading: () => <SkeletonElementRow repeat={10} />
+  }
 );
 
 const StoriesView = () => (
@@ -21,9 +24,7 @@ const StoriesView = () => (
       <AccountControlSettings hideButtonAccount />
       <LayoutDrawerAbsoluteFullScreen>
         <LayoutDrawerFlexSidebar>
-          <Suspense fallback={<SkeletonElementRow repeat={10} />}>
-            <AsyncContainerListUserStories />
-          </Suspense>
+          <AsyncContainerListUserStories />
         </LayoutDrawerFlexSidebar>
         <LayoutDrawerFlexFluid>
           <ContainerViewUserStory />

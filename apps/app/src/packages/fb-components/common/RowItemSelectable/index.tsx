@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import TextLabel from "../TextLabel";
 import Wrapper from "../Wrapper";
 import FlexWrapper from "../FlexWrapper";
@@ -17,10 +17,10 @@ const RowItemSelectable = ({
   ...restProps
 }: RowItemSelectableProps) => (
   <RowDivider>
-    <FlexWrapper align="center" {...restProps}>
-      <Wrapper m="0 10px 0 0">{image}</Wrapper>
+    <FlexWrapper $align="center" {...restProps}>
+      <Wrapper $m="0 10px 0 0">{image}</Wrapper>
       {text ? (
-        <TextLabel textSize={300} weight textColor="vgTextBlackAlpha30">
+        <TextLabel $textSize={300} $weight $textColor="vgTextBlackAlpha30">
           {text}
         </TextLabel>
       ) : (
@@ -30,4 +30,4 @@ const RowItemSelectable = ({
   </RowDivider>
 );
 
-export default RowItemSelectable;
+export default memo(RowItemSelectable);

@@ -17,15 +17,15 @@ export const ButtonPlayerContainer = styled(FlexWrapper)`
   font-size: 3em;
 `;
 
-export const VideoPlayerContainer = styled.div<{ h?: string; w?: string }>`
+export const VideoPlayerContainer = styled.div<{ $h?: string; $w?: string }>`
   display: flex;
   position: relative;
-  height: ${(props) => props.h || "180px"};
-  width: ${(props) => props.w || "100%"};
+  height: ${(props) => props.$h || "180px"};
+  width: ${(props) => props.$w || "100%"};
 `;
 
-export const VideoPlayer = styled.video<{ objectFit?: string }>`
-  object-fit: ${(props) => props.objectFit};
+export const VideoPlayer = styled.video<{ $objectFit?: string }>`
+  object-fit: ${(props) => props.$objectFit};
   display: block;
   height: 100%;
   width: 100%;

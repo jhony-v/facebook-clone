@@ -10,8 +10,8 @@ const ControlButtonOption = ({
   icon: IconComponent,
   ...restProps
 }: ControlButtonOptionProps) => (
-  <Wrapper m="0 5px">
-    <RoundButton {...restProps} dimension="40px">
+  <Wrapper $m="0 5px">
+    <RoundButton {...restProps} $dimension="40px">
       <IconComponent size={20} />
     </RoundButton>
   </Wrapper>

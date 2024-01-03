@@ -10,9 +10,9 @@ type RowItemProps = {
 };
 const RowItem = React.memo(({ style, text, image }: RowItemProps) => (
   <Wrapper style={style}>
-    <Wrapper m="10px">
+    <Wrapper $m="10px">
       <RowItemSelectable
-        image={<Avatar src={image} dimension="25px" isOnline />}
+        image={<Avatar src={image} $dimension="25px" $isOnline />}
         text={text}
       />
     </Wrapper>

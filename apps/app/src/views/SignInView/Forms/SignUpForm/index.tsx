@@ -8,10 +8,10 @@ type SignUpFormProps = {
 };
 const SignUpForm = ({ onClose, open }: SignUpFormProps) => (
   <ModalDialog onClose={onClose} open={open}>
-    <ModalDialog.Header border p="20px">
+    <ModalDialog.Header $border $p="20px">
       <HeaderTitle />
     </ModalDialog.Header>
-    <ModalDialog.Body p="20px">
+    <ModalDialog.Body $p="20px">
       <Form />
     </ModalDialog.Body>
   </ModalDialog>

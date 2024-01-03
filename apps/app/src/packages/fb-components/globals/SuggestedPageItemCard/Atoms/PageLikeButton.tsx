@@ -1,4 +1,3 @@
-import FlexWrapper from "@fb-components/common/FlexWrapper";
 import RaisedButton from "@fb-components/common/RaisedButton";
 import TextLabel from "@fb-components/common/TextLabel";
 import Wrapper from "@fb-components/common/Wrapper";
@@ -12,11 +11,11 @@ type PageLikeButtonProps = {
   liked?: boolean;
 };
 const PageLikeButton = (props: PageLikeButtonProps) => (
-  <Wrapper m="auto 0 0">
-    <StyledButton fluid>
+  <Wrapper $m="auto 0 0">
+    <StyledButton $fluid>
       <FaThumbsUp size={16} />
-      <Wrapper m="0 0 0 5px">
-        <TextLabel weight textColor="vgTextBlack">
+      <Wrapper $m="0 0 0 5px">
+        <TextLabel $weight $textColor="vgTextBlack">
           Like
         </TextLabel>
       </Wrapper>

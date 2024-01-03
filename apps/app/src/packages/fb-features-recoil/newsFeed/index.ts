@@ -1,35 +1,6 @@
 import { postsMocks } from "@mocks/index";
 import { atom, selector, useRecoilValue } from "recoil";
 
-interface NewsFeed {
-  id: string;
-  image: string;
-  text: string;
-  createdAt: string;
-  user: {
-    name: string;
-    avatar: string;
-    id: string;
-  };
-  reactionIcons: string[];
-  reactionUser: {
-    isReaction: boolean;
-    type: string;
-    text: string;
-  };
-  reactions: {
-    types: string[];
-    isReaction: boolean;
-    total: number;
-    userReaction: {
-      type: string;
-      text: string;
-    };
-  };
-  comments: {
-    total: number;
-  };
-}
 
 export const newsFeedState = atom({
   key: "newsFeedState",
@@ -39,7 +10,7 @@ export const newsFeedState = atom({
 export const getNewsFeedSelector = selector({
   key: "getNewsFeedSelector",
   get: ({ get }) => {
-    const data = get(newsFeedState) as NewsFeed[];
+    const data = get(newsFeedState);
     return {
       data,
       isEmpty: data.length

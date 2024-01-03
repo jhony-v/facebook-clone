@@ -10,9 +10,9 @@ const positionFixedStatic = (() => {
 })();
 
 export type StyledFacebookAvatarTypes = {
-  isFixed?: boolean;
-  leftPosition?: string;
-  topPosition?: string;
+  $isFixed?: boolean;
+  $leftPosition?: string;
+  $topPosition?: string;
 };
 
 export const StyledFacebookAvatar = styled.a<StyledFacebookAvatarTypes>`
@@ -23,9 +23,9 @@ export const StyledFacebookAvatar = styled.a<StyledFacebookAvatarTypes>`
   );
   width: ${size}px;
   height: ${size}px;
-  position: ${(props) => props.isFixed && "fixed"};
-  left: ${(props) => props.leftPosition || "16px"};
-  top: ${(props) => props.topPosition || positionFixedStatic};
+  position: ${(props) => props.$isFixed && "fixed"};
+  left: ${(props) => props.$leftPosition || "16px"};
+  top: ${(props) => props.$topPosition || positionFixedStatic};
   border-radius: 100%;
   color: white;
   overflow: hidden;

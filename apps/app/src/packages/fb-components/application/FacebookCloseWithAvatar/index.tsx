@@ -6,7 +6,7 @@ import { StyledWrapper, StyledWrapperFacebookAnimatable } from "./elements";
 
 const FacebookCloseWithAvatar = ({ onClose }: { onClose: () => void }) => (
   <StyledWrapper>
-    <Wrapper m="0 5px 0 0">
+    <Wrapper $m="0 5px 0 0">
       <ButtonClose onClose={onClose} />
     </Wrapper>
     <StyledWrapperFacebookAnimatable>

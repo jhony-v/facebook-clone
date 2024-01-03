@@ -5,14 +5,14 @@ import { DAYS } from "../Config";
 import { weatherDescriptionSelector } from "../Store/Store";
 
 const ListWeekWeather = () => {
-  const { description } = useRecoilValue(weatherDescriptionSelector);
+  const data = useRecoilValue(weatherDescriptionSelector);
   return (
-    <Wrapper m="1em 0">
+    <Wrapper $m="1em 0">
       {DAYS.map((e, i) => (
-        <Wrapper key={i} m="30px 0">
+        <Wrapper key={i} $m="30px 0">
           <ItemDayWeather
             day={e}
-            description={description}
+            description={data?.description || ''}
             celcius={{
               min: "10° C",
               max: "20° C"

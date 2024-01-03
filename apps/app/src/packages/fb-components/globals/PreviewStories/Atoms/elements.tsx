@@ -27,11 +27,11 @@ export const StyledCardOverflow = styled.div`
 `;
 
 type StyledCardBackgroundImageProps = {
-  image?: string;
+  $image?: string;
 };
 export const StyledCardBackgroundImage = styled.div<StyledCardBackgroundImageProps>`
   background: linear-gradient(25deg, rgba(0, 0, 0, 0.6) 20%, transparent 100%),
-    url(${(props) => props.image}) no-repeat center / cover;
+    url(${(props) => props.$image}) no-repeat center / cover;
   width: 100%;
   height: 100%;
   display: flex;
@@ -39,8 +39,8 @@ export const StyledCardBackgroundImage = styled.div<StyledCardBackgroundImagePro
 `;
 
 export const StyledUserButtonAdd = styled(RoundButton).attrs({
-  dimension: "36px",
-  colorIcon: "vgBlackAlpha00"
+  $dimension: "36px",
+  $colorIcon: "vgBlackAlpha00"
 })`
   background-color: ${(props) => props.theme.colors.vgPrimary};
   position: absolute;

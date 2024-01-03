@@ -15,7 +15,7 @@ const ActionInputController = ({
   onClick
 }: ActionInputControllerProps) => (
   <StyledActionInputWrapper onClick={onClick}>
-    <Wrapper m="0 10px 0 0">
+    <Wrapper $m="0 10px 0 0">
       <Avatar src={userImage} />
     </Wrapper>
     <ActionButtonsController.Input placeholder={inputPlaceholder} />

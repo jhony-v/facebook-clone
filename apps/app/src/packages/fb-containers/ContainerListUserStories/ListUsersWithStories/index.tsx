@@ -4,11 +4,11 @@ import { faker } from "@faker-js/faker";
 import UserStory from "./UserStory";
 
 const ListUsersWithStories = () => (
-  <Wrapper p="10px">
-    <TextLabel weight block textColor="vgTextBlack">
+  <Wrapper $p="10px">
+    <TextLabel $weight $block $textColor="vgTextBlack">
       All stories
     </TextLabel>
-    <Wrapper m="10px -10px">
+    <Wrapper $m="10px -10px">
       {Array(20)
         .fill(0)
         .map((_, i) => (

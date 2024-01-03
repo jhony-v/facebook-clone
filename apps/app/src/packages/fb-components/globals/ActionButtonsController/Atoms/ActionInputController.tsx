@@ -4,19 +4,16 @@ import { StyledRaisedButtonPlaceholderInput } from "./elements";
 
 type ActionInputControllerProps = {
   placeholder?: string | React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
 };
 const ActionInputController = ({
   placeholder,
-  onClick
+  onClick = () => {}
 }: ActionInputControllerProps) => (
   <StyledRaisedButtonPlaceholderInput onClick={onClick}>
     <TextLabel>{placeholder}</TextLabel>
   </StyledRaisedButtonPlaceholderInput>
 );
 
-ActionInputController.defaultProps = {
-  onClick: () => {}
-};
 
 export default ActionInputController;

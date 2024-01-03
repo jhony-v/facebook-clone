@@ -19,12 +19,12 @@ interface InstaStoriesProps {
 }
 
 const InstaStories = (props: InstaStoriesProps) => {
-  const { user, stories, onChangeStory, w, h } = props;
+  const { user, stories, onChangeStory, w = "330px", h = "580px" } = props;
   const duration = 5;
 
   return (
     <InstaStoriesProvider duration={duration} stories={stories}>
-      <OverflowCardStory w={w} h={h}>
+      <OverflowCardStory $w={w} $h={h}>
         <PreviewImageStory onChangeStory={onChangeStory} />
         <PreviewLoadingImage />
         <PreviewProgressStories />
@@ -34,9 +34,5 @@ const InstaStories = (props: InstaStoriesProps) => {
   );
 };
 
-InstaStories.defaultProps = {
-  w: "330px",
-  h: "580px"
-};
 
 export default InstaStories;

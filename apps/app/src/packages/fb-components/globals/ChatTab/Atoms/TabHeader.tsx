@@ -9,12 +9,12 @@ type TabHeaderProps = {
   onClose: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 const TabHeader = ({ titleHeader, onClose }: TabHeaderProps) => (
-  <Wrapper p="10px 20px 5px">
-    <FlexWrapper centerBetween>
-      <TextLabel weight data-testid="title-header">
+  <Wrapper $p="10px 20px 5px">
+    <FlexWrapper $centerBetween>
+      <TextLabel $weight data-testid="title-header">
         {titleHeader}
       </TextLabel>
-      <RoundButton onClick={onClose} colorIcon="vgPrimary">
+      <RoundButton onClick={onClose} $colorIcon="vgPrimary">
         <VscClose size={30} />
       </RoundButton>
     </FlexWrapper>

@@ -10,13 +10,13 @@ import ContainerOptionsNavigation from "@fb-containers/ContainerOptionsNavigatio
 const SearchView = () => (
   <ContainerMainNavigator>
     <LayoutDrawer>
-      <Wrapper w="100%">
+      <Wrapper $w="100%">
         <LayoutDrawerGridColumn variant="left-rail fluid">
-          <LayoutDrawerLeftRail compact>
+          <LayoutDrawerLeftRail $compact>
             <ContainerOptionsNavigation />
           </LayoutDrawerLeftRail>
           <Wrapper />
-          <Wrapper w="65%" m="2em auto">
+          <Wrapper $w="65%" $m="2em auto">
             <ContainerListSearchPeople />
           </Wrapper>
         </LayoutDrawerGridColumn>

@@ -8,7 +8,7 @@ const listStyle = {
   outline: "none"
 };
 
-const ListRenderItems = ({ data, render, renderHeight }) => {
+const ListRenderItems = ({ data, render, renderHeight  = 80 }) => {
   const scroll = useRef<any>(null);
 
   const onScrolling = ({ target }) => {
@@ -35,8 +35,5 @@ const ListRenderItems = ({ data, render, renderHeight }) => {
   );
 };
 
-ListRenderItems.defaultProps = {
-  renderHeight: 80
-};
 
 export default ListRenderItems;

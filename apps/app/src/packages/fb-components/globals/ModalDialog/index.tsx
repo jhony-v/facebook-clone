@@ -15,13 +15,13 @@ type ModalDialogProps = {
 const ModalDialog = ({
   open,
   children,
-  w,
+  w = "600px",
   onModal,
   onClose
 }: ModalDialogProps) => {
   useEffect(() => {
     onModal && onModal(open);
-  }, [open]);
+  }, [open, onModal]);
 
   return (
     <AnimatePresence>
@@ -34,10 +34,6 @@ const ModalDialog = ({
       )}
     </AnimatePresence>
   );
-};
-
-ModalDialog.defaultProps = {
-  w: "600px"
 };
 
 ModalDialog.Header = StyledHeaderWrapper;

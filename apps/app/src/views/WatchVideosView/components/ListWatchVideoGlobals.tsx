@@ -8,7 +8,7 @@ const ListWatchVideoGlobals = () => (
     {Array(10)
       .fill(0)
       .map((e, i) => (
-        <Wrapper p="5px 0" key={i}>
+        <Wrapper $p="5px 0" key={i}>
           <WatchVideoCard
             text="¿Por Qué Iron Man No Usó A EDITH Contra Thanos En Avengers_ Endgame"
             video="https://player.vimeo.com/external/459802291.sd.mp4?s=c846c0ef9292600014ca216aa0be31496974e3a6&profile_id=164"

@@ -8,9 +8,9 @@ type SearchInputProps = {
   onKeyUp: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 };
 const SearchInput = ({ onKeyUp }: SearchInputProps) => (
-  <Wrapper p="10px 20px 20px">
-    <FlexWrapper centerBetween>
-      <TextLabel textSize={200}>To:</TextLabel>
+  <Wrapper $p="10px 20px 20px">
+    <FlexWrapper $centerBetween>
+      <TextLabel $textSize={200}>To:</TextLabel>
       <StyledInputSearch onKeyUp={onKeyUp} autoFocus />
     </FlexWrapper>
   </Wrapper>

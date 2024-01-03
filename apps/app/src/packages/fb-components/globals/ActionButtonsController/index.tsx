@@ -11,7 +11,7 @@ const ActionButtonsController = ({
   children,
   repeatColumns
 }: ActionButtonsControllerProps) => (
-  <Grid gap="10px" repeatColumns={repeatColumns}>
+  <Grid $gap="10px" $repeatColumns={repeatColumns}>
     {children}
   </Grid>
 );

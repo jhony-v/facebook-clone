@@ -25,7 +25,7 @@ const MarketplaceCard = ({
 
   useEffect(() => {
     visibility && setImage(image);
-  }, [visibility]);
+  }, [visibility, image]);
 
   return (
     <MarketplaceCardWrapper onClick={onClick}>
@@ -35,18 +35,18 @@ const MarketplaceCard = ({
         {...(!!processImage && { src: processImage })}
       />
       <Wrapper>
-        <Wrapper p="10px 0 5px">
-          <TextLabel weight textColor="vgTextBlack">
+        <Wrapper $p="10px 0 5px">
+          <TextLabel $weight $textColor="vgTextBlack">
             {price}
           </TextLabel>
         </Wrapper>
-        <Wrapper p="5px 0">
-          <TextLabel textSize={400} textColor="vgTextBlack">
+        <Wrapper $p="5px 0">
+          <TextLabel $textSize={400} $textColor="vgTextBlack">
             {description}
           </TextLabel>
         </Wrapper>
-        <Wrapper p="5px 0">
-          <TextLabel textSize={200}>{location}</TextLabel>
+        <Wrapper $p="5px 0">
+          <TextLabel $textSize={200}>{location}</TextLabel>
         </Wrapper>
       </Wrapper>
     </MarketplaceCardWrapper>

@@ -3,7 +3,7 @@ import React from "react";
 import ScenePosts from "./ScenePosts/ScenePosts";
 
 const PreviewStateOfNavigatorSelected = () => (
-  <Wrapper className="profile__pagelet" m="20px auto">
+  <Wrapper className="profile__pagelet" $m="20px auto">
     <ScenePosts />
   </Wrapper>
 );

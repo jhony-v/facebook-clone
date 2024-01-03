@@ -20,31 +20,31 @@ const UserResultSearchedCard = ({
   children,
   rightComponent
 }: UserResultSearchedCardProps) => (
-  <Card variant="compact">
-    <Wrapper p="10px">
+  <Card $variant="compact">
+    <Wrapper $p="10px">
       <FlexWrapper>
-        <Wrapper flexNone m="0 10px 0 0">
-          <Avatar src={avatar} dimension="60px" />
+        <Wrapper $flexNone $m="0 10px 0 0">
+          <Avatar src={avatar} $dimension="60px" />
         </Wrapper>
-        <FlexWrapper flexDirection="column" w="60%" justify="center">
-          <TextLabel weight textColor="vgTextBlack" textSize={300}>
+        <FlexWrapper $flexDirection="column" $w="60%" $justify="center">
+          <TextLabel $weight $textColor="vgTextBlack" $textSize={300}>
             {fullName}
           </TextLabel>
           <Wrapper>
             {subtitle && (
-              <Wrapper m="5px 0 0">
-                <TextLabel textSize={200}>{subtitle}</TextLabel>
+              <Wrapper $m="5px 0 0">
+                <TextLabel $textSize={200}>{subtitle}</TextLabel>
               </Wrapper>
             )}
             {description && (
-              <Wrapper m="10px 0 0">
-                <TextLabel textSize={300}>{description}</TextLabel>
+              <Wrapper $m="10px 0 0">
+                <TextLabel $textSize={300}>{description}</TextLabel>
               </Wrapper>
             )}
           </Wrapper>
           {children}
         </FlexWrapper>
-        <Wrapper flexNone m="auto 0 auto auto">
+        <Wrapper $flexNone $m="auto 0 auto auto">
           {rightComponent}
         </Wrapper>
       </FlexWrapper>

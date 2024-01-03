@@ -16,9 +16,9 @@ type NewsHeaderProps = {
   };
 };
 const NewsHeader = ({ user, detail }: NewsHeaderProps) => (
-  <Wrapper p="20px 10px 0">
-    <FlexWrapper align="center">
-      <Wrapper flexNone m="0 10px 0 0">
+  <Wrapper $p="20px 10px 0">
+    <FlexWrapper $align="center">
+      <Wrapper $flexNone $m="0 10px 0 0">
         <Avatar src={user.avatar} />
       </Wrapper>
       <DetailUser title={user.name} detail={detail.text} icon={detail.icon} />

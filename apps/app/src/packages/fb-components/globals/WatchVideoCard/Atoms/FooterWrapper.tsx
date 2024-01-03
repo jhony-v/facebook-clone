@@ -8,7 +8,7 @@ type FooterWrapperProps = {
 };
 
 const FooterWrapper = ({ options, reactions }: FooterWrapperProps) => (
-  <FlexWrapper justify="space-between" align="center">
+  <FlexWrapper $justify="space-between" $align="center">
     <Wrapper>{options}</Wrapper>
     <Wrapper>{reactions}</Wrapper>
   </FlexWrapper>

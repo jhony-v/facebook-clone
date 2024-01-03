@@ -9,15 +9,15 @@ import { peopleSearchResult } from "@mocks/index";
 const ContainerListSearchPeople = () => (
   <Wrapper>
     {peopleSearchResult.getPeople().map((e, i) => (
-      <Wrapper m="10px auto 20px" key={i}>
+      <Wrapper $m="10px auto 20px" key={i}>
         <UserResultSearchedCard
           avatar={faker.image.url()}
           fullName={e.fullName}
           subtitle={e.subtitle}
           description={e.description}
           rightComponent={
-            <DarkTooltip position="bottom" text="Add friend" w="100px">
-              <RoundButton dimension="40px">
+            <DarkTooltip $position="bottom" text="Add friend" $w="100px">
+              <RoundButton $dimension="40px">
                 <FaUserPlus size={20} />
               </RoundButton>
             </DarkTooltip>

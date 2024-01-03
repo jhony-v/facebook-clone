@@ -23,8 +23,8 @@ const LayoutDrawerGridColumn: FCWithChildren<GridColumnProps> = (props) => {
       break;
   }
   return (
-    <Wrapper w="100%">
-      <Grid sizeColumns={columns}>{children}</Grid>
+    <Wrapper $w="100%">
+      <Grid $sizeColumns={columns}>{children}</Grid>
     </Wrapper>
   );
 };

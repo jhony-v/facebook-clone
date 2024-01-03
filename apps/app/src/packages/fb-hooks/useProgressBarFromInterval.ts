@@ -39,7 +39,7 @@ const useProgressBarFromInterval = ({
         fn && cancelAnimationFrame(fn);
       };
     }
-  }, [playing]);
+  }, [playing,duration]);
 
   return {
     progress,

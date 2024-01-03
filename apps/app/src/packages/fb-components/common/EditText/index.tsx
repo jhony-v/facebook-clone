@@ -8,9 +8,9 @@ const options = {
 };
 
 export type StyledEditTextTypes = {
-  variant?: keyof typeof options;
-  w?: string;
-  fluid?: boolean;
+  $variant?: keyof typeof options;
+  $w?: string;
+  $fluid?: boolean;
 };
 
 const StyledEditText = styled.input<StyledEditTextTypes>`
@@ -18,21 +18,21 @@ const StyledEditText = styled.input<StyledEditTextTypes>`
   border-radius: 10px;
   outline: none;
   border-width: 0;
-  width: ${(props) => (props.fluid ? "100%" : props.w || "auto")};
+  width: ${(props) => (props.$fluid ? "100%" : props.$w || "auto")};
   ${(props) =>
-    props.variant === options.primary &&
+    props.$variant === options.primary &&
     css`
       background-color: ${props.theme.colors.vgBlackAlpha10};
       color: ${props.theme.colors.vgTextBlackAlpha20};
     `}
   ${(props) =>
-    props.variant === options.outline &&
+    props.$variant === options.outline &&
     css`
       border: 1px solid ${props.theme.colors.vgBlackAlpha20};
     `}
 
   ${(props) =>
-    props.variant === options.darker &&
+    props.$variant === options.darker &&
     css`
       background-color: ${props.theme.colors.vgBlackAlpha20};
       color: ${props.theme.colors.vgTextBlackAlpha30};

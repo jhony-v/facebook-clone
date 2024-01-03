@@ -11,7 +11,7 @@ const WeatherView = () => {
     <ContainerMainNavigator>
       <LayoutDrawer>
         <LayoutDrawerGridColumn variant="left-rail fluid">
-          <LayoutDrawerLeftRail compact>
+          <LayoutDrawerLeftRail $compact>
             <ContainerOptionsNavigation />
           </LayoutDrawerLeftRail>
           <div>

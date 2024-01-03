@@ -15,14 +15,14 @@ type HistoryUserItemProps = {
 const HistoryUserItem = ({ username, avatar }: HistoryUserItemProps) => (
   <StyledCardOverflow>
     <StyledUserImageAdd src={avatar} />
-    <FlexWrapper justify="center">
+    <FlexWrapper $justify="center">
       <StyledUserButtonAdd>
         <FiPlus size={20} />
       </StyledUserButtonAdd>
     </FlexWrapper>
-    <Wrapper m="auto 0" w="100%">
-      <FlexWrapper justify="center">
-        <TextLabel weight textSize={200} textAlign="center">
+    <Wrapper $m="auto 0" $w="100%">
+      <FlexWrapper $justify="center">
+        <TextLabel $weight $textSize={200} $textAlign="center">
           {username}
         </TextLabel>
       </FlexWrapper>

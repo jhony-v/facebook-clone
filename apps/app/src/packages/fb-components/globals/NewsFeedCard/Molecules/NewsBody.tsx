@@ -7,9 +7,9 @@ type NewsBodyProps = {
   image?: string;
 };
 const NewsBody = ({ text, image }: NewsBodyProps) => (
-  <Wrapper p="20px 0">
-    <Wrapper p="0 10px 10px">
-      <TextLabel textColor="vgTextBlack" textSize={300}>
+  <Wrapper $p="20px 0">
+    <Wrapper $p="0 10px 10px">
+      <TextLabel $textColor="vgTextBlack" $textSize={300}>
         {text}
       </TextLabel>
     </Wrapper>

@@ -13,17 +13,17 @@ const VideoDetailStreamInformation = (
 ) => {
   const { title, avatar, detail } = props;
   return (
-    <Wrapper m="15px 0">
-      <FlexWrapper align="center">
+    <Wrapper $m="15px 0">
+      <FlexWrapper $align="center">
         <Wrapper>
           <AvatarStreaming src={avatar} />
         </Wrapper>
-        <Wrapper m="0 0 0 10px">
-          <TextLabel block weight textColor="vgTextBlack">
+        <Wrapper $m="0 0 0 10px">
+          <TextLabel $block $weight $textColor="vgTextBlack">
             {title}
           </TextLabel>
-          <Wrapper p="5px 0 0 0">
-            <TextLabel weight textSize={200}>
+          <Wrapper $p="5px 0 0 0">
+            <TextLabel $weight $textSize={200}>
               {detail}
             </TextLabel>
           </Wrapper>

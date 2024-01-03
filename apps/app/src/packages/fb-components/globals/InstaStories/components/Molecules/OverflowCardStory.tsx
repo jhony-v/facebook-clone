@@ -1,11 +1,9 @@
-import useFetchImage from "@fb-hooks/useFetchImage";
 import React from "react";
 import styled from "styled-components";
-import OverflowBackgroundImage from "../../../../common/OverflowBackgroundImage";
 
 type RootStoryOverflowTypes = {
-  w?: string;
-  h?: string;
+  $w?: string;
+  $h?: string;
 };
 const RootStory = styled.div<RootStoryOverflowTypes>`
   border-radius: 10px;
@@ -13,8 +11,8 @@ const RootStory = styled.div<RootStoryOverflowTypes>`
   position: relative;
   display: flex;
   background-color: #303030;
-  width: ${({ w }) => w};
-  height: ${({ h }) => h};
+  width: ${({ $w }) => $w};
+  height: ${({ $h }) => $h};
   margin: auto;
 `;
 
@@ -24,19 +22,7 @@ const RootMainStory = styled.div`
   display: flex;
 `;
 
-const RootStoryBodyBackground = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.4) 30%,
-    transparent 80%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
-`;
+
 
 const RootStoryBody = styled.div`
   width: 100%;
@@ -45,24 +31,16 @@ const RootStoryBody = styled.div`
   display: flex;
 `;
 
-const ImageStory = styled.img`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  object-fit: cover;
-`;
 
 type OverflowCardBackgroundImage = {
   children?: React.ReactNode;
 } & RootStoryOverflowTypes;
 
 const OverflowCardStory = (props: OverflowCardBackgroundImage) => {
-  const { children, w, h } = props;
+  const { children, $w, $h } = props;
 
   return (
-    <RootStory w={w} h={h}>
+    <RootStory $w={$w} $h={$h}>
       <RootMainStory>
         <RootStoryBody>{children}</RootStoryBody>
       </RootMainStory>

@@ -15,22 +15,22 @@ const PageInformation = ({
   category,
   likes
 }: PageInformationProps) => (
-  <Wrapper m="0 0 20px">
+  <Wrapper $m="0 0 20px">
     <FlexWrapper>
-      <Wrapper m="0 10px 0 0">
+      <Wrapper $m="0 10px 0 0">
         <Avatar src={avatar} />
       </Wrapper>
       <Wrapper>
-        <TextLabel weight textColor="vgTextBlack" textSize={600}>
+        <TextLabel $weight $textColor="vgTextBlack" $textSize={600}>
           {name}
         </TextLabel>
         <Wrapper>
           <Wrapper>
-            <TextLabel textSize={200} weight>
+            <TextLabel $textSize={200} $weight>
               {category}
             </TextLabel>
           </Wrapper>
-          <TextLabel textSize={200}>
+          <TextLabel $textSize={200}>
             {`${likes} people like this Page`}
           </TextLabel>
         </Wrapper>

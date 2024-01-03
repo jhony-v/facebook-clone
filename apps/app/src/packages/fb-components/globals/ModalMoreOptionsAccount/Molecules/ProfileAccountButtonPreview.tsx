@@ -7,16 +7,16 @@ import ItemButtonSelectable from "../Atoms/ItemButtonSelectable";
 
 const ProfileAccountButtonPreview = () => (
   <ItemButtonSelectable onClick={() => null} hideNextArrow>
-    <FlexWrapper align="center">
+    <FlexWrapper $align="center">
       <Avatar
         src={faker.image.urlLoremFlickr({ category: "people" })}
-        dimension="70px"
+        $dimension="70px"
       />
-      <Wrapper m="0 0 0 15px">
-        <TextLabel weight textColor="vgTextBlack" block>
+      <Wrapper $m="0 0 0 15px">
+        <TextLabel $weight $textColor="vgTextBlack" $block>
           {`${faker.person.firstName()} ${faker.person.lastName()} ${faker.person.lastName()}`}
         </TextLabel>
-        <TextLabel textSize={300} block>
+        <TextLabel $textSize={300} $block>
           See your profile
         </TextLabel>
       </Wrapper>

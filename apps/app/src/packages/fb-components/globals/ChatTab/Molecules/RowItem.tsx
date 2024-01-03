@@ -10,7 +10,7 @@ type RowItemProps = {
 };
 const RowItem = memo(({ style, text, image }: RowItemProps) => (
   <Wrapper style={style}>
-    <Wrapper m="10px">
+    <Wrapper $m="10px">
       <RowItemSelectable image={<Avatar src={image} />} text={text} />
     </Wrapper>
   </Wrapper>

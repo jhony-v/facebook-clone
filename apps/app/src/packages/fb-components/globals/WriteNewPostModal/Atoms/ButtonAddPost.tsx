@@ -7,7 +7,7 @@ const ButtonAddPost = () => {
   const { isEmpty } = useRecoilValue(textMessageDetailsSelector);
   return (
     <div>
-      <StyledRaisedButtonAddPost active={!isEmpty} disabled={isEmpty}>
+      <StyledRaisedButtonAddPost $active={!isEmpty} disabled={isEmpty}>
         Add post
       </StyledRaisedButtonAddPost>
     </div>
@@ -15,19 +15,19 @@ const ButtonAddPost = () => {
 };
 
 type ButtonAddPostTypes = {
-  active?: boolean;
+  $active?: boolean;
 };
 
 const StyledRaisedButtonAddPost = styled(RaisedButton)<ButtonAddPostTypes>`
   width: 100%;
   ${(props) =>
-    props.active &&
+    props.$active &&
     css`
       background-color: ${props.theme.colors.vgPrimary};
       color: ${props.theme.colors.vgBlackAlpha00};
     `}
   ${(props) =>
-    !props.active &&
+    !props.$active &&
     css`
       background-color: ${props.theme.colors.vgBlackAlpha20};
     `}

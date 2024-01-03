@@ -9,13 +9,13 @@ export const ImageStreamUser = styled(SquareImage)`
   height: 200px;
 `;
 
-export const TextLabelStreamUser = styled(TextLabel)<{ isTitle?: boolean }>`
+export const TextLabelStreamUser = styled(TextLabel)<{ $isTitle?: boolean }>`
   color: ${(props) => props.theme.colors.vgTextBlack};
   font-size: ${(props) => props.theme.fontSizes[200]};
   display: block;
   padding: 5px 0;
   ${(props) =>
-    props.isTitle &&
+    props.$isTitle &&
     css`
       font-weight: bold;
       font-size: ${props.theme.fontSizes[300]};

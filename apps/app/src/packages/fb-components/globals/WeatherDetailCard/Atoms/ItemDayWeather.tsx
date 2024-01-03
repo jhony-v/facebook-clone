@@ -14,12 +14,12 @@ type ItemDayWeatherProps = {
 const ItemDayWeather = (props: ItemDayWeatherProps) => {
   const { celcius, day, description } = props;
   return (
-    <FlexWrapper align="center">
+    <FlexWrapper $align="center">
       <Wrapper />
       <Wrapper>
         <SubtitleTextDetail primaryTitle title={day} subtitle={description} />
       </Wrapper>
-      <Wrapper m="0 0 0 auto">
+      <Wrapper $m="0 0 0 auto">
         <SubtitleTextDetail
           horizontal
           primaryTitle

@@ -11,12 +11,12 @@ const StyledWrapper = styled.div`
  * Main dark tooltip to show in modals
  */
 type StyledTooltipTypes = {
-  w?: string;
-  position?: "left" | "right" | "top" | "bottom";
+  $w?: string;
+  $position?: "left" | "right" | "top" | "bottom";
 };
 const StyledTooltip = styled(motion.div)<StyledTooltipTypes>`
   font-size: ${(props) => props.theme.fontSizes[200]};
-  width: ${(props) => props.w};
+  width: ${(props) => props.$w};
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
@@ -26,28 +26,28 @@ const StyledTooltip = styled(motion.div)<StyledTooltipTypes>`
   text-align: center;
   z-index: 2;
   ${(props) =>
-    props.position === "bottom" &&
+    props.$position === "bottom" &&
     css`
       bottom: -40px;
       left: 50%;
       transform: translateX(-50%);
     `}
   ${(props) =>
-    props.position === "top" &&
+    props.$position === "top" &&
     css`
       top: -40px;
       left: 50%;
       transform: translateX(-50%);
     `}
   ${(props) =>
-    props.position === "left" &&
+    props.$position === "left" &&
     css`
       left: 0;
       top: 50%;
       transform: translateY(-50%) translateX(-100%);
     `}
   ${(props) =>
-    props.position === "right" &&
+    props.$position === "right" &&
     css`
       left: 0;
       top: 50%;
@@ -55,7 +55,7 @@ const StyledTooltip = styled(motion.div)<StyledTooltipTypes>`
     `}
 `;
 StyledTooltip.defaultProps = {
-  position: "bottom",
+  $position: "bottom",
   exit: {
     opacity: 0
   },
@@ -71,8 +71,8 @@ type DarkTooltipProps = { text?: string } & StyledTooltipTypes;
 const DarkTooltip: FCWithChildren<DarkTooltipProps> = ({
   children,
   text,
-  position,
-  w
+  $position,
+  $w
 }) => {
   const [visible, setVisible] = useState(false);
   const onHover = (state: boolean) => () => {
@@ -84,7 +84,7 @@ const DarkTooltip: FCWithChildren<DarkTooltipProps> = ({
       {children}
       <AnimatePresence>
         {visible && (
-          <StyledTooltip w={w} position={position}>
+          <StyledTooltip $w={$w} $position={$position}>
             {text}
           </StyledTooltip>
         )}

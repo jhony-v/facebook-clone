@@ -16,13 +16,13 @@ const HeaderSubItem: FCWithChildren<HeaderSubItemProps> = ({
   children
 }) => (
   <>
-    <Wrapper m="0 0 30px 0">
-      <FlexWrapper align="center">
-        <RoundButton dimension="45px" onClick={onBack}>
+    <Wrapper $m="0 0 30px 0">
+      <FlexWrapper $align="center">
+        <RoundButton $dimension="45px" onClick={onBack}>
           <BiArrowBack size="30px" />
         </RoundButton>
-        <Wrapper p="0px 0 0px 20px">
-          <TextLabel weight textColor="vgTextBlack" textSize={600}>
+        <Wrapper $p="0px 0 0px 20px">
+          <TextLabel $weight $textColor="vgTextBlack" $textSize={600}>
             {title}
           </TextLabel>
         </Wrapper>

@@ -7,19 +7,19 @@ export default function nextAppGenerator(plop: NodePlopAPI) {
       {
         type: "input",
         name: "name",
-        message: "Type a name for the next app:",
-      },
+        message: "Type a name for the next app:"
+      }
     ],
     actions: [
       {
         type: "addMany",
-        destination: "../../apps/client-{{name}}",
+        destination: "../../apps/{{name}}",
         base: "next-app/templates",
         templateFiles: [
           "next-app/templates/**/*.hbs",
-          "next-app/templates/public/favicon.ico",
-        ],
-      },
-    ],
+          "next-app/templates/public/favicon.ico"
+        ]
+      }
+    ]
   });
 }

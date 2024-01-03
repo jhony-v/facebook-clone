@@ -8,12 +8,9 @@ docs
 
 **/babel.*
 **/webpack.*
-**/jest.config.*
 package-lock.json
-/package.json
 **/yarn.lock
 **/yarn-error.log
-*.json
 **/*.png
 **/*.jpg
 **/*.svg

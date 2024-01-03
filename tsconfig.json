@@ -1,0 +1,3 @@
+{
+    "extends": "@fb/tsconfig/base.json",
+}

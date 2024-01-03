@@ -1,0 +1,4 @@
+{
+  "extends": "@fb/tsconfig/react-vite.json",
+  "include": ["./src/**/*","vite.config.ts"],
+}
